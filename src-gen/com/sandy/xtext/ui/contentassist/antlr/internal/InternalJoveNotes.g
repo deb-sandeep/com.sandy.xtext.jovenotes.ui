@@ -2405,9 +2405,9 @@ rule__ChemEquation__Group__1__Impl
     }
 :
 (
-{ before(grammarAccess.getChemEquationAccess().getEquationAssignment_1()); }
-(rule__ChemEquation__EquationAssignment_1)
-{ after(grammarAccess.getChemEquationAccess().getEquationAssignment_1()); }
+{ before(grammarAccess.getChemEquationAccess().getDescriptionAssignment_1()); }
+(rule__ChemEquation__DescriptionAssignment_1)?
+{ after(grammarAccess.getChemEquationAccess().getDescriptionAssignment_1()); }
 )
 
 ;
@@ -2434,9 +2434,11 @@ rule__ChemEquation__Group__2__Impl
     }
 :
 (
-{ before(grammarAccess.getChemEquationAccess().getDescriptionAssignment_2()); }
-(rule__ChemEquation__DescriptionAssignment_2)
-{ after(grammarAccess.getChemEquationAccess().getDescriptionAssignment_2()); }
+{ before(grammarAccess.getChemEquationAccess().getLeftCurlyBracketKeyword_2()); }
+
+	'{' 
+
+{ after(grammarAccess.getChemEquationAccess().getLeftCurlyBracketKeyword_2()); }
 )
 
 ;
@@ -2451,6 +2453,7 @@ rule__ChemEquation__Group__3
     }
 :
 	rule__ChemEquation__Group__3__Impl
+	rule__ChemEquation__Group__4
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2462,15 +2465,175 @@ rule__ChemEquation__Group__3__Impl
     }
 :
 (
-{ before(grammarAccess.getChemEquationAccess().getNotesAssignment_3()); }
-(rule__ChemEquation__NotesAssignment_3)
-{ after(grammarAccess.getChemEquationAccess().getNotesAssignment_3()); }
+{ before(grammarAccess.getChemEquationAccess().getReactantsAssignment_3()); }
+(rule__ChemEquation__ReactantsAssignment_3)
+{ after(grammarAccess.getChemEquationAccess().getReactantsAssignment_3()); }
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__ChemEquation__Group__4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ChemEquation__Group__4__Impl
+	rule__ChemEquation__Group__5
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ChemEquation__Group__4__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getChemEquationAccess().getGreaterThanSignKeyword_4()); }
+
+	'>' 
+
+{ after(grammarAccess.getChemEquationAccess().getGreaterThanSignKeyword_4()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ChemEquation__Group__5
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ChemEquation__Group__5__Impl
+	rule__ChemEquation__Group__6
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ChemEquation__Group__5__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getChemEquationAccess().getProducesAssignment_5()); }
+(rule__ChemEquation__ProducesAssignment_5)?
+{ after(grammarAccess.getChemEquationAccess().getProducesAssignment_5()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ChemEquation__Group__6
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ChemEquation__Group__6__Impl
+	rule__ChemEquation__Group__7
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ChemEquation__Group__6__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getChemEquationAccess().getGreaterThanSignKeyword_6()); }
+
+	'>' 
+
+{ after(grammarAccess.getChemEquationAccess().getGreaterThanSignKeyword_6()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ChemEquation__Group__7
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ChemEquation__Group__7__Impl
+	rule__ChemEquation__Group__8
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ChemEquation__Group__7__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getChemEquationAccess().getProductsAssignment_7()); }
+(rule__ChemEquation__ProductsAssignment_7)
+{ after(grammarAccess.getChemEquationAccess().getProductsAssignment_7()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ChemEquation__Group__8
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ChemEquation__Group__8__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ChemEquation__Group__8__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getChemEquationAccess().getRightCurlyBracketKeyword_8()); }
+
+	'}' 
+
+{ after(grammarAccess.getChemEquationAccess().getRightCurlyBracketKeyword_8()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4421,14 +4584,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ChemEquation__EquationAssignment_1
+rule__ChemEquation__DescriptionAssignment_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getChemEquationAccess().getEquationSTRINGTerminalRuleCall_1_0()); }
-	RULE_STRING{ after(grammarAccess.getChemEquationAccess().getEquationSTRINGTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getChemEquationAccess().getDescriptionSTRINGTerminalRuleCall_1_0()); }
+	RULE_STRING{ after(grammarAccess.getChemEquationAccess().getDescriptionSTRINGTerminalRuleCall_1_0()); }
 )
 
 ;
@@ -4436,14 +4599,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ChemEquation__DescriptionAssignment_2
+rule__ChemEquation__ReactantsAssignment_3
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getChemEquationAccess().getDescriptionSTRINGTerminalRuleCall_2_0()); }
-	RULE_STRING{ after(grammarAccess.getChemEquationAccess().getDescriptionSTRINGTerminalRuleCall_2_0()); }
+{ before(grammarAccess.getChemEquationAccess().getReactantsSTRINGTerminalRuleCall_3_0()); }
+	RULE_STRING{ after(grammarAccess.getChemEquationAccess().getReactantsSTRINGTerminalRuleCall_3_0()); }
 )
 
 ;
@@ -4451,14 +4614,29 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ChemEquation__NotesAssignment_3
+rule__ChemEquation__ProducesAssignment_5
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getChemEquationAccess().getNotesSTRINGTerminalRuleCall_3_0()); }
-	RULE_STRING{ after(grammarAccess.getChemEquationAccess().getNotesSTRINGTerminalRuleCall_3_0()); }
+{ before(grammarAccess.getChemEquationAccess().getProducesSTRINGTerminalRuleCall_5_0()); }
+	RULE_STRING{ after(grammarAccess.getChemEquationAccess().getProducesSTRINGTerminalRuleCall_5_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ChemEquation__ProductsAssignment_7
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getChemEquationAccess().getProductsSTRINGTerminalRuleCall_7_0()); }
+	RULE_STRING{ after(grammarAccess.getChemEquationAccess().getProductsSTRINGTerminalRuleCall_7_0()); }
 )
 
 ;

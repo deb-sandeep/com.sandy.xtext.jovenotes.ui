@@ -95,9 +95,10 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTrueFalseAccess().getStatementAssignment_1(), "rule__TrueFalse__StatementAssignment_1");
 					put(grammarAccess.getTrueFalseAccess().getTruthValueAssignment_2(), "rule__TrueFalse__TruthValueAssignment_2");
 					put(grammarAccess.getTrueFalseAccess().getJustificationAssignment_3(), "rule__TrueFalse__JustificationAssignment_3");
-					put(grammarAccess.getChemEquationAccess().getEquationAssignment_1(), "rule__ChemEquation__EquationAssignment_1");
-					put(grammarAccess.getChemEquationAccess().getDescriptionAssignment_2(), "rule__ChemEquation__DescriptionAssignment_2");
-					put(grammarAccess.getChemEquationAccess().getNotesAssignment_3(), "rule__ChemEquation__NotesAssignment_3");
+					put(grammarAccess.getChemEquationAccess().getDescriptionAssignment_1(), "rule__ChemEquation__DescriptionAssignment_1");
+					put(grammarAccess.getChemEquationAccess().getReactantsAssignment_3(), "rule__ChemEquation__ReactantsAssignment_3");
+					put(grammarAccess.getChemEquationAccess().getProducesAssignment_5(), "rule__ChemEquation__ProducesAssignment_5");
+					put(grammarAccess.getChemEquationAccess().getProductsAssignment_7(), "rule__ChemEquation__ProductsAssignment_7");
 					put(grammarAccess.getChemCompoundAccess().getSymbolAssignment_1(), "rule__ChemCompound__SymbolAssignment_1");
 					put(grammarAccess.getChemCompoundAccess().getChemicalNameAssignment_2(), "rule__ChemCompound__ChemicalNameAssignment_2");
 					put(grammarAccess.getChemCompoundAccess().getCommonNameAssignment_3(), "rule__ChemCompound__CommonNameAssignment_3");
