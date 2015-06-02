@@ -85,8 +85,9 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCharacterAccess().getCmapAssignment_3(), "rule__Character__CmapAssignment_3");
 					put(grammarAccess.getTeacherNoteAccess().getNoteAssignment_1(), "rule__TeacherNote__NoteAssignment_1");
 					put(grammarAccess.getTeacherNoteAccess().getCmapAssignment_2(), "rule__TeacherNote__CmapAssignment_2");
-					put(grammarAccess.getMatchingAccess().getQuestionAssignment_1(), "rule__Matching__QuestionAssignment_1");
-					put(grammarAccess.getMatchingAccess().getPairsAssignment_3(), "rule__Matching__PairsAssignment_3");
+					put(grammarAccess.getMatchingAccess().getSkipReverseQuestionAssignment_1(), "rule__Matching__SkipReverseQuestionAssignment_1");
+					put(grammarAccess.getMatchingAccess().getQuestionAssignment_2(), "rule__Matching__QuestionAssignment_2");
+					put(grammarAccess.getMatchingAccess().getPairsAssignment_4(), "rule__Matching__PairsAssignment_4");
 					put(grammarAccess.getMatchPairAccess().getMatchQuestionAssignment_0(), "rule__MatchPair__MatchQuestionAssignment_0");
 					put(grammarAccess.getMatchPairAccess().getMatchAnswerAssignment_2(), "rule__MatchPair__MatchAnswerAssignment_2");
 					put(grammarAccess.getEventAccess().getEventAssignment_1(), "rule__Event__EventAssignment_1");
