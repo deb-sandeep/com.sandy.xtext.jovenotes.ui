@@ -23,8 +23,9 @@
 'chapterNumber'=13
 'cmap'=39
 'context'=38
+'hide'=42
 'imageName'=33
-'skip_reverse_question'=42
+'skip_reverse_question'=43
 'subject'=12
 'where'=36
 '{'=23
@@ -68,3 +69,4 @@ T__39=39
 T__40=40
 T__41=41
 T__42=42
+T__43=43
