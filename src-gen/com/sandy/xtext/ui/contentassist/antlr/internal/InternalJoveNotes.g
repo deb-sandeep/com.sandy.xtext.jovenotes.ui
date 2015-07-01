@@ -1984,9 +1984,9 @@ rule__TeacherNote__Group__2__Impl
     }
 :
 (
-{ before(grammarAccess.getTeacherNoteAccess().getNoteAssignment_2()); }
-(rule__TeacherNote__NoteAssignment_2)
-{ after(grammarAccess.getTeacherNoteAccess().getNoteAssignment_2()); }
+{ before(grammarAccess.getTeacherNoteAccess().getCaptionAssignment_2()); }
+(rule__TeacherNote__CaptionAssignment_2)?
+{ after(grammarAccess.getTeacherNoteAccess().getCaptionAssignment_2()); }
 )
 
 ;
@@ -2001,6 +2001,7 @@ rule__TeacherNote__Group__3
     }
 :
 	rule__TeacherNote__Group__3__Impl
+	rule__TeacherNote__Group__4
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2012,15 +2013,45 @@ rule__TeacherNote__Group__3__Impl
     }
 :
 (
-{ before(grammarAccess.getTeacherNoteAccess().getCmapAssignment_3()); }
-(rule__TeacherNote__CmapAssignment_3)?
-{ after(grammarAccess.getTeacherNoteAccess().getCmapAssignment_3()); }
+{ before(grammarAccess.getTeacherNoteAccess().getNoteAssignment_3()); }
+(rule__TeacherNote__NoteAssignment_3)
+{ after(grammarAccess.getTeacherNoteAccess().getNoteAssignment_3()); }
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__TeacherNote__Group__4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__TeacherNote__Group__4__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TeacherNote__Group__4__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getTeacherNoteAccess().getCmapAssignment_4()); }
+(rule__TeacherNote__CmapAssignment_4)?
+{ after(grammarAccess.getTeacherNoteAccess().getCmapAssignment_4()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 
 
 
@@ -4999,14 +5030,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__TeacherNote__NoteAssignment_2
+rule__TeacherNote__CaptionAssignment_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getTeacherNoteAccess().getNoteSTRINGTerminalRuleCall_2_0()); }
-	RULE_STRING{ after(grammarAccess.getTeacherNoteAccess().getNoteSTRINGTerminalRuleCall_2_0()); }
+{ before(grammarAccess.getTeacherNoteAccess().getCaptionSTRINGTerminalRuleCall_2_0()); }
+	RULE_STRING{ after(grammarAccess.getTeacherNoteAccess().getCaptionSTRINGTerminalRuleCall_2_0()); }
 )
 
 ;
@@ -5014,14 +5045,29 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__TeacherNote__CmapAssignment_3
+rule__TeacherNote__NoteAssignment_3
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getTeacherNoteAccess().getCmapCMapParserRuleCall_3_0()); }
-	ruleCMap{ after(grammarAccess.getTeacherNoteAccess().getCmapCMapParserRuleCall_3_0()); }
+{ before(grammarAccess.getTeacherNoteAccess().getNoteSTRINGTerminalRuleCall_3_0()); }
+	RULE_STRING{ after(grammarAccess.getTeacherNoteAccess().getNoteSTRINGTerminalRuleCall_3_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TeacherNote__CmapAssignment_4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getTeacherNoteAccess().getCmapCMapParserRuleCall_4_0()); }
+	ruleCMap{ after(grammarAccess.getTeacherNoteAccess().getCmapCMapParserRuleCall_4_0()); }
 )
 
 ;
