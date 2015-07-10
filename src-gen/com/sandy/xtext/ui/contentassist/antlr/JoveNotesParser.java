@@ -75,7 +75,7 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getWordMeaningAccess().getMeaningAssignment_3(), "rule__WordMeaning__MeaningAssignment_3");
 					put(grammarAccess.getQuestionAnswerAccess().getHideFromViewAssignment_1(), "rule__QuestionAnswer__HideFromViewAssignment_1");
 					put(grammarAccess.getQuestionAnswerAccess().getQuestionAssignment_2(), "rule__QuestionAnswer__QuestionAssignment_2");
-					put(grammarAccess.getQuestionAnswerAccess().getAnswerAssignment_3(), "rule__QuestionAnswer__AnswerAssignment_3");
+					put(grammarAccess.getQuestionAnswerAccess().getAnswerPartsAssignment_3(), "rule__QuestionAnswer__AnswerPartsAssignment_3");
 					put(grammarAccess.getQuestionAnswerAccess().getCmapAssignment_4(), "rule__QuestionAnswer__CmapAssignment_4");
 					put(grammarAccess.getFIBAccess().getHideFromViewAssignment_1(), "rule__FIB__HideFromViewAssignment_1");
 					put(grammarAccess.getFIBAccess().getQuestionAssignment_2(), "rule__FIB__QuestionAssignment_2");
