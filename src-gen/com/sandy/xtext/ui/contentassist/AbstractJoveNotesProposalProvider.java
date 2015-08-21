@@ -28,6 +28,9 @@ public class AbstractJoveNotesProposalProvider extends org.eclipse.xtext.common.
 	public void completeProcessingHints_SkipGeneration(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		// subclasses may override
 	}
+	public void completeProcessingHints_SkipGenerationInProduction(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		// subclasses may override
+	}
 	public void completeChapterDetails_TestPaper(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		// subclasses may override
 	}

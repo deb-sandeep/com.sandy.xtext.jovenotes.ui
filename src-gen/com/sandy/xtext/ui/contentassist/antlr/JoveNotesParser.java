@@ -39,6 +39,7 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getNotesElementAccess().getAlternatives(), "rule__NotesElement__Alternatives");
 					put(grammarAccess.getJoveNotesAccess().getGroup(), "rule__JoveNotes__Group__0");
+					put(grammarAccess.getProcessingHintsAccess().getGroup(), "rule__ProcessingHints__Group__0");
 					put(grammarAccess.getChapterDetailsAccess().getGroup(), "rule__ChapterDetails__Group__0");
 					put(grammarAccess.getWordMeaningAccess().getGroup(), "rule__WordMeaning__Group__0");
 					put(grammarAccess.getQuestionAnswerAccess().getGroup(), "rule__QuestionAnswer__Group__0");
@@ -64,7 +65,8 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getJoveNotesAccess().getProcessingHintsAssignment_0(), "rule__JoveNotes__ProcessingHintsAssignment_0");
 					put(grammarAccess.getJoveNotesAccess().getChapterDetailsAssignment_1(), "rule__JoveNotes__ChapterDetailsAssignment_1");
 					put(grammarAccess.getJoveNotesAccess().getNotesElementsAssignment_2(), "rule__JoveNotes__NotesElementsAssignment_2");
-					put(grammarAccess.getProcessingHintsAccess().getSkipGenerationAssignment(), "rule__ProcessingHints__SkipGenerationAssignment");
+					put(grammarAccess.getProcessingHintsAccess().getSkipGenerationAssignment_1(), "rule__ProcessingHints__SkipGenerationAssignment_1");
+					put(grammarAccess.getProcessingHintsAccess().getSkipGenerationInProductionAssignment_2(), "rule__ProcessingHints__SkipGenerationInProductionAssignment_2");
 					put(grammarAccess.getChapterDetailsAccess().getTestPaperAssignment_0(), "rule__ChapterDetails__TestPaperAssignment_0");
 					put(grammarAccess.getChapterDetailsAccess().getSubjectNameAssignment_2(), "rule__ChapterDetails__SubjectNameAssignment_2");
 					put(grammarAccess.getChapterDetailsAccess().getChapterNumberAssignment_4(), "rule__ChapterDetails__ChapterNumberAssignment_4");

@@ -12,11 +12,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalJoveNotesLexer extends Lexer {
-    public static final int T__42=42;
-    public static final int T__43=43;
-    public static final int T__40=40;
     public static final int RULE_ID=7;
-    public static final int T__41=41;
     public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
@@ -25,33 +21,38 @@ public class InternalJoveNotesLexer extends Lexer {
     public static final int T__24=24;
     public static final int T__23=23;
     public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=11;
     public static final int T__21=21;
+    public static final int RULE_ANY_OTHER=11;
     public static final int T__20=20;
     public static final int RULE_BOOL=6;
-    public static final int RULE_SL_COMMENT=9;
     public static final int EOF=-1;
-    public static final int RULE_ML_COMMENT=8;
-    public static final int T__30=30;
     public static final int T__19=19;
-    public static final int T__31=31;
-    public static final int RULE_STRING=4;
-    public static final int T__32=32;
-    public static final int T__33=33;
     public static final int T__16=16;
-    public static final int T__34=34;
     public static final int T__15=15;
-    public static final int T__35=35;
     public static final int T__18=18;
-    public static final int T__36=36;
     public static final int T__17=17;
-    public static final int T__37=37;
     public static final int T__12=12;
-    public static final int T__38=38;
-    public static final int T__39=39;
     public static final int T__14=14;
     public static final int T__13=13;
     public static final int RULE_INT=5;
+    public static final int T__42=42;
+    public static final int T__43=43;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__44=44;
+    public static final int RULE_SL_COMMENT=9;
+    public static final int RULE_ML_COMMENT=8;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
+    public static final int RULE_STRING=4;
+    public static final int T__33=33;
+    public static final int T__34=34;
+    public static final int T__35=35;
+    public static final int T__36=36;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
     public static final int RULE_WS=10;
 
     // delegates
@@ -675,10 +676,10 @@ public class InternalJoveNotesLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:40:7: ( '@test_paper' )
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:40:9: '@test_paper'
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:40:7: ( '@skip_generation_in_production' )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:40:9: '@skip_generation_in_production'
             {
-            match("@test_paper"); 
+            match("@skip_generation_in_production"); 
 
 
             }
@@ -696,10 +697,10 @@ public class InternalJoveNotesLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:41:7: ( 'hide' )
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:41:9: 'hide'
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:41:7: ( '@test_paper' )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:41:9: '@test_paper'
             {
-            match("hide"); 
+            match("@test_paper"); 
 
 
             }
@@ -717,10 +718,10 @@ public class InternalJoveNotesLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:42:7: ( 'skip_reverse_question' )
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:42:9: 'skip_reverse_question'
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:42:7: ( 'hide' )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:42:9: 'hide'
             {
-            match("skip_reverse_question"); 
+            match("hide"); 
 
 
             }
@@ -733,15 +734,36 @@ public class InternalJoveNotesLexer extends Lexer {
     }
     // $ANTLR end "T__43"
 
+    // $ANTLR start "T__44"
+    public final void mT__44() throws RecognitionException {
+        try {
+            int _type = T__44;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:43:7: ( 'skip_reverse_question' )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:43:9: 'skip_reverse_question'
+            {
+            match("skip_reverse_question"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__44"
+
     // $ANTLR start "RULE_BOOL"
     public final void mRULE_BOOL() throws RecognitionException {
         try {
             int _type = RULE_BOOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5811:11: ( ( 'true' | 'false' ) )
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5811:13: ( 'true' | 'false' )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5928:11: ( ( 'true' | 'false' ) )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5928:13: ( 'true' | 'false' )
             {
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5811:13: ( 'true' | 'false' )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5928:13: ( 'true' | 'false' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -759,7 +781,7 @@ public class InternalJoveNotesLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5811:14: 'true'
+                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5928:14: 'true'
                     {
                     match("true"); 
 
@@ -767,7 +789,7 @@ public class InternalJoveNotesLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5811:21: 'false'
+                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5928:21: 'false'
                     {
                     match("false"); 
 
@@ -793,10 +815,10 @@ public class InternalJoveNotesLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5813:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5813:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5930:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5930:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5813:11: ( '^' )?
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5930:11: ( '^' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -805,7 +827,7 @@ public class InternalJoveNotesLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5813:11: '^'
+                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5930:11: '^'
                     {
                     match('^'); 
 
@@ -823,7 +845,7 @@ public class InternalJoveNotesLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5813:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5930:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -872,10 +894,10 @@ public class InternalJoveNotesLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5815:10: ( ( '0' .. '9' )+ )
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5815:12: ( '0' .. '9' )+
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5932:10: ( ( '0' .. '9' )+ )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5932:12: ( '0' .. '9' )+
             {
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5815:12: ( '0' .. '9' )+
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5932:12: ( '0' .. '9' )+
             int cnt4=0;
             loop4:
             do {
@@ -889,7 +911,7 @@ public class InternalJoveNotesLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5815:13: '0' .. '9'
+            	    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5932:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -921,10 +943,10 @@ public class InternalJoveNotesLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5817:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5817:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5934:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5934:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5817:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5934:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -942,10 +964,10 @@ public class InternalJoveNotesLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5817:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5934:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5817:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5934:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -961,7 +983,7 @@ public class InternalJoveNotesLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5817:21: '\\\\' .
+                    	    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5934:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -969,7 +991,7 @@ public class InternalJoveNotesLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5817:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5934:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -994,10 +1016,10 @@ public class InternalJoveNotesLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5817:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5934:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5817:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5934:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -1013,7 +1035,7 @@ public class InternalJoveNotesLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5817:54: '\\\\' .
+                    	    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5934:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1021,7 +1043,7 @@ public class InternalJoveNotesLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5817:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5934:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1064,12 +1086,12 @@ public class InternalJoveNotesLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5819:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5819:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5936:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5936:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5819:24: ( options {greedy=false; } : . )*
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5936:24: ( options {greedy=false; } : . )*
             loop8:
             do {
                 int alt8=2;
@@ -1094,7 +1116,7 @@ public class InternalJoveNotesLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5819:52: .
+            	    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5936:52: .
             	    {
             	    matchAny(); 
 
@@ -1124,12 +1146,12 @@ public class InternalJoveNotesLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5821:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5821:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5938:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5938:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5821:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5938:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -1142,7 +1164,7 @@ public class InternalJoveNotesLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5821:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5938:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1162,7 +1184,7 @@ public class InternalJoveNotesLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5821:40: ( ( '\\r' )? '\\n' )?
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5938:40: ( ( '\\r' )? '\\n' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1171,9 +1193,9 @@ public class InternalJoveNotesLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5821:41: ( '\\r' )? '\\n'
+                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5938:41: ( '\\r' )? '\\n'
                     {
-                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5821:41: ( '\\r' )?
+                    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5938:41: ( '\\r' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -1182,7 +1204,7 @@ public class InternalJoveNotesLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5821:41: '\\r'
+                            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5938:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1214,10 +1236,10 @@ public class InternalJoveNotesLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5823:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5823:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5940:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5940:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5823:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5940:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt12=0;
             loop12:
             do {
@@ -1271,8 +1293,8 @@ public class InternalJoveNotesLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5825:16: ( . )
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5825:18: .
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5942:16: ( . )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:5942:18: .
             {
             matchAny(); 
 
@@ -1287,8 +1309,8 @@ public class InternalJoveNotesLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | RULE_BOOL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt13=40;
+        // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | RULE_BOOL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt13=41;
         alt13 = dfa13.predict(input);
         switch (alt13) {
             case 1 :
@@ -1516,56 +1538,63 @@ public class InternalJoveNotesLexer extends Lexer {
                 }
                 break;
             case 33 :
-                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:202: RULE_BOOL
+                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:202: T__44
+                {
+                mT__44(); 
+
+                }
+                break;
+            case 34 :
+                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:208: RULE_BOOL
                 {
                 mRULE_BOOL(); 
 
                 }
                 break;
-            case 34 :
-                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:212: RULE_ID
+            case 35 :
+                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:218: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 35 :
-                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:220: RULE_INT
+            case 36 :
+                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:226: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 36 :
-                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:229: RULE_STRING
+            case 37 :
+                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:235: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 37 :
-                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:241: RULE_ML_COMMENT
+            case 38 :
+                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:247: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 38 :
-                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:257: RULE_SL_COMMENT
+            case 39 :
+                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:263: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 39 :
-                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:273: RULE_WS
+            case 40 :
+                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:279: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 40 :
-                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:281: RULE_ANY_OTHER
+            case 41 :
+                // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:1:287: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1579,17 +1608,17 @@ public class InternalJoveNotesLexer extends Lexer {
 
     protected DFA13 dfa13 = new DFA13(this);
     static final String DFA13_eotS =
-        "\1\uffff\2\31\1\uffff\1\26\4\uffff\1\31\1\uffff\4\31\1\26\2\uffff\3\26\2\uffff\2\31\1\uffff\3\31\20\uffff\1\31\1\uffff\4\31\5\uffff\5\31\10\uffff\11\31\1\132\2\uffff\2\31\1\136\1\137\5\31\2\uffff\1\31\1\147\2\uffff\1\137\4\31\1\uffff\1\31\1\uffff\1\157\2\31\1\162\2\uffff\1\31\1\uffff\2\31\1\uffff\4\31\1\173\3\31\1\uffff\2\31\1\u0081\2\31\1\uffff\1\31\1\u0085\1\31\1\uffff\6\31\1\u008d\1\uffff";
+        "\1\uffff\2\31\1\uffff\1\26\4\uffff\1\31\1\uffff\4\31\1\26\2\uffff\3\26\2\uffff\2\31\1\uffff\3\31\20\uffff\1\31\1\uffff\4\31\5\uffff\5\31\10\uffff\11\31\1\133\3\uffff\2\31\1\140\1\141\5\31\3\uffff\1\31\1\152\2\uffff\1\141\4\31\2\uffff\1\31\1\uffff\1\163\2\31\1\166\3\uffff\1\31\1\uffff\2\31\2\uffff\4\31\1\uffff\1\u0082\3\31\2\uffff\2\31\1\u0089\1\uffff\2\31\2\uffff\1\31\1\u008f\1\uffff\1\31\2\uffff\1\31\1\uffff\1\31\1\u0097\1\31\2\uffff\3\31\1\u009c\1\uffff";
     static final String DFA13_eofS =
-        "\u008e\uffff";
+        "\u009d\uffff";
     static final String DFA13_minS =
-        "\1\0\1\153\1\150\1\uffff\1\143\4\uffff\1\155\1\uffff\1\150\1\151\1\162\1\141\1\101\2\uffff\2\0\1\52\2\uffff\1\142\1\151\1\uffff\1\141\1\156\1\141\5\uffff\1\150\1\145\1\uffff\1\161\1\153\6\uffff\1\141\1\uffff\1\145\1\144\1\165\1\154\5\uffff\1\152\2\160\1\164\1\160\1\141\7\uffff\1\147\1\162\2\145\1\163\1\145\1\137\1\164\1\145\1\60\1\uffff\1\155\2\145\2\60\1\145\1\143\1\162\1\145\1\170\1\uffff\1\137\1\116\1\60\2\uffff\1\60\1\164\1\145\1\162\1\164\1\143\1\141\1\uffff\1\60\1\166\1\116\1\60\2\uffff\1\155\1\uffff\1\145\1\141\1\uffff\1\145\1\162\2\155\1\60\1\163\1\142\1\145\1\uffff\2\145\1\60\1\137\1\162\1\uffff\1\161\1\60\1\165\1\uffff\1\145\1\163\1\164\1\151\1\157\1\156\1\60\1\uffff";
+        "\1\0\1\153\1\150\1\uffff\1\143\4\uffff\1\155\1\uffff\1\150\1\151\1\162\1\141\1\101\2\uffff\2\0\1\52\2\uffff\1\142\1\151\1\uffff\1\141\1\156\1\141\5\uffff\1\150\1\145\1\uffff\1\161\1\153\6\uffff\1\141\1\uffff\1\145\1\144\1\165\1\154\5\uffff\1\152\2\160\1\164\1\160\1\141\6\uffff\1\151\1\147\1\162\2\145\1\163\1\145\1\137\1\164\1\145\1\60\1\uffff\1\155\1\160\2\145\2\60\1\145\1\143\1\162\1\145\1\170\1\uffff\2\137\1\116\1\60\2\uffff\1\60\1\164\1\145\1\162\1\164\1\143\1\147\1\141\1\uffff\1\60\1\166\1\116\1\60\2\uffff\1\145\1\155\1\uffff\1\145\1\141\1\uffff\1\156\1\145\1\162\2\155\1\145\1\60\1\163\1\142\1\145\1\162\1\uffff\2\145\1\60\1\141\1\137\1\162\1\uffff\1\164\1\161\1\60\1\151\1\165\1\uffff\1\157\1\145\1\156\1\163\1\137\1\164\2\uffff\1\151\1\157\1\156\1\60\1\uffff";
     static final String DFA13_maxS =
-        "\1\uffff\1\165\1\157\1\uffff\1\167\4\uffff\1\155\1\uffff\1\150\1\151\1\162\1\141\1\172\2\uffff\2\uffff\1\57\2\uffff\1\142\1\151\1\uffff\1\141\1\156\1\141\5\uffff\1\150\1\162\1\uffff\1\166\1\160\6\uffff\1\141\1\uffff\1\145\1\144\1\165\1\154\5\uffff\1\152\2\160\1\164\1\160\1\145\7\uffff\1\147\1\162\2\145\1\163\1\145\1\137\1\164\1\145\1\172\1\uffff\1\155\2\145\2\172\1\145\1\143\1\162\1\145\1\170\1\uffff\1\137\1\116\1\172\2\uffff\1\172\1\164\1\145\1\162\1\164\1\145\1\141\1\uffff\1\172\1\166\1\116\1\172\2\uffff\1\155\1\uffff\1\145\1\165\1\uffff\1\145\1\162\2\155\1\172\1\163\1\142\1\145\1\uffff\2\145\1\172\1\137\1\162\1\uffff\1\161\1\172\1\165\1\uffff\1\145\1\163\1\164\1\151\1\157\1\156\1\172\1\uffff";
+        "\1\uffff\1\165\1\157\1\uffff\1\167\4\uffff\1\155\1\uffff\1\150\1\151\1\162\1\141\1\172\2\uffff\2\uffff\1\57\2\uffff\1\142\1\151\1\uffff\1\141\1\156\1\141\5\uffff\1\150\1\162\1\uffff\1\166\1\160\6\uffff\1\141\1\uffff\1\145\1\144\1\165\1\154\5\uffff\1\152\2\160\1\164\1\160\1\145\6\uffff\1\151\1\147\1\162\2\145\1\163\1\145\1\137\1\164\1\145\1\172\1\uffff\1\155\1\160\2\145\2\172\1\145\1\143\1\162\1\145\1\170\1\uffff\2\137\1\116\1\172\2\uffff\1\172\1\164\1\145\1\162\1\164\1\145\1\147\1\141\1\uffff\1\172\1\166\1\116\1\172\2\uffff\1\145\1\155\1\uffff\1\145\1\165\1\uffff\1\156\1\145\1\162\2\155\1\145\1\172\1\163\1\142\1\145\1\162\1\uffff\2\145\1\172\1\141\1\137\1\162\1\uffff\1\164\1\161\1\172\1\151\1\165\1\uffff\1\157\1\145\1\156\1\163\1\137\1\164\2\uffff\1\151\1\157\1\156\1\172\1\uffff";
     static final String DFA13_acceptS =
-        "\3\uffff\1\3\1\uffff\1\14\1\15\1\16\1\22\1\uffff\1\27\5\uffff\1\42\1\43\3\uffff\1\47\1\50\2\uffff\1\42\3\uffff\1\3\1\5\1\6\1\7\1\10\2\uffff\1\13\2\uffff\1\25\1\32\1\14\1\15\1\16\1\22\1\uffff\1\27\4\uffff\1\43\1\44\1\45\1\46\1\47\6\uffff\1\12\1\20\1\36\1\17\1\30\1\24\1\35\12\uffff\1\11\12\uffff\1\34\3\uffff\1\37\1\41\7\uffff\1\31\4\uffff\1\21\1\23\1\uffff\1\1\2\uffff\1\33\10\uffff\1\26\5\uffff\1\4\3\uffff\1\2\7\uffff\1\40";
+        "\3\uffff\1\3\1\uffff\1\14\1\15\1\16\1\22\1\uffff\1\27\5\uffff\1\43\1\44\3\uffff\1\50\1\51\2\uffff\1\43\3\uffff\1\3\1\5\1\6\1\7\1\10\2\uffff\1\13\2\uffff\1\25\1\32\1\14\1\15\1\16\1\22\1\uffff\1\27\4\uffff\1\44\1\45\1\46\1\47\1\50\6\uffff\1\12\1\20\1\37\1\17\1\30\1\24\13\uffff\1\11\13\uffff\1\34\4\uffff\1\40\1\42\10\uffff\1\31\4\uffff\1\21\1\23\2\uffff\1\1\2\uffff\1\33\13\uffff\1\26\6\uffff\1\4\5\uffff\1\2\6\uffff\1\36\1\35\4\uffff\1\41";
     static final String DFA13_specialS =
-        "\1\1\21\uffff\1\0\1\2\172\uffff}>";
+        "\1\2\21\uffff\1\1\1\0\u0089\uffff}>";
     static final String[] DFA13_transitionS = {
             "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\22\4\26\1\23\4\26\1\12\1\26\1\3\1\24\12\21\3\26\1\7\1\10\1\26\1\4\32\20\3\26\1\17\1\20\1\26\2\20\1\2\2\20\1\16\1\20\1\14\1\11\11\20\1\1\1\15\2\20\1\13\3\20\1\5\1\26\1\6\uff82\26",
             "\1\30\11\uffff\1\27",
@@ -1659,7 +1688,6 @@ public class InternalJoveNotesLexer extends Lexer {
             "",
             "",
             "",
-            "",
             "\1\121",
             "\1\122",
             "\1\123",
@@ -1669,68 +1697,84 @@ public class InternalJoveNotesLexer extends Lexer {
             "\1\127",
             "\1\130",
             "\1\131",
+            "\1\132",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "",
-            "\1\133",
             "\1\134",
             "\1\135",
+            "\1\136",
+            "\1\137",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\1\140",
-            "\1\141",
             "\1\142",
             "\1\143",
             "\1\144",
-            "",
             "\1\145",
             "\1\146",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "",
-            "",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\147",
             "\1\150",
             "\1\151",
-            "\1\152",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "",
+            "",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "\1\153",
-            "\1\155\1\uffff\1\154",
+            "\1\154",
+            "\1\155",
             "\1\156",
-            "",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\1\160",
+            "\1\160\1\uffff\1\157",
             "\1\161",
+            "\1\162",
+            "",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\164",
+            "\1\165",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "",
-            "",
-            "\1\163",
-            "",
-            "\1\164",
-            "\1\166\23\uffff\1\165",
             "",
             "\1\167",
             "\1\170",
+            "",
             "\1\171",
-            "\1\172",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\173\23\uffff\1\172",
+            "",
             "\1\174",
             "\1\175",
             "\1\176",
-            "",
             "\1\177",
             "\1\u0080",
+            "\1\u0081",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\1\u0082",
             "\1\u0083",
-            "",
             "\1\u0084",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\u0085",
             "\1\u0086",
             "",
             "\1\u0087",
             "\1\u0088",
-            "\1\u0089",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "\1\u008a",
             "\1\u008b",
             "\1\u008c",
+            "",
+            "\1\u008d",
+            "\1\u008e",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\u0090",
+            "\1\u0091",
+            "",
+            "\1\u0092",
+            "\1\u0093",
+            "\1\u0094",
+            "\1\u0095",
+            "\1\u0096",
+            "\1\u0098",
+            "",
+            "",
+            "\1\u0099",
+            "\1\u009a",
+            "\1\u009b",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             ""
     };
@@ -1765,13 +1809,23 @@ public class InternalJoveNotesLexer extends Lexer {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | RULE_BOOL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | RULE_BOOL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA13_19 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA13_19>='\u0000' && LA13_19<='\uFFFF')) ) {s = 52;}
+
+                        else s = 22;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
                         int LA13_18 = input.LA(1);
 
                         s = -1;
@@ -1781,7 +1835,7 @@ public class InternalJoveNotesLexer extends Lexer {
 
                         if ( s>=0 ) return s;
                         break;
-                    case 1 : 
+                    case 2 : 
                         int LA13_0 = input.LA(1);
 
                         s = -1;
@@ -1828,16 +1882,6 @@ public class InternalJoveNotesLexer extends Lexer {
                         else if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r'||LA13_0==' ') ) {s = 21;}
 
                         else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||LA13_0=='!'||(LA13_0>='#' && LA13_0<='&')||(LA13_0>='(' && LA13_0<='+')||LA13_0=='-'||(LA13_0>=':' && LA13_0<='<')||LA13_0=='?'||(LA13_0>='[' && LA13_0<=']')||LA13_0=='`'||LA13_0=='|'||(LA13_0>='~' && LA13_0<='\uFFFF')) ) {s = 22;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA13_19 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA13_19>='\u0000' && LA13_19<='\uFFFF')) ) {s = 52;}
-
-                        else s = 22;
 
                         if ( s>=0 ) return s;
                         break;
