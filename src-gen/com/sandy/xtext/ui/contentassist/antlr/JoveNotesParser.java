@@ -62,8 +62,8 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEqSymbolAccess().getGroup(), "rule__EqSymbol__Group__0");
 					put(grammarAccess.getRefToContextAccess().getGroup(), "rule__RefToContext__Group__0");
 					put(grammarAccess.getMultiChoiceAccess().getGroup(), "rule__MultiChoice__Group__0");
-					put(grammarAccess.getMultiChoiceAccess().getGroup_6(), "rule__MultiChoice__Group_6__0");
-					put(grammarAccess.getMultiChoiceAccess().getGroup_8(), "rule__MultiChoice__Group_8__0");
+					put(grammarAccess.getMultiChoiceAccess().getGroup_7(), "rule__MultiChoice__Group_7__0");
+					put(grammarAccess.getMultiChoiceAccess().getGroup_9(), "rule__MultiChoice__Group_9__0");
 					put(grammarAccess.getOptionAccess().getGroup(), "rule__Option__Group__0");
 					put(grammarAccess.getCMapAccess().getGroup(), "rule__CMap__Group__0");
 					put(grammarAccess.getJoveNotesAccess().getProcessingHintsAssignment_0(), "rule__JoveNotes__ProcessingHintsAssignment_0");
@@ -140,10 +140,11 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRefToContextAccess().getHideFromViewAssignment_1(), "rule__RefToContext__HideFromViewAssignment_1");
 					put(grammarAccess.getRefToContextAccess().getContextAssignment_4(), "rule__RefToContext__ContextAssignment_4");
 					put(grammarAccess.getRefToContextAccess().getQuestionsAssignment_5(), "rule__RefToContext__QuestionsAssignment_5");
-					put(grammarAccess.getMultiChoiceAccess().getQuestionAssignment_1(), "rule__MultiChoice__QuestionAssignment_1");
-					put(grammarAccess.getMultiChoiceAccess().getOptionsAssignment_5(), "rule__MultiChoice__OptionsAssignment_5");
-					put(grammarAccess.getMultiChoiceAccess().getOptionsAssignment_6_1(), "rule__MultiChoice__OptionsAssignment_6_1");
-					put(grammarAccess.getMultiChoiceAccess().getExplanationAssignment_8_1(), "rule__MultiChoice__ExplanationAssignment_8_1");
+					put(grammarAccess.getMultiChoiceAccess().getHideFromViewAssignment_1(), "rule__MultiChoice__HideFromViewAssignment_1");
+					put(grammarAccess.getMultiChoiceAccess().getQuestionAssignment_2(), "rule__MultiChoice__QuestionAssignment_2");
+					put(grammarAccess.getMultiChoiceAccess().getOptionsAssignment_6(), "rule__MultiChoice__OptionsAssignment_6");
+					put(grammarAccess.getMultiChoiceAccess().getOptionsAssignment_7_1(), "rule__MultiChoice__OptionsAssignment_7_1");
+					put(grammarAccess.getMultiChoiceAccess().getExplanationAssignment_9_1(), "rule__MultiChoice__ExplanationAssignment_9_1");
 					put(grammarAccess.getOptionAccess().getOptionValueAssignment_0(), "rule__Option__OptionValueAssignment_0");
 					put(grammarAccess.getOptionAccess().getCorrectOptionAssignment_1(), "rule__Option__CorrectOptionAssignment_1");
 					put(grammarAccess.getCMapAccess().getContentAssignment_2(), "rule__CMap__ContentAssignment_2");
