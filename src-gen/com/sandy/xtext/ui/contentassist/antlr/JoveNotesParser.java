@@ -64,6 +64,8 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMultiChoiceAccess().getGroup(), "rule__MultiChoice__Group__0");
 					put(grammarAccess.getMultiChoiceAccess().getGroup_7(), "rule__MultiChoice__Group_7__0");
 					put(grammarAccess.getMultiChoiceAccess().getGroup_9(), "rule__MultiChoice__Group_9__0");
+					put(grammarAccess.getMultiChoiceAccess().getGroup_10(), "rule__MultiChoice__Group_10__0");
+					put(grammarAccess.getMultiChoiceAccess().getGroup_11(), "rule__MultiChoice__Group_11__0");
 					put(grammarAccess.getOptionAccess().getGroup(), "rule__Option__Group__0");
 					put(grammarAccess.getCMapAccess().getGroup(), "rule__CMap__Group__0");
 					put(grammarAccess.getJoveNotesAccess().getProcessingHintsAssignment_0(), "rule__JoveNotes__ProcessingHintsAssignment_0");
@@ -144,7 +146,9 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMultiChoiceAccess().getQuestionAssignment_2(), "rule__MultiChoice__QuestionAssignment_2");
 					put(grammarAccess.getMultiChoiceAccess().getOptionsAssignment_6(), "rule__MultiChoice__OptionsAssignment_6");
 					put(grammarAccess.getMultiChoiceAccess().getOptionsAssignment_7_1(), "rule__MultiChoice__OptionsAssignment_7_1");
-					put(grammarAccess.getMultiChoiceAccess().getExplanationAssignment_9_1(), "rule__MultiChoice__ExplanationAssignment_9_1");
+					put(grammarAccess.getMultiChoiceAccess().getNumOptionsToShowAssignment_9_1(), "rule__MultiChoice__NumOptionsToShowAssignment_9_1");
+					put(grammarAccess.getMultiChoiceAccess().getNumOptionsPerRowAssignment_10_1(), "rule__MultiChoice__NumOptionsPerRowAssignment_10_1");
+					put(grammarAccess.getMultiChoiceAccess().getExplanationAssignment_11_1(), "rule__MultiChoice__ExplanationAssignment_11_1");
 					put(grammarAccess.getOptionAccess().getOptionValueAssignment_0(), "rule__Option__OptionValueAssignment_0");
 					put(grammarAccess.getOptionAccess().getCorrectOptionAssignment_1(), "rule__Option__CorrectOptionAssignment_1");
 					put(grammarAccess.getCMapAccess().getContentAssignment_2(), "rule__CMap__ContentAssignment_2");
