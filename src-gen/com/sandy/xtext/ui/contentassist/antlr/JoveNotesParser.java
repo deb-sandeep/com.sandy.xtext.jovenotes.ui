@@ -49,6 +49,10 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTeacherNoteAccess().getGroup(), "rule__TeacherNote__Group__0");
 					put(grammarAccess.getMatchingAccess().getGroup(), "rule__Matching__Group__0");
 					put(grammarAccess.getMatchPairAccess().getGroup(), "rule__MatchPair__Group__0");
+					put(grammarAccess.getMatchMCQConfigAccess().getGroup(), "rule__MatchMCQConfig__Group__0");
+					put(grammarAccess.getMatchMCQConfigAccess().getGroup_4(), "rule__MatchMCQConfig__Group_4__0");
+					put(grammarAccess.getMatchMCQConfigAccess().getGroup_5(), "rule__MatchMCQConfig__Group_5__0");
+					put(grammarAccess.getMatchMCQConfigAccess().getGroup_6(), "rule__MatchMCQConfig__Group_6__0");
 					put(grammarAccess.getEventAccess().getGroup(), "rule__Event__Group__0");
 					put(grammarAccess.getTrueFalseAccess().getGroup(), "rule__TrueFalse__Group__0");
 					put(grammarAccess.getChemEquationAccess().getGroup(), "rule__ChemEquation__Group__0");
@@ -104,8 +108,13 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMatchingAccess().getSkipReverseQuestionAssignment_2(), "rule__Matching__SkipReverseQuestionAssignment_2");
 					put(grammarAccess.getMatchingAccess().getQuestionAssignment_3(), "rule__Matching__QuestionAssignment_3");
 					put(grammarAccess.getMatchingAccess().getPairsAssignment_5(), "rule__Matching__PairsAssignment_5");
+					put(grammarAccess.getMatchingAccess().getMcqConfigAssignment_6(), "rule__Matching__McqConfigAssignment_6");
 					put(grammarAccess.getMatchPairAccess().getMatchQuestionAssignment_0(), "rule__MatchPair__MatchQuestionAssignment_0");
 					put(grammarAccess.getMatchPairAccess().getMatchAnswerAssignment_2(), "rule__MatchPair__MatchAnswerAssignment_2");
+					put(grammarAccess.getMatchMCQConfigAccess().getForwardCaptionAssignment_3(), "rule__MatchMCQConfig__ForwardCaptionAssignment_3");
+					put(grammarAccess.getMatchMCQConfigAccess().getReverseCaptionAssignment_4_1(), "rule__MatchMCQConfig__ReverseCaptionAssignment_4_1");
+					put(grammarAccess.getMatchMCQConfigAccess().getNumOptionsToShowAssignment_5_1(), "rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1");
+					put(grammarAccess.getMatchMCQConfigAccess().getNumOptionsPerRowAssignment_6_1(), "rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1");
 					put(grammarAccess.getEventAccess().getHideFromViewAssignment_1(), "rule__Event__HideFromViewAssignment_1");
 					put(grammarAccess.getEventAccess().getEventAssignment_2(), "rule__Event__EventAssignment_2");
 					put(grammarAccess.getEventAccess().getTimeAssignment_3(), "rule__Event__TimeAssignment_3");
