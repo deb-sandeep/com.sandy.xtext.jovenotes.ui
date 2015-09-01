@@ -37,10 +37,11 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getNotesElementAccess().getAlternatives(), "rule__NotesElement__Alternatives");
+					put(grammarAccess.getNotesElementAccess().getAlternatives_0(), "rule__NotesElement__Alternatives_0");
 					put(grammarAccess.getJoveNotesAccess().getGroup(), "rule__JoveNotes__Group__0");
 					put(grammarAccess.getProcessingHintsAccess().getGroup(), "rule__ProcessingHints__Group__0");
 					put(grammarAccess.getChapterDetailsAccess().getGroup(), "rule__ChapterDetails__Group__0");
+					put(grammarAccess.getNotesElementAccess().getGroup(), "rule__NotesElement__Group__0");
 					put(grammarAccess.getWordMeaningAccess().getGroup(), "rule__WordMeaning__Group__0");
 					put(grammarAccess.getQuestionAnswerAccess().getGroup(), "rule__QuestionAnswer__Group__0");
 					put(grammarAccess.getFIBAccess().getGroup(), "rule__FIB__Group__0");
@@ -72,6 +73,7 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMultiChoiceAccess().getGroup_11(), "rule__MultiChoice__Group_11__0");
 					put(grammarAccess.getOptionAccess().getGroup(), "rule__Option__Group__0");
 					put(grammarAccess.getCMapAccess().getGroup(), "rule__CMap__Group__0");
+					put(grammarAccess.getScriptAccess().getGroup(), "rule__Script__Group__0");
 					put(grammarAccess.getJoveNotesAccess().getProcessingHintsAssignment_0(), "rule__JoveNotes__ProcessingHintsAssignment_0");
 					put(grammarAccess.getJoveNotesAccess().getChapterDetailsAssignment_1(), "rule__JoveNotes__ChapterDetailsAssignment_1");
 					put(grammarAccess.getJoveNotesAccess().getNotesElementsAssignment_2(), "rule__JoveNotes__NotesElementsAssignment_2");
@@ -82,6 +84,8 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getChapterDetailsAccess().getChapterNumberAssignment_4(), "rule__ChapterDetails__ChapterNumberAssignment_4");
 					put(grammarAccess.getChapterDetailsAccess().getSubChapterNumberAssignment_6(), "rule__ChapterDetails__SubChapterNumberAssignment_6");
 					put(grammarAccess.getChapterDetailsAccess().getChapterNameAssignment_8(), "rule__ChapterDetails__ChapterNameAssignment_8");
+					put(grammarAccess.getChapterDetailsAccess().getScriptAssignment_9(), "rule__ChapterDetails__ScriptAssignment_9");
+					put(grammarAccess.getNotesElementAccess().getScriptAssignment_1(), "rule__NotesElement__ScriptAssignment_1");
 					put(grammarAccess.getWordMeaningAccess().getHideFromViewAssignment_1(), "rule__WordMeaning__HideFromViewAssignment_1");
 					put(grammarAccess.getWordMeaningAccess().getWordAssignment_2(), "rule__WordMeaning__WordAssignment_2");
 					put(grammarAccess.getWordMeaningAccess().getMeaningAssignment_3(), "rule__WordMeaning__MeaningAssignment_3");
@@ -161,6 +165,7 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOptionAccess().getOptionValueAssignment_0(), "rule__Option__OptionValueAssignment_0");
 					put(grammarAccess.getOptionAccess().getCorrectOptionAssignment_1(), "rule__Option__CorrectOptionAssignment_1");
 					put(grammarAccess.getCMapAccess().getContentAssignment_2(), "rule__CMap__ContentAssignment_2");
+					put(grammarAccess.getScriptAccess().getScriptBodyAssignment_2(), "rule__Script__ScriptBodyAssignment_2");
 				}
 			};
 		}
