@@ -74,6 +74,9 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOptionAccess().getGroup(), "rule__Option__Group__0");
 					put(grammarAccess.getCMapAccess().getGroup(), "rule__CMap__Group__0");
 					put(grammarAccess.getScriptAccess().getGroup(), "rule__Script__Group__0");
+					put(grammarAccess.getScriptAccess().getGroup_3(), "rule__Script__Group_3__0");
+					put(grammarAccess.getEvalVarAccess().getGroup(), "rule__EvalVar__Group__0");
+					put(grammarAccess.getScriptBodyAccess().getGroup(), "rule__ScriptBody__Group__0");
 					put(grammarAccess.getJoveNotesAccess().getProcessingHintsAssignment_0(), "rule__JoveNotes__ProcessingHintsAssignment_0");
 					put(grammarAccess.getJoveNotesAccess().getChapterDetailsAssignment_1(), "rule__JoveNotes__ChapterDetailsAssignment_1");
 					put(grammarAccess.getJoveNotesAccess().getNotesElementsAssignment_2(), "rule__JoveNotes__NotesElementsAssignment_2");
@@ -84,7 +87,7 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getChapterDetailsAccess().getChapterNumberAssignment_4(), "rule__ChapterDetails__ChapterNumberAssignment_4");
 					put(grammarAccess.getChapterDetailsAccess().getSubChapterNumberAssignment_6(), "rule__ChapterDetails__SubChapterNumberAssignment_6");
 					put(grammarAccess.getChapterDetailsAccess().getChapterNameAssignment_8(), "rule__ChapterDetails__ChapterNameAssignment_8");
-					put(grammarAccess.getChapterDetailsAccess().getScriptAssignment_9(), "rule__ChapterDetails__ScriptAssignment_9");
+					put(grammarAccess.getChapterDetailsAccess().getScriptBodyAssignment_9(), "rule__ChapterDetails__ScriptBodyAssignment_9");
 					put(grammarAccess.getNotesElementAccess().getScriptAssignment_1(), "rule__NotesElement__ScriptAssignment_1");
 					put(grammarAccess.getWordMeaningAccess().getHideFromViewAssignment_1(), "rule__WordMeaning__HideFromViewAssignment_1");
 					put(grammarAccess.getWordMeaningAccess().getWordAssignment_2(), "rule__WordMeaning__WordAssignment_2");
@@ -165,7 +168,12 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOptionAccess().getOptionValueAssignment_0(), "rule__Option__OptionValueAssignment_0");
 					put(grammarAccess.getOptionAccess().getCorrectOptionAssignment_1(), "rule__Option__CorrectOptionAssignment_1");
 					put(grammarAccess.getCMapAccess().getContentAssignment_2(), "rule__CMap__ContentAssignment_2");
-					put(grammarAccess.getScriptAccess().getScriptBodyAssignment_2(), "rule__Script__ScriptBodyAssignment_2");
+					put(grammarAccess.getScriptAccess().getEvalVarsAssignment_2(), "rule__Script__EvalVarsAssignment_2");
+					put(grammarAccess.getScriptAccess().getEvalVarsAssignment_3_1(), "rule__Script__EvalVarsAssignment_3_1");
+					put(grammarAccess.getScriptAccess().getScriptBodyAssignment_5(), "rule__Script__ScriptBodyAssignment_5");
+					put(grammarAccess.getEvalVarAccess().getVarNameAssignment_0(), "rule__EvalVar__VarNameAssignment_0");
+					put(grammarAccess.getEvalVarAccess().getVarExpressionAssignment_2(), "rule__EvalVar__VarExpressionAssignment_2");
+					put(grammarAccess.getScriptBodyAccess().getScriptBodyAssignment_2(), "rule__ScriptBody__ScriptBodyAssignment_2");
 				}
 			};
 		}
