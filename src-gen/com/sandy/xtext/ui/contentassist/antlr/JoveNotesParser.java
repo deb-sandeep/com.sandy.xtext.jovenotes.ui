@@ -173,7 +173,7 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getScriptAccess().getScriptBodyAssignment_5(), "rule__Script__ScriptBodyAssignment_5");
 					put(grammarAccess.getEvalVarAccess().getVarNameAssignment_0(), "rule__EvalVar__VarNameAssignment_0");
 					put(grammarAccess.getEvalVarAccess().getVarExpressionAssignment_2(), "rule__EvalVar__VarExpressionAssignment_2");
-					put(grammarAccess.getScriptBodyAccess().getScriptBodyAssignment_2(), "rule__ScriptBody__ScriptBodyAssignment_2");
+					put(grammarAccess.getScriptBodyAccess().getScriptAssignment_2(), "rule__ScriptBody__ScriptAssignment_2");
 				}
 			};
 		}

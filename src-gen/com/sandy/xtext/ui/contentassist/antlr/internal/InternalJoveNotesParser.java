@@ -17550,31 +17550,31 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ScriptBody__Group__2__Impl"
-    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:6539:1: rule__ScriptBody__Group__2__Impl : ( ( rule__ScriptBody__ScriptBodyAssignment_2 ) ) ;
+    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:6539:1: rule__ScriptBody__Group__2__Impl : ( ( rule__ScriptBody__ScriptAssignment_2 ) ) ;
     public final void rule__ScriptBody__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:6543:1: ( ( ( rule__ScriptBody__ScriptBodyAssignment_2 ) ) )
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:6544:1: ( ( rule__ScriptBody__ScriptBodyAssignment_2 ) )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:6543:1: ( ( ( rule__ScriptBody__ScriptAssignment_2 ) ) )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:6544:1: ( ( rule__ScriptBody__ScriptAssignment_2 ) )
             {
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:6544:1: ( ( rule__ScriptBody__ScriptBodyAssignment_2 ) )
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:6545:1: ( rule__ScriptBody__ScriptBodyAssignment_2 )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:6544:1: ( ( rule__ScriptBody__ScriptAssignment_2 ) )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:6545:1: ( rule__ScriptBody__ScriptAssignment_2 )
             {
-             before(grammarAccess.getScriptBodyAccess().getScriptBodyAssignment_2()); 
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:6546:1: ( rule__ScriptBody__ScriptBodyAssignment_2 )
-            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:6546:2: rule__ScriptBody__ScriptBodyAssignment_2
+             before(grammarAccess.getScriptBodyAccess().getScriptAssignment_2()); 
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:6546:1: ( rule__ScriptBody__ScriptAssignment_2 )
+            // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:6546:2: rule__ScriptBody__ScriptAssignment_2
             {
-            pushFollow(FOLLOW_rule__ScriptBody__ScriptBodyAssignment_2_in_rule__ScriptBody__Group__2__Impl13108);
-            rule__ScriptBody__ScriptBodyAssignment_2();
+            pushFollow(FOLLOW_rule__ScriptBody__ScriptAssignment_2_in_rule__ScriptBody__Group__2__Impl13108);
+            rule__ScriptBody__ScriptAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getScriptBodyAccess().getScriptBodyAssignment_2()); 
+             after(grammarAccess.getScriptBodyAccess().getScriptAssignment_2()); 
 
             }
 
@@ -21470,9 +21470,9 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__EvalVar__VarExpressionAssignment_2"
 
 
-    // $ANTLR start "rule__ScriptBody__ScriptBodyAssignment_2"
-    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:8203:1: rule__ScriptBody__ScriptBodyAssignment_2 : ( RULE_STRING ) ;
-    public final void rule__ScriptBody__ScriptBodyAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__ScriptBody__ScriptAssignment_2"
+    // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:8203:1: rule__ScriptBody__ScriptAssignment_2 : ( RULE_STRING ) ;
+    public final void rule__ScriptBody__ScriptAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -21483,9 +21483,9 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:8208:1: ( RULE_STRING )
             // ../com.sandy.xtext.jovenotes.ui/src-gen/com/sandy/xtext/ui/contentassist/antlr/internal/InternalJoveNotes.g:8209:1: RULE_STRING
             {
-             before(grammarAccess.getScriptBodyAccess().getScriptBodySTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ScriptBody__ScriptBodyAssignment_216459); 
-             after(grammarAccess.getScriptBodyAccess().getScriptBodySTRINGTerminalRuleCall_2_0()); 
+             before(grammarAccess.getScriptBodyAccess().getScriptSTRINGTerminalRuleCall_2_0()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ScriptBody__ScriptAssignment_216459); 
+             after(grammarAccess.getScriptBodyAccess().getScriptSTRINGTerminalRuleCall_2_0()); 
 
             }
 
@@ -21504,7 +21504,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__ScriptBody__ScriptBodyAssignment_2"
+    // $ANTLR end "rule__ScriptBody__ScriptAssignment_2"
 
     // Delegated rules
 
@@ -22106,7 +22106,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
     public static final BitSet FOLLOW_23_in_rule__ScriptBody__Group__1__Impl13047 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ScriptBody__Group__2__Impl_in_rule__ScriptBody__Group__213078 = new BitSet(new long[]{0x0000000001000000L});
     public static final BitSet FOLLOW_rule__ScriptBody__Group__3_in_rule__ScriptBody__Group__213081 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ScriptBody__ScriptBodyAssignment_2_in_rule__ScriptBody__Group__2__Impl13108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ScriptBody__ScriptAssignment_2_in_rule__ScriptBody__Group__2__Impl13108 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ScriptBody__Group__3__Impl_in_rule__ScriptBody__Group__313138 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_24_in_rule__ScriptBody__Group__3__Impl13166 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleProcessingHints_in_rule__JoveNotes__ProcessingHintsAssignment_013210 = new BitSet(new long[]{0x0000000000000002L});
@@ -22205,6 +22205,6 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
     public static final BitSet FOLLOW_ruleScriptBody_in_rule__Script__ScriptBodyAssignment_516366 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_rule__EvalVar__VarNameAssignment_016397 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_rule__EvalVar__VarExpressionAssignment_216428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__ScriptBody__ScriptBodyAssignment_216459 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__ScriptBody__ScriptAssignment_216459 = new BitSet(new long[]{0x0000000000000002L});
 
 }

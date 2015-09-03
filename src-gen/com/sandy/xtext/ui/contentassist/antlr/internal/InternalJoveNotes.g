@@ -6542,9 +6542,9 @@ rule__ScriptBody__Group__2__Impl
     }
 :
 (
-{ before(grammarAccess.getScriptBodyAccess().getScriptBodyAssignment_2()); }
-(rule__ScriptBody__ScriptBodyAssignment_2)
-{ after(grammarAccess.getScriptBodyAccess().getScriptBodyAssignment_2()); }
+{ before(grammarAccess.getScriptBodyAccess().getScriptAssignment_2()); }
+(rule__ScriptBody__ScriptAssignment_2)
+{ after(grammarAccess.getScriptBodyAccess().getScriptAssignment_2()); }
 )
 
 ;
@@ -8200,14 +8200,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ScriptBody__ScriptBodyAssignment_2
+rule__ScriptBody__ScriptAssignment_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getScriptBodyAccess().getScriptBodySTRINGTerminalRuleCall_2_0()); }
-	RULE_STRING{ after(grammarAccess.getScriptBodyAccess().getScriptBodySTRINGTerminalRuleCall_2_0()); }
+{ before(grammarAccess.getScriptBodyAccess().getScriptSTRINGTerminalRuleCall_2_0()); }
+	RULE_STRING{ after(grammarAccess.getScriptBodyAccess().getScriptSTRINGTerminalRuleCall_2_0()); }
 )
 
 ;
