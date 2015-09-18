@@ -38,6 +38,7 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getNotesElementAccess().getAlternatives_0(), "rule__NotesElement__Alternatives_0");
+					put(grammarAccess.getRTCElementAccess().getAlternatives(), "rule__RTCElement__Alternatives");
 					put(grammarAccess.getJoveNotesAccess().getGroup(), "rule__JoveNotes__Group__0");
 					put(grammarAccess.getProcessingHintsAccess().getGroup(), "rule__ProcessingHints__Group__0");
 					put(grammarAccess.getChapterDetailsAccess().getGroup(), "rule__ChapterDetails__Group__0");
@@ -157,7 +158,7 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEqSymbolAccess().getDescriptionAssignment_2(), "rule__EqSymbol__DescriptionAssignment_2");
 					put(grammarAccess.getRefToContextAccess().getHideFromViewAssignment_1(), "rule__RefToContext__HideFromViewAssignment_1");
 					put(grammarAccess.getRefToContextAccess().getContextAssignment_4(), "rule__RefToContext__ContextAssignment_4");
-					put(grammarAccess.getRefToContextAccess().getNotesElementsAssignment_5(), "rule__RefToContext__NotesElementsAssignment_5");
+					put(grammarAccess.getRefToContextAccess().getRtcElementAssignment_5(), "rule__RefToContext__RtcElementAssignment_5");
 					put(grammarAccess.getMultiChoiceAccess().getHideFromViewAssignment_1(), "rule__MultiChoice__HideFromViewAssignment_1");
 					put(grammarAccess.getMultiChoiceAccess().getQuestionAssignment_2(), "rule__MultiChoice__QuestionAssignment_2");
 					put(grammarAccess.getMultiChoiceAccess().getOptionsAssignment_6(), "rule__MultiChoice__OptionsAssignment_6");
