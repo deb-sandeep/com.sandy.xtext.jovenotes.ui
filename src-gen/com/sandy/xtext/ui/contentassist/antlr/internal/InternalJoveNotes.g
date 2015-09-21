@@ -1075,27 +1075,21 @@ rule__RTCElement__Alternatives
 )
 
     |(
-{ before(grammarAccess.getRTCElementAccess().getSpellbeeParserRuleCall_11()); }
-	ruleSpellbee
-{ after(grammarAccess.getRTCElementAccess().getSpellbeeParserRuleCall_11()); }
-)
-
-    |(
-{ before(grammarAccess.getRTCElementAccess().getImageLabelParserRuleCall_12()); }
+{ before(grammarAccess.getRTCElementAccess().getImageLabelParserRuleCall_11()); }
 	ruleImageLabel
-{ after(grammarAccess.getRTCElementAccess().getImageLabelParserRuleCall_12()); }
+{ after(grammarAccess.getRTCElementAccess().getImageLabelParserRuleCall_11()); }
 )
 
     |(
-{ before(grammarAccess.getRTCElementAccess().getEquationParserRuleCall_13()); }
+{ before(grammarAccess.getRTCElementAccess().getEquationParserRuleCall_12()); }
 	ruleEquation
-{ after(grammarAccess.getRTCElementAccess().getEquationParserRuleCall_13()); }
+{ after(grammarAccess.getRTCElementAccess().getEquationParserRuleCall_12()); }
 )
 
     |(
-{ before(grammarAccess.getRTCElementAccess().getMultiChoiceParserRuleCall_14()); }
+{ before(grammarAccess.getRTCElementAccess().getMultiChoiceParserRuleCall_13()); }
 	ruleMultiChoice
-{ after(grammarAccess.getRTCElementAccess().getMultiChoiceParserRuleCall_14()); }
+{ after(grammarAccess.getRTCElementAccess().getMultiChoiceParserRuleCall_13()); }
 )
 
 ;
