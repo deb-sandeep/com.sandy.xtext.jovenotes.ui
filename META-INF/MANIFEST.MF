@@ -21,5 +21,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: com.sandy.xtext.ui.quickfix,
  com.sandy.xtext.ui.contentassist,
  com.sandy.xtext.ui.internal,
- com.sandy.xtext.ui.contentassist.antlr
+ com.sandy.xtext.ui.contentassist.antlr,
+ com.sandy.xtext.ui.contentassist.antlr.internal
 Bundle-Activator: com.sandy.xtext.ui.internal.JoveNotesActivator
