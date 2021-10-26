@@ -812,6 +812,34 @@ finally {
 
 
 
+// Entry rule entryRuleCompilerBreak
+entryRuleCompilerBreak 
+:
+{ before(grammarAccess.getCompilerBreakRule()); }
+	 ruleCompilerBreak
+{ after(grammarAccess.getCompilerBreakRule()); } 
+	 EOF 
+;
+
+// Rule CompilerBreak
+ruleCompilerBreak
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getCompilerBreakAccess().getGroup()); }
+(rule__CompilerBreak__Group__0)
+{ after(grammarAccess.getCompilerBreakAccess().getGroup()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
 // Entry rule entryRuleOption
 entryRuleOption 
 :
@@ -1064,6 +1092,12 @@ rule__NotesElement__Alternatives_0
 { before(grammarAccess.getNotesElementAccess().getVoiceToTextParserRuleCall_0_17()); }
 	ruleVoiceToText
 { after(grammarAccess.getNotesElementAccess().getVoiceToTextParserRuleCall_0_17()); }
+)
+
+    |(
+{ before(grammarAccess.getNotesElementAccess().getCompilerBreakParserRuleCall_0_18()); }
+	ruleCompilerBreak
+{ after(grammarAccess.getNotesElementAccess().getCompilerBreakParserRuleCall_0_18()); }
 )
 
 ;
@@ -6715,6 +6749,71 @@ finally {
 
 
 
+
+
+
+
+
+
+rule__CompilerBreak__Group__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__CompilerBreak__Group__0__Impl
+	rule__CompilerBreak__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__CompilerBreak__Group__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getCompilerBreakAccess().getCompilerBreakAction_0()); }
+(
+
+)
+{ after(grammarAccess.getCompilerBreakAccess().getCompilerBreakAction_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__CompilerBreak__Group__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__CompilerBreak__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__CompilerBreak__Group__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getCompilerBreakAccess().getCompiler_breakKeyword_1()); }
+
+	'@compiler_break' 
+
+{ after(grammarAccess.getCompilerBreakAccess().getCompiler_breakKeyword_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
 
 
 

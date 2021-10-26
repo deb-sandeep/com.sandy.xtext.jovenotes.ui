@@ -77,6 +77,7 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExerciseAccess().getGroup_4(), "rule__Exercise__Group_4__0");
 					put(grammarAccess.getExerciseAccess().getGroup_5(), "rule__Exercise__Group_5__0");
 					put(grammarAccess.getVoiceToTextAccess().getGroup(), "rule__VoiceToText__Group__0");
+					put(grammarAccess.getCompilerBreakAccess().getGroup(), "rule__CompilerBreak__Group__0");
 					put(grammarAccess.getOptionAccess().getGroup(), "rule__Option__Group__0");
 					put(grammarAccess.getCMapAccess().getGroup(), "rule__CMap__Group__0");
 					put(grammarAccess.getScriptAccess().getGroup(), "rule__Script__Group__0");
