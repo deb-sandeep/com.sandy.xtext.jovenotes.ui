@@ -78,6 +78,7 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExerciseAccess().getGroup_5(), "rule__Exercise__Group_5__0");
 					put(grammarAccess.getVoiceToTextAccess().getGroup(), "rule__VoiceToText__Group__0");
 					put(grammarAccess.getCompilerBreakAccess().getGroup(), "rule__CompilerBreak__Group__0");
+					put(grammarAccess.getChapterSectionAccess().getGroup(), "rule__ChapterSection__Group__0");
 					put(grammarAccess.getOptionAccess().getGroup(), "rule__Option__Group__0");
 					put(grammarAccess.getCMapAccess().getGroup(), "rule__CMap__Group__0");
 					put(grammarAccess.getScriptAccess().getGroup(), "rule__Script__Group__0");
@@ -180,6 +181,7 @@ public class JoveNotesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVoiceToTextAccess().getHideFromViewAssignment_1(), "rule__VoiceToText__HideFromViewAssignment_1");
 					put(grammarAccess.getVoiceToTextAccess().getClipNameAssignment_2(), "rule__VoiceToText__ClipNameAssignment_2");
 					put(grammarAccess.getVoiceToTextAccess().getTextAssignment_3(), "rule__VoiceToText__TextAssignment_3");
+					put(grammarAccess.getChapterSectionAccess().getSectionNameAssignment_1(), "rule__ChapterSection__SectionNameAssignment_1");
 					put(grammarAccess.getOptionAccess().getOptionValueAssignment_0(), "rule__Option__OptionValueAssignment_0");
 					put(grammarAccess.getOptionAccess().getCorrectOptionAssignment_1(), "rule__Option__CorrectOptionAssignment_1");
 					put(grammarAccess.getCMapAccess().getContentAssignment_2(), "rule__CMap__ContentAssignment_2");

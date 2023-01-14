@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalJoveNotesParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_BOOL", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'subject'", "'chapterNumber'", "'.'", "'chapterName'", "'@wm'", "'@qa'", "'@fib'", "'@definition'", "'@character'", "'@tn'", "'@match'", "'{'", "'}'", "'='", "'@mcq_config'", "'@forwardCaption'", "'@reverseCaption'", "'@numOptionsToShow'", "'@numOptionsPerRow'", "'@event'", "'@true_false'", "'@chem_equation'", "'>'", "'@chem_compound'", "'@spellbee'", "'@image_label'", "'imageName'", "','", "'@equation'", "'where'", "'@rtc'", "'context'", "'@multi_choice'", "'@options'", "'@explanation'", "'@exercise'", "'marks'", "'hints'", "'answer'", "'@voice2text'", "'@compiler_break'", "'cmap'", "'script_expressions'", "'script'", "'@skip_generation'", "'@skip_generation_in_production'", "'@exercise_bank'", "'hide'", "'skip_reverse_question'", "'correct'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_BOOL", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'subject'", "'chapterNumber'", "'.'", "'chapterName'", "'@wm'", "'@qa'", "'@fib'", "'@definition'", "'@character'", "'@tn'", "'@match'", "'{'", "'}'", "'='", "'@mcq_config'", "'@forwardCaption'", "'@reverseCaption'", "'@numOptionsToShow'", "'@numOptionsPerRow'", "'@event'", "'@true_false'", "'@chem_equation'", "'>'", "'@chem_compound'", "'@spellbee'", "'@image_label'", "'imageName'", "','", "'@equation'", "'where'", "'@rtc'", "'context'", "'@multi_choice'", "'@options'", "'@explanation'", "'@exercise'", "'marks'", "'hints'", "'answer'", "'@voice2text'", "'@compiler_break'", "'@section'", "'cmap'", "'script_expressions'", "'script'", "'@skip_generation'", "'@skip_generation_in_production'", "'@exercise_bank'", "'hide'", "'skip_reverse_question'", "'correct'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -55,6 +55,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
     public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
+    public static final int T__62=62;
     public static final int T__20=20;
     public static final int T__21=21;
     public static final int RULE_STRING=4;
@@ -2277,12 +2278,89 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
     // $ANTLR end "ruleCompilerBreak"
 
 
+    // $ANTLR start "entryRuleChapterSection"
+    // InternalJoveNotes.g:844:1: entryRuleChapterSection : ruleChapterSection EOF ;
+    public final void entryRuleChapterSection() throws RecognitionException {
+        try {
+            // InternalJoveNotes.g:845:1: ( ruleChapterSection EOF )
+            // InternalJoveNotes.g:846:1: ruleChapterSection EOF
+            {
+             before(grammarAccess.getChapterSectionRule()); 
+            pushFollow(FOLLOW_1);
+            ruleChapterSection();
+
+            state._fsp--;
+
+             after(grammarAccess.getChapterSectionRule()); 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleChapterSection"
+
+
+    // $ANTLR start "ruleChapterSection"
+    // InternalJoveNotes.g:853:1: ruleChapterSection : ( ( rule__ChapterSection__Group__0 ) ) ;
+    public final void ruleChapterSection() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalJoveNotes.g:857:2: ( ( ( rule__ChapterSection__Group__0 ) ) )
+            // InternalJoveNotes.g:858:1: ( ( rule__ChapterSection__Group__0 ) )
+            {
+            // InternalJoveNotes.g:858:1: ( ( rule__ChapterSection__Group__0 ) )
+            // InternalJoveNotes.g:859:1: ( rule__ChapterSection__Group__0 )
+            {
+             before(grammarAccess.getChapterSectionAccess().getGroup()); 
+            // InternalJoveNotes.g:860:1: ( rule__ChapterSection__Group__0 )
+            // InternalJoveNotes.g:860:2: rule__ChapterSection__Group__0
+            {
+            pushFollow(FOLLOW_2);
+            rule__ChapterSection__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getChapterSectionAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleChapterSection"
+
+
     // $ANTLR start "entryRuleOption"
-    // InternalJoveNotes.g:844:1: entryRuleOption : ruleOption EOF ;
+    // InternalJoveNotes.g:872:1: entryRuleOption : ruleOption EOF ;
     public final void entryRuleOption() throws RecognitionException {
         try {
-            // InternalJoveNotes.g:845:1: ( ruleOption EOF )
-            // InternalJoveNotes.g:846:1: ruleOption EOF
+            // InternalJoveNotes.g:873:1: ( ruleOption EOF )
+            // InternalJoveNotes.g:874:1: ruleOption EOF
             {
              before(grammarAccess.getOptionRule()); 
             pushFollow(FOLLOW_1);
@@ -2308,21 +2386,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleOption"
-    // InternalJoveNotes.g:853:1: ruleOption : ( ( rule__Option__Group__0 ) ) ;
+    // InternalJoveNotes.g:881:1: ruleOption : ( ( rule__Option__Group__0 ) ) ;
     public final void ruleOption() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:857:2: ( ( ( rule__Option__Group__0 ) ) )
-            // InternalJoveNotes.g:858:1: ( ( rule__Option__Group__0 ) )
+            // InternalJoveNotes.g:885:2: ( ( ( rule__Option__Group__0 ) ) )
+            // InternalJoveNotes.g:886:1: ( ( rule__Option__Group__0 ) )
             {
-            // InternalJoveNotes.g:858:1: ( ( rule__Option__Group__0 ) )
-            // InternalJoveNotes.g:859:1: ( rule__Option__Group__0 )
+            // InternalJoveNotes.g:886:1: ( ( rule__Option__Group__0 ) )
+            // InternalJoveNotes.g:887:1: ( rule__Option__Group__0 )
             {
              before(grammarAccess.getOptionAccess().getGroup()); 
-            // InternalJoveNotes.g:860:1: ( rule__Option__Group__0 )
-            // InternalJoveNotes.g:860:2: rule__Option__Group__0
+            // InternalJoveNotes.g:888:1: ( rule__Option__Group__0 )
+            // InternalJoveNotes.g:888:2: rule__Option__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Option__Group__0();
@@ -2355,11 +2433,11 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleCMap"
-    // InternalJoveNotes.g:872:1: entryRuleCMap : ruleCMap EOF ;
+    // InternalJoveNotes.g:900:1: entryRuleCMap : ruleCMap EOF ;
     public final void entryRuleCMap() throws RecognitionException {
         try {
-            // InternalJoveNotes.g:873:1: ( ruleCMap EOF )
-            // InternalJoveNotes.g:874:1: ruleCMap EOF
+            // InternalJoveNotes.g:901:1: ( ruleCMap EOF )
+            // InternalJoveNotes.g:902:1: ruleCMap EOF
             {
              before(grammarAccess.getCMapRule()); 
             pushFollow(FOLLOW_1);
@@ -2385,21 +2463,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleCMap"
-    // InternalJoveNotes.g:881:1: ruleCMap : ( ( rule__CMap__Group__0 ) ) ;
+    // InternalJoveNotes.g:909:1: ruleCMap : ( ( rule__CMap__Group__0 ) ) ;
     public final void ruleCMap() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:885:2: ( ( ( rule__CMap__Group__0 ) ) )
-            // InternalJoveNotes.g:886:1: ( ( rule__CMap__Group__0 ) )
+            // InternalJoveNotes.g:913:2: ( ( ( rule__CMap__Group__0 ) ) )
+            // InternalJoveNotes.g:914:1: ( ( rule__CMap__Group__0 ) )
             {
-            // InternalJoveNotes.g:886:1: ( ( rule__CMap__Group__0 ) )
-            // InternalJoveNotes.g:887:1: ( rule__CMap__Group__0 )
+            // InternalJoveNotes.g:914:1: ( ( rule__CMap__Group__0 ) )
+            // InternalJoveNotes.g:915:1: ( rule__CMap__Group__0 )
             {
              before(grammarAccess.getCMapAccess().getGroup()); 
-            // InternalJoveNotes.g:888:1: ( rule__CMap__Group__0 )
-            // InternalJoveNotes.g:888:2: rule__CMap__Group__0
+            // InternalJoveNotes.g:916:1: ( rule__CMap__Group__0 )
+            // InternalJoveNotes.g:916:2: rule__CMap__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__CMap__Group__0();
@@ -2432,11 +2510,11 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleScript"
-    // InternalJoveNotes.g:900:1: entryRuleScript : ruleScript EOF ;
+    // InternalJoveNotes.g:928:1: entryRuleScript : ruleScript EOF ;
     public final void entryRuleScript() throws RecognitionException {
         try {
-            // InternalJoveNotes.g:901:1: ( ruleScript EOF )
-            // InternalJoveNotes.g:902:1: ruleScript EOF
+            // InternalJoveNotes.g:929:1: ( ruleScript EOF )
+            // InternalJoveNotes.g:930:1: ruleScript EOF
             {
              before(grammarAccess.getScriptRule()); 
             pushFollow(FOLLOW_1);
@@ -2462,21 +2540,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleScript"
-    // InternalJoveNotes.g:909:1: ruleScript : ( ( rule__Script__Group__0 ) ) ;
+    // InternalJoveNotes.g:937:1: ruleScript : ( ( rule__Script__Group__0 ) ) ;
     public final void ruleScript() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:913:2: ( ( ( rule__Script__Group__0 ) ) )
-            // InternalJoveNotes.g:914:1: ( ( rule__Script__Group__0 ) )
+            // InternalJoveNotes.g:941:2: ( ( ( rule__Script__Group__0 ) ) )
+            // InternalJoveNotes.g:942:1: ( ( rule__Script__Group__0 ) )
             {
-            // InternalJoveNotes.g:914:1: ( ( rule__Script__Group__0 ) )
-            // InternalJoveNotes.g:915:1: ( rule__Script__Group__0 )
+            // InternalJoveNotes.g:942:1: ( ( rule__Script__Group__0 ) )
+            // InternalJoveNotes.g:943:1: ( rule__Script__Group__0 )
             {
              before(grammarAccess.getScriptAccess().getGroup()); 
-            // InternalJoveNotes.g:916:1: ( rule__Script__Group__0 )
-            // InternalJoveNotes.g:916:2: rule__Script__Group__0
+            // InternalJoveNotes.g:944:1: ( rule__Script__Group__0 )
+            // InternalJoveNotes.g:944:2: rule__Script__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Script__Group__0();
@@ -2509,11 +2587,11 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleEvalVar"
-    // InternalJoveNotes.g:928:1: entryRuleEvalVar : ruleEvalVar EOF ;
+    // InternalJoveNotes.g:956:1: entryRuleEvalVar : ruleEvalVar EOF ;
     public final void entryRuleEvalVar() throws RecognitionException {
         try {
-            // InternalJoveNotes.g:929:1: ( ruleEvalVar EOF )
-            // InternalJoveNotes.g:930:1: ruleEvalVar EOF
+            // InternalJoveNotes.g:957:1: ( ruleEvalVar EOF )
+            // InternalJoveNotes.g:958:1: ruleEvalVar EOF
             {
              before(grammarAccess.getEvalVarRule()); 
             pushFollow(FOLLOW_1);
@@ -2539,21 +2617,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleEvalVar"
-    // InternalJoveNotes.g:937:1: ruleEvalVar : ( ( rule__EvalVar__Group__0 ) ) ;
+    // InternalJoveNotes.g:965:1: ruleEvalVar : ( ( rule__EvalVar__Group__0 ) ) ;
     public final void ruleEvalVar() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:941:2: ( ( ( rule__EvalVar__Group__0 ) ) )
-            // InternalJoveNotes.g:942:1: ( ( rule__EvalVar__Group__0 ) )
+            // InternalJoveNotes.g:969:2: ( ( ( rule__EvalVar__Group__0 ) ) )
+            // InternalJoveNotes.g:970:1: ( ( rule__EvalVar__Group__0 ) )
             {
-            // InternalJoveNotes.g:942:1: ( ( rule__EvalVar__Group__0 ) )
-            // InternalJoveNotes.g:943:1: ( rule__EvalVar__Group__0 )
+            // InternalJoveNotes.g:970:1: ( ( rule__EvalVar__Group__0 ) )
+            // InternalJoveNotes.g:971:1: ( rule__EvalVar__Group__0 )
             {
              before(grammarAccess.getEvalVarAccess().getGroup()); 
-            // InternalJoveNotes.g:944:1: ( rule__EvalVar__Group__0 )
-            // InternalJoveNotes.g:944:2: rule__EvalVar__Group__0
+            // InternalJoveNotes.g:972:1: ( rule__EvalVar__Group__0 )
+            // InternalJoveNotes.g:972:2: rule__EvalVar__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__EvalVar__Group__0();
@@ -2586,11 +2664,11 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleScriptBody"
-    // InternalJoveNotes.g:956:1: entryRuleScriptBody : ruleScriptBody EOF ;
+    // InternalJoveNotes.g:984:1: entryRuleScriptBody : ruleScriptBody EOF ;
     public final void entryRuleScriptBody() throws RecognitionException {
         try {
-            // InternalJoveNotes.g:957:1: ( ruleScriptBody EOF )
-            // InternalJoveNotes.g:958:1: ruleScriptBody EOF
+            // InternalJoveNotes.g:985:1: ( ruleScriptBody EOF )
+            // InternalJoveNotes.g:986:1: ruleScriptBody EOF
             {
              before(grammarAccess.getScriptBodyRule()); 
             pushFollow(FOLLOW_1);
@@ -2616,21 +2694,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleScriptBody"
-    // InternalJoveNotes.g:965:1: ruleScriptBody : ( ( rule__ScriptBody__Group__0 ) ) ;
+    // InternalJoveNotes.g:993:1: ruleScriptBody : ( ( rule__ScriptBody__Group__0 ) ) ;
     public final void ruleScriptBody() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:969:2: ( ( ( rule__ScriptBody__Group__0 ) ) )
-            // InternalJoveNotes.g:970:1: ( ( rule__ScriptBody__Group__0 ) )
+            // InternalJoveNotes.g:997:2: ( ( ( rule__ScriptBody__Group__0 ) ) )
+            // InternalJoveNotes.g:998:1: ( ( rule__ScriptBody__Group__0 ) )
             {
-            // InternalJoveNotes.g:970:1: ( ( rule__ScriptBody__Group__0 ) )
-            // InternalJoveNotes.g:971:1: ( rule__ScriptBody__Group__0 )
+            // InternalJoveNotes.g:998:1: ( ( rule__ScriptBody__Group__0 ) )
+            // InternalJoveNotes.g:999:1: ( rule__ScriptBody__Group__0 )
             {
              before(grammarAccess.getScriptBodyAccess().getGroup()); 
-            // InternalJoveNotes.g:972:1: ( rule__ScriptBody__Group__0 )
-            // InternalJoveNotes.g:972:2: rule__ScriptBody__Group__0
+            // InternalJoveNotes.g:1000:1: ( rule__ScriptBody__Group__0 )
+            // InternalJoveNotes.g:1000:2: rule__ScriptBody__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__ScriptBody__Group__0();
@@ -2663,14 +2741,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__NotesElement__Alternatives_0"
-    // InternalJoveNotes.g:984:1: rule__NotesElement__Alternatives_0 : ( ( ruleWordMeaning ) | ( ruleQuestionAnswer ) | ( ruleFIB ) | ( ruleDefinition ) | ( ruleCharacter ) | ( ruleTeacherNote ) | ( ruleMatching ) | ( ruleEvent ) | ( ruleTrueFalse ) | ( ruleChemEquation ) | ( ruleChemCompound ) | ( ruleSpellbee ) | ( ruleImageLabel ) | ( ruleEquation ) | ( ruleRefToContext ) | ( ruleMultiChoice ) | ( ruleExercise ) | ( ruleVoiceToText ) | ( ruleCompilerBreak ) );
+    // InternalJoveNotes.g:1012:1: rule__NotesElement__Alternatives_0 : ( ( ruleWordMeaning ) | ( ruleQuestionAnswer ) | ( ruleFIB ) | ( ruleDefinition ) | ( ruleCharacter ) | ( ruleTeacherNote ) | ( ruleMatching ) | ( ruleEvent ) | ( ruleTrueFalse ) | ( ruleChemEquation ) | ( ruleChemCompound ) | ( ruleSpellbee ) | ( ruleImageLabel ) | ( ruleEquation ) | ( ruleRefToContext ) | ( ruleMultiChoice ) | ( ruleExercise ) | ( ruleVoiceToText ) | ( ruleCompilerBreak ) | ( ruleChapterSection ) );
     public final void rule__NotesElement__Alternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:988:1: ( ( ruleWordMeaning ) | ( ruleQuestionAnswer ) | ( ruleFIB ) | ( ruleDefinition ) | ( ruleCharacter ) | ( ruleTeacherNote ) | ( ruleMatching ) | ( ruleEvent ) | ( ruleTrueFalse ) | ( ruleChemEquation ) | ( ruleChemCompound ) | ( ruleSpellbee ) | ( ruleImageLabel ) | ( ruleEquation ) | ( ruleRefToContext ) | ( ruleMultiChoice ) | ( ruleExercise ) | ( ruleVoiceToText ) | ( ruleCompilerBreak ) )
-            int alt1=19;
+            // InternalJoveNotes.g:1016:1: ( ( ruleWordMeaning ) | ( ruleQuestionAnswer ) | ( ruleFIB ) | ( ruleDefinition ) | ( ruleCharacter ) | ( ruleTeacherNote ) | ( ruleMatching ) | ( ruleEvent ) | ( ruleTrueFalse ) | ( ruleChemEquation ) | ( ruleChemCompound ) | ( ruleSpellbee ) | ( ruleImageLabel ) | ( ruleEquation ) | ( ruleRefToContext ) | ( ruleMultiChoice ) | ( ruleExercise ) | ( ruleVoiceToText ) | ( ruleCompilerBreak ) | ( ruleChapterSection ) )
+            int alt1=20;
             switch ( input.LA(1) ) {
             case 16:
                 {
@@ -2767,6 +2845,11 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                 alt1=19;
                 }
                 break;
+            case 53:
+                {
+                alt1=20;
+                }
+                break;
             default:
                 NoViableAltException nvae =
                     new NoViableAltException("", 1, 0, input);
@@ -2776,10 +2859,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
             switch (alt1) {
                 case 1 :
-                    // InternalJoveNotes.g:989:1: ( ruleWordMeaning )
+                    // InternalJoveNotes.g:1017:1: ( ruleWordMeaning )
                     {
-                    // InternalJoveNotes.g:989:1: ( ruleWordMeaning )
-                    // InternalJoveNotes.g:990:1: ruleWordMeaning
+                    // InternalJoveNotes.g:1017:1: ( ruleWordMeaning )
+                    // InternalJoveNotes.g:1018:1: ruleWordMeaning
                     {
                      before(grammarAccess.getNotesElementAccess().getWordMeaningParserRuleCall_0_0()); 
                     pushFollow(FOLLOW_2);
@@ -2795,10 +2878,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 2 :
-                    // InternalJoveNotes.g:995:6: ( ruleQuestionAnswer )
+                    // InternalJoveNotes.g:1023:6: ( ruleQuestionAnswer )
                     {
-                    // InternalJoveNotes.g:995:6: ( ruleQuestionAnswer )
-                    // InternalJoveNotes.g:996:1: ruleQuestionAnswer
+                    // InternalJoveNotes.g:1023:6: ( ruleQuestionAnswer )
+                    // InternalJoveNotes.g:1024:1: ruleQuestionAnswer
                     {
                      before(grammarAccess.getNotesElementAccess().getQuestionAnswerParserRuleCall_0_1()); 
                     pushFollow(FOLLOW_2);
@@ -2814,10 +2897,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 3 :
-                    // InternalJoveNotes.g:1001:6: ( ruleFIB )
+                    // InternalJoveNotes.g:1029:6: ( ruleFIB )
                     {
-                    // InternalJoveNotes.g:1001:6: ( ruleFIB )
-                    // InternalJoveNotes.g:1002:1: ruleFIB
+                    // InternalJoveNotes.g:1029:6: ( ruleFIB )
+                    // InternalJoveNotes.g:1030:1: ruleFIB
                     {
                      before(grammarAccess.getNotesElementAccess().getFIBParserRuleCall_0_2()); 
                     pushFollow(FOLLOW_2);
@@ -2833,10 +2916,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 4 :
-                    // InternalJoveNotes.g:1007:6: ( ruleDefinition )
+                    // InternalJoveNotes.g:1035:6: ( ruleDefinition )
                     {
-                    // InternalJoveNotes.g:1007:6: ( ruleDefinition )
-                    // InternalJoveNotes.g:1008:1: ruleDefinition
+                    // InternalJoveNotes.g:1035:6: ( ruleDefinition )
+                    // InternalJoveNotes.g:1036:1: ruleDefinition
                     {
                      before(grammarAccess.getNotesElementAccess().getDefinitionParserRuleCall_0_3()); 
                     pushFollow(FOLLOW_2);
@@ -2852,10 +2935,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 5 :
-                    // InternalJoveNotes.g:1013:6: ( ruleCharacter )
+                    // InternalJoveNotes.g:1041:6: ( ruleCharacter )
                     {
-                    // InternalJoveNotes.g:1013:6: ( ruleCharacter )
-                    // InternalJoveNotes.g:1014:1: ruleCharacter
+                    // InternalJoveNotes.g:1041:6: ( ruleCharacter )
+                    // InternalJoveNotes.g:1042:1: ruleCharacter
                     {
                      before(grammarAccess.getNotesElementAccess().getCharacterParserRuleCall_0_4()); 
                     pushFollow(FOLLOW_2);
@@ -2871,10 +2954,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 6 :
-                    // InternalJoveNotes.g:1019:6: ( ruleTeacherNote )
+                    // InternalJoveNotes.g:1047:6: ( ruleTeacherNote )
                     {
-                    // InternalJoveNotes.g:1019:6: ( ruleTeacherNote )
-                    // InternalJoveNotes.g:1020:1: ruleTeacherNote
+                    // InternalJoveNotes.g:1047:6: ( ruleTeacherNote )
+                    // InternalJoveNotes.g:1048:1: ruleTeacherNote
                     {
                      before(grammarAccess.getNotesElementAccess().getTeacherNoteParserRuleCall_0_5()); 
                     pushFollow(FOLLOW_2);
@@ -2890,10 +2973,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 7 :
-                    // InternalJoveNotes.g:1025:6: ( ruleMatching )
+                    // InternalJoveNotes.g:1053:6: ( ruleMatching )
                     {
-                    // InternalJoveNotes.g:1025:6: ( ruleMatching )
-                    // InternalJoveNotes.g:1026:1: ruleMatching
+                    // InternalJoveNotes.g:1053:6: ( ruleMatching )
+                    // InternalJoveNotes.g:1054:1: ruleMatching
                     {
                      before(grammarAccess.getNotesElementAccess().getMatchingParserRuleCall_0_6()); 
                     pushFollow(FOLLOW_2);
@@ -2909,10 +2992,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 8 :
-                    // InternalJoveNotes.g:1031:6: ( ruleEvent )
+                    // InternalJoveNotes.g:1059:6: ( ruleEvent )
                     {
-                    // InternalJoveNotes.g:1031:6: ( ruleEvent )
-                    // InternalJoveNotes.g:1032:1: ruleEvent
+                    // InternalJoveNotes.g:1059:6: ( ruleEvent )
+                    // InternalJoveNotes.g:1060:1: ruleEvent
                     {
                      before(grammarAccess.getNotesElementAccess().getEventParserRuleCall_0_7()); 
                     pushFollow(FOLLOW_2);
@@ -2928,10 +3011,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 9 :
-                    // InternalJoveNotes.g:1037:6: ( ruleTrueFalse )
+                    // InternalJoveNotes.g:1065:6: ( ruleTrueFalse )
                     {
-                    // InternalJoveNotes.g:1037:6: ( ruleTrueFalse )
-                    // InternalJoveNotes.g:1038:1: ruleTrueFalse
+                    // InternalJoveNotes.g:1065:6: ( ruleTrueFalse )
+                    // InternalJoveNotes.g:1066:1: ruleTrueFalse
                     {
                      before(grammarAccess.getNotesElementAccess().getTrueFalseParserRuleCall_0_8()); 
                     pushFollow(FOLLOW_2);
@@ -2947,10 +3030,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 10 :
-                    // InternalJoveNotes.g:1043:6: ( ruleChemEquation )
+                    // InternalJoveNotes.g:1071:6: ( ruleChemEquation )
                     {
-                    // InternalJoveNotes.g:1043:6: ( ruleChemEquation )
-                    // InternalJoveNotes.g:1044:1: ruleChemEquation
+                    // InternalJoveNotes.g:1071:6: ( ruleChemEquation )
+                    // InternalJoveNotes.g:1072:1: ruleChemEquation
                     {
                      before(grammarAccess.getNotesElementAccess().getChemEquationParserRuleCall_0_9()); 
                     pushFollow(FOLLOW_2);
@@ -2966,10 +3049,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 11 :
-                    // InternalJoveNotes.g:1049:6: ( ruleChemCompound )
+                    // InternalJoveNotes.g:1077:6: ( ruleChemCompound )
                     {
-                    // InternalJoveNotes.g:1049:6: ( ruleChemCompound )
-                    // InternalJoveNotes.g:1050:1: ruleChemCompound
+                    // InternalJoveNotes.g:1077:6: ( ruleChemCompound )
+                    // InternalJoveNotes.g:1078:1: ruleChemCompound
                     {
                      before(grammarAccess.getNotesElementAccess().getChemCompoundParserRuleCall_0_10()); 
                     pushFollow(FOLLOW_2);
@@ -2985,10 +3068,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 12 :
-                    // InternalJoveNotes.g:1055:6: ( ruleSpellbee )
+                    // InternalJoveNotes.g:1083:6: ( ruleSpellbee )
                     {
-                    // InternalJoveNotes.g:1055:6: ( ruleSpellbee )
-                    // InternalJoveNotes.g:1056:1: ruleSpellbee
+                    // InternalJoveNotes.g:1083:6: ( ruleSpellbee )
+                    // InternalJoveNotes.g:1084:1: ruleSpellbee
                     {
                      before(grammarAccess.getNotesElementAccess().getSpellbeeParserRuleCall_0_11()); 
                     pushFollow(FOLLOW_2);
@@ -3004,10 +3087,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 13 :
-                    // InternalJoveNotes.g:1061:6: ( ruleImageLabel )
+                    // InternalJoveNotes.g:1089:6: ( ruleImageLabel )
                     {
-                    // InternalJoveNotes.g:1061:6: ( ruleImageLabel )
-                    // InternalJoveNotes.g:1062:1: ruleImageLabel
+                    // InternalJoveNotes.g:1089:6: ( ruleImageLabel )
+                    // InternalJoveNotes.g:1090:1: ruleImageLabel
                     {
                      before(grammarAccess.getNotesElementAccess().getImageLabelParserRuleCall_0_12()); 
                     pushFollow(FOLLOW_2);
@@ -3023,10 +3106,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 14 :
-                    // InternalJoveNotes.g:1067:6: ( ruleEquation )
+                    // InternalJoveNotes.g:1095:6: ( ruleEquation )
                     {
-                    // InternalJoveNotes.g:1067:6: ( ruleEquation )
-                    // InternalJoveNotes.g:1068:1: ruleEquation
+                    // InternalJoveNotes.g:1095:6: ( ruleEquation )
+                    // InternalJoveNotes.g:1096:1: ruleEquation
                     {
                      before(grammarAccess.getNotesElementAccess().getEquationParserRuleCall_0_13()); 
                     pushFollow(FOLLOW_2);
@@ -3042,10 +3125,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 15 :
-                    // InternalJoveNotes.g:1073:6: ( ruleRefToContext )
+                    // InternalJoveNotes.g:1101:6: ( ruleRefToContext )
                     {
-                    // InternalJoveNotes.g:1073:6: ( ruleRefToContext )
-                    // InternalJoveNotes.g:1074:1: ruleRefToContext
+                    // InternalJoveNotes.g:1101:6: ( ruleRefToContext )
+                    // InternalJoveNotes.g:1102:1: ruleRefToContext
                     {
                      before(grammarAccess.getNotesElementAccess().getRefToContextParserRuleCall_0_14()); 
                     pushFollow(FOLLOW_2);
@@ -3061,10 +3144,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 16 :
-                    // InternalJoveNotes.g:1079:6: ( ruleMultiChoice )
+                    // InternalJoveNotes.g:1107:6: ( ruleMultiChoice )
                     {
-                    // InternalJoveNotes.g:1079:6: ( ruleMultiChoice )
-                    // InternalJoveNotes.g:1080:1: ruleMultiChoice
+                    // InternalJoveNotes.g:1107:6: ( ruleMultiChoice )
+                    // InternalJoveNotes.g:1108:1: ruleMultiChoice
                     {
                      before(grammarAccess.getNotesElementAccess().getMultiChoiceParserRuleCall_0_15()); 
                     pushFollow(FOLLOW_2);
@@ -3080,10 +3163,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 17 :
-                    // InternalJoveNotes.g:1085:6: ( ruleExercise )
+                    // InternalJoveNotes.g:1113:6: ( ruleExercise )
                     {
-                    // InternalJoveNotes.g:1085:6: ( ruleExercise )
-                    // InternalJoveNotes.g:1086:1: ruleExercise
+                    // InternalJoveNotes.g:1113:6: ( ruleExercise )
+                    // InternalJoveNotes.g:1114:1: ruleExercise
                     {
                      before(grammarAccess.getNotesElementAccess().getExerciseParserRuleCall_0_16()); 
                     pushFollow(FOLLOW_2);
@@ -3099,10 +3182,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 18 :
-                    // InternalJoveNotes.g:1091:6: ( ruleVoiceToText )
+                    // InternalJoveNotes.g:1119:6: ( ruleVoiceToText )
                     {
-                    // InternalJoveNotes.g:1091:6: ( ruleVoiceToText )
-                    // InternalJoveNotes.g:1092:1: ruleVoiceToText
+                    // InternalJoveNotes.g:1119:6: ( ruleVoiceToText )
+                    // InternalJoveNotes.g:1120:1: ruleVoiceToText
                     {
                      before(grammarAccess.getNotesElementAccess().getVoiceToTextParserRuleCall_0_17()); 
                     pushFollow(FOLLOW_2);
@@ -3118,10 +3201,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 19 :
-                    // InternalJoveNotes.g:1097:6: ( ruleCompilerBreak )
+                    // InternalJoveNotes.g:1125:6: ( ruleCompilerBreak )
                     {
-                    // InternalJoveNotes.g:1097:6: ( ruleCompilerBreak )
-                    // InternalJoveNotes.g:1098:1: ruleCompilerBreak
+                    // InternalJoveNotes.g:1125:6: ( ruleCompilerBreak )
+                    // InternalJoveNotes.g:1126:1: ruleCompilerBreak
                     {
                      before(grammarAccess.getNotesElementAccess().getCompilerBreakParserRuleCall_0_18()); 
                     pushFollow(FOLLOW_2);
@@ -3130,6 +3213,25 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     state._fsp--;
 
                      after(grammarAccess.getNotesElementAccess().getCompilerBreakParserRuleCall_0_18()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 20 :
+                    // InternalJoveNotes.g:1131:6: ( ruleChapterSection )
+                    {
+                    // InternalJoveNotes.g:1131:6: ( ruleChapterSection )
+                    // InternalJoveNotes.g:1132:1: ruleChapterSection
+                    {
+                     before(grammarAccess.getNotesElementAccess().getChapterSectionParserRuleCall_0_19()); 
+                    pushFollow(FOLLOW_2);
+                    ruleChapterSection();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getNotesElementAccess().getChapterSectionParserRuleCall_0_19()); 
 
                     }
 
@@ -3154,13 +3256,13 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RTCElement__Alternatives"
-    // InternalJoveNotes.g:1108:1: rule__RTCElement__Alternatives : ( ( ruleWordMeaning ) | ( ruleQuestionAnswer ) | ( ruleFIB ) | ( ruleDefinition ) | ( ruleCharacter ) | ( ruleTeacherNote ) | ( ruleMatching ) | ( ruleEvent ) | ( ruleTrueFalse ) | ( ruleChemEquation ) | ( ruleChemCompound ) | ( ruleImageLabel ) | ( ruleEquation ) | ( ruleMultiChoice ) );
+    // InternalJoveNotes.g:1142:1: rule__RTCElement__Alternatives : ( ( ruleWordMeaning ) | ( ruleQuestionAnswer ) | ( ruleFIB ) | ( ruleDefinition ) | ( ruleCharacter ) | ( ruleTeacherNote ) | ( ruleMatching ) | ( ruleEvent ) | ( ruleTrueFalse ) | ( ruleChemEquation ) | ( ruleChemCompound ) | ( ruleImageLabel ) | ( ruleEquation ) | ( ruleMultiChoice ) );
     public final void rule__RTCElement__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1112:1: ( ( ruleWordMeaning ) | ( ruleQuestionAnswer ) | ( ruleFIB ) | ( ruleDefinition ) | ( ruleCharacter ) | ( ruleTeacherNote ) | ( ruleMatching ) | ( ruleEvent ) | ( ruleTrueFalse ) | ( ruleChemEquation ) | ( ruleChemCompound ) | ( ruleImageLabel ) | ( ruleEquation ) | ( ruleMultiChoice ) )
+            // InternalJoveNotes.g:1146:1: ( ( ruleWordMeaning ) | ( ruleQuestionAnswer ) | ( ruleFIB ) | ( ruleDefinition ) | ( ruleCharacter ) | ( ruleTeacherNote ) | ( ruleMatching ) | ( ruleEvent ) | ( ruleTrueFalse ) | ( ruleChemEquation ) | ( ruleChemCompound ) | ( ruleImageLabel ) | ( ruleEquation ) | ( ruleMultiChoice ) )
             int alt2=14;
             switch ( input.LA(1) ) {
             case 16:
@@ -3242,10 +3344,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
             switch (alt2) {
                 case 1 :
-                    // InternalJoveNotes.g:1113:1: ( ruleWordMeaning )
+                    // InternalJoveNotes.g:1147:1: ( ruleWordMeaning )
                     {
-                    // InternalJoveNotes.g:1113:1: ( ruleWordMeaning )
-                    // InternalJoveNotes.g:1114:1: ruleWordMeaning
+                    // InternalJoveNotes.g:1147:1: ( ruleWordMeaning )
+                    // InternalJoveNotes.g:1148:1: ruleWordMeaning
                     {
                      before(grammarAccess.getRTCElementAccess().getWordMeaningParserRuleCall_0()); 
                     pushFollow(FOLLOW_2);
@@ -3261,10 +3363,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 2 :
-                    // InternalJoveNotes.g:1119:6: ( ruleQuestionAnswer )
+                    // InternalJoveNotes.g:1153:6: ( ruleQuestionAnswer )
                     {
-                    // InternalJoveNotes.g:1119:6: ( ruleQuestionAnswer )
-                    // InternalJoveNotes.g:1120:1: ruleQuestionAnswer
+                    // InternalJoveNotes.g:1153:6: ( ruleQuestionAnswer )
+                    // InternalJoveNotes.g:1154:1: ruleQuestionAnswer
                     {
                      before(grammarAccess.getRTCElementAccess().getQuestionAnswerParserRuleCall_1()); 
                     pushFollow(FOLLOW_2);
@@ -3280,10 +3382,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 3 :
-                    // InternalJoveNotes.g:1125:6: ( ruleFIB )
+                    // InternalJoveNotes.g:1159:6: ( ruleFIB )
                     {
-                    // InternalJoveNotes.g:1125:6: ( ruleFIB )
-                    // InternalJoveNotes.g:1126:1: ruleFIB
+                    // InternalJoveNotes.g:1159:6: ( ruleFIB )
+                    // InternalJoveNotes.g:1160:1: ruleFIB
                     {
                      before(grammarAccess.getRTCElementAccess().getFIBParserRuleCall_2()); 
                     pushFollow(FOLLOW_2);
@@ -3299,10 +3401,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 4 :
-                    // InternalJoveNotes.g:1131:6: ( ruleDefinition )
+                    // InternalJoveNotes.g:1165:6: ( ruleDefinition )
                     {
-                    // InternalJoveNotes.g:1131:6: ( ruleDefinition )
-                    // InternalJoveNotes.g:1132:1: ruleDefinition
+                    // InternalJoveNotes.g:1165:6: ( ruleDefinition )
+                    // InternalJoveNotes.g:1166:1: ruleDefinition
                     {
                      before(grammarAccess.getRTCElementAccess().getDefinitionParserRuleCall_3()); 
                     pushFollow(FOLLOW_2);
@@ -3318,10 +3420,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 5 :
-                    // InternalJoveNotes.g:1137:6: ( ruleCharacter )
+                    // InternalJoveNotes.g:1171:6: ( ruleCharacter )
                     {
-                    // InternalJoveNotes.g:1137:6: ( ruleCharacter )
-                    // InternalJoveNotes.g:1138:1: ruleCharacter
+                    // InternalJoveNotes.g:1171:6: ( ruleCharacter )
+                    // InternalJoveNotes.g:1172:1: ruleCharacter
                     {
                      before(grammarAccess.getRTCElementAccess().getCharacterParserRuleCall_4()); 
                     pushFollow(FOLLOW_2);
@@ -3337,10 +3439,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 6 :
-                    // InternalJoveNotes.g:1143:6: ( ruleTeacherNote )
+                    // InternalJoveNotes.g:1177:6: ( ruleTeacherNote )
                     {
-                    // InternalJoveNotes.g:1143:6: ( ruleTeacherNote )
-                    // InternalJoveNotes.g:1144:1: ruleTeacherNote
+                    // InternalJoveNotes.g:1177:6: ( ruleTeacherNote )
+                    // InternalJoveNotes.g:1178:1: ruleTeacherNote
                     {
                      before(grammarAccess.getRTCElementAccess().getTeacherNoteParserRuleCall_5()); 
                     pushFollow(FOLLOW_2);
@@ -3356,10 +3458,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 7 :
-                    // InternalJoveNotes.g:1149:6: ( ruleMatching )
+                    // InternalJoveNotes.g:1183:6: ( ruleMatching )
                     {
-                    // InternalJoveNotes.g:1149:6: ( ruleMatching )
-                    // InternalJoveNotes.g:1150:1: ruleMatching
+                    // InternalJoveNotes.g:1183:6: ( ruleMatching )
+                    // InternalJoveNotes.g:1184:1: ruleMatching
                     {
                      before(grammarAccess.getRTCElementAccess().getMatchingParserRuleCall_6()); 
                     pushFollow(FOLLOW_2);
@@ -3375,10 +3477,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 8 :
-                    // InternalJoveNotes.g:1155:6: ( ruleEvent )
+                    // InternalJoveNotes.g:1189:6: ( ruleEvent )
                     {
-                    // InternalJoveNotes.g:1155:6: ( ruleEvent )
-                    // InternalJoveNotes.g:1156:1: ruleEvent
+                    // InternalJoveNotes.g:1189:6: ( ruleEvent )
+                    // InternalJoveNotes.g:1190:1: ruleEvent
                     {
                      before(grammarAccess.getRTCElementAccess().getEventParserRuleCall_7()); 
                     pushFollow(FOLLOW_2);
@@ -3394,10 +3496,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 9 :
-                    // InternalJoveNotes.g:1161:6: ( ruleTrueFalse )
+                    // InternalJoveNotes.g:1195:6: ( ruleTrueFalse )
                     {
-                    // InternalJoveNotes.g:1161:6: ( ruleTrueFalse )
-                    // InternalJoveNotes.g:1162:1: ruleTrueFalse
+                    // InternalJoveNotes.g:1195:6: ( ruleTrueFalse )
+                    // InternalJoveNotes.g:1196:1: ruleTrueFalse
                     {
                      before(grammarAccess.getRTCElementAccess().getTrueFalseParserRuleCall_8()); 
                     pushFollow(FOLLOW_2);
@@ -3413,10 +3515,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 10 :
-                    // InternalJoveNotes.g:1167:6: ( ruleChemEquation )
+                    // InternalJoveNotes.g:1201:6: ( ruleChemEquation )
                     {
-                    // InternalJoveNotes.g:1167:6: ( ruleChemEquation )
-                    // InternalJoveNotes.g:1168:1: ruleChemEquation
+                    // InternalJoveNotes.g:1201:6: ( ruleChemEquation )
+                    // InternalJoveNotes.g:1202:1: ruleChemEquation
                     {
                      before(grammarAccess.getRTCElementAccess().getChemEquationParserRuleCall_9()); 
                     pushFollow(FOLLOW_2);
@@ -3432,10 +3534,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 11 :
-                    // InternalJoveNotes.g:1173:6: ( ruleChemCompound )
+                    // InternalJoveNotes.g:1207:6: ( ruleChemCompound )
                     {
-                    // InternalJoveNotes.g:1173:6: ( ruleChemCompound )
-                    // InternalJoveNotes.g:1174:1: ruleChemCompound
+                    // InternalJoveNotes.g:1207:6: ( ruleChemCompound )
+                    // InternalJoveNotes.g:1208:1: ruleChemCompound
                     {
                      before(grammarAccess.getRTCElementAccess().getChemCompoundParserRuleCall_10()); 
                     pushFollow(FOLLOW_2);
@@ -3451,10 +3553,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 12 :
-                    // InternalJoveNotes.g:1179:6: ( ruleImageLabel )
+                    // InternalJoveNotes.g:1213:6: ( ruleImageLabel )
                     {
-                    // InternalJoveNotes.g:1179:6: ( ruleImageLabel )
-                    // InternalJoveNotes.g:1180:1: ruleImageLabel
+                    // InternalJoveNotes.g:1213:6: ( ruleImageLabel )
+                    // InternalJoveNotes.g:1214:1: ruleImageLabel
                     {
                      before(grammarAccess.getRTCElementAccess().getImageLabelParserRuleCall_11()); 
                     pushFollow(FOLLOW_2);
@@ -3470,10 +3572,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 13 :
-                    // InternalJoveNotes.g:1185:6: ( ruleEquation )
+                    // InternalJoveNotes.g:1219:6: ( ruleEquation )
                     {
-                    // InternalJoveNotes.g:1185:6: ( ruleEquation )
-                    // InternalJoveNotes.g:1186:1: ruleEquation
+                    // InternalJoveNotes.g:1219:6: ( ruleEquation )
+                    // InternalJoveNotes.g:1220:1: ruleEquation
                     {
                      before(grammarAccess.getRTCElementAccess().getEquationParserRuleCall_12()); 
                     pushFollow(FOLLOW_2);
@@ -3489,10 +3591,10 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 14 :
-                    // InternalJoveNotes.g:1191:6: ( ruleMultiChoice )
+                    // InternalJoveNotes.g:1225:6: ( ruleMultiChoice )
                     {
-                    // InternalJoveNotes.g:1191:6: ( ruleMultiChoice )
-                    // InternalJoveNotes.g:1192:1: ruleMultiChoice
+                    // InternalJoveNotes.g:1225:6: ( ruleMultiChoice )
+                    // InternalJoveNotes.g:1226:1: ruleMultiChoice
                     {
                      before(grammarAccess.getRTCElementAccess().getMultiChoiceParserRuleCall_13()); 
                     pushFollow(FOLLOW_2);
@@ -3525,14 +3627,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__JoveNotes__Group__0"
-    // InternalJoveNotes.g:1204:1: rule__JoveNotes__Group__0 : rule__JoveNotes__Group__0__Impl rule__JoveNotes__Group__1 ;
+    // InternalJoveNotes.g:1238:1: rule__JoveNotes__Group__0 : rule__JoveNotes__Group__0__Impl rule__JoveNotes__Group__1 ;
     public final void rule__JoveNotes__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1208:1: ( rule__JoveNotes__Group__0__Impl rule__JoveNotes__Group__1 )
-            // InternalJoveNotes.g:1209:2: rule__JoveNotes__Group__0__Impl rule__JoveNotes__Group__1
+            // InternalJoveNotes.g:1242:1: ( rule__JoveNotes__Group__0__Impl rule__JoveNotes__Group__1 )
+            // InternalJoveNotes.g:1243:2: rule__JoveNotes__Group__0__Impl rule__JoveNotes__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__JoveNotes__Group__0__Impl();
@@ -3563,21 +3665,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__JoveNotes__Group__0__Impl"
-    // InternalJoveNotes.g:1216:1: rule__JoveNotes__Group__0__Impl : ( ( rule__JoveNotes__ProcessingHintsAssignment_0 ) ) ;
+    // InternalJoveNotes.g:1250:1: rule__JoveNotes__Group__0__Impl : ( ( rule__JoveNotes__ProcessingHintsAssignment_0 ) ) ;
     public final void rule__JoveNotes__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1220:1: ( ( ( rule__JoveNotes__ProcessingHintsAssignment_0 ) ) )
-            // InternalJoveNotes.g:1221:1: ( ( rule__JoveNotes__ProcessingHintsAssignment_0 ) )
+            // InternalJoveNotes.g:1254:1: ( ( ( rule__JoveNotes__ProcessingHintsAssignment_0 ) ) )
+            // InternalJoveNotes.g:1255:1: ( ( rule__JoveNotes__ProcessingHintsAssignment_0 ) )
             {
-            // InternalJoveNotes.g:1221:1: ( ( rule__JoveNotes__ProcessingHintsAssignment_0 ) )
-            // InternalJoveNotes.g:1222:1: ( rule__JoveNotes__ProcessingHintsAssignment_0 )
+            // InternalJoveNotes.g:1255:1: ( ( rule__JoveNotes__ProcessingHintsAssignment_0 ) )
+            // InternalJoveNotes.g:1256:1: ( rule__JoveNotes__ProcessingHintsAssignment_0 )
             {
              before(grammarAccess.getJoveNotesAccess().getProcessingHintsAssignment_0()); 
-            // InternalJoveNotes.g:1223:1: ( rule__JoveNotes__ProcessingHintsAssignment_0 )
-            // InternalJoveNotes.g:1223:2: rule__JoveNotes__ProcessingHintsAssignment_0
+            // InternalJoveNotes.g:1257:1: ( rule__JoveNotes__ProcessingHintsAssignment_0 )
+            // InternalJoveNotes.g:1257:2: rule__JoveNotes__ProcessingHintsAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__JoveNotes__ProcessingHintsAssignment_0();
@@ -3610,14 +3712,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__JoveNotes__Group__1"
-    // InternalJoveNotes.g:1233:1: rule__JoveNotes__Group__1 : rule__JoveNotes__Group__1__Impl rule__JoveNotes__Group__2 ;
+    // InternalJoveNotes.g:1267:1: rule__JoveNotes__Group__1 : rule__JoveNotes__Group__1__Impl rule__JoveNotes__Group__2 ;
     public final void rule__JoveNotes__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1237:1: ( rule__JoveNotes__Group__1__Impl rule__JoveNotes__Group__2 )
-            // InternalJoveNotes.g:1238:2: rule__JoveNotes__Group__1__Impl rule__JoveNotes__Group__2
+            // InternalJoveNotes.g:1271:1: ( rule__JoveNotes__Group__1__Impl rule__JoveNotes__Group__2 )
+            // InternalJoveNotes.g:1272:2: rule__JoveNotes__Group__1__Impl rule__JoveNotes__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__JoveNotes__Group__1__Impl();
@@ -3648,21 +3750,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__JoveNotes__Group__1__Impl"
-    // InternalJoveNotes.g:1245:1: rule__JoveNotes__Group__1__Impl : ( ( rule__JoveNotes__ChapterDetailsAssignment_1 ) ) ;
+    // InternalJoveNotes.g:1279:1: rule__JoveNotes__Group__1__Impl : ( ( rule__JoveNotes__ChapterDetailsAssignment_1 ) ) ;
     public final void rule__JoveNotes__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1249:1: ( ( ( rule__JoveNotes__ChapterDetailsAssignment_1 ) ) )
-            // InternalJoveNotes.g:1250:1: ( ( rule__JoveNotes__ChapterDetailsAssignment_1 ) )
+            // InternalJoveNotes.g:1283:1: ( ( ( rule__JoveNotes__ChapterDetailsAssignment_1 ) ) )
+            // InternalJoveNotes.g:1284:1: ( ( rule__JoveNotes__ChapterDetailsAssignment_1 ) )
             {
-            // InternalJoveNotes.g:1250:1: ( ( rule__JoveNotes__ChapterDetailsAssignment_1 ) )
-            // InternalJoveNotes.g:1251:1: ( rule__JoveNotes__ChapterDetailsAssignment_1 )
+            // InternalJoveNotes.g:1284:1: ( ( rule__JoveNotes__ChapterDetailsAssignment_1 ) )
+            // InternalJoveNotes.g:1285:1: ( rule__JoveNotes__ChapterDetailsAssignment_1 )
             {
              before(grammarAccess.getJoveNotesAccess().getChapterDetailsAssignment_1()); 
-            // InternalJoveNotes.g:1252:1: ( rule__JoveNotes__ChapterDetailsAssignment_1 )
-            // InternalJoveNotes.g:1252:2: rule__JoveNotes__ChapterDetailsAssignment_1
+            // InternalJoveNotes.g:1286:1: ( rule__JoveNotes__ChapterDetailsAssignment_1 )
+            // InternalJoveNotes.g:1286:2: rule__JoveNotes__ChapterDetailsAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__JoveNotes__ChapterDetailsAssignment_1();
@@ -3695,14 +3797,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__JoveNotes__Group__2"
-    // InternalJoveNotes.g:1262:1: rule__JoveNotes__Group__2 : rule__JoveNotes__Group__2__Impl ;
+    // InternalJoveNotes.g:1296:1: rule__JoveNotes__Group__2 : rule__JoveNotes__Group__2__Impl ;
     public final void rule__JoveNotes__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1266:1: ( rule__JoveNotes__Group__2__Impl )
-            // InternalJoveNotes.g:1267:2: rule__JoveNotes__Group__2__Impl
+            // InternalJoveNotes.g:1300:1: ( rule__JoveNotes__Group__2__Impl )
+            // InternalJoveNotes.g:1301:2: rule__JoveNotes__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__JoveNotes__Group__2__Impl();
@@ -3728,33 +3830,33 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__JoveNotes__Group__2__Impl"
-    // InternalJoveNotes.g:1273:1: rule__JoveNotes__Group__2__Impl : ( ( rule__JoveNotes__NotesElementsAssignment_2 )* ) ;
+    // InternalJoveNotes.g:1307:1: rule__JoveNotes__Group__2__Impl : ( ( rule__JoveNotes__NotesElementsAssignment_2 )* ) ;
     public final void rule__JoveNotes__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1277:1: ( ( ( rule__JoveNotes__NotesElementsAssignment_2 )* ) )
-            // InternalJoveNotes.g:1278:1: ( ( rule__JoveNotes__NotesElementsAssignment_2 )* )
+            // InternalJoveNotes.g:1311:1: ( ( ( rule__JoveNotes__NotesElementsAssignment_2 )* ) )
+            // InternalJoveNotes.g:1312:1: ( ( rule__JoveNotes__NotesElementsAssignment_2 )* )
             {
-            // InternalJoveNotes.g:1278:1: ( ( rule__JoveNotes__NotesElementsAssignment_2 )* )
-            // InternalJoveNotes.g:1279:1: ( rule__JoveNotes__NotesElementsAssignment_2 )*
+            // InternalJoveNotes.g:1312:1: ( ( rule__JoveNotes__NotesElementsAssignment_2 )* )
+            // InternalJoveNotes.g:1313:1: ( rule__JoveNotes__NotesElementsAssignment_2 )*
             {
              before(grammarAccess.getJoveNotesAccess().getNotesElementsAssignment_2()); 
-            // InternalJoveNotes.g:1280:1: ( rule__JoveNotes__NotesElementsAssignment_2 )*
+            // InternalJoveNotes.g:1314:1: ( rule__JoveNotes__NotesElementsAssignment_2 )*
             loop3:
             do {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( ((LA3_0>=16 && LA3_0<=22)||(LA3_0>=31 && LA3_0<=33)||(LA3_0>=35 && LA3_0<=37)||LA3_0==40||LA3_0==42||LA3_0==44||LA3_0==47||(LA3_0>=51 && LA3_0<=52)) ) {
+                if ( ((LA3_0>=16 && LA3_0<=22)||(LA3_0>=31 && LA3_0<=33)||(LA3_0>=35 && LA3_0<=37)||LA3_0==40||LA3_0==42||LA3_0==44||LA3_0==47||(LA3_0>=51 && LA3_0<=53)) ) {
                     alt3=1;
                 }
 
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalJoveNotes.g:1280:2: rule__JoveNotes__NotesElementsAssignment_2
+            	    // InternalJoveNotes.g:1314:2: rule__JoveNotes__NotesElementsAssignment_2
             	    {
             	    pushFollow(FOLLOW_5);
             	    rule__JoveNotes__NotesElementsAssignment_2();
@@ -3793,14 +3895,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ProcessingHints__Group__0"
-    // InternalJoveNotes.g:1296:1: rule__ProcessingHints__Group__0 : rule__ProcessingHints__Group__0__Impl rule__ProcessingHints__Group__1 ;
+    // InternalJoveNotes.g:1330:1: rule__ProcessingHints__Group__0 : rule__ProcessingHints__Group__0__Impl rule__ProcessingHints__Group__1 ;
     public final void rule__ProcessingHints__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1300:1: ( rule__ProcessingHints__Group__0__Impl rule__ProcessingHints__Group__1 )
-            // InternalJoveNotes.g:1301:2: rule__ProcessingHints__Group__0__Impl rule__ProcessingHints__Group__1
+            // InternalJoveNotes.g:1334:1: ( rule__ProcessingHints__Group__0__Impl rule__ProcessingHints__Group__1 )
+            // InternalJoveNotes.g:1335:2: rule__ProcessingHints__Group__0__Impl rule__ProcessingHints__Group__1
             {
             pushFollow(FOLLOW_6);
             rule__ProcessingHints__Group__0__Impl();
@@ -3831,21 +3933,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ProcessingHints__Group__0__Impl"
-    // InternalJoveNotes.g:1308:1: rule__ProcessingHints__Group__0__Impl : ( () ) ;
+    // InternalJoveNotes.g:1342:1: rule__ProcessingHints__Group__0__Impl : ( () ) ;
     public final void rule__ProcessingHints__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1312:1: ( ( () ) )
-            // InternalJoveNotes.g:1313:1: ( () )
+            // InternalJoveNotes.g:1346:1: ( ( () ) )
+            // InternalJoveNotes.g:1347:1: ( () )
             {
-            // InternalJoveNotes.g:1313:1: ( () )
-            // InternalJoveNotes.g:1314:1: ()
+            // InternalJoveNotes.g:1347:1: ( () )
+            // InternalJoveNotes.g:1348:1: ()
             {
              before(grammarAccess.getProcessingHintsAccess().getProcessingHintsAction_0()); 
-            // InternalJoveNotes.g:1315:1: ()
-            // InternalJoveNotes.g:1317:1: 
+            // InternalJoveNotes.g:1349:1: ()
+            // InternalJoveNotes.g:1351:1: 
             {
             }
 
@@ -3868,14 +3970,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ProcessingHints__Group__1"
-    // InternalJoveNotes.g:1327:1: rule__ProcessingHints__Group__1 : rule__ProcessingHints__Group__1__Impl rule__ProcessingHints__Group__2 ;
+    // InternalJoveNotes.g:1361:1: rule__ProcessingHints__Group__1 : rule__ProcessingHints__Group__1__Impl rule__ProcessingHints__Group__2 ;
     public final void rule__ProcessingHints__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1331:1: ( rule__ProcessingHints__Group__1__Impl rule__ProcessingHints__Group__2 )
-            // InternalJoveNotes.g:1332:2: rule__ProcessingHints__Group__1__Impl rule__ProcessingHints__Group__2
+            // InternalJoveNotes.g:1365:1: ( rule__ProcessingHints__Group__1__Impl rule__ProcessingHints__Group__2 )
+            // InternalJoveNotes.g:1366:2: rule__ProcessingHints__Group__1__Impl rule__ProcessingHints__Group__2
             {
             pushFollow(FOLLOW_6);
             rule__ProcessingHints__Group__1__Impl();
@@ -3906,29 +4008,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ProcessingHints__Group__1__Impl"
-    // InternalJoveNotes.g:1339:1: rule__ProcessingHints__Group__1__Impl : ( ( rule__ProcessingHints__SkipGenerationAssignment_1 )? ) ;
+    // InternalJoveNotes.g:1373:1: rule__ProcessingHints__Group__1__Impl : ( ( rule__ProcessingHints__SkipGenerationAssignment_1 )? ) ;
     public final void rule__ProcessingHints__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1343:1: ( ( ( rule__ProcessingHints__SkipGenerationAssignment_1 )? ) )
-            // InternalJoveNotes.g:1344:1: ( ( rule__ProcessingHints__SkipGenerationAssignment_1 )? )
+            // InternalJoveNotes.g:1377:1: ( ( ( rule__ProcessingHints__SkipGenerationAssignment_1 )? ) )
+            // InternalJoveNotes.g:1378:1: ( ( rule__ProcessingHints__SkipGenerationAssignment_1 )? )
             {
-            // InternalJoveNotes.g:1344:1: ( ( rule__ProcessingHints__SkipGenerationAssignment_1 )? )
-            // InternalJoveNotes.g:1345:1: ( rule__ProcessingHints__SkipGenerationAssignment_1 )?
+            // InternalJoveNotes.g:1378:1: ( ( rule__ProcessingHints__SkipGenerationAssignment_1 )? )
+            // InternalJoveNotes.g:1379:1: ( rule__ProcessingHints__SkipGenerationAssignment_1 )?
             {
              before(grammarAccess.getProcessingHintsAccess().getSkipGenerationAssignment_1()); 
-            // InternalJoveNotes.g:1346:1: ( rule__ProcessingHints__SkipGenerationAssignment_1 )?
+            // InternalJoveNotes.g:1380:1: ( rule__ProcessingHints__SkipGenerationAssignment_1 )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==56) ) {
+            if ( (LA4_0==57) ) {
                 alt4=1;
             }
             switch (alt4) {
                 case 1 :
-                    // InternalJoveNotes.g:1346:2: rule__ProcessingHints__SkipGenerationAssignment_1
+                    // InternalJoveNotes.g:1380:2: rule__ProcessingHints__SkipGenerationAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__ProcessingHints__SkipGenerationAssignment_1();
@@ -3964,14 +4066,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ProcessingHints__Group__2"
-    // InternalJoveNotes.g:1356:1: rule__ProcessingHints__Group__2 : rule__ProcessingHints__Group__2__Impl ;
+    // InternalJoveNotes.g:1390:1: rule__ProcessingHints__Group__2 : rule__ProcessingHints__Group__2__Impl ;
     public final void rule__ProcessingHints__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1360:1: ( rule__ProcessingHints__Group__2__Impl )
-            // InternalJoveNotes.g:1361:2: rule__ProcessingHints__Group__2__Impl
+            // InternalJoveNotes.g:1394:1: ( rule__ProcessingHints__Group__2__Impl )
+            // InternalJoveNotes.g:1395:2: rule__ProcessingHints__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ProcessingHints__Group__2__Impl();
@@ -3997,29 +4099,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ProcessingHints__Group__2__Impl"
-    // InternalJoveNotes.g:1367:1: rule__ProcessingHints__Group__2__Impl : ( ( rule__ProcessingHints__SkipGenerationInProductionAssignment_2 )? ) ;
+    // InternalJoveNotes.g:1401:1: rule__ProcessingHints__Group__2__Impl : ( ( rule__ProcessingHints__SkipGenerationInProductionAssignment_2 )? ) ;
     public final void rule__ProcessingHints__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1371:1: ( ( ( rule__ProcessingHints__SkipGenerationInProductionAssignment_2 )? ) )
-            // InternalJoveNotes.g:1372:1: ( ( rule__ProcessingHints__SkipGenerationInProductionAssignment_2 )? )
+            // InternalJoveNotes.g:1405:1: ( ( ( rule__ProcessingHints__SkipGenerationInProductionAssignment_2 )? ) )
+            // InternalJoveNotes.g:1406:1: ( ( rule__ProcessingHints__SkipGenerationInProductionAssignment_2 )? )
             {
-            // InternalJoveNotes.g:1372:1: ( ( rule__ProcessingHints__SkipGenerationInProductionAssignment_2 )? )
-            // InternalJoveNotes.g:1373:1: ( rule__ProcessingHints__SkipGenerationInProductionAssignment_2 )?
+            // InternalJoveNotes.g:1406:1: ( ( rule__ProcessingHints__SkipGenerationInProductionAssignment_2 )? )
+            // InternalJoveNotes.g:1407:1: ( rule__ProcessingHints__SkipGenerationInProductionAssignment_2 )?
             {
              before(grammarAccess.getProcessingHintsAccess().getSkipGenerationInProductionAssignment_2()); 
-            // InternalJoveNotes.g:1374:1: ( rule__ProcessingHints__SkipGenerationInProductionAssignment_2 )?
+            // InternalJoveNotes.g:1408:1: ( rule__ProcessingHints__SkipGenerationInProductionAssignment_2 )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==57) ) {
+            if ( (LA5_0==58) ) {
                 alt5=1;
             }
             switch (alt5) {
                 case 1 :
-                    // InternalJoveNotes.g:1374:2: rule__ProcessingHints__SkipGenerationInProductionAssignment_2
+                    // InternalJoveNotes.g:1408:2: rule__ProcessingHints__SkipGenerationInProductionAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__ProcessingHints__SkipGenerationInProductionAssignment_2();
@@ -4055,14 +4157,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__0"
-    // InternalJoveNotes.g:1390:1: rule__ChapterDetails__Group__0 : rule__ChapterDetails__Group__0__Impl rule__ChapterDetails__Group__1 ;
+    // InternalJoveNotes.g:1424:1: rule__ChapterDetails__Group__0 : rule__ChapterDetails__Group__0__Impl rule__ChapterDetails__Group__1 ;
     public final void rule__ChapterDetails__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1394:1: ( rule__ChapterDetails__Group__0__Impl rule__ChapterDetails__Group__1 )
-            // InternalJoveNotes.g:1395:2: rule__ChapterDetails__Group__0__Impl rule__ChapterDetails__Group__1
+            // InternalJoveNotes.g:1428:1: ( rule__ChapterDetails__Group__0__Impl rule__ChapterDetails__Group__1 )
+            // InternalJoveNotes.g:1429:2: rule__ChapterDetails__Group__0__Impl rule__ChapterDetails__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__ChapterDetails__Group__0__Impl();
@@ -4093,29 +4195,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__0__Impl"
-    // InternalJoveNotes.g:1402:1: rule__ChapterDetails__Group__0__Impl : ( ( rule__ChapterDetails__ExerciseBankAssignment_0 )? ) ;
+    // InternalJoveNotes.g:1436:1: rule__ChapterDetails__Group__0__Impl : ( ( rule__ChapterDetails__ExerciseBankAssignment_0 )? ) ;
     public final void rule__ChapterDetails__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1406:1: ( ( ( rule__ChapterDetails__ExerciseBankAssignment_0 )? ) )
-            // InternalJoveNotes.g:1407:1: ( ( rule__ChapterDetails__ExerciseBankAssignment_0 )? )
+            // InternalJoveNotes.g:1440:1: ( ( ( rule__ChapterDetails__ExerciseBankAssignment_0 )? ) )
+            // InternalJoveNotes.g:1441:1: ( ( rule__ChapterDetails__ExerciseBankAssignment_0 )? )
             {
-            // InternalJoveNotes.g:1407:1: ( ( rule__ChapterDetails__ExerciseBankAssignment_0 )? )
-            // InternalJoveNotes.g:1408:1: ( rule__ChapterDetails__ExerciseBankAssignment_0 )?
+            // InternalJoveNotes.g:1441:1: ( ( rule__ChapterDetails__ExerciseBankAssignment_0 )? )
+            // InternalJoveNotes.g:1442:1: ( rule__ChapterDetails__ExerciseBankAssignment_0 )?
             {
              before(grammarAccess.getChapterDetailsAccess().getExerciseBankAssignment_0()); 
-            // InternalJoveNotes.g:1409:1: ( rule__ChapterDetails__ExerciseBankAssignment_0 )?
+            // InternalJoveNotes.g:1443:1: ( rule__ChapterDetails__ExerciseBankAssignment_0 )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==58) ) {
+            if ( (LA6_0==59) ) {
                 alt6=1;
             }
             switch (alt6) {
                 case 1 :
-                    // InternalJoveNotes.g:1409:2: rule__ChapterDetails__ExerciseBankAssignment_0
+                    // InternalJoveNotes.g:1443:2: rule__ChapterDetails__ExerciseBankAssignment_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__ChapterDetails__ExerciseBankAssignment_0();
@@ -4151,14 +4253,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__1"
-    // InternalJoveNotes.g:1419:1: rule__ChapterDetails__Group__1 : rule__ChapterDetails__Group__1__Impl rule__ChapterDetails__Group__2 ;
+    // InternalJoveNotes.g:1453:1: rule__ChapterDetails__Group__1 : rule__ChapterDetails__Group__1__Impl rule__ChapterDetails__Group__2 ;
     public final void rule__ChapterDetails__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1423:1: ( rule__ChapterDetails__Group__1__Impl rule__ChapterDetails__Group__2 )
-            // InternalJoveNotes.g:1424:2: rule__ChapterDetails__Group__1__Impl rule__ChapterDetails__Group__2
+            // InternalJoveNotes.g:1457:1: ( rule__ChapterDetails__Group__1__Impl rule__ChapterDetails__Group__2 )
+            // InternalJoveNotes.g:1458:2: rule__ChapterDetails__Group__1__Impl rule__ChapterDetails__Group__2
             {
             pushFollow(FOLLOW_7);
             rule__ChapterDetails__Group__1__Impl();
@@ -4189,17 +4291,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__1__Impl"
-    // InternalJoveNotes.g:1431:1: rule__ChapterDetails__Group__1__Impl : ( 'subject' ) ;
+    // InternalJoveNotes.g:1465:1: rule__ChapterDetails__Group__1__Impl : ( 'subject' ) ;
     public final void rule__ChapterDetails__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1435:1: ( ( 'subject' ) )
-            // InternalJoveNotes.g:1436:1: ( 'subject' )
+            // InternalJoveNotes.g:1469:1: ( ( 'subject' ) )
+            // InternalJoveNotes.g:1470:1: ( 'subject' )
             {
-            // InternalJoveNotes.g:1436:1: ( 'subject' )
-            // InternalJoveNotes.g:1437:1: 'subject'
+            // InternalJoveNotes.g:1470:1: ( 'subject' )
+            // InternalJoveNotes.g:1471:1: 'subject'
             {
              before(grammarAccess.getChapterDetailsAccess().getSubjectKeyword_1()); 
             match(input,12,FOLLOW_2); 
@@ -4226,14 +4328,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__2"
-    // InternalJoveNotes.g:1450:1: rule__ChapterDetails__Group__2 : rule__ChapterDetails__Group__2__Impl rule__ChapterDetails__Group__3 ;
+    // InternalJoveNotes.g:1484:1: rule__ChapterDetails__Group__2 : rule__ChapterDetails__Group__2__Impl rule__ChapterDetails__Group__3 ;
     public final void rule__ChapterDetails__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1454:1: ( rule__ChapterDetails__Group__2__Impl rule__ChapterDetails__Group__3 )
-            // InternalJoveNotes.g:1455:2: rule__ChapterDetails__Group__2__Impl rule__ChapterDetails__Group__3
+            // InternalJoveNotes.g:1488:1: ( rule__ChapterDetails__Group__2__Impl rule__ChapterDetails__Group__3 )
+            // InternalJoveNotes.g:1489:2: rule__ChapterDetails__Group__2__Impl rule__ChapterDetails__Group__3
             {
             pushFollow(FOLLOW_8);
             rule__ChapterDetails__Group__2__Impl();
@@ -4264,21 +4366,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__2__Impl"
-    // InternalJoveNotes.g:1462:1: rule__ChapterDetails__Group__2__Impl : ( ( rule__ChapterDetails__SubjectNameAssignment_2 ) ) ;
+    // InternalJoveNotes.g:1496:1: rule__ChapterDetails__Group__2__Impl : ( ( rule__ChapterDetails__SubjectNameAssignment_2 ) ) ;
     public final void rule__ChapterDetails__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1466:1: ( ( ( rule__ChapterDetails__SubjectNameAssignment_2 ) ) )
-            // InternalJoveNotes.g:1467:1: ( ( rule__ChapterDetails__SubjectNameAssignment_2 ) )
+            // InternalJoveNotes.g:1500:1: ( ( ( rule__ChapterDetails__SubjectNameAssignment_2 ) ) )
+            // InternalJoveNotes.g:1501:1: ( ( rule__ChapterDetails__SubjectNameAssignment_2 ) )
             {
-            // InternalJoveNotes.g:1467:1: ( ( rule__ChapterDetails__SubjectNameAssignment_2 ) )
-            // InternalJoveNotes.g:1468:1: ( rule__ChapterDetails__SubjectNameAssignment_2 )
+            // InternalJoveNotes.g:1501:1: ( ( rule__ChapterDetails__SubjectNameAssignment_2 ) )
+            // InternalJoveNotes.g:1502:1: ( rule__ChapterDetails__SubjectNameAssignment_2 )
             {
              before(grammarAccess.getChapterDetailsAccess().getSubjectNameAssignment_2()); 
-            // InternalJoveNotes.g:1469:1: ( rule__ChapterDetails__SubjectNameAssignment_2 )
-            // InternalJoveNotes.g:1469:2: rule__ChapterDetails__SubjectNameAssignment_2
+            // InternalJoveNotes.g:1503:1: ( rule__ChapterDetails__SubjectNameAssignment_2 )
+            // InternalJoveNotes.g:1503:2: rule__ChapterDetails__SubjectNameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__ChapterDetails__SubjectNameAssignment_2();
@@ -4311,14 +4413,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__3"
-    // InternalJoveNotes.g:1479:1: rule__ChapterDetails__Group__3 : rule__ChapterDetails__Group__3__Impl rule__ChapterDetails__Group__4 ;
+    // InternalJoveNotes.g:1513:1: rule__ChapterDetails__Group__3 : rule__ChapterDetails__Group__3__Impl rule__ChapterDetails__Group__4 ;
     public final void rule__ChapterDetails__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1483:1: ( rule__ChapterDetails__Group__3__Impl rule__ChapterDetails__Group__4 )
-            // InternalJoveNotes.g:1484:2: rule__ChapterDetails__Group__3__Impl rule__ChapterDetails__Group__4
+            // InternalJoveNotes.g:1517:1: ( rule__ChapterDetails__Group__3__Impl rule__ChapterDetails__Group__4 )
+            // InternalJoveNotes.g:1518:2: rule__ChapterDetails__Group__3__Impl rule__ChapterDetails__Group__4
             {
             pushFollow(FOLLOW_9);
             rule__ChapterDetails__Group__3__Impl();
@@ -4349,17 +4451,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__3__Impl"
-    // InternalJoveNotes.g:1491:1: rule__ChapterDetails__Group__3__Impl : ( 'chapterNumber' ) ;
+    // InternalJoveNotes.g:1525:1: rule__ChapterDetails__Group__3__Impl : ( 'chapterNumber' ) ;
     public final void rule__ChapterDetails__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1495:1: ( ( 'chapterNumber' ) )
-            // InternalJoveNotes.g:1496:1: ( 'chapterNumber' )
+            // InternalJoveNotes.g:1529:1: ( ( 'chapterNumber' ) )
+            // InternalJoveNotes.g:1530:1: ( 'chapterNumber' )
             {
-            // InternalJoveNotes.g:1496:1: ( 'chapterNumber' )
-            // InternalJoveNotes.g:1497:1: 'chapterNumber'
+            // InternalJoveNotes.g:1530:1: ( 'chapterNumber' )
+            // InternalJoveNotes.g:1531:1: 'chapterNumber'
             {
              before(grammarAccess.getChapterDetailsAccess().getChapterNumberKeyword_3()); 
             match(input,13,FOLLOW_2); 
@@ -4386,14 +4488,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__4"
-    // InternalJoveNotes.g:1510:1: rule__ChapterDetails__Group__4 : rule__ChapterDetails__Group__4__Impl rule__ChapterDetails__Group__5 ;
+    // InternalJoveNotes.g:1544:1: rule__ChapterDetails__Group__4 : rule__ChapterDetails__Group__4__Impl rule__ChapterDetails__Group__5 ;
     public final void rule__ChapterDetails__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1514:1: ( rule__ChapterDetails__Group__4__Impl rule__ChapterDetails__Group__5 )
-            // InternalJoveNotes.g:1515:2: rule__ChapterDetails__Group__4__Impl rule__ChapterDetails__Group__5
+            // InternalJoveNotes.g:1548:1: ( rule__ChapterDetails__Group__4__Impl rule__ChapterDetails__Group__5 )
+            // InternalJoveNotes.g:1549:2: rule__ChapterDetails__Group__4__Impl rule__ChapterDetails__Group__5
             {
             pushFollow(FOLLOW_10);
             rule__ChapterDetails__Group__4__Impl();
@@ -4424,21 +4526,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__4__Impl"
-    // InternalJoveNotes.g:1522:1: rule__ChapterDetails__Group__4__Impl : ( ( rule__ChapterDetails__ChapterNumberAssignment_4 ) ) ;
+    // InternalJoveNotes.g:1556:1: rule__ChapterDetails__Group__4__Impl : ( ( rule__ChapterDetails__ChapterNumberAssignment_4 ) ) ;
     public final void rule__ChapterDetails__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1526:1: ( ( ( rule__ChapterDetails__ChapterNumberAssignment_4 ) ) )
-            // InternalJoveNotes.g:1527:1: ( ( rule__ChapterDetails__ChapterNumberAssignment_4 ) )
+            // InternalJoveNotes.g:1560:1: ( ( ( rule__ChapterDetails__ChapterNumberAssignment_4 ) ) )
+            // InternalJoveNotes.g:1561:1: ( ( rule__ChapterDetails__ChapterNumberAssignment_4 ) )
             {
-            // InternalJoveNotes.g:1527:1: ( ( rule__ChapterDetails__ChapterNumberAssignment_4 ) )
-            // InternalJoveNotes.g:1528:1: ( rule__ChapterDetails__ChapterNumberAssignment_4 )
+            // InternalJoveNotes.g:1561:1: ( ( rule__ChapterDetails__ChapterNumberAssignment_4 ) )
+            // InternalJoveNotes.g:1562:1: ( rule__ChapterDetails__ChapterNumberAssignment_4 )
             {
              before(grammarAccess.getChapterDetailsAccess().getChapterNumberAssignment_4()); 
-            // InternalJoveNotes.g:1529:1: ( rule__ChapterDetails__ChapterNumberAssignment_4 )
-            // InternalJoveNotes.g:1529:2: rule__ChapterDetails__ChapterNumberAssignment_4
+            // InternalJoveNotes.g:1563:1: ( rule__ChapterDetails__ChapterNumberAssignment_4 )
+            // InternalJoveNotes.g:1563:2: rule__ChapterDetails__ChapterNumberAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__ChapterDetails__ChapterNumberAssignment_4();
@@ -4471,14 +4573,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__5"
-    // InternalJoveNotes.g:1539:1: rule__ChapterDetails__Group__5 : rule__ChapterDetails__Group__5__Impl rule__ChapterDetails__Group__6 ;
+    // InternalJoveNotes.g:1573:1: rule__ChapterDetails__Group__5 : rule__ChapterDetails__Group__5__Impl rule__ChapterDetails__Group__6 ;
     public final void rule__ChapterDetails__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1543:1: ( rule__ChapterDetails__Group__5__Impl rule__ChapterDetails__Group__6 )
-            // InternalJoveNotes.g:1544:2: rule__ChapterDetails__Group__5__Impl rule__ChapterDetails__Group__6
+            // InternalJoveNotes.g:1577:1: ( rule__ChapterDetails__Group__5__Impl rule__ChapterDetails__Group__6 )
+            // InternalJoveNotes.g:1578:2: rule__ChapterDetails__Group__5__Impl rule__ChapterDetails__Group__6
             {
             pushFollow(FOLLOW_9);
             rule__ChapterDetails__Group__5__Impl();
@@ -4509,17 +4611,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__5__Impl"
-    // InternalJoveNotes.g:1551:1: rule__ChapterDetails__Group__5__Impl : ( '.' ) ;
+    // InternalJoveNotes.g:1585:1: rule__ChapterDetails__Group__5__Impl : ( '.' ) ;
     public final void rule__ChapterDetails__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1555:1: ( ( '.' ) )
-            // InternalJoveNotes.g:1556:1: ( '.' )
+            // InternalJoveNotes.g:1589:1: ( ( '.' ) )
+            // InternalJoveNotes.g:1590:1: ( '.' )
             {
-            // InternalJoveNotes.g:1556:1: ( '.' )
-            // InternalJoveNotes.g:1557:1: '.'
+            // InternalJoveNotes.g:1590:1: ( '.' )
+            // InternalJoveNotes.g:1591:1: '.'
             {
              before(grammarAccess.getChapterDetailsAccess().getFullStopKeyword_5()); 
             match(input,14,FOLLOW_2); 
@@ -4546,14 +4648,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__6"
-    // InternalJoveNotes.g:1570:1: rule__ChapterDetails__Group__6 : rule__ChapterDetails__Group__6__Impl rule__ChapterDetails__Group__7 ;
+    // InternalJoveNotes.g:1604:1: rule__ChapterDetails__Group__6 : rule__ChapterDetails__Group__6__Impl rule__ChapterDetails__Group__7 ;
     public final void rule__ChapterDetails__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1574:1: ( rule__ChapterDetails__Group__6__Impl rule__ChapterDetails__Group__7 )
-            // InternalJoveNotes.g:1575:2: rule__ChapterDetails__Group__6__Impl rule__ChapterDetails__Group__7
+            // InternalJoveNotes.g:1608:1: ( rule__ChapterDetails__Group__6__Impl rule__ChapterDetails__Group__7 )
+            // InternalJoveNotes.g:1609:2: rule__ChapterDetails__Group__6__Impl rule__ChapterDetails__Group__7
             {
             pushFollow(FOLLOW_11);
             rule__ChapterDetails__Group__6__Impl();
@@ -4584,21 +4686,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__6__Impl"
-    // InternalJoveNotes.g:1582:1: rule__ChapterDetails__Group__6__Impl : ( ( rule__ChapterDetails__SubChapterNumberAssignment_6 ) ) ;
+    // InternalJoveNotes.g:1616:1: rule__ChapterDetails__Group__6__Impl : ( ( rule__ChapterDetails__SubChapterNumberAssignment_6 ) ) ;
     public final void rule__ChapterDetails__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1586:1: ( ( ( rule__ChapterDetails__SubChapterNumberAssignment_6 ) ) )
-            // InternalJoveNotes.g:1587:1: ( ( rule__ChapterDetails__SubChapterNumberAssignment_6 ) )
+            // InternalJoveNotes.g:1620:1: ( ( ( rule__ChapterDetails__SubChapterNumberAssignment_6 ) ) )
+            // InternalJoveNotes.g:1621:1: ( ( rule__ChapterDetails__SubChapterNumberAssignment_6 ) )
             {
-            // InternalJoveNotes.g:1587:1: ( ( rule__ChapterDetails__SubChapterNumberAssignment_6 ) )
-            // InternalJoveNotes.g:1588:1: ( rule__ChapterDetails__SubChapterNumberAssignment_6 )
+            // InternalJoveNotes.g:1621:1: ( ( rule__ChapterDetails__SubChapterNumberAssignment_6 ) )
+            // InternalJoveNotes.g:1622:1: ( rule__ChapterDetails__SubChapterNumberAssignment_6 )
             {
              before(grammarAccess.getChapterDetailsAccess().getSubChapterNumberAssignment_6()); 
-            // InternalJoveNotes.g:1589:1: ( rule__ChapterDetails__SubChapterNumberAssignment_6 )
-            // InternalJoveNotes.g:1589:2: rule__ChapterDetails__SubChapterNumberAssignment_6
+            // InternalJoveNotes.g:1623:1: ( rule__ChapterDetails__SubChapterNumberAssignment_6 )
+            // InternalJoveNotes.g:1623:2: rule__ChapterDetails__SubChapterNumberAssignment_6
             {
             pushFollow(FOLLOW_2);
             rule__ChapterDetails__SubChapterNumberAssignment_6();
@@ -4631,14 +4733,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__7"
-    // InternalJoveNotes.g:1599:1: rule__ChapterDetails__Group__7 : rule__ChapterDetails__Group__7__Impl rule__ChapterDetails__Group__8 ;
+    // InternalJoveNotes.g:1633:1: rule__ChapterDetails__Group__7 : rule__ChapterDetails__Group__7__Impl rule__ChapterDetails__Group__8 ;
     public final void rule__ChapterDetails__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1603:1: ( rule__ChapterDetails__Group__7__Impl rule__ChapterDetails__Group__8 )
-            // InternalJoveNotes.g:1604:2: rule__ChapterDetails__Group__7__Impl rule__ChapterDetails__Group__8
+            // InternalJoveNotes.g:1637:1: ( rule__ChapterDetails__Group__7__Impl rule__ChapterDetails__Group__8 )
+            // InternalJoveNotes.g:1638:2: rule__ChapterDetails__Group__7__Impl rule__ChapterDetails__Group__8
             {
             pushFollow(FOLLOW_7);
             rule__ChapterDetails__Group__7__Impl();
@@ -4669,17 +4771,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__7__Impl"
-    // InternalJoveNotes.g:1611:1: rule__ChapterDetails__Group__7__Impl : ( 'chapterName' ) ;
+    // InternalJoveNotes.g:1645:1: rule__ChapterDetails__Group__7__Impl : ( 'chapterName' ) ;
     public final void rule__ChapterDetails__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1615:1: ( ( 'chapterName' ) )
-            // InternalJoveNotes.g:1616:1: ( 'chapterName' )
+            // InternalJoveNotes.g:1649:1: ( ( 'chapterName' ) )
+            // InternalJoveNotes.g:1650:1: ( 'chapterName' )
             {
-            // InternalJoveNotes.g:1616:1: ( 'chapterName' )
-            // InternalJoveNotes.g:1617:1: 'chapterName'
+            // InternalJoveNotes.g:1650:1: ( 'chapterName' )
+            // InternalJoveNotes.g:1651:1: 'chapterName'
             {
              before(grammarAccess.getChapterDetailsAccess().getChapterNameKeyword_7()); 
             match(input,15,FOLLOW_2); 
@@ -4706,14 +4808,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__8"
-    // InternalJoveNotes.g:1630:1: rule__ChapterDetails__Group__8 : rule__ChapterDetails__Group__8__Impl rule__ChapterDetails__Group__9 ;
+    // InternalJoveNotes.g:1664:1: rule__ChapterDetails__Group__8 : rule__ChapterDetails__Group__8__Impl rule__ChapterDetails__Group__9 ;
     public final void rule__ChapterDetails__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1634:1: ( rule__ChapterDetails__Group__8__Impl rule__ChapterDetails__Group__9 )
-            // InternalJoveNotes.g:1635:2: rule__ChapterDetails__Group__8__Impl rule__ChapterDetails__Group__9
+            // InternalJoveNotes.g:1668:1: ( rule__ChapterDetails__Group__8__Impl rule__ChapterDetails__Group__9 )
+            // InternalJoveNotes.g:1669:2: rule__ChapterDetails__Group__8__Impl rule__ChapterDetails__Group__9
             {
             pushFollow(FOLLOW_12);
             rule__ChapterDetails__Group__8__Impl();
@@ -4744,21 +4846,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__8__Impl"
-    // InternalJoveNotes.g:1642:1: rule__ChapterDetails__Group__8__Impl : ( ( rule__ChapterDetails__ChapterNameAssignment_8 ) ) ;
+    // InternalJoveNotes.g:1676:1: rule__ChapterDetails__Group__8__Impl : ( ( rule__ChapterDetails__ChapterNameAssignment_8 ) ) ;
     public final void rule__ChapterDetails__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1646:1: ( ( ( rule__ChapterDetails__ChapterNameAssignment_8 ) ) )
-            // InternalJoveNotes.g:1647:1: ( ( rule__ChapterDetails__ChapterNameAssignment_8 ) )
+            // InternalJoveNotes.g:1680:1: ( ( ( rule__ChapterDetails__ChapterNameAssignment_8 ) ) )
+            // InternalJoveNotes.g:1681:1: ( ( rule__ChapterDetails__ChapterNameAssignment_8 ) )
             {
-            // InternalJoveNotes.g:1647:1: ( ( rule__ChapterDetails__ChapterNameAssignment_8 ) )
-            // InternalJoveNotes.g:1648:1: ( rule__ChapterDetails__ChapterNameAssignment_8 )
+            // InternalJoveNotes.g:1681:1: ( ( rule__ChapterDetails__ChapterNameAssignment_8 ) )
+            // InternalJoveNotes.g:1682:1: ( rule__ChapterDetails__ChapterNameAssignment_8 )
             {
              before(grammarAccess.getChapterDetailsAccess().getChapterNameAssignment_8()); 
-            // InternalJoveNotes.g:1649:1: ( rule__ChapterDetails__ChapterNameAssignment_8 )
-            // InternalJoveNotes.g:1649:2: rule__ChapterDetails__ChapterNameAssignment_8
+            // InternalJoveNotes.g:1683:1: ( rule__ChapterDetails__ChapterNameAssignment_8 )
+            // InternalJoveNotes.g:1683:2: rule__ChapterDetails__ChapterNameAssignment_8
             {
             pushFollow(FOLLOW_2);
             rule__ChapterDetails__ChapterNameAssignment_8();
@@ -4791,14 +4893,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__9"
-    // InternalJoveNotes.g:1659:1: rule__ChapterDetails__Group__9 : rule__ChapterDetails__Group__9__Impl ;
+    // InternalJoveNotes.g:1693:1: rule__ChapterDetails__Group__9 : rule__ChapterDetails__Group__9__Impl ;
     public final void rule__ChapterDetails__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1663:1: ( rule__ChapterDetails__Group__9__Impl )
-            // InternalJoveNotes.g:1664:2: rule__ChapterDetails__Group__9__Impl
+            // InternalJoveNotes.g:1697:1: ( rule__ChapterDetails__Group__9__Impl )
+            // InternalJoveNotes.g:1698:2: rule__ChapterDetails__Group__9__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ChapterDetails__Group__9__Impl();
@@ -4824,29 +4926,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__Group__9__Impl"
-    // InternalJoveNotes.g:1670:1: rule__ChapterDetails__Group__9__Impl : ( ( rule__ChapterDetails__ScriptBodyAssignment_9 )? ) ;
+    // InternalJoveNotes.g:1704:1: rule__ChapterDetails__Group__9__Impl : ( ( rule__ChapterDetails__ScriptBodyAssignment_9 )? ) ;
     public final void rule__ChapterDetails__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1674:1: ( ( ( rule__ChapterDetails__ScriptBodyAssignment_9 )? ) )
-            // InternalJoveNotes.g:1675:1: ( ( rule__ChapterDetails__ScriptBodyAssignment_9 )? )
+            // InternalJoveNotes.g:1708:1: ( ( ( rule__ChapterDetails__ScriptBodyAssignment_9 )? ) )
+            // InternalJoveNotes.g:1709:1: ( ( rule__ChapterDetails__ScriptBodyAssignment_9 )? )
             {
-            // InternalJoveNotes.g:1675:1: ( ( rule__ChapterDetails__ScriptBodyAssignment_9 )? )
-            // InternalJoveNotes.g:1676:1: ( rule__ChapterDetails__ScriptBodyAssignment_9 )?
+            // InternalJoveNotes.g:1709:1: ( ( rule__ChapterDetails__ScriptBodyAssignment_9 )? )
+            // InternalJoveNotes.g:1710:1: ( rule__ChapterDetails__ScriptBodyAssignment_9 )?
             {
              before(grammarAccess.getChapterDetailsAccess().getScriptBodyAssignment_9()); 
-            // InternalJoveNotes.g:1677:1: ( rule__ChapterDetails__ScriptBodyAssignment_9 )?
+            // InternalJoveNotes.g:1711:1: ( rule__ChapterDetails__ScriptBodyAssignment_9 )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==55) ) {
+            if ( (LA7_0==56) ) {
                 alt7=1;
             }
             switch (alt7) {
                 case 1 :
-                    // InternalJoveNotes.g:1677:2: rule__ChapterDetails__ScriptBodyAssignment_9
+                    // InternalJoveNotes.g:1711:2: rule__ChapterDetails__ScriptBodyAssignment_9
                     {
                     pushFollow(FOLLOW_2);
                     rule__ChapterDetails__ScriptBodyAssignment_9();
@@ -4882,14 +4984,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__NotesElement__Group__0"
-    // InternalJoveNotes.g:1707:1: rule__NotesElement__Group__0 : rule__NotesElement__Group__0__Impl rule__NotesElement__Group__1 ;
+    // InternalJoveNotes.g:1741:1: rule__NotesElement__Group__0 : rule__NotesElement__Group__0__Impl rule__NotesElement__Group__1 ;
     public final void rule__NotesElement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1711:1: ( rule__NotesElement__Group__0__Impl rule__NotesElement__Group__1 )
-            // InternalJoveNotes.g:1712:2: rule__NotesElement__Group__0__Impl rule__NotesElement__Group__1
+            // InternalJoveNotes.g:1745:1: ( rule__NotesElement__Group__0__Impl rule__NotesElement__Group__1 )
+            // InternalJoveNotes.g:1746:2: rule__NotesElement__Group__0__Impl rule__NotesElement__Group__1
             {
             pushFollow(FOLLOW_13);
             rule__NotesElement__Group__0__Impl();
@@ -4920,21 +5022,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__NotesElement__Group__0__Impl"
-    // InternalJoveNotes.g:1719:1: rule__NotesElement__Group__0__Impl : ( ( rule__NotesElement__Alternatives_0 ) ) ;
+    // InternalJoveNotes.g:1753:1: rule__NotesElement__Group__0__Impl : ( ( rule__NotesElement__Alternatives_0 ) ) ;
     public final void rule__NotesElement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1723:1: ( ( ( rule__NotesElement__Alternatives_0 ) ) )
-            // InternalJoveNotes.g:1724:1: ( ( rule__NotesElement__Alternatives_0 ) )
+            // InternalJoveNotes.g:1757:1: ( ( ( rule__NotesElement__Alternatives_0 ) ) )
+            // InternalJoveNotes.g:1758:1: ( ( rule__NotesElement__Alternatives_0 ) )
             {
-            // InternalJoveNotes.g:1724:1: ( ( rule__NotesElement__Alternatives_0 ) )
-            // InternalJoveNotes.g:1725:1: ( rule__NotesElement__Alternatives_0 )
+            // InternalJoveNotes.g:1758:1: ( ( rule__NotesElement__Alternatives_0 ) )
+            // InternalJoveNotes.g:1759:1: ( rule__NotesElement__Alternatives_0 )
             {
              before(grammarAccess.getNotesElementAccess().getAlternatives_0()); 
-            // InternalJoveNotes.g:1726:1: ( rule__NotesElement__Alternatives_0 )
-            // InternalJoveNotes.g:1726:2: rule__NotesElement__Alternatives_0
+            // InternalJoveNotes.g:1760:1: ( rule__NotesElement__Alternatives_0 )
+            // InternalJoveNotes.g:1760:2: rule__NotesElement__Alternatives_0
             {
             pushFollow(FOLLOW_2);
             rule__NotesElement__Alternatives_0();
@@ -4967,14 +5069,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__NotesElement__Group__1"
-    // InternalJoveNotes.g:1736:1: rule__NotesElement__Group__1 : rule__NotesElement__Group__1__Impl ;
+    // InternalJoveNotes.g:1770:1: rule__NotesElement__Group__1 : rule__NotesElement__Group__1__Impl ;
     public final void rule__NotesElement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1740:1: ( rule__NotesElement__Group__1__Impl )
-            // InternalJoveNotes.g:1741:2: rule__NotesElement__Group__1__Impl
+            // InternalJoveNotes.g:1774:1: ( rule__NotesElement__Group__1__Impl )
+            // InternalJoveNotes.g:1775:2: rule__NotesElement__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__NotesElement__Group__1__Impl();
@@ -5000,29 +5102,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__NotesElement__Group__1__Impl"
-    // InternalJoveNotes.g:1747:1: rule__NotesElement__Group__1__Impl : ( ( rule__NotesElement__ScriptAssignment_1 )? ) ;
+    // InternalJoveNotes.g:1781:1: rule__NotesElement__Group__1__Impl : ( ( rule__NotesElement__ScriptAssignment_1 )? ) ;
     public final void rule__NotesElement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1751:1: ( ( ( rule__NotesElement__ScriptAssignment_1 )? ) )
-            // InternalJoveNotes.g:1752:1: ( ( rule__NotesElement__ScriptAssignment_1 )? )
+            // InternalJoveNotes.g:1785:1: ( ( ( rule__NotesElement__ScriptAssignment_1 )? ) )
+            // InternalJoveNotes.g:1786:1: ( ( rule__NotesElement__ScriptAssignment_1 )? )
             {
-            // InternalJoveNotes.g:1752:1: ( ( rule__NotesElement__ScriptAssignment_1 )? )
-            // InternalJoveNotes.g:1753:1: ( rule__NotesElement__ScriptAssignment_1 )?
+            // InternalJoveNotes.g:1786:1: ( ( rule__NotesElement__ScriptAssignment_1 )? )
+            // InternalJoveNotes.g:1787:1: ( rule__NotesElement__ScriptAssignment_1 )?
             {
              before(grammarAccess.getNotesElementAccess().getScriptAssignment_1()); 
-            // InternalJoveNotes.g:1754:1: ( rule__NotesElement__ScriptAssignment_1 )?
+            // InternalJoveNotes.g:1788:1: ( rule__NotesElement__ScriptAssignment_1 )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==54) ) {
+            if ( (LA8_0==55) ) {
                 alt8=1;
             }
             switch (alt8) {
                 case 1 :
-                    // InternalJoveNotes.g:1754:2: rule__NotesElement__ScriptAssignment_1
+                    // InternalJoveNotes.g:1788:2: rule__NotesElement__ScriptAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__NotesElement__ScriptAssignment_1();
@@ -5058,14 +5160,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__WordMeaning__Group__0"
-    // InternalJoveNotes.g:1768:1: rule__WordMeaning__Group__0 : rule__WordMeaning__Group__0__Impl rule__WordMeaning__Group__1 ;
+    // InternalJoveNotes.g:1802:1: rule__WordMeaning__Group__0 : rule__WordMeaning__Group__0__Impl rule__WordMeaning__Group__1 ;
     public final void rule__WordMeaning__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1772:1: ( rule__WordMeaning__Group__0__Impl rule__WordMeaning__Group__1 )
-            // InternalJoveNotes.g:1773:2: rule__WordMeaning__Group__0__Impl rule__WordMeaning__Group__1
+            // InternalJoveNotes.g:1806:1: ( rule__WordMeaning__Group__0__Impl rule__WordMeaning__Group__1 )
+            // InternalJoveNotes.g:1807:2: rule__WordMeaning__Group__0__Impl rule__WordMeaning__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__WordMeaning__Group__0__Impl();
@@ -5096,17 +5198,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__WordMeaning__Group__0__Impl"
-    // InternalJoveNotes.g:1780:1: rule__WordMeaning__Group__0__Impl : ( '@wm' ) ;
+    // InternalJoveNotes.g:1814:1: rule__WordMeaning__Group__0__Impl : ( '@wm' ) ;
     public final void rule__WordMeaning__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1784:1: ( ( '@wm' ) )
-            // InternalJoveNotes.g:1785:1: ( '@wm' )
+            // InternalJoveNotes.g:1818:1: ( ( '@wm' ) )
+            // InternalJoveNotes.g:1819:1: ( '@wm' )
             {
-            // InternalJoveNotes.g:1785:1: ( '@wm' )
-            // InternalJoveNotes.g:1786:1: '@wm'
+            // InternalJoveNotes.g:1819:1: ( '@wm' )
+            // InternalJoveNotes.g:1820:1: '@wm'
             {
              before(grammarAccess.getWordMeaningAccess().getWmKeyword_0()); 
             match(input,16,FOLLOW_2); 
@@ -5133,14 +5235,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__WordMeaning__Group__1"
-    // InternalJoveNotes.g:1799:1: rule__WordMeaning__Group__1 : rule__WordMeaning__Group__1__Impl rule__WordMeaning__Group__2 ;
+    // InternalJoveNotes.g:1833:1: rule__WordMeaning__Group__1 : rule__WordMeaning__Group__1__Impl rule__WordMeaning__Group__2 ;
     public final void rule__WordMeaning__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1803:1: ( rule__WordMeaning__Group__1__Impl rule__WordMeaning__Group__2 )
-            // InternalJoveNotes.g:1804:2: rule__WordMeaning__Group__1__Impl rule__WordMeaning__Group__2
+            // InternalJoveNotes.g:1837:1: ( rule__WordMeaning__Group__1__Impl rule__WordMeaning__Group__2 )
+            // InternalJoveNotes.g:1838:2: rule__WordMeaning__Group__1__Impl rule__WordMeaning__Group__2
             {
             pushFollow(FOLLOW_14);
             rule__WordMeaning__Group__1__Impl();
@@ -5171,29 +5273,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__WordMeaning__Group__1__Impl"
-    // InternalJoveNotes.g:1811:1: rule__WordMeaning__Group__1__Impl : ( ( rule__WordMeaning__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:1845:1: rule__WordMeaning__Group__1__Impl : ( ( rule__WordMeaning__HideFromViewAssignment_1 )? ) ;
     public final void rule__WordMeaning__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1815:1: ( ( ( rule__WordMeaning__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:1816:1: ( ( rule__WordMeaning__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:1849:1: ( ( ( rule__WordMeaning__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:1850:1: ( ( rule__WordMeaning__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:1816:1: ( ( rule__WordMeaning__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:1817:1: ( rule__WordMeaning__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:1850:1: ( ( rule__WordMeaning__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:1851:1: ( rule__WordMeaning__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getWordMeaningAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:1818:1: ( rule__WordMeaning__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:1852:1: ( rule__WordMeaning__HideFromViewAssignment_1 )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( (LA9_0==59) ) {
+            if ( (LA9_0==60) ) {
                 alt9=1;
             }
             switch (alt9) {
                 case 1 :
-                    // InternalJoveNotes.g:1818:2: rule__WordMeaning__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:1852:2: rule__WordMeaning__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__WordMeaning__HideFromViewAssignment_1();
@@ -5229,14 +5331,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__WordMeaning__Group__2"
-    // InternalJoveNotes.g:1828:1: rule__WordMeaning__Group__2 : rule__WordMeaning__Group__2__Impl rule__WordMeaning__Group__3 ;
+    // InternalJoveNotes.g:1862:1: rule__WordMeaning__Group__2 : rule__WordMeaning__Group__2__Impl rule__WordMeaning__Group__3 ;
     public final void rule__WordMeaning__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1832:1: ( rule__WordMeaning__Group__2__Impl rule__WordMeaning__Group__3 )
-            // InternalJoveNotes.g:1833:2: rule__WordMeaning__Group__2__Impl rule__WordMeaning__Group__3
+            // InternalJoveNotes.g:1866:1: ( rule__WordMeaning__Group__2__Impl rule__WordMeaning__Group__3 )
+            // InternalJoveNotes.g:1867:2: rule__WordMeaning__Group__2__Impl rule__WordMeaning__Group__3
             {
             pushFollow(FOLLOW_7);
             rule__WordMeaning__Group__2__Impl();
@@ -5267,21 +5369,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__WordMeaning__Group__2__Impl"
-    // InternalJoveNotes.g:1840:1: rule__WordMeaning__Group__2__Impl : ( ( rule__WordMeaning__WordAssignment_2 ) ) ;
+    // InternalJoveNotes.g:1874:1: rule__WordMeaning__Group__2__Impl : ( ( rule__WordMeaning__WordAssignment_2 ) ) ;
     public final void rule__WordMeaning__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1844:1: ( ( ( rule__WordMeaning__WordAssignment_2 ) ) )
-            // InternalJoveNotes.g:1845:1: ( ( rule__WordMeaning__WordAssignment_2 ) )
+            // InternalJoveNotes.g:1878:1: ( ( ( rule__WordMeaning__WordAssignment_2 ) ) )
+            // InternalJoveNotes.g:1879:1: ( ( rule__WordMeaning__WordAssignment_2 ) )
             {
-            // InternalJoveNotes.g:1845:1: ( ( rule__WordMeaning__WordAssignment_2 ) )
-            // InternalJoveNotes.g:1846:1: ( rule__WordMeaning__WordAssignment_2 )
+            // InternalJoveNotes.g:1879:1: ( ( rule__WordMeaning__WordAssignment_2 ) )
+            // InternalJoveNotes.g:1880:1: ( rule__WordMeaning__WordAssignment_2 )
             {
              before(grammarAccess.getWordMeaningAccess().getWordAssignment_2()); 
-            // InternalJoveNotes.g:1847:1: ( rule__WordMeaning__WordAssignment_2 )
-            // InternalJoveNotes.g:1847:2: rule__WordMeaning__WordAssignment_2
+            // InternalJoveNotes.g:1881:1: ( rule__WordMeaning__WordAssignment_2 )
+            // InternalJoveNotes.g:1881:2: rule__WordMeaning__WordAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__WordMeaning__WordAssignment_2();
@@ -5314,14 +5416,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__WordMeaning__Group__3"
-    // InternalJoveNotes.g:1857:1: rule__WordMeaning__Group__3 : rule__WordMeaning__Group__3__Impl ;
+    // InternalJoveNotes.g:1891:1: rule__WordMeaning__Group__3 : rule__WordMeaning__Group__3__Impl ;
     public final void rule__WordMeaning__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1861:1: ( rule__WordMeaning__Group__3__Impl )
-            // InternalJoveNotes.g:1862:2: rule__WordMeaning__Group__3__Impl
+            // InternalJoveNotes.g:1895:1: ( rule__WordMeaning__Group__3__Impl )
+            // InternalJoveNotes.g:1896:2: rule__WordMeaning__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__WordMeaning__Group__3__Impl();
@@ -5347,21 +5449,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__WordMeaning__Group__3__Impl"
-    // InternalJoveNotes.g:1868:1: rule__WordMeaning__Group__3__Impl : ( ( rule__WordMeaning__MeaningAssignment_3 ) ) ;
+    // InternalJoveNotes.g:1902:1: rule__WordMeaning__Group__3__Impl : ( ( rule__WordMeaning__MeaningAssignment_3 ) ) ;
     public final void rule__WordMeaning__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1872:1: ( ( ( rule__WordMeaning__MeaningAssignment_3 ) ) )
-            // InternalJoveNotes.g:1873:1: ( ( rule__WordMeaning__MeaningAssignment_3 ) )
+            // InternalJoveNotes.g:1906:1: ( ( ( rule__WordMeaning__MeaningAssignment_3 ) ) )
+            // InternalJoveNotes.g:1907:1: ( ( rule__WordMeaning__MeaningAssignment_3 ) )
             {
-            // InternalJoveNotes.g:1873:1: ( ( rule__WordMeaning__MeaningAssignment_3 ) )
-            // InternalJoveNotes.g:1874:1: ( rule__WordMeaning__MeaningAssignment_3 )
+            // InternalJoveNotes.g:1907:1: ( ( rule__WordMeaning__MeaningAssignment_3 ) )
+            // InternalJoveNotes.g:1908:1: ( rule__WordMeaning__MeaningAssignment_3 )
             {
              before(grammarAccess.getWordMeaningAccess().getMeaningAssignment_3()); 
-            // InternalJoveNotes.g:1875:1: ( rule__WordMeaning__MeaningAssignment_3 )
-            // InternalJoveNotes.g:1875:2: rule__WordMeaning__MeaningAssignment_3
+            // InternalJoveNotes.g:1909:1: ( rule__WordMeaning__MeaningAssignment_3 )
+            // InternalJoveNotes.g:1909:2: rule__WordMeaning__MeaningAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__WordMeaning__MeaningAssignment_3();
@@ -5394,14 +5496,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuestionAnswer__Group__0"
-    // InternalJoveNotes.g:1893:1: rule__QuestionAnswer__Group__0 : rule__QuestionAnswer__Group__0__Impl rule__QuestionAnswer__Group__1 ;
+    // InternalJoveNotes.g:1927:1: rule__QuestionAnswer__Group__0 : rule__QuestionAnswer__Group__0__Impl rule__QuestionAnswer__Group__1 ;
     public final void rule__QuestionAnswer__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1897:1: ( rule__QuestionAnswer__Group__0__Impl rule__QuestionAnswer__Group__1 )
-            // InternalJoveNotes.g:1898:2: rule__QuestionAnswer__Group__0__Impl rule__QuestionAnswer__Group__1
+            // InternalJoveNotes.g:1931:1: ( rule__QuestionAnswer__Group__0__Impl rule__QuestionAnswer__Group__1 )
+            // InternalJoveNotes.g:1932:2: rule__QuestionAnswer__Group__0__Impl rule__QuestionAnswer__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__QuestionAnswer__Group__0__Impl();
@@ -5432,17 +5534,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuestionAnswer__Group__0__Impl"
-    // InternalJoveNotes.g:1905:1: rule__QuestionAnswer__Group__0__Impl : ( '@qa' ) ;
+    // InternalJoveNotes.g:1939:1: rule__QuestionAnswer__Group__0__Impl : ( '@qa' ) ;
     public final void rule__QuestionAnswer__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1909:1: ( ( '@qa' ) )
-            // InternalJoveNotes.g:1910:1: ( '@qa' )
+            // InternalJoveNotes.g:1943:1: ( ( '@qa' ) )
+            // InternalJoveNotes.g:1944:1: ( '@qa' )
             {
-            // InternalJoveNotes.g:1910:1: ( '@qa' )
-            // InternalJoveNotes.g:1911:1: '@qa'
+            // InternalJoveNotes.g:1944:1: ( '@qa' )
+            // InternalJoveNotes.g:1945:1: '@qa'
             {
              before(grammarAccess.getQuestionAnswerAccess().getQaKeyword_0()); 
             match(input,17,FOLLOW_2); 
@@ -5469,14 +5571,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuestionAnswer__Group__1"
-    // InternalJoveNotes.g:1924:1: rule__QuestionAnswer__Group__1 : rule__QuestionAnswer__Group__1__Impl rule__QuestionAnswer__Group__2 ;
+    // InternalJoveNotes.g:1958:1: rule__QuestionAnswer__Group__1 : rule__QuestionAnswer__Group__1__Impl rule__QuestionAnswer__Group__2 ;
     public final void rule__QuestionAnswer__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1928:1: ( rule__QuestionAnswer__Group__1__Impl rule__QuestionAnswer__Group__2 )
-            // InternalJoveNotes.g:1929:2: rule__QuestionAnswer__Group__1__Impl rule__QuestionAnswer__Group__2
+            // InternalJoveNotes.g:1962:1: ( rule__QuestionAnswer__Group__1__Impl rule__QuestionAnswer__Group__2 )
+            // InternalJoveNotes.g:1963:2: rule__QuestionAnswer__Group__1__Impl rule__QuestionAnswer__Group__2
             {
             pushFollow(FOLLOW_14);
             rule__QuestionAnswer__Group__1__Impl();
@@ -5507,29 +5609,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuestionAnswer__Group__1__Impl"
-    // InternalJoveNotes.g:1936:1: rule__QuestionAnswer__Group__1__Impl : ( ( rule__QuestionAnswer__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:1970:1: rule__QuestionAnswer__Group__1__Impl : ( ( rule__QuestionAnswer__HideFromViewAssignment_1 )? ) ;
     public final void rule__QuestionAnswer__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1940:1: ( ( ( rule__QuestionAnswer__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:1941:1: ( ( rule__QuestionAnswer__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:1974:1: ( ( ( rule__QuestionAnswer__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:1975:1: ( ( rule__QuestionAnswer__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:1941:1: ( ( rule__QuestionAnswer__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:1942:1: ( rule__QuestionAnswer__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:1975:1: ( ( rule__QuestionAnswer__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:1976:1: ( rule__QuestionAnswer__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getQuestionAnswerAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:1943:1: ( rule__QuestionAnswer__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:1977:1: ( rule__QuestionAnswer__HideFromViewAssignment_1 )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==59) ) {
+            if ( (LA10_0==60) ) {
                 alt10=1;
             }
             switch (alt10) {
                 case 1 :
-                    // InternalJoveNotes.g:1943:2: rule__QuestionAnswer__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:1977:2: rule__QuestionAnswer__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__QuestionAnswer__HideFromViewAssignment_1();
@@ -5565,14 +5667,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuestionAnswer__Group__2"
-    // InternalJoveNotes.g:1953:1: rule__QuestionAnswer__Group__2 : rule__QuestionAnswer__Group__2__Impl rule__QuestionAnswer__Group__3 ;
+    // InternalJoveNotes.g:1987:1: rule__QuestionAnswer__Group__2 : rule__QuestionAnswer__Group__2__Impl rule__QuestionAnswer__Group__3 ;
     public final void rule__QuestionAnswer__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1957:1: ( rule__QuestionAnswer__Group__2__Impl rule__QuestionAnswer__Group__3 )
-            // InternalJoveNotes.g:1958:2: rule__QuestionAnswer__Group__2__Impl rule__QuestionAnswer__Group__3
+            // InternalJoveNotes.g:1991:1: ( rule__QuestionAnswer__Group__2__Impl rule__QuestionAnswer__Group__3 )
+            // InternalJoveNotes.g:1992:2: rule__QuestionAnswer__Group__2__Impl rule__QuestionAnswer__Group__3
             {
             pushFollow(FOLLOW_7);
             rule__QuestionAnswer__Group__2__Impl();
@@ -5603,21 +5705,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuestionAnswer__Group__2__Impl"
-    // InternalJoveNotes.g:1965:1: rule__QuestionAnswer__Group__2__Impl : ( ( rule__QuestionAnswer__QuestionAssignment_2 ) ) ;
+    // InternalJoveNotes.g:1999:1: rule__QuestionAnswer__Group__2__Impl : ( ( rule__QuestionAnswer__QuestionAssignment_2 ) ) ;
     public final void rule__QuestionAnswer__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1969:1: ( ( ( rule__QuestionAnswer__QuestionAssignment_2 ) ) )
-            // InternalJoveNotes.g:1970:1: ( ( rule__QuestionAnswer__QuestionAssignment_2 ) )
+            // InternalJoveNotes.g:2003:1: ( ( ( rule__QuestionAnswer__QuestionAssignment_2 ) ) )
+            // InternalJoveNotes.g:2004:1: ( ( rule__QuestionAnswer__QuestionAssignment_2 ) )
             {
-            // InternalJoveNotes.g:1970:1: ( ( rule__QuestionAnswer__QuestionAssignment_2 ) )
-            // InternalJoveNotes.g:1971:1: ( rule__QuestionAnswer__QuestionAssignment_2 )
+            // InternalJoveNotes.g:2004:1: ( ( rule__QuestionAnswer__QuestionAssignment_2 ) )
+            // InternalJoveNotes.g:2005:1: ( rule__QuestionAnswer__QuestionAssignment_2 )
             {
              before(grammarAccess.getQuestionAnswerAccess().getQuestionAssignment_2()); 
-            // InternalJoveNotes.g:1972:1: ( rule__QuestionAnswer__QuestionAssignment_2 )
-            // InternalJoveNotes.g:1972:2: rule__QuestionAnswer__QuestionAssignment_2
+            // InternalJoveNotes.g:2006:1: ( rule__QuestionAnswer__QuestionAssignment_2 )
+            // InternalJoveNotes.g:2006:2: rule__QuestionAnswer__QuestionAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__QuestionAnswer__QuestionAssignment_2();
@@ -5650,14 +5752,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuestionAnswer__Group__3"
-    // InternalJoveNotes.g:1982:1: rule__QuestionAnswer__Group__3 : rule__QuestionAnswer__Group__3__Impl rule__QuestionAnswer__Group__4 ;
+    // InternalJoveNotes.g:2016:1: rule__QuestionAnswer__Group__3 : rule__QuestionAnswer__Group__3__Impl rule__QuestionAnswer__Group__4 ;
     public final void rule__QuestionAnswer__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1986:1: ( rule__QuestionAnswer__Group__3__Impl rule__QuestionAnswer__Group__4 )
-            // InternalJoveNotes.g:1987:2: rule__QuestionAnswer__Group__3__Impl rule__QuestionAnswer__Group__4
+            // InternalJoveNotes.g:2020:1: ( rule__QuestionAnswer__Group__3__Impl rule__QuestionAnswer__Group__4 )
+            // InternalJoveNotes.g:2021:2: rule__QuestionAnswer__Group__3__Impl rule__QuestionAnswer__Group__4
             {
             pushFollow(FOLLOW_15);
             rule__QuestionAnswer__Group__3__Impl();
@@ -5688,24 +5790,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuestionAnswer__Group__3__Impl"
-    // InternalJoveNotes.g:1994:1: rule__QuestionAnswer__Group__3__Impl : ( ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 ) ) ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 )* ) ) ;
+    // InternalJoveNotes.g:2028:1: rule__QuestionAnswer__Group__3__Impl : ( ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 ) ) ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 )* ) ) ;
     public final void rule__QuestionAnswer__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:1998:1: ( ( ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 ) ) ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 )* ) ) )
-            // InternalJoveNotes.g:1999:1: ( ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 ) ) ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 )* ) )
+            // InternalJoveNotes.g:2032:1: ( ( ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 ) ) ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 )* ) ) )
+            // InternalJoveNotes.g:2033:1: ( ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 ) ) ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 )* ) )
             {
-            // InternalJoveNotes.g:1999:1: ( ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 ) ) ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 )* ) )
-            // InternalJoveNotes.g:2000:1: ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 ) ) ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 )* )
+            // InternalJoveNotes.g:2033:1: ( ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 ) ) ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 )* ) )
+            // InternalJoveNotes.g:2034:1: ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 ) ) ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 )* )
             {
-            // InternalJoveNotes.g:2000:1: ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 ) )
-            // InternalJoveNotes.g:2001:1: ( rule__QuestionAnswer__AnswerPartsAssignment_3 )
+            // InternalJoveNotes.g:2034:1: ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 ) )
+            // InternalJoveNotes.g:2035:1: ( rule__QuestionAnswer__AnswerPartsAssignment_3 )
             {
              before(grammarAccess.getQuestionAnswerAccess().getAnswerPartsAssignment_3()); 
-            // InternalJoveNotes.g:2002:1: ( rule__QuestionAnswer__AnswerPartsAssignment_3 )
-            // InternalJoveNotes.g:2002:2: rule__QuestionAnswer__AnswerPartsAssignment_3
+            // InternalJoveNotes.g:2036:1: ( rule__QuestionAnswer__AnswerPartsAssignment_3 )
+            // InternalJoveNotes.g:2036:2: rule__QuestionAnswer__AnswerPartsAssignment_3
             {
             pushFollow(FOLLOW_16);
             rule__QuestionAnswer__AnswerPartsAssignment_3();
@@ -5719,11 +5821,11 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
             }
 
-            // InternalJoveNotes.g:2005:1: ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 )* )
-            // InternalJoveNotes.g:2006:1: ( rule__QuestionAnswer__AnswerPartsAssignment_3 )*
+            // InternalJoveNotes.g:2039:1: ( ( rule__QuestionAnswer__AnswerPartsAssignment_3 )* )
+            // InternalJoveNotes.g:2040:1: ( rule__QuestionAnswer__AnswerPartsAssignment_3 )*
             {
              before(grammarAccess.getQuestionAnswerAccess().getAnswerPartsAssignment_3()); 
-            // InternalJoveNotes.g:2007:1: ( rule__QuestionAnswer__AnswerPartsAssignment_3 )*
+            // InternalJoveNotes.g:2041:1: ( rule__QuestionAnswer__AnswerPartsAssignment_3 )*
             loop11:
             do {
                 int alt11=2;
@@ -5736,7 +5838,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
                 switch (alt11) {
             	case 1 :
-            	    // InternalJoveNotes.g:2007:2: rule__QuestionAnswer__AnswerPartsAssignment_3
+            	    // InternalJoveNotes.g:2041:2: rule__QuestionAnswer__AnswerPartsAssignment_3
             	    {
             	    pushFollow(FOLLOW_16);
             	    rule__QuestionAnswer__AnswerPartsAssignment_3();
@@ -5778,14 +5880,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuestionAnswer__Group__4"
-    // InternalJoveNotes.g:2018:1: rule__QuestionAnswer__Group__4 : rule__QuestionAnswer__Group__4__Impl ;
+    // InternalJoveNotes.g:2052:1: rule__QuestionAnswer__Group__4 : rule__QuestionAnswer__Group__4__Impl ;
     public final void rule__QuestionAnswer__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2022:1: ( rule__QuestionAnswer__Group__4__Impl )
-            // InternalJoveNotes.g:2023:2: rule__QuestionAnswer__Group__4__Impl
+            // InternalJoveNotes.g:2056:1: ( rule__QuestionAnswer__Group__4__Impl )
+            // InternalJoveNotes.g:2057:2: rule__QuestionAnswer__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__QuestionAnswer__Group__4__Impl();
@@ -5811,29 +5913,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuestionAnswer__Group__4__Impl"
-    // InternalJoveNotes.g:2029:1: rule__QuestionAnswer__Group__4__Impl : ( ( rule__QuestionAnswer__CmapAssignment_4 )? ) ;
+    // InternalJoveNotes.g:2063:1: rule__QuestionAnswer__Group__4__Impl : ( ( rule__QuestionAnswer__CmapAssignment_4 )? ) ;
     public final void rule__QuestionAnswer__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2033:1: ( ( ( rule__QuestionAnswer__CmapAssignment_4 )? ) )
-            // InternalJoveNotes.g:2034:1: ( ( rule__QuestionAnswer__CmapAssignment_4 )? )
+            // InternalJoveNotes.g:2067:1: ( ( ( rule__QuestionAnswer__CmapAssignment_4 )? ) )
+            // InternalJoveNotes.g:2068:1: ( ( rule__QuestionAnswer__CmapAssignment_4 )? )
             {
-            // InternalJoveNotes.g:2034:1: ( ( rule__QuestionAnswer__CmapAssignment_4 )? )
-            // InternalJoveNotes.g:2035:1: ( rule__QuestionAnswer__CmapAssignment_4 )?
+            // InternalJoveNotes.g:2068:1: ( ( rule__QuestionAnswer__CmapAssignment_4 )? )
+            // InternalJoveNotes.g:2069:1: ( rule__QuestionAnswer__CmapAssignment_4 )?
             {
              before(grammarAccess.getQuestionAnswerAccess().getCmapAssignment_4()); 
-            // InternalJoveNotes.g:2036:1: ( rule__QuestionAnswer__CmapAssignment_4 )?
+            // InternalJoveNotes.g:2070:1: ( rule__QuestionAnswer__CmapAssignment_4 )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( (LA12_0==53) ) {
+            if ( (LA12_0==54) ) {
                 alt12=1;
             }
             switch (alt12) {
                 case 1 :
-                    // InternalJoveNotes.g:2036:2: rule__QuestionAnswer__CmapAssignment_4
+                    // InternalJoveNotes.g:2070:2: rule__QuestionAnswer__CmapAssignment_4
                     {
                     pushFollow(FOLLOW_2);
                     rule__QuestionAnswer__CmapAssignment_4();
@@ -5869,14 +5971,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__FIB__Group__0"
-    // InternalJoveNotes.g:2056:1: rule__FIB__Group__0 : rule__FIB__Group__0__Impl rule__FIB__Group__1 ;
+    // InternalJoveNotes.g:2090:1: rule__FIB__Group__0 : rule__FIB__Group__0__Impl rule__FIB__Group__1 ;
     public final void rule__FIB__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2060:1: ( rule__FIB__Group__0__Impl rule__FIB__Group__1 )
-            // InternalJoveNotes.g:2061:2: rule__FIB__Group__0__Impl rule__FIB__Group__1
+            // InternalJoveNotes.g:2094:1: ( rule__FIB__Group__0__Impl rule__FIB__Group__1 )
+            // InternalJoveNotes.g:2095:2: rule__FIB__Group__0__Impl rule__FIB__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__FIB__Group__0__Impl();
@@ -5907,17 +6009,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__FIB__Group__0__Impl"
-    // InternalJoveNotes.g:2068:1: rule__FIB__Group__0__Impl : ( '@fib' ) ;
+    // InternalJoveNotes.g:2102:1: rule__FIB__Group__0__Impl : ( '@fib' ) ;
     public final void rule__FIB__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2072:1: ( ( '@fib' ) )
-            // InternalJoveNotes.g:2073:1: ( '@fib' )
+            // InternalJoveNotes.g:2106:1: ( ( '@fib' ) )
+            // InternalJoveNotes.g:2107:1: ( '@fib' )
             {
-            // InternalJoveNotes.g:2073:1: ( '@fib' )
-            // InternalJoveNotes.g:2074:1: '@fib'
+            // InternalJoveNotes.g:2107:1: ( '@fib' )
+            // InternalJoveNotes.g:2108:1: '@fib'
             {
              before(grammarAccess.getFIBAccess().getFibKeyword_0()); 
             match(input,18,FOLLOW_2); 
@@ -5944,14 +6046,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__FIB__Group__1"
-    // InternalJoveNotes.g:2087:1: rule__FIB__Group__1 : rule__FIB__Group__1__Impl rule__FIB__Group__2 ;
+    // InternalJoveNotes.g:2121:1: rule__FIB__Group__1 : rule__FIB__Group__1__Impl rule__FIB__Group__2 ;
     public final void rule__FIB__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2091:1: ( rule__FIB__Group__1__Impl rule__FIB__Group__2 )
-            // InternalJoveNotes.g:2092:2: rule__FIB__Group__1__Impl rule__FIB__Group__2
+            // InternalJoveNotes.g:2125:1: ( rule__FIB__Group__1__Impl rule__FIB__Group__2 )
+            // InternalJoveNotes.g:2126:2: rule__FIB__Group__1__Impl rule__FIB__Group__2
             {
             pushFollow(FOLLOW_14);
             rule__FIB__Group__1__Impl();
@@ -5982,29 +6084,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__FIB__Group__1__Impl"
-    // InternalJoveNotes.g:2099:1: rule__FIB__Group__1__Impl : ( ( rule__FIB__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:2133:1: rule__FIB__Group__1__Impl : ( ( rule__FIB__HideFromViewAssignment_1 )? ) ;
     public final void rule__FIB__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2103:1: ( ( ( rule__FIB__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:2104:1: ( ( rule__FIB__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:2137:1: ( ( ( rule__FIB__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:2138:1: ( ( rule__FIB__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:2104:1: ( ( rule__FIB__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:2105:1: ( rule__FIB__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:2138:1: ( ( rule__FIB__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:2139:1: ( rule__FIB__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getFIBAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:2106:1: ( rule__FIB__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:2140:1: ( rule__FIB__HideFromViewAssignment_1 )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==59) ) {
+            if ( (LA13_0==60) ) {
                 alt13=1;
             }
             switch (alt13) {
                 case 1 :
-                    // InternalJoveNotes.g:2106:2: rule__FIB__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:2140:2: rule__FIB__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__FIB__HideFromViewAssignment_1();
@@ -6040,14 +6142,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__FIB__Group__2"
-    // InternalJoveNotes.g:2116:1: rule__FIB__Group__2 : rule__FIB__Group__2__Impl rule__FIB__Group__3 ;
+    // InternalJoveNotes.g:2150:1: rule__FIB__Group__2 : rule__FIB__Group__2__Impl rule__FIB__Group__3 ;
     public final void rule__FIB__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2120:1: ( rule__FIB__Group__2__Impl rule__FIB__Group__3 )
-            // InternalJoveNotes.g:2121:2: rule__FIB__Group__2__Impl rule__FIB__Group__3
+            // InternalJoveNotes.g:2154:1: ( rule__FIB__Group__2__Impl rule__FIB__Group__3 )
+            // InternalJoveNotes.g:2155:2: rule__FIB__Group__2__Impl rule__FIB__Group__3
             {
             pushFollow(FOLLOW_7);
             rule__FIB__Group__2__Impl();
@@ -6078,21 +6180,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__FIB__Group__2__Impl"
-    // InternalJoveNotes.g:2128:1: rule__FIB__Group__2__Impl : ( ( rule__FIB__QuestionAssignment_2 ) ) ;
+    // InternalJoveNotes.g:2162:1: rule__FIB__Group__2__Impl : ( ( rule__FIB__QuestionAssignment_2 ) ) ;
     public final void rule__FIB__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2132:1: ( ( ( rule__FIB__QuestionAssignment_2 ) ) )
-            // InternalJoveNotes.g:2133:1: ( ( rule__FIB__QuestionAssignment_2 ) )
+            // InternalJoveNotes.g:2166:1: ( ( ( rule__FIB__QuestionAssignment_2 ) ) )
+            // InternalJoveNotes.g:2167:1: ( ( rule__FIB__QuestionAssignment_2 ) )
             {
-            // InternalJoveNotes.g:2133:1: ( ( rule__FIB__QuestionAssignment_2 ) )
-            // InternalJoveNotes.g:2134:1: ( rule__FIB__QuestionAssignment_2 )
+            // InternalJoveNotes.g:2167:1: ( ( rule__FIB__QuestionAssignment_2 ) )
+            // InternalJoveNotes.g:2168:1: ( rule__FIB__QuestionAssignment_2 )
             {
              before(grammarAccess.getFIBAccess().getQuestionAssignment_2()); 
-            // InternalJoveNotes.g:2135:1: ( rule__FIB__QuestionAssignment_2 )
-            // InternalJoveNotes.g:2135:2: rule__FIB__QuestionAssignment_2
+            // InternalJoveNotes.g:2169:1: ( rule__FIB__QuestionAssignment_2 )
+            // InternalJoveNotes.g:2169:2: rule__FIB__QuestionAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__FIB__QuestionAssignment_2();
@@ -6125,14 +6227,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__FIB__Group__3"
-    // InternalJoveNotes.g:2145:1: rule__FIB__Group__3 : rule__FIB__Group__3__Impl ;
+    // InternalJoveNotes.g:2179:1: rule__FIB__Group__3 : rule__FIB__Group__3__Impl ;
     public final void rule__FIB__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2149:1: ( rule__FIB__Group__3__Impl )
-            // InternalJoveNotes.g:2150:2: rule__FIB__Group__3__Impl
+            // InternalJoveNotes.g:2183:1: ( rule__FIB__Group__3__Impl )
+            // InternalJoveNotes.g:2184:2: rule__FIB__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__FIB__Group__3__Impl();
@@ -6158,24 +6260,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__FIB__Group__3__Impl"
-    // InternalJoveNotes.g:2156:1: rule__FIB__Group__3__Impl : ( ( ( rule__FIB__AnswersAssignment_3 ) ) ( ( rule__FIB__AnswersAssignment_3 )* ) ) ;
+    // InternalJoveNotes.g:2190:1: rule__FIB__Group__3__Impl : ( ( ( rule__FIB__AnswersAssignment_3 ) ) ( ( rule__FIB__AnswersAssignment_3 )* ) ) ;
     public final void rule__FIB__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2160:1: ( ( ( ( rule__FIB__AnswersAssignment_3 ) ) ( ( rule__FIB__AnswersAssignment_3 )* ) ) )
-            // InternalJoveNotes.g:2161:1: ( ( ( rule__FIB__AnswersAssignment_3 ) ) ( ( rule__FIB__AnswersAssignment_3 )* ) )
+            // InternalJoveNotes.g:2194:1: ( ( ( ( rule__FIB__AnswersAssignment_3 ) ) ( ( rule__FIB__AnswersAssignment_3 )* ) ) )
+            // InternalJoveNotes.g:2195:1: ( ( ( rule__FIB__AnswersAssignment_3 ) ) ( ( rule__FIB__AnswersAssignment_3 )* ) )
             {
-            // InternalJoveNotes.g:2161:1: ( ( ( rule__FIB__AnswersAssignment_3 ) ) ( ( rule__FIB__AnswersAssignment_3 )* ) )
-            // InternalJoveNotes.g:2162:1: ( ( rule__FIB__AnswersAssignment_3 ) ) ( ( rule__FIB__AnswersAssignment_3 )* )
+            // InternalJoveNotes.g:2195:1: ( ( ( rule__FIB__AnswersAssignment_3 ) ) ( ( rule__FIB__AnswersAssignment_3 )* ) )
+            // InternalJoveNotes.g:2196:1: ( ( rule__FIB__AnswersAssignment_3 ) ) ( ( rule__FIB__AnswersAssignment_3 )* )
             {
-            // InternalJoveNotes.g:2162:1: ( ( rule__FIB__AnswersAssignment_3 ) )
-            // InternalJoveNotes.g:2163:1: ( rule__FIB__AnswersAssignment_3 )
+            // InternalJoveNotes.g:2196:1: ( ( rule__FIB__AnswersAssignment_3 ) )
+            // InternalJoveNotes.g:2197:1: ( rule__FIB__AnswersAssignment_3 )
             {
              before(grammarAccess.getFIBAccess().getAnswersAssignment_3()); 
-            // InternalJoveNotes.g:2164:1: ( rule__FIB__AnswersAssignment_3 )
-            // InternalJoveNotes.g:2164:2: rule__FIB__AnswersAssignment_3
+            // InternalJoveNotes.g:2198:1: ( rule__FIB__AnswersAssignment_3 )
+            // InternalJoveNotes.g:2198:2: rule__FIB__AnswersAssignment_3
             {
             pushFollow(FOLLOW_16);
             rule__FIB__AnswersAssignment_3();
@@ -6189,11 +6291,11 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
             }
 
-            // InternalJoveNotes.g:2167:1: ( ( rule__FIB__AnswersAssignment_3 )* )
-            // InternalJoveNotes.g:2168:1: ( rule__FIB__AnswersAssignment_3 )*
+            // InternalJoveNotes.g:2201:1: ( ( rule__FIB__AnswersAssignment_3 )* )
+            // InternalJoveNotes.g:2202:1: ( rule__FIB__AnswersAssignment_3 )*
             {
              before(grammarAccess.getFIBAccess().getAnswersAssignment_3()); 
-            // InternalJoveNotes.g:2169:1: ( rule__FIB__AnswersAssignment_3 )*
+            // InternalJoveNotes.g:2203:1: ( rule__FIB__AnswersAssignment_3 )*
             loop14:
             do {
                 int alt14=2;
@@ -6206,7 +6308,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
                 switch (alt14) {
             	case 1 :
-            	    // InternalJoveNotes.g:2169:2: rule__FIB__AnswersAssignment_3
+            	    // InternalJoveNotes.g:2203:2: rule__FIB__AnswersAssignment_3
             	    {
             	    pushFollow(FOLLOW_16);
             	    rule__FIB__AnswersAssignment_3();
@@ -6248,14 +6350,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Definition__Group__0"
-    // InternalJoveNotes.g:2188:1: rule__Definition__Group__0 : rule__Definition__Group__0__Impl rule__Definition__Group__1 ;
+    // InternalJoveNotes.g:2222:1: rule__Definition__Group__0 : rule__Definition__Group__0__Impl rule__Definition__Group__1 ;
     public final void rule__Definition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2192:1: ( rule__Definition__Group__0__Impl rule__Definition__Group__1 )
-            // InternalJoveNotes.g:2193:2: rule__Definition__Group__0__Impl rule__Definition__Group__1
+            // InternalJoveNotes.g:2226:1: ( rule__Definition__Group__0__Impl rule__Definition__Group__1 )
+            // InternalJoveNotes.g:2227:2: rule__Definition__Group__0__Impl rule__Definition__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__Definition__Group__0__Impl();
@@ -6286,17 +6388,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Definition__Group__0__Impl"
-    // InternalJoveNotes.g:2200:1: rule__Definition__Group__0__Impl : ( '@definition' ) ;
+    // InternalJoveNotes.g:2234:1: rule__Definition__Group__0__Impl : ( '@definition' ) ;
     public final void rule__Definition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2204:1: ( ( '@definition' ) )
-            // InternalJoveNotes.g:2205:1: ( '@definition' )
+            // InternalJoveNotes.g:2238:1: ( ( '@definition' ) )
+            // InternalJoveNotes.g:2239:1: ( '@definition' )
             {
-            // InternalJoveNotes.g:2205:1: ( '@definition' )
-            // InternalJoveNotes.g:2206:1: '@definition'
+            // InternalJoveNotes.g:2239:1: ( '@definition' )
+            // InternalJoveNotes.g:2240:1: '@definition'
             {
              before(grammarAccess.getDefinitionAccess().getDefinitionKeyword_0()); 
             match(input,19,FOLLOW_2); 
@@ -6323,14 +6425,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Definition__Group__1"
-    // InternalJoveNotes.g:2219:1: rule__Definition__Group__1 : rule__Definition__Group__1__Impl rule__Definition__Group__2 ;
+    // InternalJoveNotes.g:2253:1: rule__Definition__Group__1 : rule__Definition__Group__1__Impl rule__Definition__Group__2 ;
     public final void rule__Definition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2223:1: ( rule__Definition__Group__1__Impl rule__Definition__Group__2 )
-            // InternalJoveNotes.g:2224:2: rule__Definition__Group__1__Impl rule__Definition__Group__2
+            // InternalJoveNotes.g:2257:1: ( rule__Definition__Group__1__Impl rule__Definition__Group__2 )
+            // InternalJoveNotes.g:2258:2: rule__Definition__Group__1__Impl rule__Definition__Group__2
             {
             pushFollow(FOLLOW_14);
             rule__Definition__Group__1__Impl();
@@ -6361,29 +6463,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Definition__Group__1__Impl"
-    // InternalJoveNotes.g:2231:1: rule__Definition__Group__1__Impl : ( ( rule__Definition__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:2265:1: rule__Definition__Group__1__Impl : ( ( rule__Definition__HideFromViewAssignment_1 )? ) ;
     public final void rule__Definition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2235:1: ( ( ( rule__Definition__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:2236:1: ( ( rule__Definition__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:2269:1: ( ( ( rule__Definition__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:2270:1: ( ( rule__Definition__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:2236:1: ( ( rule__Definition__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:2237:1: ( rule__Definition__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:2270:1: ( ( rule__Definition__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:2271:1: ( rule__Definition__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getDefinitionAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:2238:1: ( rule__Definition__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:2272:1: ( rule__Definition__HideFromViewAssignment_1 )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
-            if ( (LA15_0==59) ) {
+            if ( (LA15_0==60) ) {
                 alt15=1;
             }
             switch (alt15) {
                 case 1 :
-                    // InternalJoveNotes.g:2238:2: rule__Definition__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:2272:2: rule__Definition__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Definition__HideFromViewAssignment_1();
@@ -6419,14 +6521,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Definition__Group__2"
-    // InternalJoveNotes.g:2248:1: rule__Definition__Group__2 : rule__Definition__Group__2__Impl rule__Definition__Group__3 ;
+    // InternalJoveNotes.g:2282:1: rule__Definition__Group__2 : rule__Definition__Group__2__Impl rule__Definition__Group__3 ;
     public final void rule__Definition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2252:1: ( rule__Definition__Group__2__Impl rule__Definition__Group__3 )
-            // InternalJoveNotes.g:2253:2: rule__Definition__Group__2__Impl rule__Definition__Group__3
+            // InternalJoveNotes.g:2286:1: ( rule__Definition__Group__2__Impl rule__Definition__Group__3 )
+            // InternalJoveNotes.g:2287:2: rule__Definition__Group__2__Impl rule__Definition__Group__3
             {
             pushFollow(FOLLOW_7);
             rule__Definition__Group__2__Impl();
@@ -6457,21 +6559,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Definition__Group__2__Impl"
-    // InternalJoveNotes.g:2260:1: rule__Definition__Group__2__Impl : ( ( rule__Definition__TermAssignment_2 ) ) ;
+    // InternalJoveNotes.g:2294:1: rule__Definition__Group__2__Impl : ( ( rule__Definition__TermAssignment_2 ) ) ;
     public final void rule__Definition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2264:1: ( ( ( rule__Definition__TermAssignment_2 ) ) )
-            // InternalJoveNotes.g:2265:1: ( ( rule__Definition__TermAssignment_2 ) )
+            // InternalJoveNotes.g:2298:1: ( ( ( rule__Definition__TermAssignment_2 ) ) )
+            // InternalJoveNotes.g:2299:1: ( ( rule__Definition__TermAssignment_2 ) )
             {
-            // InternalJoveNotes.g:2265:1: ( ( rule__Definition__TermAssignment_2 ) )
-            // InternalJoveNotes.g:2266:1: ( rule__Definition__TermAssignment_2 )
+            // InternalJoveNotes.g:2299:1: ( ( rule__Definition__TermAssignment_2 ) )
+            // InternalJoveNotes.g:2300:1: ( rule__Definition__TermAssignment_2 )
             {
              before(grammarAccess.getDefinitionAccess().getTermAssignment_2()); 
-            // InternalJoveNotes.g:2267:1: ( rule__Definition__TermAssignment_2 )
-            // InternalJoveNotes.g:2267:2: rule__Definition__TermAssignment_2
+            // InternalJoveNotes.g:2301:1: ( rule__Definition__TermAssignment_2 )
+            // InternalJoveNotes.g:2301:2: rule__Definition__TermAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Definition__TermAssignment_2();
@@ -6504,14 +6606,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Definition__Group__3"
-    // InternalJoveNotes.g:2277:1: rule__Definition__Group__3 : rule__Definition__Group__3__Impl rule__Definition__Group__4 ;
+    // InternalJoveNotes.g:2311:1: rule__Definition__Group__3 : rule__Definition__Group__3__Impl rule__Definition__Group__4 ;
     public final void rule__Definition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2281:1: ( rule__Definition__Group__3__Impl rule__Definition__Group__4 )
-            // InternalJoveNotes.g:2282:2: rule__Definition__Group__3__Impl rule__Definition__Group__4
+            // InternalJoveNotes.g:2315:1: ( rule__Definition__Group__3__Impl rule__Definition__Group__4 )
+            // InternalJoveNotes.g:2316:2: rule__Definition__Group__3__Impl rule__Definition__Group__4
             {
             pushFollow(FOLLOW_15);
             rule__Definition__Group__3__Impl();
@@ -6542,21 +6644,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Definition__Group__3__Impl"
-    // InternalJoveNotes.g:2289:1: rule__Definition__Group__3__Impl : ( ( rule__Definition__DefinitionAssignment_3 ) ) ;
+    // InternalJoveNotes.g:2323:1: rule__Definition__Group__3__Impl : ( ( rule__Definition__DefinitionAssignment_3 ) ) ;
     public final void rule__Definition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2293:1: ( ( ( rule__Definition__DefinitionAssignment_3 ) ) )
-            // InternalJoveNotes.g:2294:1: ( ( rule__Definition__DefinitionAssignment_3 ) )
+            // InternalJoveNotes.g:2327:1: ( ( ( rule__Definition__DefinitionAssignment_3 ) ) )
+            // InternalJoveNotes.g:2328:1: ( ( rule__Definition__DefinitionAssignment_3 ) )
             {
-            // InternalJoveNotes.g:2294:1: ( ( rule__Definition__DefinitionAssignment_3 ) )
-            // InternalJoveNotes.g:2295:1: ( rule__Definition__DefinitionAssignment_3 )
+            // InternalJoveNotes.g:2328:1: ( ( rule__Definition__DefinitionAssignment_3 ) )
+            // InternalJoveNotes.g:2329:1: ( rule__Definition__DefinitionAssignment_3 )
             {
              before(grammarAccess.getDefinitionAccess().getDefinitionAssignment_3()); 
-            // InternalJoveNotes.g:2296:1: ( rule__Definition__DefinitionAssignment_3 )
-            // InternalJoveNotes.g:2296:2: rule__Definition__DefinitionAssignment_3
+            // InternalJoveNotes.g:2330:1: ( rule__Definition__DefinitionAssignment_3 )
+            // InternalJoveNotes.g:2330:2: rule__Definition__DefinitionAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__Definition__DefinitionAssignment_3();
@@ -6589,14 +6691,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Definition__Group__4"
-    // InternalJoveNotes.g:2306:1: rule__Definition__Group__4 : rule__Definition__Group__4__Impl ;
+    // InternalJoveNotes.g:2340:1: rule__Definition__Group__4 : rule__Definition__Group__4__Impl ;
     public final void rule__Definition__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2310:1: ( rule__Definition__Group__4__Impl )
-            // InternalJoveNotes.g:2311:2: rule__Definition__Group__4__Impl
+            // InternalJoveNotes.g:2344:1: ( rule__Definition__Group__4__Impl )
+            // InternalJoveNotes.g:2345:2: rule__Definition__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Definition__Group__4__Impl();
@@ -6622,29 +6724,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Definition__Group__4__Impl"
-    // InternalJoveNotes.g:2317:1: rule__Definition__Group__4__Impl : ( ( rule__Definition__CmapAssignment_4 )? ) ;
+    // InternalJoveNotes.g:2351:1: rule__Definition__Group__4__Impl : ( ( rule__Definition__CmapAssignment_4 )? ) ;
     public final void rule__Definition__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2321:1: ( ( ( rule__Definition__CmapAssignment_4 )? ) )
-            // InternalJoveNotes.g:2322:1: ( ( rule__Definition__CmapAssignment_4 )? )
+            // InternalJoveNotes.g:2355:1: ( ( ( rule__Definition__CmapAssignment_4 )? ) )
+            // InternalJoveNotes.g:2356:1: ( ( rule__Definition__CmapAssignment_4 )? )
             {
-            // InternalJoveNotes.g:2322:1: ( ( rule__Definition__CmapAssignment_4 )? )
-            // InternalJoveNotes.g:2323:1: ( rule__Definition__CmapAssignment_4 )?
+            // InternalJoveNotes.g:2356:1: ( ( rule__Definition__CmapAssignment_4 )? )
+            // InternalJoveNotes.g:2357:1: ( rule__Definition__CmapAssignment_4 )?
             {
              before(grammarAccess.getDefinitionAccess().getCmapAssignment_4()); 
-            // InternalJoveNotes.g:2324:1: ( rule__Definition__CmapAssignment_4 )?
+            // InternalJoveNotes.g:2358:1: ( rule__Definition__CmapAssignment_4 )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
-            if ( (LA16_0==53) ) {
+            if ( (LA16_0==54) ) {
                 alt16=1;
             }
             switch (alt16) {
                 case 1 :
-                    // InternalJoveNotes.g:2324:2: rule__Definition__CmapAssignment_4
+                    // InternalJoveNotes.g:2358:2: rule__Definition__CmapAssignment_4
                     {
                     pushFollow(FOLLOW_2);
                     rule__Definition__CmapAssignment_4();
@@ -6680,14 +6782,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Character__Group__0"
-    // InternalJoveNotes.g:2344:1: rule__Character__Group__0 : rule__Character__Group__0__Impl rule__Character__Group__1 ;
+    // InternalJoveNotes.g:2378:1: rule__Character__Group__0 : rule__Character__Group__0__Impl rule__Character__Group__1 ;
     public final void rule__Character__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2348:1: ( rule__Character__Group__0__Impl rule__Character__Group__1 )
-            // InternalJoveNotes.g:2349:2: rule__Character__Group__0__Impl rule__Character__Group__1
+            // InternalJoveNotes.g:2382:1: ( rule__Character__Group__0__Impl rule__Character__Group__1 )
+            // InternalJoveNotes.g:2383:2: rule__Character__Group__0__Impl rule__Character__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__Character__Group__0__Impl();
@@ -6718,17 +6820,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Character__Group__0__Impl"
-    // InternalJoveNotes.g:2356:1: rule__Character__Group__0__Impl : ( '@character' ) ;
+    // InternalJoveNotes.g:2390:1: rule__Character__Group__0__Impl : ( '@character' ) ;
     public final void rule__Character__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2360:1: ( ( '@character' ) )
-            // InternalJoveNotes.g:2361:1: ( '@character' )
+            // InternalJoveNotes.g:2394:1: ( ( '@character' ) )
+            // InternalJoveNotes.g:2395:1: ( '@character' )
             {
-            // InternalJoveNotes.g:2361:1: ( '@character' )
-            // InternalJoveNotes.g:2362:1: '@character'
+            // InternalJoveNotes.g:2395:1: ( '@character' )
+            // InternalJoveNotes.g:2396:1: '@character'
             {
              before(grammarAccess.getCharacterAccess().getCharacterKeyword_0()); 
             match(input,20,FOLLOW_2); 
@@ -6755,14 +6857,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Character__Group__1"
-    // InternalJoveNotes.g:2375:1: rule__Character__Group__1 : rule__Character__Group__1__Impl rule__Character__Group__2 ;
+    // InternalJoveNotes.g:2409:1: rule__Character__Group__1 : rule__Character__Group__1__Impl rule__Character__Group__2 ;
     public final void rule__Character__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2379:1: ( rule__Character__Group__1__Impl rule__Character__Group__2 )
-            // InternalJoveNotes.g:2380:2: rule__Character__Group__1__Impl rule__Character__Group__2
+            // InternalJoveNotes.g:2413:1: ( rule__Character__Group__1__Impl rule__Character__Group__2 )
+            // InternalJoveNotes.g:2414:2: rule__Character__Group__1__Impl rule__Character__Group__2
             {
             pushFollow(FOLLOW_14);
             rule__Character__Group__1__Impl();
@@ -6793,29 +6895,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Character__Group__1__Impl"
-    // InternalJoveNotes.g:2387:1: rule__Character__Group__1__Impl : ( ( rule__Character__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:2421:1: rule__Character__Group__1__Impl : ( ( rule__Character__HideFromViewAssignment_1 )? ) ;
     public final void rule__Character__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2391:1: ( ( ( rule__Character__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:2392:1: ( ( rule__Character__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:2425:1: ( ( ( rule__Character__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:2426:1: ( ( rule__Character__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:2392:1: ( ( rule__Character__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:2393:1: ( rule__Character__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:2426:1: ( ( rule__Character__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:2427:1: ( rule__Character__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getCharacterAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:2394:1: ( rule__Character__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:2428:1: ( rule__Character__HideFromViewAssignment_1 )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
-            if ( (LA17_0==59) ) {
+            if ( (LA17_0==60) ) {
                 alt17=1;
             }
             switch (alt17) {
                 case 1 :
-                    // InternalJoveNotes.g:2394:2: rule__Character__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:2428:2: rule__Character__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Character__HideFromViewAssignment_1();
@@ -6851,14 +6953,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Character__Group__2"
-    // InternalJoveNotes.g:2404:1: rule__Character__Group__2 : rule__Character__Group__2__Impl rule__Character__Group__3 ;
+    // InternalJoveNotes.g:2438:1: rule__Character__Group__2 : rule__Character__Group__2__Impl rule__Character__Group__3 ;
     public final void rule__Character__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2408:1: ( rule__Character__Group__2__Impl rule__Character__Group__3 )
-            // InternalJoveNotes.g:2409:2: rule__Character__Group__2__Impl rule__Character__Group__3
+            // InternalJoveNotes.g:2442:1: ( rule__Character__Group__2__Impl rule__Character__Group__3 )
+            // InternalJoveNotes.g:2443:2: rule__Character__Group__2__Impl rule__Character__Group__3
             {
             pushFollow(FOLLOW_7);
             rule__Character__Group__2__Impl();
@@ -6889,21 +6991,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Character__Group__2__Impl"
-    // InternalJoveNotes.g:2416:1: rule__Character__Group__2__Impl : ( ( rule__Character__CharacterAssignment_2 ) ) ;
+    // InternalJoveNotes.g:2450:1: rule__Character__Group__2__Impl : ( ( rule__Character__CharacterAssignment_2 ) ) ;
     public final void rule__Character__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2420:1: ( ( ( rule__Character__CharacterAssignment_2 ) ) )
-            // InternalJoveNotes.g:2421:1: ( ( rule__Character__CharacterAssignment_2 ) )
+            // InternalJoveNotes.g:2454:1: ( ( ( rule__Character__CharacterAssignment_2 ) ) )
+            // InternalJoveNotes.g:2455:1: ( ( rule__Character__CharacterAssignment_2 ) )
             {
-            // InternalJoveNotes.g:2421:1: ( ( rule__Character__CharacterAssignment_2 ) )
-            // InternalJoveNotes.g:2422:1: ( rule__Character__CharacterAssignment_2 )
+            // InternalJoveNotes.g:2455:1: ( ( rule__Character__CharacterAssignment_2 ) )
+            // InternalJoveNotes.g:2456:1: ( rule__Character__CharacterAssignment_2 )
             {
              before(grammarAccess.getCharacterAccess().getCharacterAssignment_2()); 
-            // InternalJoveNotes.g:2423:1: ( rule__Character__CharacterAssignment_2 )
-            // InternalJoveNotes.g:2423:2: rule__Character__CharacterAssignment_2
+            // InternalJoveNotes.g:2457:1: ( rule__Character__CharacterAssignment_2 )
+            // InternalJoveNotes.g:2457:2: rule__Character__CharacterAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Character__CharacterAssignment_2();
@@ -6936,14 +7038,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Character__Group__3"
-    // InternalJoveNotes.g:2433:1: rule__Character__Group__3 : rule__Character__Group__3__Impl rule__Character__Group__4 ;
+    // InternalJoveNotes.g:2467:1: rule__Character__Group__3 : rule__Character__Group__3__Impl rule__Character__Group__4 ;
     public final void rule__Character__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2437:1: ( rule__Character__Group__3__Impl rule__Character__Group__4 )
-            // InternalJoveNotes.g:2438:2: rule__Character__Group__3__Impl rule__Character__Group__4
+            // InternalJoveNotes.g:2471:1: ( rule__Character__Group__3__Impl rule__Character__Group__4 )
+            // InternalJoveNotes.g:2472:2: rule__Character__Group__3__Impl rule__Character__Group__4
             {
             pushFollow(FOLLOW_15);
             rule__Character__Group__3__Impl();
@@ -6974,21 +7076,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Character__Group__3__Impl"
-    // InternalJoveNotes.g:2445:1: rule__Character__Group__3__Impl : ( ( rule__Character__EstimateAssignment_3 ) ) ;
+    // InternalJoveNotes.g:2479:1: rule__Character__Group__3__Impl : ( ( rule__Character__EstimateAssignment_3 ) ) ;
     public final void rule__Character__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2449:1: ( ( ( rule__Character__EstimateAssignment_3 ) ) )
-            // InternalJoveNotes.g:2450:1: ( ( rule__Character__EstimateAssignment_3 ) )
+            // InternalJoveNotes.g:2483:1: ( ( ( rule__Character__EstimateAssignment_3 ) ) )
+            // InternalJoveNotes.g:2484:1: ( ( rule__Character__EstimateAssignment_3 ) )
             {
-            // InternalJoveNotes.g:2450:1: ( ( rule__Character__EstimateAssignment_3 ) )
-            // InternalJoveNotes.g:2451:1: ( rule__Character__EstimateAssignment_3 )
+            // InternalJoveNotes.g:2484:1: ( ( rule__Character__EstimateAssignment_3 ) )
+            // InternalJoveNotes.g:2485:1: ( rule__Character__EstimateAssignment_3 )
             {
              before(grammarAccess.getCharacterAccess().getEstimateAssignment_3()); 
-            // InternalJoveNotes.g:2452:1: ( rule__Character__EstimateAssignment_3 )
-            // InternalJoveNotes.g:2452:2: rule__Character__EstimateAssignment_3
+            // InternalJoveNotes.g:2486:1: ( rule__Character__EstimateAssignment_3 )
+            // InternalJoveNotes.g:2486:2: rule__Character__EstimateAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__Character__EstimateAssignment_3();
@@ -7021,14 +7123,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Character__Group__4"
-    // InternalJoveNotes.g:2462:1: rule__Character__Group__4 : rule__Character__Group__4__Impl ;
+    // InternalJoveNotes.g:2496:1: rule__Character__Group__4 : rule__Character__Group__4__Impl ;
     public final void rule__Character__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2466:1: ( rule__Character__Group__4__Impl )
-            // InternalJoveNotes.g:2467:2: rule__Character__Group__4__Impl
+            // InternalJoveNotes.g:2500:1: ( rule__Character__Group__4__Impl )
+            // InternalJoveNotes.g:2501:2: rule__Character__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Character__Group__4__Impl();
@@ -7054,29 +7156,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Character__Group__4__Impl"
-    // InternalJoveNotes.g:2473:1: rule__Character__Group__4__Impl : ( ( rule__Character__CmapAssignment_4 )? ) ;
+    // InternalJoveNotes.g:2507:1: rule__Character__Group__4__Impl : ( ( rule__Character__CmapAssignment_4 )? ) ;
     public final void rule__Character__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2477:1: ( ( ( rule__Character__CmapAssignment_4 )? ) )
-            // InternalJoveNotes.g:2478:1: ( ( rule__Character__CmapAssignment_4 )? )
+            // InternalJoveNotes.g:2511:1: ( ( ( rule__Character__CmapAssignment_4 )? ) )
+            // InternalJoveNotes.g:2512:1: ( ( rule__Character__CmapAssignment_4 )? )
             {
-            // InternalJoveNotes.g:2478:1: ( ( rule__Character__CmapAssignment_4 )? )
-            // InternalJoveNotes.g:2479:1: ( rule__Character__CmapAssignment_4 )?
+            // InternalJoveNotes.g:2512:1: ( ( rule__Character__CmapAssignment_4 )? )
+            // InternalJoveNotes.g:2513:1: ( rule__Character__CmapAssignment_4 )?
             {
              before(grammarAccess.getCharacterAccess().getCmapAssignment_4()); 
-            // InternalJoveNotes.g:2480:1: ( rule__Character__CmapAssignment_4 )?
+            // InternalJoveNotes.g:2514:1: ( rule__Character__CmapAssignment_4 )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
-            if ( (LA18_0==53) ) {
+            if ( (LA18_0==54) ) {
                 alt18=1;
             }
             switch (alt18) {
                 case 1 :
-                    // InternalJoveNotes.g:2480:2: rule__Character__CmapAssignment_4
+                    // InternalJoveNotes.g:2514:2: rule__Character__CmapAssignment_4
                     {
                     pushFollow(FOLLOW_2);
                     rule__Character__CmapAssignment_4();
@@ -7112,14 +7214,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TeacherNote__Group__0"
-    // InternalJoveNotes.g:2500:1: rule__TeacherNote__Group__0 : rule__TeacherNote__Group__0__Impl rule__TeacherNote__Group__1 ;
+    // InternalJoveNotes.g:2534:1: rule__TeacherNote__Group__0 : rule__TeacherNote__Group__0__Impl rule__TeacherNote__Group__1 ;
     public final void rule__TeacherNote__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2504:1: ( rule__TeacherNote__Group__0__Impl rule__TeacherNote__Group__1 )
-            // InternalJoveNotes.g:2505:2: rule__TeacherNote__Group__0__Impl rule__TeacherNote__Group__1
+            // InternalJoveNotes.g:2538:1: ( rule__TeacherNote__Group__0__Impl rule__TeacherNote__Group__1 )
+            // InternalJoveNotes.g:2539:2: rule__TeacherNote__Group__0__Impl rule__TeacherNote__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__TeacherNote__Group__0__Impl();
@@ -7150,17 +7252,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TeacherNote__Group__0__Impl"
-    // InternalJoveNotes.g:2512:1: rule__TeacherNote__Group__0__Impl : ( '@tn' ) ;
+    // InternalJoveNotes.g:2546:1: rule__TeacherNote__Group__0__Impl : ( '@tn' ) ;
     public final void rule__TeacherNote__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2516:1: ( ( '@tn' ) )
-            // InternalJoveNotes.g:2517:1: ( '@tn' )
+            // InternalJoveNotes.g:2550:1: ( ( '@tn' ) )
+            // InternalJoveNotes.g:2551:1: ( '@tn' )
             {
-            // InternalJoveNotes.g:2517:1: ( '@tn' )
-            // InternalJoveNotes.g:2518:1: '@tn'
+            // InternalJoveNotes.g:2551:1: ( '@tn' )
+            // InternalJoveNotes.g:2552:1: '@tn'
             {
              before(grammarAccess.getTeacherNoteAccess().getTnKeyword_0()); 
             match(input,21,FOLLOW_2); 
@@ -7187,14 +7289,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TeacherNote__Group__1"
-    // InternalJoveNotes.g:2531:1: rule__TeacherNote__Group__1 : rule__TeacherNote__Group__1__Impl rule__TeacherNote__Group__2 ;
+    // InternalJoveNotes.g:2565:1: rule__TeacherNote__Group__1 : rule__TeacherNote__Group__1__Impl rule__TeacherNote__Group__2 ;
     public final void rule__TeacherNote__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2535:1: ( rule__TeacherNote__Group__1__Impl rule__TeacherNote__Group__2 )
-            // InternalJoveNotes.g:2536:2: rule__TeacherNote__Group__1__Impl rule__TeacherNote__Group__2
+            // InternalJoveNotes.g:2569:1: ( rule__TeacherNote__Group__1__Impl rule__TeacherNote__Group__2 )
+            // InternalJoveNotes.g:2570:2: rule__TeacherNote__Group__1__Impl rule__TeacherNote__Group__2
             {
             pushFollow(FOLLOW_14);
             rule__TeacherNote__Group__1__Impl();
@@ -7225,29 +7327,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TeacherNote__Group__1__Impl"
-    // InternalJoveNotes.g:2543:1: rule__TeacherNote__Group__1__Impl : ( ( rule__TeacherNote__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:2577:1: rule__TeacherNote__Group__1__Impl : ( ( rule__TeacherNote__HideFromViewAssignment_1 )? ) ;
     public final void rule__TeacherNote__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2547:1: ( ( ( rule__TeacherNote__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:2548:1: ( ( rule__TeacherNote__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:2581:1: ( ( ( rule__TeacherNote__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:2582:1: ( ( rule__TeacherNote__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:2548:1: ( ( rule__TeacherNote__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:2549:1: ( rule__TeacherNote__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:2582:1: ( ( rule__TeacherNote__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:2583:1: ( rule__TeacherNote__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getTeacherNoteAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:2550:1: ( rule__TeacherNote__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:2584:1: ( rule__TeacherNote__HideFromViewAssignment_1 )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
-            if ( (LA19_0==59) ) {
+            if ( (LA19_0==60) ) {
                 alt19=1;
             }
             switch (alt19) {
                 case 1 :
-                    // InternalJoveNotes.g:2550:2: rule__TeacherNote__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:2584:2: rule__TeacherNote__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__TeacherNote__HideFromViewAssignment_1();
@@ -7283,14 +7385,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TeacherNote__Group__2"
-    // InternalJoveNotes.g:2560:1: rule__TeacherNote__Group__2 : rule__TeacherNote__Group__2__Impl rule__TeacherNote__Group__3 ;
+    // InternalJoveNotes.g:2594:1: rule__TeacherNote__Group__2 : rule__TeacherNote__Group__2__Impl rule__TeacherNote__Group__3 ;
     public final void rule__TeacherNote__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2564:1: ( rule__TeacherNote__Group__2__Impl rule__TeacherNote__Group__3 )
-            // InternalJoveNotes.g:2565:2: rule__TeacherNote__Group__2__Impl rule__TeacherNote__Group__3
+            // InternalJoveNotes.g:2598:1: ( rule__TeacherNote__Group__2__Impl rule__TeacherNote__Group__3 )
+            // InternalJoveNotes.g:2599:2: rule__TeacherNote__Group__2__Impl rule__TeacherNote__Group__3
             {
             pushFollow(FOLLOW_14);
             rule__TeacherNote__Group__2__Impl();
@@ -7321,20 +7423,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TeacherNote__Group__2__Impl"
-    // InternalJoveNotes.g:2572:1: rule__TeacherNote__Group__2__Impl : ( ( rule__TeacherNote__CaptionAssignment_2 )? ) ;
+    // InternalJoveNotes.g:2606:1: rule__TeacherNote__Group__2__Impl : ( ( rule__TeacherNote__CaptionAssignment_2 )? ) ;
     public final void rule__TeacherNote__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2576:1: ( ( ( rule__TeacherNote__CaptionAssignment_2 )? ) )
-            // InternalJoveNotes.g:2577:1: ( ( rule__TeacherNote__CaptionAssignment_2 )? )
+            // InternalJoveNotes.g:2610:1: ( ( ( rule__TeacherNote__CaptionAssignment_2 )? ) )
+            // InternalJoveNotes.g:2611:1: ( ( rule__TeacherNote__CaptionAssignment_2 )? )
             {
-            // InternalJoveNotes.g:2577:1: ( ( rule__TeacherNote__CaptionAssignment_2 )? )
-            // InternalJoveNotes.g:2578:1: ( rule__TeacherNote__CaptionAssignment_2 )?
+            // InternalJoveNotes.g:2611:1: ( ( rule__TeacherNote__CaptionAssignment_2 )? )
+            // InternalJoveNotes.g:2612:1: ( rule__TeacherNote__CaptionAssignment_2 )?
             {
              before(grammarAccess.getTeacherNoteAccess().getCaptionAssignment_2()); 
-            // InternalJoveNotes.g:2579:1: ( rule__TeacherNote__CaptionAssignment_2 )?
+            // InternalJoveNotes.g:2613:1: ( rule__TeacherNote__CaptionAssignment_2 )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -7347,7 +7449,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt20) {
                 case 1 :
-                    // InternalJoveNotes.g:2579:2: rule__TeacherNote__CaptionAssignment_2
+                    // InternalJoveNotes.g:2613:2: rule__TeacherNote__CaptionAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__TeacherNote__CaptionAssignment_2();
@@ -7383,14 +7485,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TeacherNote__Group__3"
-    // InternalJoveNotes.g:2589:1: rule__TeacherNote__Group__3 : rule__TeacherNote__Group__3__Impl rule__TeacherNote__Group__4 ;
+    // InternalJoveNotes.g:2623:1: rule__TeacherNote__Group__3 : rule__TeacherNote__Group__3__Impl rule__TeacherNote__Group__4 ;
     public final void rule__TeacherNote__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2593:1: ( rule__TeacherNote__Group__3__Impl rule__TeacherNote__Group__4 )
-            // InternalJoveNotes.g:2594:2: rule__TeacherNote__Group__3__Impl rule__TeacherNote__Group__4
+            // InternalJoveNotes.g:2627:1: ( rule__TeacherNote__Group__3__Impl rule__TeacherNote__Group__4 )
+            // InternalJoveNotes.g:2628:2: rule__TeacherNote__Group__3__Impl rule__TeacherNote__Group__4
             {
             pushFollow(FOLLOW_15);
             rule__TeacherNote__Group__3__Impl();
@@ -7421,21 +7523,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TeacherNote__Group__3__Impl"
-    // InternalJoveNotes.g:2601:1: rule__TeacherNote__Group__3__Impl : ( ( rule__TeacherNote__NoteAssignment_3 ) ) ;
+    // InternalJoveNotes.g:2635:1: rule__TeacherNote__Group__3__Impl : ( ( rule__TeacherNote__NoteAssignment_3 ) ) ;
     public final void rule__TeacherNote__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2605:1: ( ( ( rule__TeacherNote__NoteAssignment_3 ) ) )
-            // InternalJoveNotes.g:2606:1: ( ( rule__TeacherNote__NoteAssignment_3 ) )
+            // InternalJoveNotes.g:2639:1: ( ( ( rule__TeacherNote__NoteAssignment_3 ) ) )
+            // InternalJoveNotes.g:2640:1: ( ( rule__TeacherNote__NoteAssignment_3 ) )
             {
-            // InternalJoveNotes.g:2606:1: ( ( rule__TeacherNote__NoteAssignment_3 ) )
-            // InternalJoveNotes.g:2607:1: ( rule__TeacherNote__NoteAssignment_3 )
+            // InternalJoveNotes.g:2640:1: ( ( rule__TeacherNote__NoteAssignment_3 ) )
+            // InternalJoveNotes.g:2641:1: ( rule__TeacherNote__NoteAssignment_3 )
             {
              before(grammarAccess.getTeacherNoteAccess().getNoteAssignment_3()); 
-            // InternalJoveNotes.g:2608:1: ( rule__TeacherNote__NoteAssignment_3 )
-            // InternalJoveNotes.g:2608:2: rule__TeacherNote__NoteAssignment_3
+            // InternalJoveNotes.g:2642:1: ( rule__TeacherNote__NoteAssignment_3 )
+            // InternalJoveNotes.g:2642:2: rule__TeacherNote__NoteAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__TeacherNote__NoteAssignment_3();
@@ -7468,14 +7570,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TeacherNote__Group__4"
-    // InternalJoveNotes.g:2618:1: rule__TeacherNote__Group__4 : rule__TeacherNote__Group__4__Impl ;
+    // InternalJoveNotes.g:2652:1: rule__TeacherNote__Group__4 : rule__TeacherNote__Group__4__Impl ;
     public final void rule__TeacherNote__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2622:1: ( rule__TeacherNote__Group__4__Impl )
-            // InternalJoveNotes.g:2623:2: rule__TeacherNote__Group__4__Impl
+            // InternalJoveNotes.g:2656:1: ( rule__TeacherNote__Group__4__Impl )
+            // InternalJoveNotes.g:2657:2: rule__TeacherNote__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TeacherNote__Group__4__Impl();
@@ -7501,29 +7603,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TeacherNote__Group__4__Impl"
-    // InternalJoveNotes.g:2629:1: rule__TeacherNote__Group__4__Impl : ( ( rule__TeacherNote__CmapAssignment_4 )? ) ;
+    // InternalJoveNotes.g:2663:1: rule__TeacherNote__Group__4__Impl : ( ( rule__TeacherNote__CmapAssignment_4 )? ) ;
     public final void rule__TeacherNote__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2633:1: ( ( ( rule__TeacherNote__CmapAssignment_4 )? ) )
-            // InternalJoveNotes.g:2634:1: ( ( rule__TeacherNote__CmapAssignment_4 )? )
+            // InternalJoveNotes.g:2667:1: ( ( ( rule__TeacherNote__CmapAssignment_4 )? ) )
+            // InternalJoveNotes.g:2668:1: ( ( rule__TeacherNote__CmapAssignment_4 )? )
             {
-            // InternalJoveNotes.g:2634:1: ( ( rule__TeacherNote__CmapAssignment_4 )? )
-            // InternalJoveNotes.g:2635:1: ( rule__TeacherNote__CmapAssignment_4 )?
+            // InternalJoveNotes.g:2668:1: ( ( rule__TeacherNote__CmapAssignment_4 )? )
+            // InternalJoveNotes.g:2669:1: ( rule__TeacherNote__CmapAssignment_4 )?
             {
              before(grammarAccess.getTeacherNoteAccess().getCmapAssignment_4()); 
-            // InternalJoveNotes.g:2636:1: ( rule__TeacherNote__CmapAssignment_4 )?
+            // InternalJoveNotes.g:2670:1: ( rule__TeacherNote__CmapAssignment_4 )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
-            if ( (LA21_0==53) ) {
+            if ( (LA21_0==54) ) {
                 alt21=1;
             }
             switch (alt21) {
                 case 1 :
-                    // InternalJoveNotes.g:2636:2: rule__TeacherNote__CmapAssignment_4
+                    // InternalJoveNotes.g:2670:2: rule__TeacherNote__CmapAssignment_4
                     {
                     pushFollow(FOLLOW_2);
                     rule__TeacherNote__CmapAssignment_4();
@@ -7559,14 +7661,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__0"
-    // InternalJoveNotes.g:2656:1: rule__Matching__Group__0 : rule__Matching__Group__0__Impl rule__Matching__Group__1 ;
+    // InternalJoveNotes.g:2690:1: rule__Matching__Group__0 : rule__Matching__Group__0__Impl rule__Matching__Group__1 ;
     public final void rule__Matching__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2660:1: ( rule__Matching__Group__0__Impl rule__Matching__Group__1 )
-            // InternalJoveNotes.g:2661:2: rule__Matching__Group__0__Impl rule__Matching__Group__1
+            // InternalJoveNotes.g:2694:1: ( rule__Matching__Group__0__Impl rule__Matching__Group__1 )
+            // InternalJoveNotes.g:2695:2: rule__Matching__Group__0__Impl rule__Matching__Group__1
             {
             pushFollow(FOLLOW_17);
             rule__Matching__Group__0__Impl();
@@ -7597,17 +7699,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__0__Impl"
-    // InternalJoveNotes.g:2668:1: rule__Matching__Group__0__Impl : ( '@match' ) ;
+    // InternalJoveNotes.g:2702:1: rule__Matching__Group__0__Impl : ( '@match' ) ;
     public final void rule__Matching__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2672:1: ( ( '@match' ) )
-            // InternalJoveNotes.g:2673:1: ( '@match' )
+            // InternalJoveNotes.g:2706:1: ( ( '@match' ) )
+            // InternalJoveNotes.g:2707:1: ( '@match' )
             {
-            // InternalJoveNotes.g:2673:1: ( '@match' )
-            // InternalJoveNotes.g:2674:1: '@match'
+            // InternalJoveNotes.g:2707:1: ( '@match' )
+            // InternalJoveNotes.g:2708:1: '@match'
             {
              before(grammarAccess.getMatchingAccess().getMatchKeyword_0()); 
             match(input,22,FOLLOW_2); 
@@ -7634,14 +7736,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__1"
-    // InternalJoveNotes.g:2687:1: rule__Matching__Group__1 : rule__Matching__Group__1__Impl rule__Matching__Group__2 ;
+    // InternalJoveNotes.g:2721:1: rule__Matching__Group__1 : rule__Matching__Group__1__Impl rule__Matching__Group__2 ;
     public final void rule__Matching__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2691:1: ( rule__Matching__Group__1__Impl rule__Matching__Group__2 )
-            // InternalJoveNotes.g:2692:2: rule__Matching__Group__1__Impl rule__Matching__Group__2
+            // InternalJoveNotes.g:2725:1: ( rule__Matching__Group__1__Impl rule__Matching__Group__2 )
+            // InternalJoveNotes.g:2726:2: rule__Matching__Group__1__Impl rule__Matching__Group__2
             {
             pushFollow(FOLLOW_17);
             rule__Matching__Group__1__Impl();
@@ -7672,29 +7774,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__1__Impl"
-    // InternalJoveNotes.g:2699:1: rule__Matching__Group__1__Impl : ( ( rule__Matching__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:2733:1: rule__Matching__Group__1__Impl : ( ( rule__Matching__HideFromViewAssignment_1 )? ) ;
     public final void rule__Matching__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2703:1: ( ( ( rule__Matching__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:2704:1: ( ( rule__Matching__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:2737:1: ( ( ( rule__Matching__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:2738:1: ( ( rule__Matching__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:2704:1: ( ( rule__Matching__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:2705:1: ( rule__Matching__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:2738:1: ( ( rule__Matching__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:2739:1: ( rule__Matching__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getMatchingAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:2706:1: ( rule__Matching__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:2740:1: ( rule__Matching__HideFromViewAssignment_1 )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
-            if ( (LA22_0==59) ) {
+            if ( (LA22_0==60) ) {
                 alt22=1;
             }
             switch (alt22) {
                 case 1 :
-                    // InternalJoveNotes.g:2706:2: rule__Matching__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:2740:2: rule__Matching__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Matching__HideFromViewAssignment_1();
@@ -7730,14 +7832,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__2"
-    // InternalJoveNotes.g:2716:1: rule__Matching__Group__2 : rule__Matching__Group__2__Impl rule__Matching__Group__3 ;
+    // InternalJoveNotes.g:2750:1: rule__Matching__Group__2 : rule__Matching__Group__2__Impl rule__Matching__Group__3 ;
     public final void rule__Matching__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2720:1: ( rule__Matching__Group__2__Impl rule__Matching__Group__3 )
-            // InternalJoveNotes.g:2721:2: rule__Matching__Group__2__Impl rule__Matching__Group__3
+            // InternalJoveNotes.g:2754:1: ( rule__Matching__Group__2__Impl rule__Matching__Group__3 )
+            // InternalJoveNotes.g:2755:2: rule__Matching__Group__2__Impl rule__Matching__Group__3
             {
             pushFollow(FOLLOW_17);
             rule__Matching__Group__2__Impl();
@@ -7768,29 +7870,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__2__Impl"
-    // InternalJoveNotes.g:2728:1: rule__Matching__Group__2__Impl : ( ( rule__Matching__SkipReverseQuestionAssignment_2 )? ) ;
+    // InternalJoveNotes.g:2762:1: rule__Matching__Group__2__Impl : ( ( rule__Matching__SkipReverseQuestionAssignment_2 )? ) ;
     public final void rule__Matching__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2732:1: ( ( ( rule__Matching__SkipReverseQuestionAssignment_2 )? ) )
-            // InternalJoveNotes.g:2733:1: ( ( rule__Matching__SkipReverseQuestionAssignment_2 )? )
+            // InternalJoveNotes.g:2766:1: ( ( ( rule__Matching__SkipReverseQuestionAssignment_2 )? ) )
+            // InternalJoveNotes.g:2767:1: ( ( rule__Matching__SkipReverseQuestionAssignment_2 )? )
             {
-            // InternalJoveNotes.g:2733:1: ( ( rule__Matching__SkipReverseQuestionAssignment_2 )? )
-            // InternalJoveNotes.g:2734:1: ( rule__Matching__SkipReverseQuestionAssignment_2 )?
+            // InternalJoveNotes.g:2767:1: ( ( rule__Matching__SkipReverseQuestionAssignment_2 )? )
+            // InternalJoveNotes.g:2768:1: ( rule__Matching__SkipReverseQuestionAssignment_2 )?
             {
              before(grammarAccess.getMatchingAccess().getSkipReverseQuestionAssignment_2()); 
-            // InternalJoveNotes.g:2735:1: ( rule__Matching__SkipReverseQuestionAssignment_2 )?
+            // InternalJoveNotes.g:2769:1: ( rule__Matching__SkipReverseQuestionAssignment_2 )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
-            if ( (LA23_0==60) ) {
+            if ( (LA23_0==61) ) {
                 alt23=1;
             }
             switch (alt23) {
                 case 1 :
-                    // InternalJoveNotes.g:2735:2: rule__Matching__SkipReverseQuestionAssignment_2
+                    // InternalJoveNotes.g:2769:2: rule__Matching__SkipReverseQuestionAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Matching__SkipReverseQuestionAssignment_2();
@@ -7826,14 +7928,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__3"
-    // InternalJoveNotes.g:2745:1: rule__Matching__Group__3 : rule__Matching__Group__3__Impl rule__Matching__Group__4 ;
+    // InternalJoveNotes.g:2779:1: rule__Matching__Group__3 : rule__Matching__Group__3__Impl rule__Matching__Group__4 ;
     public final void rule__Matching__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2749:1: ( rule__Matching__Group__3__Impl rule__Matching__Group__4 )
-            // InternalJoveNotes.g:2750:2: rule__Matching__Group__3__Impl rule__Matching__Group__4
+            // InternalJoveNotes.g:2783:1: ( rule__Matching__Group__3__Impl rule__Matching__Group__4 )
+            // InternalJoveNotes.g:2784:2: rule__Matching__Group__3__Impl rule__Matching__Group__4
             {
             pushFollow(FOLLOW_17);
             rule__Matching__Group__3__Impl();
@@ -7864,20 +7966,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__3__Impl"
-    // InternalJoveNotes.g:2757:1: rule__Matching__Group__3__Impl : ( ( rule__Matching__QuestionAssignment_3 )? ) ;
+    // InternalJoveNotes.g:2791:1: rule__Matching__Group__3__Impl : ( ( rule__Matching__QuestionAssignment_3 )? ) ;
     public final void rule__Matching__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2761:1: ( ( ( rule__Matching__QuestionAssignment_3 )? ) )
-            // InternalJoveNotes.g:2762:1: ( ( rule__Matching__QuestionAssignment_3 )? )
+            // InternalJoveNotes.g:2795:1: ( ( ( rule__Matching__QuestionAssignment_3 )? ) )
+            // InternalJoveNotes.g:2796:1: ( ( rule__Matching__QuestionAssignment_3 )? )
             {
-            // InternalJoveNotes.g:2762:1: ( ( rule__Matching__QuestionAssignment_3 )? )
-            // InternalJoveNotes.g:2763:1: ( rule__Matching__QuestionAssignment_3 )?
+            // InternalJoveNotes.g:2796:1: ( ( rule__Matching__QuestionAssignment_3 )? )
+            // InternalJoveNotes.g:2797:1: ( rule__Matching__QuestionAssignment_3 )?
             {
              before(grammarAccess.getMatchingAccess().getQuestionAssignment_3()); 
-            // InternalJoveNotes.g:2764:1: ( rule__Matching__QuestionAssignment_3 )?
+            // InternalJoveNotes.g:2798:1: ( rule__Matching__QuestionAssignment_3 )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -7886,7 +7988,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt24) {
                 case 1 :
-                    // InternalJoveNotes.g:2764:2: rule__Matching__QuestionAssignment_3
+                    // InternalJoveNotes.g:2798:2: rule__Matching__QuestionAssignment_3
                     {
                     pushFollow(FOLLOW_2);
                     rule__Matching__QuestionAssignment_3();
@@ -7922,14 +8024,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__4"
-    // InternalJoveNotes.g:2774:1: rule__Matching__Group__4 : rule__Matching__Group__4__Impl rule__Matching__Group__5 ;
+    // InternalJoveNotes.g:2808:1: rule__Matching__Group__4 : rule__Matching__Group__4__Impl rule__Matching__Group__5 ;
     public final void rule__Matching__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2778:1: ( rule__Matching__Group__4__Impl rule__Matching__Group__5 )
-            // InternalJoveNotes.g:2779:2: rule__Matching__Group__4__Impl rule__Matching__Group__5
+            // InternalJoveNotes.g:2812:1: ( rule__Matching__Group__4__Impl rule__Matching__Group__5 )
+            // InternalJoveNotes.g:2813:2: rule__Matching__Group__4__Impl rule__Matching__Group__5
             {
             pushFollow(FOLLOW_7);
             rule__Matching__Group__4__Impl();
@@ -7960,17 +8062,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__4__Impl"
-    // InternalJoveNotes.g:2786:1: rule__Matching__Group__4__Impl : ( '{' ) ;
+    // InternalJoveNotes.g:2820:1: rule__Matching__Group__4__Impl : ( '{' ) ;
     public final void rule__Matching__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2790:1: ( ( '{' ) )
-            // InternalJoveNotes.g:2791:1: ( '{' )
+            // InternalJoveNotes.g:2824:1: ( ( '{' ) )
+            // InternalJoveNotes.g:2825:1: ( '{' )
             {
-            // InternalJoveNotes.g:2791:1: ( '{' )
-            // InternalJoveNotes.g:2792:1: '{'
+            // InternalJoveNotes.g:2825:1: ( '{' )
+            // InternalJoveNotes.g:2826:1: '{'
             {
              before(grammarAccess.getMatchingAccess().getLeftCurlyBracketKeyword_4()); 
             match(input,23,FOLLOW_2); 
@@ -7997,14 +8099,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__5"
-    // InternalJoveNotes.g:2805:1: rule__Matching__Group__5 : rule__Matching__Group__5__Impl rule__Matching__Group__6 ;
+    // InternalJoveNotes.g:2839:1: rule__Matching__Group__5 : rule__Matching__Group__5__Impl rule__Matching__Group__6 ;
     public final void rule__Matching__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2809:1: ( rule__Matching__Group__5__Impl rule__Matching__Group__6 )
-            // InternalJoveNotes.g:2810:2: rule__Matching__Group__5__Impl rule__Matching__Group__6
+            // InternalJoveNotes.g:2843:1: ( rule__Matching__Group__5__Impl rule__Matching__Group__6 )
+            // InternalJoveNotes.g:2844:2: rule__Matching__Group__5__Impl rule__Matching__Group__6
             {
             pushFollow(FOLLOW_18);
             rule__Matching__Group__5__Impl();
@@ -8035,24 +8137,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__5__Impl"
-    // InternalJoveNotes.g:2817:1: rule__Matching__Group__5__Impl : ( ( ( rule__Matching__PairsAssignment_5 ) ) ( ( rule__Matching__PairsAssignment_5 )* ) ) ;
+    // InternalJoveNotes.g:2851:1: rule__Matching__Group__5__Impl : ( ( ( rule__Matching__PairsAssignment_5 ) ) ( ( rule__Matching__PairsAssignment_5 )* ) ) ;
     public final void rule__Matching__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2821:1: ( ( ( ( rule__Matching__PairsAssignment_5 ) ) ( ( rule__Matching__PairsAssignment_5 )* ) ) )
-            // InternalJoveNotes.g:2822:1: ( ( ( rule__Matching__PairsAssignment_5 ) ) ( ( rule__Matching__PairsAssignment_5 )* ) )
+            // InternalJoveNotes.g:2855:1: ( ( ( ( rule__Matching__PairsAssignment_5 ) ) ( ( rule__Matching__PairsAssignment_5 )* ) ) )
+            // InternalJoveNotes.g:2856:1: ( ( ( rule__Matching__PairsAssignment_5 ) ) ( ( rule__Matching__PairsAssignment_5 )* ) )
             {
-            // InternalJoveNotes.g:2822:1: ( ( ( rule__Matching__PairsAssignment_5 ) ) ( ( rule__Matching__PairsAssignment_5 )* ) )
-            // InternalJoveNotes.g:2823:1: ( ( rule__Matching__PairsAssignment_5 ) ) ( ( rule__Matching__PairsAssignment_5 )* )
+            // InternalJoveNotes.g:2856:1: ( ( ( rule__Matching__PairsAssignment_5 ) ) ( ( rule__Matching__PairsAssignment_5 )* ) )
+            // InternalJoveNotes.g:2857:1: ( ( rule__Matching__PairsAssignment_5 ) ) ( ( rule__Matching__PairsAssignment_5 )* )
             {
-            // InternalJoveNotes.g:2823:1: ( ( rule__Matching__PairsAssignment_5 ) )
-            // InternalJoveNotes.g:2824:1: ( rule__Matching__PairsAssignment_5 )
+            // InternalJoveNotes.g:2857:1: ( ( rule__Matching__PairsAssignment_5 ) )
+            // InternalJoveNotes.g:2858:1: ( rule__Matching__PairsAssignment_5 )
             {
              before(grammarAccess.getMatchingAccess().getPairsAssignment_5()); 
-            // InternalJoveNotes.g:2825:1: ( rule__Matching__PairsAssignment_5 )
-            // InternalJoveNotes.g:2825:2: rule__Matching__PairsAssignment_5
+            // InternalJoveNotes.g:2859:1: ( rule__Matching__PairsAssignment_5 )
+            // InternalJoveNotes.g:2859:2: rule__Matching__PairsAssignment_5
             {
             pushFollow(FOLLOW_16);
             rule__Matching__PairsAssignment_5();
@@ -8066,11 +8168,11 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
             }
 
-            // InternalJoveNotes.g:2828:1: ( ( rule__Matching__PairsAssignment_5 )* )
-            // InternalJoveNotes.g:2829:1: ( rule__Matching__PairsAssignment_5 )*
+            // InternalJoveNotes.g:2862:1: ( ( rule__Matching__PairsAssignment_5 )* )
+            // InternalJoveNotes.g:2863:1: ( rule__Matching__PairsAssignment_5 )*
             {
              before(grammarAccess.getMatchingAccess().getPairsAssignment_5()); 
-            // InternalJoveNotes.g:2830:1: ( rule__Matching__PairsAssignment_5 )*
+            // InternalJoveNotes.g:2864:1: ( rule__Matching__PairsAssignment_5 )*
             loop25:
             do {
                 int alt25=2;
@@ -8083,7 +8185,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
                 switch (alt25) {
             	case 1 :
-            	    // InternalJoveNotes.g:2830:2: rule__Matching__PairsAssignment_5
+            	    // InternalJoveNotes.g:2864:2: rule__Matching__PairsAssignment_5
             	    {
             	    pushFollow(FOLLOW_16);
             	    rule__Matching__PairsAssignment_5();
@@ -8125,14 +8227,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__6"
-    // InternalJoveNotes.g:2841:1: rule__Matching__Group__6 : rule__Matching__Group__6__Impl rule__Matching__Group__7 ;
+    // InternalJoveNotes.g:2875:1: rule__Matching__Group__6 : rule__Matching__Group__6__Impl rule__Matching__Group__7 ;
     public final void rule__Matching__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2845:1: ( rule__Matching__Group__6__Impl rule__Matching__Group__7 )
-            // InternalJoveNotes.g:2846:2: rule__Matching__Group__6__Impl rule__Matching__Group__7
+            // InternalJoveNotes.g:2879:1: ( rule__Matching__Group__6__Impl rule__Matching__Group__7 )
+            // InternalJoveNotes.g:2880:2: rule__Matching__Group__6__Impl rule__Matching__Group__7
             {
             pushFollow(FOLLOW_18);
             rule__Matching__Group__6__Impl();
@@ -8163,20 +8265,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__6__Impl"
-    // InternalJoveNotes.g:2853:1: rule__Matching__Group__6__Impl : ( ( rule__Matching__McqConfigAssignment_6 )? ) ;
+    // InternalJoveNotes.g:2887:1: rule__Matching__Group__6__Impl : ( ( rule__Matching__McqConfigAssignment_6 )? ) ;
     public final void rule__Matching__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2857:1: ( ( ( rule__Matching__McqConfigAssignment_6 )? ) )
-            // InternalJoveNotes.g:2858:1: ( ( rule__Matching__McqConfigAssignment_6 )? )
+            // InternalJoveNotes.g:2891:1: ( ( ( rule__Matching__McqConfigAssignment_6 )? ) )
+            // InternalJoveNotes.g:2892:1: ( ( rule__Matching__McqConfigAssignment_6 )? )
             {
-            // InternalJoveNotes.g:2858:1: ( ( rule__Matching__McqConfigAssignment_6 )? )
-            // InternalJoveNotes.g:2859:1: ( rule__Matching__McqConfigAssignment_6 )?
+            // InternalJoveNotes.g:2892:1: ( ( rule__Matching__McqConfigAssignment_6 )? )
+            // InternalJoveNotes.g:2893:1: ( rule__Matching__McqConfigAssignment_6 )?
             {
              before(grammarAccess.getMatchingAccess().getMcqConfigAssignment_6()); 
-            // InternalJoveNotes.g:2860:1: ( rule__Matching__McqConfigAssignment_6 )?
+            // InternalJoveNotes.g:2894:1: ( rule__Matching__McqConfigAssignment_6 )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -8185,7 +8287,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt26) {
                 case 1 :
-                    // InternalJoveNotes.g:2860:2: rule__Matching__McqConfigAssignment_6
+                    // InternalJoveNotes.g:2894:2: rule__Matching__McqConfigAssignment_6
                     {
                     pushFollow(FOLLOW_2);
                     rule__Matching__McqConfigAssignment_6();
@@ -8221,14 +8323,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__7"
-    // InternalJoveNotes.g:2870:1: rule__Matching__Group__7 : rule__Matching__Group__7__Impl ;
+    // InternalJoveNotes.g:2904:1: rule__Matching__Group__7 : rule__Matching__Group__7__Impl ;
     public final void rule__Matching__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2874:1: ( rule__Matching__Group__7__Impl )
-            // InternalJoveNotes.g:2875:2: rule__Matching__Group__7__Impl
+            // InternalJoveNotes.g:2908:1: ( rule__Matching__Group__7__Impl )
+            // InternalJoveNotes.g:2909:2: rule__Matching__Group__7__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Matching__Group__7__Impl();
@@ -8254,17 +8356,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__Group__7__Impl"
-    // InternalJoveNotes.g:2881:1: rule__Matching__Group__7__Impl : ( '}' ) ;
+    // InternalJoveNotes.g:2915:1: rule__Matching__Group__7__Impl : ( '}' ) ;
     public final void rule__Matching__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2885:1: ( ( '}' ) )
-            // InternalJoveNotes.g:2886:1: ( '}' )
+            // InternalJoveNotes.g:2919:1: ( ( '}' ) )
+            // InternalJoveNotes.g:2920:1: ( '}' )
             {
-            // InternalJoveNotes.g:2886:1: ( '}' )
-            // InternalJoveNotes.g:2887:1: '}'
+            // InternalJoveNotes.g:2920:1: ( '}' )
+            // InternalJoveNotes.g:2921:1: '}'
             {
              before(grammarAccess.getMatchingAccess().getRightCurlyBracketKeyword_7()); 
             match(input,24,FOLLOW_2); 
@@ -8291,14 +8393,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchPair__Group__0"
-    // InternalJoveNotes.g:2916:1: rule__MatchPair__Group__0 : rule__MatchPair__Group__0__Impl rule__MatchPair__Group__1 ;
+    // InternalJoveNotes.g:2950:1: rule__MatchPair__Group__0 : rule__MatchPair__Group__0__Impl rule__MatchPair__Group__1 ;
     public final void rule__MatchPair__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2920:1: ( rule__MatchPair__Group__0__Impl rule__MatchPair__Group__1 )
-            // InternalJoveNotes.g:2921:2: rule__MatchPair__Group__0__Impl rule__MatchPair__Group__1
+            // InternalJoveNotes.g:2954:1: ( rule__MatchPair__Group__0__Impl rule__MatchPair__Group__1 )
+            // InternalJoveNotes.g:2955:2: rule__MatchPair__Group__0__Impl rule__MatchPair__Group__1
             {
             pushFollow(FOLLOW_19);
             rule__MatchPair__Group__0__Impl();
@@ -8329,21 +8431,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchPair__Group__0__Impl"
-    // InternalJoveNotes.g:2928:1: rule__MatchPair__Group__0__Impl : ( ( rule__MatchPair__MatchQuestionAssignment_0 ) ) ;
+    // InternalJoveNotes.g:2962:1: rule__MatchPair__Group__0__Impl : ( ( rule__MatchPair__MatchQuestionAssignment_0 ) ) ;
     public final void rule__MatchPair__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2932:1: ( ( ( rule__MatchPair__MatchQuestionAssignment_0 ) ) )
-            // InternalJoveNotes.g:2933:1: ( ( rule__MatchPair__MatchQuestionAssignment_0 ) )
+            // InternalJoveNotes.g:2966:1: ( ( ( rule__MatchPair__MatchQuestionAssignment_0 ) ) )
+            // InternalJoveNotes.g:2967:1: ( ( rule__MatchPair__MatchQuestionAssignment_0 ) )
             {
-            // InternalJoveNotes.g:2933:1: ( ( rule__MatchPair__MatchQuestionAssignment_0 ) )
-            // InternalJoveNotes.g:2934:1: ( rule__MatchPair__MatchQuestionAssignment_0 )
+            // InternalJoveNotes.g:2967:1: ( ( rule__MatchPair__MatchQuestionAssignment_0 ) )
+            // InternalJoveNotes.g:2968:1: ( rule__MatchPair__MatchQuestionAssignment_0 )
             {
              before(grammarAccess.getMatchPairAccess().getMatchQuestionAssignment_0()); 
-            // InternalJoveNotes.g:2935:1: ( rule__MatchPair__MatchQuestionAssignment_0 )
-            // InternalJoveNotes.g:2935:2: rule__MatchPair__MatchQuestionAssignment_0
+            // InternalJoveNotes.g:2969:1: ( rule__MatchPair__MatchQuestionAssignment_0 )
+            // InternalJoveNotes.g:2969:2: rule__MatchPair__MatchQuestionAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__MatchPair__MatchQuestionAssignment_0();
@@ -8376,14 +8478,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchPair__Group__1"
-    // InternalJoveNotes.g:2945:1: rule__MatchPair__Group__1 : rule__MatchPair__Group__1__Impl rule__MatchPair__Group__2 ;
+    // InternalJoveNotes.g:2979:1: rule__MatchPair__Group__1 : rule__MatchPair__Group__1__Impl rule__MatchPair__Group__2 ;
     public final void rule__MatchPair__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2949:1: ( rule__MatchPair__Group__1__Impl rule__MatchPair__Group__2 )
-            // InternalJoveNotes.g:2950:2: rule__MatchPair__Group__1__Impl rule__MatchPair__Group__2
+            // InternalJoveNotes.g:2983:1: ( rule__MatchPair__Group__1__Impl rule__MatchPair__Group__2 )
+            // InternalJoveNotes.g:2984:2: rule__MatchPair__Group__1__Impl rule__MatchPair__Group__2
             {
             pushFollow(FOLLOW_7);
             rule__MatchPair__Group__1__Impl();
@@ -8414,17 +8516,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchPair__Group__1__Impl"
-    // InternalJoveNotes.g:2957:1: rule__MatchPair__Group__1__Impl : ( '=' ) ;
+    // InternalJoveNotes.g:2991:1: rule__MatchPair__Group__1__Impl : ( '=' ) ;
     public final void rule__MatchPair__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2961:1: ( ( '=' ) )
-            // InternalJoveNotes.g:2962:1: ( '=' )
+            // InternalJoveNotes.g:2995:1: ( ( '=' ) )
+            // InternalJoveNotes.g:2996:1: ( '=' )
             {
-            // InternalJoveNotes.g:2962:1: ( '=' )
-            // InternalJoveNotes.g:2963:1: '='
+            // InternalJoveNotes.g:2996:1: ( '=' )
+            // InternalJoveNotes.g:2997:1: '='
             {
              before(grammarAccess.getMatchPairAccess().getEqualsSignKeyword_1()); 
             match(input,25,FOLLOW_2); 
@@ -8451,14 +8553,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchPair__Group__2"
-    // InternalJoveNotes.g:2976:1: rule__MatchPair__Group__2 : rule__MatchPair__Group__2__Impl ;
+    // InternalJoveNotes.g:3010:1: rule__MatchPair__Group__2 : rule__MatchPair__Group__2__Impl ;
     public final void rule__MatchPair__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2980:1: ( rule__MatchPair__Group__2__Impl )
-            // InternalJoveNotes.g:2981:2: rule__MatchPair__Group__2__Impl
+            // InternalJoveNotes.g:3014:1: ( rule__MatchPair__Group__2__Impl )
+            // InternalJoveNotes.g:3015:2: rule__MatchPair__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MatchPair__Group__2__Impl();
@@ -8484,21 +8586,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchPair__Group__2__Impl"
-    // InternalJoveNotes.g:2987:1: rule__MatchPair__Group__2__Impl : ( ( rule__MatchPair__MatchAnswerAssignment_2 ) ) ;
+    // InternalJoveNotes.g:3021:1: rule__MatchPair__Group__2__Impl : ( ( rule__MatchPair__MatchAnswerAssignment_2 ) ) ;
     public final void rule__MatchPair__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:2991:1: ( ( ( rule__MatchPair__MatchAnswerAssignment_2 ) ) )
-            // InternalJoveNotes.g:2992:1: ( ( rule__MatchPair__MatchAnswerAssignment_2 ) )
+            // InternalJoveNotes.g:3025:1: ( ( ( rule__MatchPair__MatchAnswerAssignment_2 ) ) )
+            // InternalJoveNotes.g:3026:1: ( ( rule__MatchPair__MatchAnswerAssignment_2 ) )
             {
-            // InternalJoveNotes.g:2992:1: ( ( rule__MatchPair__MatchAnswerAssignment_2 ) )
-            // InternalJoveNotes.g:2993:1: ( rule__MatchPair__MatchAnswerAssignment_2 )
+            // InternalJoveNotes.g:3026:1: ( ( rule__MatchPair__MatchAnswerAssignment_2 ) )
+            // InternalJoveNotes.g:3027:1: ( rule__MatchPair__MatchAnswerAssignment_2 )
             {
              before(grammarAccess.getMatchPairAccess().getMatchAnswerAssignment_2()); 
-            // InternalJoveNotes.g:2994:1: ( rule__MatchPair__MatchAnswerAssignment_2 )
-            // InternalJoveNotes.g:2994:2: rule__MatchPair__MatchAnswerAssignment_2
+            // InternalJoveNotes.g:3028:1: ( rule__MatchPair__MatchAnswerAssignment_2 )
+            // InternalJoveNotes.g:3028:2: rule__MatchPair__MatchAnswerAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__MatchPair__MatchAnswerAssignment_2();
@@ -8531,14 +8633,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__0"
-    // InternalJoveNotes.g:3010:1: rule__MatchMCQConfig__Group__0 : rule__MatchMCQConfig__Group__0__Impl rule__MatchMCQConfig__Group__1 ;
+    // InternalJoveNotes.g:3044:1: rule__MatchMCQConfig__Group__0 : rule__MatchMCQConfig__Group__0__Impl rule__MatchMCQConfig__Group__1 ;
     public final void rule__MatchMCQConfig__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3014:1: ( rule__MatchMCQConfig__Group__0__Impl rule__MatchMCQConfig__Group__1 )
-            // InternalJoveNotes.g:3015:2: rule__MatchMCQConfig__Group__0__Impl rule__MatchMCQConfig__Group__1
+            // InternalJoveNotes.g:3048:1: ( rule__MatchMCQConfig__Group__0__Impl rule__MatchMCQConfig__Group__1 )
+            // InternalJoveNotes.g:3049:2: rule__MatchMCQConfig__Group__0__Impl rule__MatchMCQConfig__Group__1
             {
             pushFollow(FOLLOW_20);
             rule__MatchMCQConfig__Group__0__Impl();
@@ -8569,17 +8671,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__0__Impl"
-    // InternalJoveNotes.g:3022:1: rule__MatchMCQConfig__Group__0__Impl : ( '@mcq_config' ) ;
+    // InternalJoveNotes.g:3056:1: rule__MatchMCQConfig__Group__0__Impl : ( '@mcq_config' ) ;
     public final void rule__MatchMCQConfig__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3026:1: ( ( '@mcq_config' ) )
-            // InternalJoveNotes.g:3027:1: ( '@mcq_config' )
+            // InternalJoveNotes.g:3060:1: ( ( '@mcq_config' ) )
+            // InternalJoveNotes.g:3061:1: ( '@mcq_config' )
             {
-            // InternalJoveNotes.g:3027:1: ( '@mcq_config' )
-            // InternalJoveNotes.g:3028:1: '@mcq_config'
+            // InternalJoveNotes.g:3061:1: ( '@mcq_config' )
+            // InternalJoveNotes.g:3062:1: '@mcq_config'
             {
              before(grammarAccess.getMatchMCQConfigAccess().getMcq_configKeyword_0()); 
             match(input,26,FOLLOW_2); 
@@ -8606,14 +8708,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__1"
-    // InternalJoveNotes.g:3041:1: rule__MatchMCQConfig__Group__1 : rule__MatchMCQConfig__Group__1__Impl rule__MatchMCQConfig__Group__2 ;
+    // InternalJoveNotes.g:3075:1: rule__MatchMCQConfig__Group__1 : rule__MatchMCQConfig__Group__1__Impl rule__MatchMCQConfig__Group__2 ;
     public final void rule__MatchMCQConfig__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3045:1: ( rule__MatchMCQConfig__Group__1__Impl rule__MatchMCQConfig__Group__2 )
-            // InternalJoveNotes.g:3046:2: rule__MatchMCQConfig__Group__1__Impl rule__MatchMCQConfig__Group__2
+            // InternalJoveNotes.g:3079:1: ( rule__MatchMCQConfig__Group__1__Impl rule__MatchMCQConfig__Group__2 )
+            // InternalJoveNotes.g:3080:2: rule__MatchMCQConfig__Group__1__Impl rule__MatchMCQConfig__Group__2
             {
             pushFollow(FOLLOW_21);
             rule__MatchMCQConfig__Group__1__Impl();
@@ -8644,17 +8746,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__1__Impl"
-    // InternalJoveNotes.g:3053:1: rule__MatchMCQConfig__Group__1__Impl : ( '{' ) ;
+    // InternalJoveNotes.g:3087:1: rule__MatchMCQConfig__Group__1__Impl : ( '{' ) ;
     public final void rule__MatchMCQConfig__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3057:1: ( ( '{' ) )
-            // InternalJoveNotes.g:3058:1: ( '{' )
+            // InternalJoveNotes.g:3091:1: ( ( '{' ) )
+            // InternalJoveNotes.g:3092:1: ( '{' )
             {
-            // InternalJoveNotes.g:3058:1: ( '{' )
-            // InternalJoveNotes.g:3059:1: '{'
+            // InternalJoveNotes.g:3092:1: ( '{' )
+            // InternalJoveNotes.g:3093:1: '{'
             {
              before(grammarAccess.getMatchMCQConfigAccess().getLeftCurlyBracketKeyword_1()); 
             match(input,23,FOLLOW_2); 
@@ -8681,14 +8783,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__2"
-    // InternalJoveNotes.g:3072:1: rule__MatchMCQConfig__Group__2 : rule__MatchMCQConfig__Group__2__Impl rule__MatchMCQConfig__Group__3 ;
+    // InternalJoveNotes.g:3106:1: rule__MatchMCQConfig__Group__2 : rule__MatchMCQConfig__Group__2__Impl rule__MatchMCQConfig__Group__3 ;
     public final void rule__MatchMCQConfig__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3076:1: ( rule__MatchMCQConfig__Group__2__Impl rule__MatchMCQConfig__Group__3 )
-            // InternalJoveNotes.g:3077:2: rule__MatchMCQConfig__Group__2__Impl rule__MatchMCQConfig__Group__3
+            // InternalJoveNotes.g:3110:1: ( rule__MatchMCQConfig__Group__2__Impl rule__MatchMCQConfig__Group__3 )
+            // InternalJoveNotes.g:3111:2: rule__MatchMCQConfig__Group__2__Impl rule__MatchMCQConfig__Group__3
             {
             pushFollow(FOLLOW_7);
             rule__MatchMCQConfig__Group__2__Impl();
@@ -8719,17 +8821,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__2__Impl"
-    // InternalJoveNotes.g:3084:1: rule__MatchMCQConfig__Group__2__Impl : ( '@forwardCaption' ) ;
+    // InternalJoveNotes.g:3118:1: rule__MatchMCQConfig__Group__2__Impl : ( '@forwardCaption' ) ;
     public final void rule__MatchMCQConfig__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3088:1: ( ( '@forwardCaption' ) )
-            // InternalJoveNotes.g:3089:1: ( '@forwardCaption' )
+            // InternalJoveNotes.g:3122:1: ( ( '@forwardCaption' ) )
+            // InternalJoveNotes.g:3123:1: ( '@forwardCaption' )
             {
-            // InternalJoveNotes.g:3089:1: ( '@forwardCaption' )
-            // InternalJoveNotes.g:3090:1: '@forwardCaption'
+            // InternalJoveNotes.g:3123:1: ( '@forwardCaption' )
+            // InternalJoveNotes.g:3124:1: '@forwardCaption'
             {
              before(grammarAccess.getMatchMCQConfigAccess().getForwardCaptionKeyword_2()); 
             match(input,27,FOLLOW_2); 
@@ -8756,14 +8858,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__3"
-    // InternalJoveNotes.g:3103:1: rule__MatchMCQConfig__Group__3 : rule__MatchMCQConfig__Group__3__Impl rule__MatchMCQConfig__Group__4 ;
+    // InternalJoveNotes.g:3137:1: rule__MatchMCQConfig__Group__3 : rule__MatchMCQConfig__Group__3__Impl rule__MatchMCQConfig__Group__4 ;
     public final void rule__MatchMCQConfig__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3107:1: ( rule__MatchMCQConfig__Group__3__Impl rule__MatchMCQConfig__Group__4 )
-            // InternalJoveNotes.g:3108:2: rule__MatchMCQConfig__Group__3__Impl rule__MatchMCQConfig__Group__4
+            // InternalJoveNotes.g:3141:1: ( rule__MatchMCQConfig__Group__3__Impl rule__MatchMCQConfig__Group__4 )
+            // InternalJoveNotes.g:3142:2: rule__MatchMCQConfig__Group__3__Impl rule__MatchMCQConfig__Group__4
             {
             pushFollow(FOLLOW_22);
             rule__MatchMCQConfig__Group__3__Impl();
@@ -8794,21 +8896,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__3__Impl"
-    // InternalJoveNotes.g:3115:1: rule__MatchMCQConfig__Group__3__Impl : ( ( rule__MatchMCQConfig__ForwardCaptionAssignment_3 ) ) ;
+    // InternalJoveNotes.g:3149:1: rule__MatchMCQConfig__Group__3__Impl : ( ( rule__MatchMCQConfig__ForwardCaptionAssignment_3 ) ) ;
     public final void rule__MatchMCQConfig__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3119:1: ( ( ( rule__MatchMCQConfig__ForwardCaptionAssignment_3 ) ) )
-            // InternalJoveNotes.g:3120:1: ( ( rule__MatchMCQConfig__ForwardCaptionAssignment_3 ) )
+            // InternalJoveNotes.g:3153:1: ( ( ( rule__MatchMCQConfig__ForwardCaptionAssignment_3 ) ) )
+            // InternalJoveNotes.g:3154:1: ( ( rule__MatchMCQConfig__ForwardCaptionAssignment_3 ) )
             {
-            // InternalJoveNotes.g:3120:1: ( ( rule__MatchMCQConfig__ForwardCaptionAssignment_3 ) )
-            // InternalJoveNotes.g:3121:1: ( rule__MatchMCQConfig__ForwardCaptionAssignment_3 )
+            // InternalJoveNotes.g:3154:1: ( ( rule__MatchMCQConfig__ForwardCaptionAssignment_3 ) )
+            // InternalJoveNotes.g:3155:1: ( rule__MatchMCQConfig__ForwardCaptionAssignment_3 )
             {
              before(grammarAccess.getMatchMCQConfigAccess().getForwardCaptionAssignment_3()); 
-            // InternalJoveNotes.g:3122:1: ( rule__MatchMCQConfig__ForwardCaptionAssignment_3 )
-            // InternalJoveNotes.g:3122:2: rule__MatchMCQConfig__ForwardCaptionAssignment_3
+            // InternalJoveNotes.g:3156:1: ( rule__MatchMCQConfig__ForwardCaptionAssignment_3 )
+            // InternalJoveNotes.g:3156:2: rule__MatchMCQConfig__ForwardCaptionAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__MatchMCQConfig__ForwardCaptionAssignment_3();
@@ -8841,14 +8943,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__4"
-    // InternalJoveNotes.g:3132:1: rule__MatchMCQConfig__Group__4 : rule__MatchMCQConfig__Group__4__Impl rule__MatchMCQConfig__Group__5 ;
+    // InternalJoveNotes.g:3166:1: rule__MatchMCQConfig__Group__4 : rule__MatchMCQConfig__Group__4__Impl rule__MatchMCQConfig__Group__5 ;
     public final void rule__MatchMCQConfig__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3136:1: ( rule__MatchMCQConfig__Group__4__Impl rule__MatchMCQConfig__Group__5 )
-            // InternalJoveNotes.g:3137:2: rule__MatchMCQConfig__Group__4__Impl rule__MatchMCQConfig__Group__5
+            // InternalJoveNotes.g:3170:1: ( rule__MatchMCQConfig__Group__4__Impl rule__MatchMCQConfig__Group__5 )
+            // InternalJoveNotes.g:3171:2: rule__MatchMCQConfig__Group__4__Impl rule__MatchMCQConfig__Group__5
             {
             pushFollow(FOLLOW_22);
             rule__MatchMCQConfig__Group__4__Impl();
@@ -8879,20 +8981,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__4__Impl"
-    // InternalJoveNotes.g:3144:1: rule__MatchMCQConfig__Group__4__Impl : ( ( rule__MatchMCQConfig__Group_4__0 )? ) ;
+    // InternalJoveNotes.g:3178:1: rule__MatchMCQConfig__Group__4__Impl : ( ( rule__MatchMCQConfig__Group_4__0 )? ) ;
     public final void rule__MatchMCQConfig__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3148:1: ( ( ( rule__MatchMCQConfig__Group_4__0 )? ) )
-            // InternalJoveNotes.g:3149:1: ( ( rule__MatchMCQConfig__Group_4__0 )? )
+            // InternalJoveNotes.g:3182:1: ( ( ( rule__MatchMCQConfig__Group_4__0 )? ) )
+            // InternalJoveNotes.g:3183:1: ( ( rule__MatchMCQConfig__Group_4__0 )? )
             {
-            // InternalJoveNotes.g:3149:1: ( ( rule__MatchMCQConfig__Group_4__0 )? )
-            // InternalJoveNotes.g:3150:1: ( rule__MatchMCQConfig__Group_4__0 )?
+            // InternalJoveNotes.g:3183:1: ( ( rule__MatchMCQConfig__Group_4__0 )? )
+            // InternalJoveNotes.g:3184:1: ( rule__MatchMCQConfig__Group_4__0 )?
             {
              before(grammarAccess.getMatchMCQConfigAccess().getGroup_4()); 
-            // InternalJoveNotes.g:3151:1: ( rule__MatchMCQConfig__Group_4__0 )?
+            // InternalJoveNotes.g:3185:1: ( rule__MatchMCQConfig__Group_4__0 )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -8901,7 +9003,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt27) {
                 case 1 :
-                    // InternalJoveNotes.g:3151:2: rule__MatchMCQConfig__Group_4__0
+                    // InternalJoveNotes.g:3185:2: rule__MatchMCQConfig__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__MatchMCQConfig__Group_4__0();
@@ -8937,14 +9039,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__5"
-    // InternalJoveNotes.g:3161:1: rule__MatchMCQConfig__Group__5 : rule__MatchMCQConfig__Group__5__Impl rule__MatchMCQConfig__Group__6 ;
+    // InternalJoveNotes.g:3195:1: rule__MatchMCQConfig__Group__5 : rule__MatchMCQConfig__Group__5__Impl rule__MatchMCQConfig__Group__6 ;
     public final void rule__MatchMCQConfig__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3165:1: ( rule__MatchMCQConfig__Group__5__Impl rule__MatchMCQConfig__Group__6 )
-            // InternalJoveNotes.g:3166:2: rule__MatchMCQConfig__Group__5__Impl rule__MatchMCQConfig__Group__6
+            // InternalJoveNotes.g:3199:1: ( rule__MatchMCQConfig__Group__5__Impl rule__MatchMCQConfig__Group__6 )
+            // InternalJoveNotes.g:3200:2: rule__MatchMCQConfig__Group__5__Impl rule__MatchMCQConfig__Group__6
             {
             pushFollow(FOLLOW_22);
             rule__MatchMCQConfig__Group__5__Impl();
@@ -8975,20 +9077,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__5__Impl"
-    // InternalJoveNotes.g:3173:1: rule__MatchMCQConfig__Group__5__Impl : ( ( rule__MatchMCQConfig__Group_5__0 )? ) ;
+    // InternalJoveNotes.g:3207:1: rule__MatchMCQConfig__Group__5__Impl : ( ( rule__MatchMCQConfig__Group_5__0 )? ) ;
     public final void rule__MatchMCQConfig__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3177:1: ( ( ( rule__MatchMCQConfig__Group_5__0 )? ) )
-            // InternalJoveNotes.g:3178:1: ( ( rule__MatchMCQConfig__Group_5__0 )? )
+            // InternalJoveNotes.g:3211:1: ( ( ( rule__MatchMCQConfig__Group_5__0 )? ) )
+            // InternalJoveNotes.g:3212:1: ( ( rule__MatchMCQConfig__Group_5__0 )? )
             {
-            // InternalJoveNotes.g:3178:1: ( ( rule__MatchMCQConfig__Group_5__0 )? )
-            // InternalJoveNotes.g:3179:1: ( rule__MatchMCQConfig__Group_5__0 )?
+            // InternalJoveNotes.g:3212:1: ( ( rule__MatchMCQConfig__Group_5__0 )? )
+            // InternalJoveNotes.g:3213:1: ( rule__MatchMCQConfig__Group_5__0 )?
             {
              before(grammarAccess.getMatchMCQConfigAccess().getGroup_5()); 
-            // InternalJoveNotes.g:3180:1: ( rule__MatchMCQConfig__Group_5__0 )?
+            // InternalJoveNotes.g:3214:1: ( rule__MatchMCQConfig__Group_5__0 )?
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -8997,7 +9099,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt28) {
                 case 1 :
-                    // InternalJoveNotes.g:3180:2: rule__MatchMCQConfig__Group_5__0
+                    // InternalJoveNotes.g:3214:2: rule__MatchMCQConfig__Group_5__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__MatchMCQConfig__Group_5__0();
@@ -9033,14 +9135,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__6"
-    // InternalJoveNotes.g:3190:1: rule__MatchMCQConfig__Group__6 : rule__MatchMCQConfig__Group__6__Impl rule__MatchMCQConfig__Group__7 ;
+    // InternalJoveNotes.g:3224:1: rule__MatchMCQConfig__Group__6 : rule__MatchMCQConfig__Group__6__Impl rule__MatchMCQConfig__Group__7 ;
     public final void rule__MatchMCQConfig__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3194:1: ( rule__MatchMCQConfig__Group__6__Impl rule__MatchMCQConfig__Group__7 )
-            // InternalJoveNotes.g:3195:2: rule__MatchMCQConfig__Group__6__Impl rule__MatchMCQConfig__Group__7
+            // InternalJoveNotes.g:3228:1: ( rule__MatchMCQConfig__Group__6__Impl rule__MatchMCQConfig__Group__7 )
+            // InternalJoveNotes.g:3229:2: rule__MatchMCQConfig__Group__6__Impl rule__MatchMCQConfig__Group__7
             {
             pushFollow(FOLLOW_22);
             rule__MatchMCQConfig__Group__6__Impl();
@@ -9071,20 +9173,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__6__Impl"
-    // InternalJoveNotes.g:3202:1: rule__MatchMCQConfig__Group__6__Impl : ( ( rule__MatchMCQConfig__Group_6__0 )? ) ;
+    // InternalJoveNotes.g:3236:1: rule__MatchMCQConfig__Group__6__Impl : ( ( rule__MatchMCQConfig__Group_6__0 )? ) ;
     public final void rule__MatchMCQConfig__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3206:1: ( ( ( rule__MatchMCQConfig__Group_6__0 )? ) )
-            // InternalJoveNotes.g:3207:1: ( ( rule__MatchMCQConfig__Group_6__0 )? )
+            // InternalJoveNotes.g:3240:1: ( ( ( rule__MatchMCQConfig__Group_6__0 )? ) )
+            // InternalJoveNotes.g:3241:1: ( ( rule__MatchMCQConfig__Group_6__0 )? )
             {
-            // InternalJoveNotes.g:3207:1: ( ( rule__MatchMCQConfig__Group_6__0 )? )
-            // InternalJoveNotes.g:3208:1: ( rule__MatchMCQConfig__Group_6__0 )?
+            // InternalJoveNotes.g:3241:1: ( ( rule__MatchMCQConfig__Group_6__0 )? )
+            // InternalJoveNotes.g:3242:1: ( rule__MatchMCQConfig__Group_6__0 )?
             {
              before(grammarAccess.getMatchMCQConfigAccess().getGroup_6()); 
-            // InternalJoveNotes.g:3209:1: ( rule__MatchMCQConfig__Group_6__0 )?
+            // InternalJoveNotes.g:3243:1: ( rule__MatchMCQConfig__Group_6__0 )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -9093,7 +9195,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt29) {
                 case 1 :
-                    // InternalJoveNotes.g:3209:2: rule__MatchMCQConfig__Group_6__0
+                    // InternalJoveNotes.g:3243:2: rule__MatchMCQConfig__Group_6__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__MatchMCQConfig__Group_6__0();
@@ -9129,14 +9231,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__7"
-    // InternalJoveNotes.g:3219:1: rule__MatchMCQConfig__Group__7 : rule__MatchMCQConfig__Group__7__Impl ;
+    // InternalJoveNotes.g:3253:1: rule__MatchMCQConfig__Group__7 : rule__MatchMCQConfig__Group__7__Impl ;
     public final void rule__MatchMCQConfig__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3223:1: ( rule__MatchMCQConfig__Group__7__Impl )
-            // InternalJoveNotes.g:3224:2: rule__MatchMCQConfig__Group__7__Impl
+            // InternalJoveNotes.g:3257:1: ( rule__MatchMCQConfig__Group__7__Impl )
+            // InternalJoveNotes.g:3258:2: rule__MatchMCQConfig__Group__7__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MatchMCQConfig__Group__7__Impl();
@@ -9162,17 +9264,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group__7__Impl"
-    // InternalJoveNotes.g:3230:1: rule__MatchMCQConfig__Group__7__Impl : ( '}' ) ;
+    // InternalJoveNotes.g:3264:1: rule__MatchMCQConfig__Group__7__Impl : ( '}' ) ;
     public final void rule__MatchMCQConfig__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3234:1: ( ( '}' ) )
-            // InternalJoveNotes.g:3235:1: ( '}' )
+            // InternalJoveNotes.g:3268:1: ( ( '}' ) )
+            // InternalJoveNotes.g:3269:1: ( '}' )
             {
-            // InternalJoveNotes.g:3235:1: ( '}' )
-            // InternalJoveNotes.g:3236:1: '}'
+            // InternalJoveNotes.g:3269:1: ( '}' )
+            // InternalJoveNotes.g:3270:1: '}'
             {
              before(grammarAccess.getMatchMCQConfigAccess().getRightCurlyBracketKeyword_7()); 
             match(input,24,FOLLOW_2); 
@@ -9199,14 +9301,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group_4__0"
-    // InternalJoveNotes.g:3265:1: rule__MatchMCQConfig__Group_4__0 : rule__MatchMCQConfig__Group_4__0__Impl rule__MatchMCQConfig__Group_4__1 ;
+    // InternalJoveNotes.g:3299:1: rule__MatchMCQConfig__Group_4__0 : rule__MatchMCQConfig__Group_4__0__Impl rule__MatchMCQConfig__Group_4__1 ;
     public final void rule__MatchMCQConfig__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3269:1: ( rule__MatchMCQConfig__Group_4__0__Impl rule__MatchMCQConfig__Group_4__1 )
-            // InternalJoveNotes.g:3270:2: rule__MatchMCQConfig__Group_4__0__Impl rule__MatchMCQConfig__Group_4__1
+            // InternalJoveNotes.g:3303:1: ( rule__MatchMCQConfig__Group_4__0__Impl rule__MatchMCQConfig__Group_4__1 )
+            // InternalJoveNotes.g:3304:2: rule__MatchMCQConfig__Group_4__0__Impl rule__MatchMCQConfig__Group_4__1
             {
             pushFollow(FOLLOW_7);
             rule__MatchMCQConfig__Group_4__0__Impl();
@@ -9237,17 +9339,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group_4__0__Impl"
-    // InternalJoveNotes.g:3277:1: rule__MatchMCQConfig__Group_4__0__Impl : ( '@reverseCaption' ) ;
+    // InternalJoveNotes.g:3311:1: rule__MatchMCQConfig__Group_4__0__Impl : ( '@reverseCaption' ) ;
     public final void rule__MatchMCQConfig__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3281:1: ( ( '@reverseCaption' ) )
-            // InternalJoveNotes.g:3282:1: ( '@reverseCaption' )
+            // InternalJoveNotes.g:3315:1: ( ( '@reverseCaption' ) )
+            // InternalJoveNotes.g:3316:1: ( '@reverseCaption' )
             {
-            // InternalJoveNotes.g:3282:1: ( '@reverseCaption' )
-            // InternalJoveNotes.g:3283:1: '@reverseCaption'
+            // InternalJoveNotes.g:3316:1: ( '@reverseCaption' )
+            // InternalJoveNotes.g:3317:1: '@reverseCaption'
             {
              before(grammarAccess.getMatchMCQConfigAccess().getReverseCaptionKeyword_4_0()); 
             match(input,28,FOLLOW_2); 
@@ -9274,14 +9376,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group_4__1"
-    // InternalJoveNotes.g:3296:1: rule__MatchMCQConfig__Group_4__1 : rule__MatchMCQConfig__Group_4__1__Impl ;
+    // InternalJoveNotes.g:3330:1: rule__MatchMCQConfig__Group_4__1 : rule__MatchMCQConfig__Group_4__1__Impl ;
     public final void rule__MatchMCQConfig__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3300:1: ( rule__MatchMCQConfig__Group_4__1__Impl )
-            // InternalJoveNotes.g:3301:2: rule__MatchMCQConfig__Group_4__1__Impl
+            // InternalJoveNotes.g:3334:1: ( rule__MatchMCQConfig__Group_4__1__Impl )
+            // InternalJoveNotes.g:3335:2: rule__MatchMCQConfig__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MatchMCQConfig__Group_4__1__Impl();
@@ -9307,21 +9409,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group_4__1__Impl"
-    // InternalJoveNotes.g:3307:1: rule__MatchMCQConfig__Group_4__1__Impl : ( ( rule__MatchMCQConfig__ReverseCaptionAssignment_4_1 ) ) ;
+    // InternalJoveNotes.g:3341:1: rule__MatchMCQConfig__Group_4__1__Impl : ( ( rule__MatchMCQConfig__ReverseCaptionAssignment_4_1 ) ) ;
     public final void rule__MatchMCQConfig__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3311:1: ( ( ( rule__MatchMCQConfig__ReverseCaptionAssignment_4_1 ) ) )
-            // InternalJoveNotes.g:3312:1: ( ( rule__MatchMCQConfig__ReverseCaptionAssignment_4_1 ) )
+            // InternalJoveNotes.g:3345:1: ( ( ( rule__MatchMCQConfig__ReverseCaptionAssignment_4_1 ) ) )
+            // InternalJoveNotes.g:3346:1: ( ( rule__MatchMCQConfig__ReverseCaptionAssignment_4_1 ) )
             {
-            // InternalJoveNotes.g:3312:1: ( ( rule__MatchMCQConfig__ReverseCaptionAssignment_4_1 ) )
-            // InternalJoveNotes.g:3313:1: ( rule__MatchMCQConfig__ReverseCaptionAssignment_4_1 )
+            // InternalJoveNotes.g:3346:1: ( ( rule__MatchMCQConfig__ReverseCaptionAssignment_4_1 ) )
+            // InternalJoveNotes.g:3347:1: ( rule__MatchMCQConfig__ReverseCaptionAssignment_4_1 )
             {
              before(grammarAccess.getMatchMCQConfigAccess().getReverseCaptionAssignment_4_1()); 
-            // InternalJoveNotes.g:3314:1: ( rule__MatchMCQConfig__ReverseCaptionAssignment_4_1 )
-            // InternalJoveNotes.g:3314:2: rule__MatchMCQConfig__ReverseCaptionAssignment_4_1
+            // InternalJoveNotes.g:3348:1: ( rule__MatchMCQConfig__ReverseCaptionAssignment_4_1 )
+            // InternalJoveNotes.g:3348:2: rule__MatchMCQConfig__ReverseCaptionAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__MatchMCQConfig__ReverseCaptionAssignment_4_1();
@@ -9354,14 +9456,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group_5__0"
-    // InternalJoveNotes.g:3328:1: rule__MatchMCQConfig__Group_5__0 : rule__MatchMCQConfig__Group_5__0__Impl rule__MatchMCQConfig__Group_5__1 ;
+    // InternalJoveNotes.g:3362:1: rule__MatchMCQConfig__Group_5__0 : rule__MatchMCQConfig__Group_5__0__Impl rule__MatchMCQConfig__Group_5__1 ;
     public final void rule__MatchMCQConfig__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3332:1: ( rule__MatchMCQConfig__Group_5__0__Impl rule__MatchMCQConfig__Group_5__1 )
-            // InternalJoveNotes.g:3333:2: rule__MatchMCQConfig__Group_5__0__Impl rule__MatchMCQConfig__Group_5__1
+            // InternalJoveNotes.g:3366:1: ( rule__MatchMCQConfig__Group_5__0__Impl rule__MatchMCQConfig__Group_5__1 )
+            // InternalJoveNotes.g:3367:2: rule__MatchMCQConfig__Group_5__0__Impl rule__MatchMCQConfig__Group_5__1
             {
             pushFollow(FOLLOW_9);
             rule__MatchMCQConfig__Group_5__0__Impl();
@@ -9392,17 +9494,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group_5__0__Impl"
-    // InternalJoveNotes.g:3340:1: rule__MatchMCQConfig__Group_5__0__Impl : ( '@numOptionsToShow' ) ;
+    // InternalJoveNotes.g:3374:1: rule__MatchMCQConfig__Group_5__0__Impl : ( '@numOptionsToShow' ) ;
     public final void rule__MatchMCQConfig__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3344:1: ( ( '@numOptionsToShow' ) )
-            // InternalJoveNotes.g:3345:1: ( '@numOptionsToShow' )
+            // InternalJoveNotes.g:3378:1: ( ( '@numOptionsToShow' ) )
+            // InternalJoveNotes.g:3379:1: ( '@numOptionsToShow' )
             {
-            // InternalJoveNotes.g:3345:1: ( '@numOptionsToShow' )
-            // InternalJoveNotes.g:3346:1: '@numOptionsToShow'
+            // InternalJoveNotes.g:3379:1: ( '@numOptionsToShow' )
+            // InternalJoveNotes.g:3380:1: '@numOptionsToShow'
             {
              before(grammarAccess.getMatchMCQConfigAccess().getNumOptionsToShowKeyword_5_0()); 
             match(input,29,FOLLOW_2); 
@@ -9429,14 +9531,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group_5__1"
-    // InternalJoveNotes.g:3359:1: rule__MatchMCQConfig__Group_5__1 : rule__MatchMCQConfig__Group_5__1__Impl ;
+    // InternalJoveNotes.g:3393:1: rule__MatchMCQConfig__Group_5__1 : rule__MatchMCQConfig__Group_5__1__Impl ;
     public final void rule__MatchMCQConfig__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3363:1: ( rule__MatchMCQConfig__Group_5__1__Impl )
-            // InternalJoveNotes.g:3364:2: rule__MatchMCQConfig__Group_5__1__Impl
+            // InternalJoveNotes.g:3397:1: ( rule__MatchMCQConfig__Group_5__1__Impl )
+            // InternalJoveNotes.g:3398:2: rule__MatchMCQConfig__Group_5__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MatchMCQConfig__Group_5__1__Impl();
@@ -9462,21 +9564,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group_5__1__Impl"
-    // InternalJoveNotes.g:3370:1: rule__MatchMCQConfig__Group_5__1__Impl : ( ( rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1 ) ) ;
+    // InternalJoveNotes.g:3404:1: rule__MatchMCQConfig__Group_5__1__Impl : ( ( rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1 ) ) ;
     public final void rule__MatchMCQConfig__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3374:1: ( ( ( rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1 ) ) )
-            // InternalJoveNotes.g:3375:1: ( ( rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1 ) )
+            // InternalJoveNotes.g:3408:1: ( ( ( rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1 ) ) )
+            // InternalJoveNotes.g:3409:1: ( ( rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1 ) )
             {
-            // InternalJoveNotes.g:3375:1: ( ( rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1 ) )
-            // InternalJoveNotes.g:3376:1: ( rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1 )
+            // InternalJoveNotes.g:3409:1: ( ( rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1 ) )
+            // InternalJoveNotes.g:3410:1: ( rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1 )
             {
              before(grammarAccess.getMatchMCQConfigAccess().getNumOptionsToShowAssignment_5_1()); 
-            // InternalJoveNotes.g:3377:1: ( rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1 )
-            // InternalJoveNotes.g:3377:2: rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1
+            // InternalJoveNotes.g:3411:1: ( rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1 )
+            // InternalJoveNotes.g:3411:2: rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1
             {
             pushFollow(FOLLOW_2);
             rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1();
@@ -9509,14 +9611,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group_6__0"
-    // InternalJoveNotes.g:3391:1: rule__MatchMCQConfig__Group_6__0 : rule__MatchMCQConfig__Group_6__0__Impl rule__MatchMCQConfig__Group_6__1 ;
+    // InternalJoveNotes.g:3425:1: rule__MatchMCQConfig__Group_6__0 : rule__MatchMCQConfig__Group_6__0__Impl rule__MatchMCQConfig__Group_6__1 ;
     public final void rule__MatchMCQConfig__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3395:1: ( rule__MatchMCQConfig__Group_6__0__Impl rule__MatchMCQConfig__Group_6__1 )
-            // InternalJoveNotes.g:3396:2: rule__MatchMCQConfig__Group_6__0__Impl rule__MatchMCQConfig__Group_6__1
+            // InternalJoveNotes.g:3429:1: ( rule__MatchMCQConfig__Group_6__0__Impl rule__MatchMCQConfig__Group_6__1 )
+            // InternalJoveNotes.g:3430:2: rule__MatchMCQConfig__Group_6__0__Impl rule__MatchMCQConfig__Group_6__1
             {
             pushFollow(FOLLOW_9);
             rule__MatchMCQConfig__Group_6__0__Impl();
@@ -9547,17 +9649,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group_6__0__Impl"
-    // InternalJoveNotes.g:3403:1: rule__MatchMCQConfig__Group_6__0__Impl : ( '@numOptionsPerRow' ) ;
+    // InternalJoveNotes.g:3437:1: rule__MatchMCQConfig__Group_6__0__Impl : ( '@numOptionsPerRow' ) ;
     public final void rule__MatchMCQConfig__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3407:1: ( ( '@numOptionsPerRow' ) )
-            // InternalJoveNotes.g:3408:1: ( '@numOptionsPerRow' )
+            // InternalJoveNotes.g:3441:1: ( ( '@numOptionsPerRow' ) )
+            // InternalJoveNotes.g:3442:1: ( '@numOptionsPerRow' )
             {
-            // InternalJoveNotes.g:3408:1: ( '@numOptionsPerRow' )
-            // InternalJoveNotes.g:3409:1: '@numOptionsPerRow'
+            // InternalJoveNotes.g:3442:1: ( '@numOptionsPerRow' )
+            // InternalJoveNotes.g:3443:1: '@numOptionsPerRow'
             {
              before(grammarAccess.getMatchMCQConfigAccess().getNumOptionsPerRowKeyword_6_0()); 
             match(input,30,FOLLOW_2); 
@@ -9584,14 +9686,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group_6__1"
-    // InternalJoveNotes.g:3422:1: rule__MatchMCQConfig__Group_6__1 : rule__MatchMCQConfig__Group_6__1__Impl ;
+    // InternalJoveNotes.g:3456:1: rule__MatchMCQConfig__Group_6__1 : rule__MatchMCQConfig__Group_6__1__Impl ;
     public final void rule__MatchMCQConfig__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3426:1: ( rule__MatchMCQConfig__Group_6__1__Impl )
-            // InternalJoveNotes.g:3427:2: rule__MatchMCQConfig__Group_6__1__Impl
+            // InternalJoveNotes.g:3460:1: ( rule__MatchMCQConfig__Group_6__1__Impl )
+            // InternalJoveNotes.g:3461:2: rule__MatchMCQConfig__Group_6__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MatchMCQConfig__Group_6__1__Impl();
@@ -9617,21 +9719,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__Group_6__1__Impl"
-    // InternalJoveNotes.g:3433:1: rule__MatchMCQConfig__Group_6__1__Impl : ( ( rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1 ) ) ;
+    // InternalJoveNotes.g:3467:1: rule__MatchMCQConfig__Group_6__1__Impl : ( ( rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1 ) ) ;
     public final void rule__MatchMCQConfig__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3437:1: ( ( ( rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1 ) ) )
-            // InternalJoveNotes.g:3438:1: ( ( rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1 ) )
+            // InternalJoveNotes.g:3471:1: ( ( ( rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1 ) ) )
+            // InternalJoveNotes.g:3472:1: ( ( rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1 ) )
             {
-            // InternalJoveNotes.g:3438:1: ( ( rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1 ) )
-            // InternalJoveNotes.g:3439:1: ( rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1 )
+            // InternalJoveNotes.g:3472:1: ( ( rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1 ) )
+            // InternalJoveNotes.g:3473:1: ( rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1 )
             {
              before(grammarAccess.getMatchMCQConfigAccess().getNumOptionsPerRowAssignment_6_1()); 
-            // InternalJoveNotes.g:3440:1: ( rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1 )
-            // InternalJoveNotes.g:3440:2: rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1
+            // InternalJoveNotes.g:3474:1: ( rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1 )
+            // InternalJoveNotes.g:3474:2: rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1
             {
             pushFollow(FOLLOW_2);
             rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1();
@@ -9664,14 +9766,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Event__Group__0"
-    // InternalJoveNotes.g:3454:1: rule__Event__Group__0 : rule__Event__Group__0__Impl rule__Event__Group__1 ;
+    // InternalJoveNotes.g:3488:1: rule__Event__Group__0 : rule__Event__Group__0__Impl rule__Event__Group__1 ;
     public final void rule__Event__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3458:1: ( rule__Event__Group__0__Impl rule__Event__Group__1 )
-            // InternalJoveNotes.g:3459:2: rule__Event__Group__0__Impl rule__Event__Group__1
+            // InternalJoveNotes.g:3492:1: ( rule__Event__Group__0__Impl rule__Event__Group__1 )
+            // InternalJoveNotes.g:3493:2: rule__Event__Group__0__Impl rule__Event__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__Event__Group__0__Impl();
@@ -9702,17 +9804,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Event__Group__0__Impl"
-    // InternalJoveNotes.g:3466:1: rule__Event__Group__0__Impl : ( '@event' ) ;
+    // InternalJoveNotes.g:3500:1: rule__Event__Group__0__Impl : ( '@event' ) ;
     public final void rule__Event__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3470:1: ( ( '@event' ) )
-            // InternalJoveNotes.g:3471:1: ( '@event' )
+            // InternalJoveNotes.g:3504:1: ( ( '@event' ) )
+            // InternalJoveNotes.g:3505:1: ( '@event' )
             {
-            // InternalJoveNotes.g:3471:1: ( '@event' )
-            // InternalJoveNotes.g:3472:1: '@event'
+            // InternalJoveNotes.g:3505:1: ( '@event' )
+            // InternalJoveNotes.g:3506:1: '@event'
             {
              before(grammarAccess.getEventAccess().getEventKeyword_0()); 
             match(input,31,FOLLOW_2); 
@@ -9739,14 +9841,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Event__Group__1"
-    // InternalJoveNotes.g:3485:1: rule__Event__Group__1 : rule__Event__Group__1__Impl rule__Event__Group__2 ;
+    // InternalJoveNotes.g:3519:1: rule__Event__Group__1 : rule__Event__Group__1__Impl rule__Event__Group__2 ;
     public final void rule__Event__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3489:1: ( rule__Event__Group__1__Impl rule__Event__Group__2 )
-            // InternalJoveNotes.g:3490:2: rule__Event__Group__1__Impl rule__Event__Group__2
+            // InternalJoveNotes.g:3523:1: ( rule__Event__Group__1__Impl rule__Event__Group__2 )
+            // InternalJoveNotes.g:3524:2: rule__Event__Group__1__Impl rule__Event__Group__2
             {
             pushFollow(FOLLOW_14);
             rule__Event__Group__1__Impl();
@@ -9777,29 +9879,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Event__Group__1__Impl"
-    // InternalJoveNotes.g:3497:1: rule__Event__Group__1__Impl : ( ( rule__Event__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:3531:1: rule__Event__Group__1__Impl : ( ( rule__Event__HideFromViewAssignment_1 )? ) ;
     public final void rule__Event__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3501:1: ( ( ( rule__Event__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:3502:1: ( ( rule__Event__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:3535:1: ( ( ( rule__Event__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:3536:1: ( ( rule__Event__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:3502:1: ( ( rule__Event__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:3503:1: ( rule__Event__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:3536:1: ( ( rule__Event__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:3537:1: ( rule__Event__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getEventAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:3504:1: ( rule__Event__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:3538:1: ( rule__Event__HideFromViewAssignment_1 )?
             int alt30=2;
             int LA30_0 = input.LA(1);
 
-            if ( (LA30_0==59) ) {
+            if ( (LA30_0==60) ) {
                 alt30=1;
             }
             switch (alt30) {
                 case 1 :
-                    // InternalJoveNotes.g:3504:2: rule__Event__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:3538:2: rule__Event__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Event__HideFromViewAssignment_1();
@@ -9835,14 +9937,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Event__Group__2"
-    // InternalJoveNotes.g:3514:1: rule__Event__Group__2 : rule__Event__Group__2__Impl rule__Event__Group__3 ;
+    // InternalJoveNotes.g:3548:1: rule__Event__Group__2 : rule__Event__Group__2__Impl rule__Event__Group__3 ;
     public final void rule__Event__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3518:1: ( rule__Event__Group__2__Impl rule__Event__Group__3 )
-            // InternalJoveNotes.g:3519:2: rule__Event__Group__2__Impl rule__Event__Group__3
+            // InternalJoveNotes.g:3552:1: ( rule__Event__Group__2__Impl rule__Event__Group__3 )
+            // InternalJoveNotes.g:3553:2: rule__Event__Group__2__Impl rule__Event__Group__3
             {
             pushFollow(FOLLOW_7);
             rule__Event__Group__2__Impl();
@@ -9873,21 +9975,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Event__Group__2__Impl"
-    // InternalJoveNotes.g:3526:1: rule__Event__Group__2__Impl : ( ( rule__Event__EventAssignment_2 ) ) ;
+    // InternalJoveNotes.g:3560:1: rule__Event__Group__2__Impl : ( ( rule__Event__EventAssignment_2 ) ) ;
     public final void rule__Event__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3530:1: ( ( ( rule__Event__EventAssignment_2 ) ) )
-            // InternalJoveNotes.g:3531:1: ( ( rule__Event__EventAssignment_2 ) )
+            // InternalJoveNotes.g:3564:1: ( ( ( rule__Event__EventAssignment_2 ) ) )
+            // InternalJoveNotes.g:3565:1: ( ( rule__Event__EventAssignment_2 ) )
             {
-            // InternalJoveNotes.g:3531:1: ( ( rule__Event__EventAssignment_2 ) )
-            // InternalJoveNotes.g:3532:1: ( rule__Event__EventAssignment_2 )
+            // InternalJoveNotes.g:3565:1: ( ( rule__Event__EventAssignment_2 ) )
+            // InternalJoveNotes.g:3566:1: ( rule__Event__EventAssignment_2 )
             {
              before(grammarAccess.getEventAccess().getEventAssignment_2()); 
-            // InternalJoveNotes.g:3533:1: ( rule__Event__EventAssignment_2 )
-            // InternalJoveNotes.g:3533:2: rule__Event__EventAssignment_2
+            // InternalJoveNotes.g:3567:1: ( rule__Event__EventAssignment_2 )
+            // InternalJoveNotes.g:3567:2: rule__Event__EventAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Event__EventAssignment_2();
@@ -9920,14 +10022,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Event__Group__3"
-    // InternalJoveNotes.g:3543:1: rule__Event__Group__3 : rule__Event__Group__3__Impl ;
+    // InternalJoveNotes.g:3577:1: rule__Event__Group__3 : rule__Event__Group__3__Impl ;
     public final void rule__Event__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3547:1: ( rule__Event__Group__3__Impl )
-            // InternalJoveNotes.g:3548:2: rule__Event__Group__3__Impl
+            // InternalJoveNotes.g:3581:1: ( rule__Event__Group__3__Impl )
+            // InternalJoveNotes.g:3582:2: rule__Event__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Event__Group__3__Impl();
@@ -9953,21 +10055,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Event__Group__3__Impl"
-    // InternalJoveNotes.g:3554:1: rule__Event__Group__3__Impl : ( ( rule__Event__TimeAssignment_3 ) ) ;
+    // InternalJoveNotes.g:3588:1: rule__Event__Group__3__Impl : ( ( rule__Event__TimeAssignment_3 ) ) ;
     public final void rule__Event__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3558:1: ( ( ( rule__Event__TimeAssignment_3 ) ) )
-            // InternalJoveNotes.g:3559:1: ( ( rule__Event__TimeAssignment_3 ) )
+            // InternalJoveNotes.g:3592:1: ( ( ( rule__Event__TimeAssignment_3 ) ) )
+            // InternalJoveNotes.g:3593:1: ( ( rule__Event__TimeAssignment_3 ) )
             {
-            // InternalJoveNotes.g:3559:1: ( ( rule__Event__TimeAssignment_3 ) )
-            // InternalJoveNotes.g:3560:1: ( rule__Event__TimeAssignment_3 )
+            // InternalJoveNotes.g:3593:1: ( ( rule__Event__TimeAssignment_3 ) )
+            // InternalJoveNotes.g:3594:1: ( rule__Event__TimeAssignment_3 )
             {
              before(grammarAccess.getEventAccess().getTimeAssignment_3()); 
-            // InternalJoveNotes.g:3561:1: ( rule__Event__TimeAssignment_3 )
-            // InternalJoveNotes.g:3561:2: rule__Event__TimeAssignment_3
+            // InternalJoveNotes.g:3595:1: ( rule__Event__TimeAssignment_3 )
+            // InternalJoveNotes.g:3595:2: rule__Event__TimeAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__Event__TimeAssignment_3();
@@ -10000,14 +10102,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TrueFalse__Group__0"
-    // InternalJoveNotes.g:3579:1: rule__TrueFalse__Group__0 : rule__TrueFalse__Group__0__Impl rule__TrueFalse__Group__1 ;
+    // InternalJoveNotes.g:3613:1: rule__TrueFalse__Group__0 : rule__TrueFalse__Group__0__Impl rule__TrueFalse__Group__1 ;
     public final void rule__TrueFalse__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3583:1: ( rule__TrueFalse__Group__0__Impl rule__TrueFalse__Group__1 )
-            // InternalJoveNotes.g:3584:2: rule__TrueFalse__Group__0__Impl rule__TrueFalse__Group__1
+            // InternalJoveNotes.g:3617:1: ( rule__TrueFalse__Group__0__Impl rule__TrueFalse__Group__1 )
+            // InternalJoveNotes.g:3618:2: rule__TrueFalse__Group__0__Impl rule__TrueFalse__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__TrueFalse__Group__0__Impl();
@@ -10038,17 +10140,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TrueFalse__Group__0__Impl"
-    // InternalJoveNotes.g:3591:1: rule__TrueFalse__Group__0__Impl : ( '@true_false' ) ;
+    // InternalJoveNotes.g:3625:1: rule__TrueFalse__Group__0__Impl : ( '@true_false' ) ;
     public final void rule__TrueFalse__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3595:1: ( ( '@true_false' ) )
-            // InternalJoveNotes.g:3596:1: ( '@true_false' )
+            // InternalJoveNotes.g:3629:1: ( ( '@true_false' ) )
+            // InternalJoveNotes.g:3630:1: ( '@true_false' )
             {
-            // InternalJoveNotes.g:3596:1: ( '@true_false' )
-            // InternalJoveNotes.g:3597:1: '@true_false'
+            // InternalJoveNotes.g:3630:1: ( '@true_false' )
+            // InternalJoveNotes.g:3631:1: '@true_false'
             {
              before(grammarAccess.getTrueFalseAccess().getTrue_falseKeyword_0()); 
             match(input,32,FOLLOW_2); 
@@ -10075,14 +10177,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TrueFalse__Group__1"
-    // InternalJoveNotes.g:3610:1: rule__TrueFalse__Group__1 : rule__TrueFalse__Group__1__Impl rule__TrueFalse__Group__2 ;
+    // InternalJoveNotes.g:3644:1: rule__TrueFalse__Group__1 : rule__TrueFalse__Group__1__Impl rule__TrueFalse__Group__2 ;
     public final void rule__TrueFalse__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3614:1: ( rule__TrueFalse__Group__1__Impl rule__TrueFalse__Group__2 )
-            // InternalJoveNotes.g:3615:2: rule__TrueFalse__Group__1__Impl rule__TrueFalse__Group__2
+            // InternalJoveNotes.g:3648:1: ( rule__TrueFalse__Group__1__Impl rule__TrueFalse__Group__2 )
+            // InternalJoveNotes.g:3649:2: rule__TrueFalse__Group__1__Impl rule__TrueFalse__Group__2
             {
             pushFollow(FOLLOW_14);
             rule__TrueFalse__Group__1__Impl();
@@ -10113,29 +10215,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TrueFalse__Group__1__Impl"
-    // InternalJoveNotes.g:3622:1: rule__TrueFalse__Group__1__Impl : ( ( rule__TrueFalse__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:3656:1: rule__TrueFalse__Group__1__Impl : ( ( rule__TrueFalse__HideFromViewAssignment_1 )? ) ;
     public final void rule__TrueFalse__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3626:1: ( ( ( rule__TrueFalse__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:3627:1: ( ( rule__TrueFalse__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:3660:1: ( ( ( rule__TrueFalse__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:3661:1: ( ( rule__TrueFalse__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:3627:1: ( ( rule__TrueFalse__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:3628:1: ( rule__TrueFalse__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:3661:1: ( ( rule__TrueFalse__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:3662:1: ( rule__TrueFalse__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getTrueFalseAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:3629:1: ( rule__TrueFalse__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:3663:1: ( rule__TrueFalse__HideFromViewAssignment_1 )?
             int alt31=2;
             int LA31_0 = input.LA(1);
 
-            if ( (LA31_0==59) ) {
+            if ( (LA31_0==60) ) {
                 alt31=1;
             }
             switch (alt31) {
                 case 1 :
-                    // InternalJoveNotes.g:3629:2: rule__TrueFalse__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:3663:2: rule__TrueFalse__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__TrueFalse__HideFromViewAssignment_1();
@@ -10171,14 +10273,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TrueFalse__Group__2"
-    // InternalJoveNotes.g:3639:1: rule__TrueFalse__Group__2 : rule__TrueFalse__Group__2__Impl rule__TrueFalse__Group__3 ;
+    // InternalJoveNotes.g:3673:1: rule__TrueFalse__Group__2 : rule__TrueFalse__Group__2__Impl rule__TrueFalse__Group__3 ;
     public final void rule__TrueFalse__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3643:1: ( rule__TrueFalse__Group__2__Impl rule__TrueFalse__Group__3 )
-            // InternalJoveNotes.g:3644:2: rule__TrueFalse__Group__2__Impl rule__TrueFalse__Group__3
+            // InternalJoveNotes.g:3677:1: ( rule__TrueFalse__Group__2__Impl rule__TrueFalse__Group__3 )
+            // InternalJoveNotes.g:3678:2: rule__TrueFalse__Group__2__Impl rule__TrueFalse__Group__3
             {
             pushFollow(FOLLOW_23);
             rule__TrueFalse__Group__2__Impl();
@@ -10209,21 +10311,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TrueFalse__Group__2__Impl"
-    // InternalJoveNotes.g:3651:1: rule__TrueFalse__Group__2__Impl : ( ( rule__TrueFalse__StatementAssignment_2 ) ) ;
+    // InternalJoveNotes.g:3685:1: rule__TrueFalse__Group__2__Impl : ( ( rule__TrueFalse__StatementAssignment_2 ) ) ;
     public final void rule__TrueFalse__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3655:1: ( ( ( rule__TrueFalse__StatementAssignment_2 ) ) )
-            // InternalJoveNotes.g:3656:1: ( ( rule__TrueFalse__StatementAssignment_2 ) )
+            // InternalJoveNotes.g:3689:1: ( ( ( rule__TrueFalse__StatementAssignment_2 ) ) )
+            // InternalJoveNotes.g:3690:1: ( ( rule__TrueFalse__StatementAssignment_2 ) )
             {
-            // InternalJoveNotes.g:3656:1: ( ( rule__TrueFalse__StatementAssignment_2 ) )
-            // InternalJoveNotes.g:3657:1: ( rule__TrueFalse__StatementAssignment_2 )
+            // InternalJoveNotes.g:3690:1: ( ( rule__TrueFalse__StatementAssignment_2 ) )
+            // InternalJoveNotes.g:3691:1: ( rule__TrueFalse__StatementAssignment_2 )
             {
              before(grammarAccess.getTrueFalseAccess().getStatementAssignment_2()); 
-            // InternalJoveNotes.g:3658:1: ( rule__TrueFalse__StatementAssignment_2 )
-            // InternalJoveNotes.g:3658:2: rule__TrueFalse__StatementAssignment_2
+            // InternalJoveNotes.g:3692:1: ( rule__TrueFalse__StatementAssignment_2 )
+            // InternalJoveNotes.g:3692:2: rule__TrueFalse__StatementAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__TrueFalse__StatementAssignment_2();
@@ -10256,14 +10358,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TrueFalse__Group__3"
-    // InternalJoveNotes.g:3668:1: rule__TrueFalse__Group__3 : rule__TrueFalse__Group__3__Impl rule__TrueFalse__Group__4 ;
+    // InternalJoveNotes.g:3702:1: rule__TrueFalse__Group__3 : rule__TrueFalse__Group__3__Impl rule__TrueFalse__Group__4 ;
     public final void rule__TrueFalse__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3672:1: ( rule__TrueFalse__Group__3__Impl rule__TrueFalse__Group__4 )
-            // InternalJoveNotes.g:3673:2: rule__TrueFalse__Group__3__Impl rule__TrueFalse__Group__4
+            // InternalJoveNotes.g:3706:1: ( rule__TrueFalse__Group__3__Impl rule__TrueFalse__Group__4 )
+            // InternalJoveNotes.g:3707:2: rule__TrueFalse__Group__3__Impl rule__TrueFalse__Group__4
             {
             pushFollow(FOLLOW_7);
             rule__TrueFalse__Group__3__Impl();
@@ -10294,21 +10396,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TrueFalse__Group__3__Impl"
-    // InternalJoveNotes.g:3680:1: rule__TrueFalse__Group__3__Impl : ( ( rule__TrueFalse__TruthValueAssignment_3 ) ) ;
+    // InternalJoveNotes.g:3714:1: rule__TrueFalse__Group__3__Impl : ( ( rule__TrueFalse__TruthValueAssignment_3 ) ) ;
     public final void rule__TrueFalse__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3684:1: ( ( ( rule__TrueFalse__TruthValueAssignment_3 ) ) )
-            // InternalJoveNotes.g:3685:1: ( ( rule__TrueFalse__TruthValueAssignment_3 ) )
+            // InternalJoveNotes.g:3718:1: ( ( ( rule__TrueFalse__TruthValueAssignment_3 ) ) )
+            // InternalJoveNotes.g:3719:1: ( ( rule__TrueFalse__TruthValueAssignment_3 ) )
             {
-            // InternalJoveNotes.g:3685:1: ( ( rule__TrueFalse__TruthValueAssignment_3 ) )
-            // InternalJoveNotes.g:3686:1: ( rule__TrueFalse__TruthValueAssignment_3 )
+            // InternalJoveNotes.g:3719:1: ( ( rule__TrueFalse__TruthValueAssignment_3 ) )
+            // InternalJoveNotes.g:3720:1: ( rule__TrueFalse__TruthValueAssignment_3 )
             {
              before(grammarAccess.getTrueFalseAccess().getTruthValueAssignment_3()); 
-            // InternalJoveNotes.g:3687:1: ( rule__TrueFalse__TruthValueAssignment_3 )
-            // InternalJoveNotes.g:3687:2: rule__TrueFalse__TruthValueAssignment_3
+            // InternalJoveNotes.g:3721:1: ( rule__TrueFalse__TruthValueAssignment_3 )
+            // InternalJoveNotes.g:3721:2: rule__TrueFalse__TruthValueAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__TrueFalse__TruthValueAssignment_3();
@@ -10341,14 +10443,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TrueFalse__Group__4"
-    // InternalJoveNotes.g:3697:1: rule__TrueFalse__Group__4 : rule__TrueFalse__Group__4__Impl ;
+    // InternalJoveNotes.g:3731:1: rule__TrueFalse__Group__4 : rule__TrueFalse__Group__4__Impl ;
     public final void rule__TrueFalse__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3701:1: ( rule__TrueFalse__Group__4__Impl )
-            // InternalJoveNotes.g:3702:2: rule__TrueFalse__Group__4__Impl
+            // InternalJoveNotes.g:3735:1: ( rule__TrueFalse__Group__4__Impl )
+            // InternalJoveNotes.g:3736:2: rule__TrueFalse__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TrueFalse__Group__4__Impl();
@@ -10374,20 +10476,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TrueFalse__Group__4__Impl"
-    // InternalJoveNotes.g:3708:1: rule__TrueFalse__Group__4__Impl : ( ( rule__TrueFalse__JustificationAssignment_4 )? ) ;
+    // InternalJoveNotes.g:3742:1: rule__TrueFalse__Group__4__Impl : ( ( rule__TrueFalse__JustificationAssignment_4 )? ) ;
     public final void rule__TrueFalse__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3712:1: ( ( ( rule__TrueFalse__JustificationAssignment_4 )? ) )
-            // InternalJoveNotes.g:3713:1: ( ( rule__TrueFalse__JustificationAssignment_4 )? )
+            // InternalJoveNotes.g:3746:1: ( ( ( rule__TrueFalse__JustificationAssignment_4 )? ) )
+            // InternalJoveNotes.g:3747:1: ( ( rule__TrueFalse__JustificationAssignment_4 )? )
             {
-            // InternalJoveNotes.g:3713:1: ( ( rule__TrueFalse__JustificationAssignment_4 )? )
-            // InternalJoveNotes.g:3714:1: ( rule__TrueFalse__JustificationAssignment_4 )?
+            // InternalJoveNotes.g:3747:1: ( ( rule__TrueFalse__JustificationAssignment_4 )? )
+            // InternalJoveNotes.g:3748:1: ( rule__TrueFalse__JustificationAssignment_4 )?
             {
              before(grammarAccess.getTrueFalseAccess().getJustificationAssignment_4()); 
-            // InternalJoveNotes.g:3715:1: ( rule__TrueFalse__JustificationAssignment_4 )?
+            // InternalJoveNotes.g:3749:1: ( rule__TrueFalse__JustificationAssignment_4 )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -10396,7 +10498,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt32) {
                 case 1 :
-                    // InternalJoveNotes.g:3715:2: rule__TrueFalse__JustificationAssignment_4
+                    // InternalJoveNotes.g:3749:2: rule__TrueFalse__JustificationAssignment_4
                     {
                     pushFollow(FOLLOW_2);
                     rule__TrueFalse__JustificationAssignment_4();
@@ -10432,14 +10534,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__0"
-    // InternalJoveNotes.g:3735:1: rule__ChemEquation__Group__0 : rule__ChemEquation__Group__0__Impl rule__ChemEquation__Group__1 ;
+    // InternalJoveNotes.g:3769:1: rule__ChemEquation__Group__0 : rule__ChemEquation__Group__0__Impl rule__ChemEquation__Group__1 ;
     public final void rule__ChemEquation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3739:1: ( rule__ChemEquation__Group__0__Impl rule__ChemEquation__Group__1 )
-            // InternalJoveNotes.g:3740:2: rule__ChemEquation__Group__0__Impl rule__ChemEquation__Group__1
+            // InternalJoveNotes.g:3773:1: ( rule__ChemEquation__Group__0__Impl rule__ChemEquation__Group__1 )
+            // InternalJoveNotes.g:3774:2: rule__ChemEquation__Group__0__Impl rule__ChemEquation__Group__1
             {
             pushFollow(FOLLOW_24);
             rule__ChemEquation__Group__0__Impl();
@@ -10470,17 +10572,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__0__Impl"
-    // InternalJoveNotes.g:3747:1: rule__ChemEquation__Group__0__Impl : ( '@chem_equation' ) ;
+    // InternalJoveNotes.g:3781:1: rule__ChemEquation__Group__0__Impl : ( '@chem_equation' ) ;
     public final void rule__ChemEquation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3751:1: ( ( '@chem_equation' ) )
-            // InternalJoveNotes.g:3752:1: ( '@chem_equation' )
+            // InternalJoveNotes.g:3785:1: ( ( '@chem_equation' ) )
+            // InternalJoveNotes.g:3786:1: ( '@chem_equation' )
             {
-            // InternalJoveNotes.g:3752:1: ( '@chem_equation' )
-            // InternalJoveNotes.g:3753:1: '@chem_equation'
+            // InternalJoveNotes.g:3786:1: ( '@chem_equation' )
+            // InternalJoveNotes.g:3787:1: '@chem_equation'
             {
              before(grammarAccess.getChemEquationAccess().getChem_equationKeyword_0()); 
             match(input,33,FOLLOW_2); 
@@ -10507,14 +10609,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__1"
-    // InternalJoveNotes.g:3766:1: rule__ChemEquation__Group__1 : rule__ChemEquation__Group__1__Impl rule__ChemEquation__Group__2 ;
+    // InternalJoveNotes.g:3800:1: rule__ChemEquation__Group__1 : rule__ChemEquation__Group__1__Impl rule__ChemEquation__Group__2 ;
     public final void rule__ChemEquation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3770:1: ( rule__ChemEquation__Group__1__Impl rule__ChemEquation__Group__2 )
-            // InternalJoveNotes.g:3771:2: rule__ChemEquation__Group__1__Impl rule__ChemEquation__Group__2
+            // InternalJoveNotes.g:3804:1: ( rule__ChemEquation__Group__1__Impl rule__ChemEquation__Group__2 )
+            // InternalJoveNotes.g:3805:2: rule__ChemEquation__Group__1__Impl rule__ChemEquation__Group__2
             {
             pushFollow(FOLLOW_24);
             rule__ChemEquation__Group__1__Impl();
@@ -10545,29 +10647,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__1__Impl"
-    // InternalJoveNotes.g:3778:1: rule__ChemEquation__Group__1__Impl : ( ( rule__ChemEquation__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:3812:1: rule__ChemEquation__Group__1__Impl : ( ( rule__ChemEquation__HideFromViewAssignment_1 )? ) ;
     public final void rule__ChemEquation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3782:1: ( ( ( rule__ChemEquation__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:3783:1: ( ( rule__ChemEquation__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:3816:1: ( ( ( rule__ChemEquation__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:3817:1: ( ( rule__ChemEquation__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:3783:1: ( ( rule__ChemEquation__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:3784:1: ( rule__ChemEquation__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:3817:1: ( ( rule__ChemEquation__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:3818:1: ( rule__ChemEquation__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getChemEquationAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:3785:1: ( rule__ChemEquation__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:3819:1: ( rule__ChemEquation__HideFromViewAssignment_1 )?
             int alt33=2;
             int LA33_0 = input.LA(1);
 
-            if ( (LA33_0==59) ) {
+            if ( (LA33_0==60) ) {
                 alt33=1;
             }
             switch (alt33) {
                 case 1 :
-                    // InternalJoveNotes.g:3785:2: rule__ChemEquation__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:3819:2: rule__ChemEquation__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__ChemEquation__HideFromViewAssignment_1();
@@ -10603,14 +10705,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__2"
-    // InternalJoveNotes.g:3795:1: rule__ChemEquation__Group__2 : rule__ChemEquation__Group__2__Impl rule__ChemEquation__Group__3 ;
+    // InternalJoveNotes.g:3829:1: rule__ChemEquation__Group__2 : rule__ChemEquation__Group__2__Impl rule__ChemEquation__Group__3 ;
     public final void rule__ChemEquation__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3799:1: ( rule__ChemEquation__Group__2__Impl rule__ChemEquation__Group__3 )
-            // InternalJoveNotes.g:3800:2: rule__ChemEquation__Group__2__Impl rule__ChemEquation__Group__3
+            // InternalJoveNotes.g:3833:1: ( rule__ChemEquation__Group__2__Impl rule__ChemEquation__Group__3 )
+            // InternalJoveNotes.g:3834:2: rule__ChemEquation__Group__2__Impl rule__ChemEquation__Group__3
             {
             pushFollow(FOLLOW_24);
             rule__ChemEquation__Group__2__Impl();
@@ -10641,20 +10743,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__2__Impl"
-    // InternalJoveNotes.g:3807:1: rule__ChemEquation__Group__2__Impl : ( ( rule__ChemEquation__DescriptionAssignment_2 )? ) ;
+    // InternalJoveNotes.g:3841:1: rule__ChemEquation__Group__2__Impl : ( ( rule__ChemEquation__DescriptionAssignment_2 )? ) ;
     public final void rule__ChemEquation__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3811:1: ( ( ( rule__ChemEquation__DescriptionAssignment_2 )? ) )
-            // InternalJoveNotes.g:3812:1: ( ( rule__ChemEquation__DescriptionAssignment_2 )? )
+            // InternalJoveNotes.g:3845:1: ( ( ( rule__ChemEquation__DescriptionAssignment_2 )? ) )
+            // InternalJoveNotes.g:3846:1: ( ( rule__ChemEquation__DescriptionAssignment_2 )? )
             {
-            // InternalJoveNotes.g:3812:1: ( ( rule__ChemEquation__DescriptionAssignment_2 )? )
-            // InternalJoveNotes.g:3813:1: ( rule__ChemEquation__DescriptionAssignment_2 )?
+            // InternalJoveNotes.g:3846:1: ( ( rule__ChemEquation__DescriptionAssignment_2 )? )
+            // InternalJoveNotes.g:3847:1: ( rule__ChemEquation__DescriptionAssignment_2 )?
             {
              before(grammarAccess.getChemEquationAccess().getDescriptionAssignment_2()); 
-            // InternalJoveNotes.g:3814:1: ( rule__ChemEquation__DescriptionAssignment_2 )?
+            // InternalJoveNotes.g:3848:1: ( rule__ChemEquation__DescriptionAssignment_2 )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -10663,7 +10765,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt34) {
                 case 1 :
-                    // InternalJoveNotes.g:3814:2: rule__ChemEquation__DescriptionAssignment_2
+                    // InternalJoveNotes.g:3848:2: rule__ChemEquation__DescriptionAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__ChemEquation__DescriptionAssignment_2();
@@ -10699,14 +10801,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__3"
-    // InternalJoveNotes.g:3824:1: rule__ChemEquation__Group__3 : rule__ChemEquation__Group__3__Impl rule__ChemEquation__Group__4 ;
+    // InternalJoveNotes.g:3858:1: rule__ChemEquation__Group__3 : rule__ChemEquation__Group__3__Impl rule__ChemEquation__Group__4 ;
     public final void rule__ChemEquation__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3828:1: ( rule__ChemEquation__Group__3__Impl rule__ChemEquation__Group__4 )
-            // InternalJoveNotes.g:3829:2: rule__ChemEquation__Group__3__Impl rule__ChemEquation__Group__4
+            // InternalJoveNotes.g:3862:1: ( rule__ChemEquation__Group__3__Impl rule__ChemEquation__Group__4 )
+            // InternalJoveNotes.g:3863:2: rule__ChemEquation__Group__3__Impl rule__ChemEquation__Group__4
             {
             pushFollow(FOLLOW_7);
             rule__ChemEquation__Group__3__Impl();
@@ -10737,17 +10839,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__3__Impl"
-    // InternalJoveNotes.g:3836:1: rule__ChemEquation__Group__3__Impl : ( '{' ) ;
+    // InternalJoveNotes.g:3870:1: rule__ChemEquation__Group__3__Impl : ( '{' ) ;
     public final void rule__ChemEquation__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3840:1: ( ( '{' ) )
-            // InternalJoveNotes.g:3841:1: ( '{' )
+            // InternalJoveNotes.g:3874:1: ( ( '{' ) )
+            // InternalJoveNotes.g:3875:1: ( '{' )
             {
-            // InternalJoveNotes.g:3841:1: ( '{' )
-            // InternalJoveNotes.g:3842:1: '{'
+            // InternalJoveNotes.g:3875:1: ( '{' )
+            // InternalJoveNotes.g:3876:1: '{'
             {
              before(grammarAccess.getChemEquationAccess().getLeftCurlyBracketKeyword_3()); 
             match(input,23,FOLLOW_2); 
@@ -10774,14 +10876,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__4"
-    // InternalJoveNotes.g:3855:1: rule__ChemEquation__Group__4 : rule__ChemEquation__Group__4__Impl rule__ChemEquation__Group__5 ;
+    // InternalJoveNotes.g:3889:1: rule__ChemEquation__Group__4 : rule__ChemEquation__Group__4__Impl rule__ChemEquation__Group__5 ;
     public final void rule__ChemEquation__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3859:1: ( rule__ChemEquation__Group__4__Impl rule__ChemEquation__Group__5 )
-            // InternalJoveNotes.g:3860:2: rule__ChemEquation__Group__4__Impl rule__ChemEquation__Group__5
+            // InternalJoveNotes.g:3893:1: ( rule__ChemEquation__Group__4__Impl rule__ChemEquation__Group__5 )
+            // InternalJoveNotes.g:3894:2: rule__ChemEquation__Group__4__Impl rule__ChemEquation__Group__5
             {
             pushFollow(FOLLOW_25);
             rule__ChemEquation__Group__4__Impl();
@@ -10812,21 +10914,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__4__Impl"
-    // InternalJoveNotes.g:3867:1: rule__ChemEquation__Group__4__Impl : ( ( rule__ChemEquation__ReactantsAssignment_4 ) ) ;
+    // InternalJoveNotes.g:3901:1: rule__ChemEquation__Group__4__Impl : ( ( rule__ChemEquation__ReactantsAssignment_4 ) ) ;
     public final void rule__ChemEquation__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3871:1: ( ( ( rule__ChemEquation__ReactantsAssignment_4 ) ) )
-            // InternalJoveNotes.g:3872:1: ( ( rule__ChemEquation__ReactantsAssignment_4 ) )
+            // InternalJoveNotes.g:3905:1: ( ( ( rule__ChemEquation__ReactantsAssignment_4 ) ) )
+            // InternalJoveNotes.g:3906:1: ( ( rule__ChemEquation__ReactantsAssignment_4 ) )
             {
-            // InternalJoveNotes.g:3872:1: ( ( rule__ChemEquation__ReactantsAssignment_4 ) )
-            // InternalJoveNotes.g:3873:1: ( rule__ChemEquation__ReactantsAssignment_4 )
+            // InternalJoveNotes.g:3906:1: ( ( rule__ChemEquation__ReactantsAssignment_4 ) )
+            // InternalJoveNotes.g:3907:1: ( rule__ChemEquation__ReactantsAssignment_4 )
             {
              before(grammarAccess.getChemEquationAccess().getReactantsAssignment_4()); 
-            // InternalJoveNotes.g:3874:1: ( rule__ChemEquation__ReactantsAssignment_4 )
-            // InternalJoveNotes.g:3874:2: rule__ChemEquation__ReactantsAssignment_4
+            // InternalJoveNotes.g:3908:1: ( rule__ChemEquation__ReactantsAssignment_4 )
+            // InternalJoveNotes.g:3908:2: rule__ChemEquation__ReactantsAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__ChemEquation__ReactantsAssignment_4();
@@ -10859,14 +10961,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__5"
-    // InternalJoveNotes.g:3884:1: rule__ChemEquation__Group__5 : rule__ChemEquation__Group__5__Impl rule__ChemEquation__Group__6 ;
+    // InternalJoveNotes.g:3918:1: rule__ChemEquation__Group__5 : rule__ChemEquation__Group__5__Impl rule__ChemEquation__Group__6 ;
     public final void rule__ChemEquation__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3888:1: ( rule__ChemEquation__Group__5__Impl rule__ChemEquation__Group__6 )
-            // InternalJoveNotes.g:3889:2: rule__ChemEquation__Group__5__Impl rule__ChemEquation__Group__6
+            // InternalJoveNotes.g:3922:1: ( rule__ChemEquation__Group__5__Impl rule__ChemEquation__Group__6 )
+            // InternalJoveNotes.g:3923:2: rule__ChemEquation__Group__5__Impl rule__ChemEquation__Group__6
             {
             pushFollow(FOLLOW_26);
             rule__ChemEquation__Group__5__Impl();
@@ -10897,17 +10999,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__5__Impl"
-    // InternalJoveNotes.g:3896:1: rule__ChemEquation__Group__5__Impl : ( '>' ) ;
+    // InternalJoveNotes.g:3930:1: rule__ChemEquation__Group__5__Impl : ( '>' ) ;
     public final void rule__ChemEquation__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3900:1: ( ( '>' ) )
-            // InternalJoveNotes.g:3901:1: ( '>' )
+            // InternalJoveNotes.g:3934:1: ( ( '>' ) )
+            // InternalJoveNotes.g:3935:1: ( '>' )
             {
-            // InternalJoveNotes.g:3901:1: ( '>' )
-            // InternalJoveNotes.g:3902:1: '>'
+            // InternalJoveNotes.g:3935:1: ( '>' )
+            // InternalJoveNotes.g:3936:1: '>'
             {
              before(grammarAccess.getChemEquationAccess().getGreaterThanSignKeyword_5()); 
             match(input,34,FOLLOW_2); 
@@ -10934,14 +11036,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__6"
-    // InternalJoveNotes.g:3915:1: rule__ChemEquation__Group__6 : rule__ChemEquation__Group__6__Impl rule__ChemEquation__Group__7 ;
+    // InternalJoveNotes.g:3949:1: rule__ChemEquation__Group__6 : rule__ChemEquation__Group__6__Impl rule__ChemEquation__Group__7 ;
     public final void rule__ChemEquation__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3919:1: ( rule__ChemEquation__Group__6__Impl rule__ChemEquation__Group__7 )
-            // InternalJoveNotes.g:3920:2: rule__ChemEquation__Group__6__Impl rule__ChemEquation__Group__7
+            // InternalJoveNotes.g:3953:1: ( rule__ChemEquation__Group__6__Impl rule__ChemEquation__Group__7 )
+            // InternalJoveNotes.g:3954:2: rule__ChemEquation__Group__6__Impl rule__ChemEquation__Group__7
             {
             pushFollow(FOLLOW_26);
             rule__ChemEquation__Group__6__Impl();
@@ -10972,20 +11074,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__6__Impl"
-    // InternalJoveNotes.g:3927:1: rule__ChemEquation__Group__6__Impl : ( ( rule__ChemEquation__ProducesAssignment_6 )? ) ;
+    // InternalJoveNotes.g:3961:1: rule__ChemEquation__Group__6__Impl : ( ( rule__ChemEquation__ProducesAssignment_6 )? ) ;
     public final void rule__ChemEquation__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3931:1: ( ( ( rule__ChemEquation__ProducesAssignment_6 )? ) )
-            // InternalJoveNotes.g:3932:1: ( ( rule__ChemEquation__ProducesAssignment_6 )? )
+            // InternalJoveNotes.g:3965:1: ( ( ( rule__ChemEquation__ProducesAssignment_6 )? ) )
+            // InternalJoveNotes.g:3966:1: ( ( rule__ChemEquation__ProducesAssignment_6 )? )
             {
-            // InternalJoveNotes.g:3932:1: ( ( rule__ChemEquation__ProducesAssignment_6 )? )
-            // InternalJoveNotes.g:3933:1: ( rule__ChemEquation__ProducesAssignment_6 )?
+            // InternalJoveNotes.g:3966:1: ( ( rule__ChemEquation__ProducesAssignment_6 )? )
+            // InternalJoveNotes.g:3967:1: ( rule__ChemEquation__ProducesAssignment_6 )?
             {
              before(grammarAccess.getChemEquationAccess().getProducesAssignment_6()); 
-            // InternalJoveNotes.g:3934:1: ( rule__ChemEquation__ProducesAssignment_6 )?
+            // InternalJoveNotes.g:3968:1: ( rule__ChemEquation__ProducesAssignment_6 )?
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -10994,7 +11096,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt35) {
                 case 1 :
-                    // InternalJoveNotes.g:3934:2: rule__ChemEquation__ProducesAssignment_6
+                    // InternalJoveNotes.g:3968:2: rule__ChemEquation__ProducesAssignment_6
                     {
                     pushFollow(FOLLOW_2);
                     rule__ChemEquation__ProducesAssignment_6();
@@ -11030,14 +11132,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__7"
-    // InternalJoveNotes.g:3944:1: rule__ChemEquation__Group__7 : rule__ChemEquation__Group__7__Impl rule__ChemEquation__Group__8 ;
+    // InternalJoveNotes.g:3978:1: rule__ChemEquation__Group__7 : rule__ChemEquation__Group__7__Impl rule__ChemEquation__Group__8 ;
     public final void rule__ChemEquation__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3948:1: ( rule__ChemEquation__Group__7__Impl rule__ChemEquation__Group__8 )
-            // InternalJoveNotes.g:3949:2: rule__ChemEquation__Group__7__Impl rule__ChemEquation__Group__8
+            // InternalJoveNotes.g:3982:1: ( rule__ChemEquation__Group__7__Impl rule__ChemEquation__Group__8 )
+            // InternalJoveNotes.g:3983:2: rule__ChemEquation__Group__7__Impl rule__ChemEquation__Group__8
             {
             pushFollow(FOLLOW_7);
             rule__ChemEquation__Group__7__Impl();
@@ -11068,17 +11170,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__7__Impl"
-    // InternalJoveNotes.g:3956:1: rule__ChemEquation__Group__7__Impl : ( '>' ) ;
+    // InternalJoveNotes.g:3990:1: rule__ChemEquation__Group__7__Impl : ( '>' ) ;
     public final void rule__ChemEquation__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3960:1: ( ( '>' ) )
-            // InternalJoveNotes.g:3961:1: ( '>' )
+            // InternalJoveNotes.g:3994:1: ( ( '>' ) )
+            // InternalJoveNotes.g:3995:1: ( '>' )
             {
-            // InternalJoveNotes.g:3961:1: ( '>' )
-            // InternalJoveNotes.g:3962:1: '>'
+            // InternalJoveNotes.g:3995:1: ( '>' )
+            // InternalJoveNotes.g:3996:1: '>'
             {
              before(grammarAccess.getChemEquationAccess().getGreaterThanSignKeyword_7()); 
             match(input,34,FOLLOW_2); 
@@ -11105,14 +11207,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__8"
-    // InternalJoveNotes.g:3975:1: rule__ChemEquation__Group__8 : rule__ChemEquation__Group__8__Impl rule__ChemEquation__Group__9 ;
+    // InternalJoveNotes.g:4009:1: rule__ChemEquation__Group__8 : rule__ChemEquation__Group__8__Impl rule__ChemEquation__Group__9 ;
     public final void rule__ChemEquation__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3979:1: ( rule__ChemEquation__Group__8__Impl rule__ChemEquation__Group__9 )
-            // InternalJoveNotes.g:3980:2: rule__ChemEquation__Group__8__Impl rule__ChemEquation__Group__9
+            // InternalJoveNotes.g:4013:1: ( rule__ChemEquation__Group__8__Impl rule__ChemEquation__Group__9 )
+            // InternalJoveNotes.g:4014:2: rule__ChemEquation__Group__8__Impl rule__ChemEquation__Group__9
             {
             pushFollow(FOLLOW_27);
             rule__ChemEquation__Group__8__Impl();
@@ -11143,21 +11245,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__8__Impl"
-    // InternalJoveNotes.g:3987:1: rule__ChemEquation__Group__8__Impl : ( ( rule__ChemEquation__ProductsAssignment_8 ) ) ;
+    // InternalJoveNotes.g:4021:1: rule__ChemEquation__Group__8__Impl : ( ( rule__ChemEquation__ProductsAssignment_8 ) ) ;
     public final void rule__ChemEquation__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:3991:1: ( ( ( rule__ChemEquation__ProductsAssignment_8 ) ) )
-            // InternalJoveNotes.g:3992:1: ( ( rule__ChemEquation__ProductsAssignment_8 ) )
+            // InternalJoveNotes.g:4025:1: ( ( ( rule__ChemEquation__ProductsAssignment_8 ) ) )
+            // InternalJoveNotes.g:4026:1: ( ( rule__ChemEquation__ProductsAssignment_8 ) )
             {
-            // InternalJoveNotes.g:3992:1: ( ( rule__ChemEquation__ProductsAssignment_8 ) )
-            // InternalJoveNotes.g:3993:1: ( rule__ChemEquation__ProductsAssignment_8 )
+            // InternalJoveNotes.g:4026:1: ( ( rule__ChemEquation__ProductsAssignment_8 ) )
+            // InternalJoveNotes.g:4027:1: ( rule__ChemEquation__ProductsAssignment_8 )
             {
              before(grammarAccess.getChemEquationAccess().getProductsAssignment_8()); 
-            // InternalJoveNotes.g:3994:1: ( rule__ChemEquation__ProductsAssignment_8 )
-            // InternalJoveNotes.g:3994:2: rule__ChemEquation__ProductsAssignment_8
+            // InternalJoveNotes.g:4028:1: ( rule__ChemEquation__ProductsAssignment_8 )
+            // InternalJoveNotes.g:4028:2: rule__ChemEquation__ProductsAssignment_8
             {
             pushFollow(FOLLOW_2);
             rule__ChemEquation__ProductsAssignment_8();
@@ -11190,14 +11292,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__9"
-    // InternalJoveNotes.g:4004:1: rule__ChemEquation__Group__9 : rule__ChemEquation__Group__9__Impl ;
+    // InternalJoveNotes.g:4038:1: rule__ChemEquation__Group__9 : rule__ChemEquation__Group__9__Impl ;
     public final void rule__ChemEquation__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4008:1: ( rule__ChemEquation__Group__9__Impl )
-            // InternalJoveNotes.g:4009:2: rule__ChemEquation__Group__9__Impl
+            // InternalJoveNotes.g:4042:1: ( rule__ChemEquation__Group__9__Impl )
+            // InternalJoveNotes.g:4043:2: rule__ChemEquation__Group__9__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ChemEquation__Group__9__Impl();
@@ -11223,17 +11325,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__Group__9__Impl"
-    // InternalJoveNotes.g:4015:1: rule__ChemEquation__Group__9__Impl : ( '}' ) ;
+    // InternalJoveNotes.g:4049:1: rule__ChemEquation__Group__9__Impl : ( '}' ) ;
     public final void rule__ChemEquation__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4019:1: ( ( '}' ) )
-            // InternalJoveNotes.g:4020:1: ( '}' )
+            // InternalJoveNotes.g:4053:1: ( ( '}' ) )
+            // InternalJoveNotes.g:4054:1: ( '}' )
             {
-            // InternalJoveNotes.g:4020:1: ( '}' )
-            // InternalJoveNotes.g:4021:1: '}'
+            // InternalJoveNotes.g:4054:1: ( '}' )
+            // InternalJoveNotes.g:4055:1: '}'
             {
              before(grammarAccess.getChemEquationAccess().getRightCurlyBracketKeyword_9()); 
             match(input,24,FOLLOW_2); 
@@ -11260,14 +11362,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemCompound__Group__0"
-    // InternalJoveNotes.g:4054:1: rule__ChemCompound__Group__0 : rule__ChemCompound__Group__0__Impl rule__ChemCompound__Group__1 ;
+    // InternalJoveNotes.g:4088:1: rule__ChemCompound__Group__0 : rule__ChemCompound__Group__0__Impl rule__ChemCompound__Group__1 ;
     public final void rule__ChemCompound__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4058:1: ( rule__ChemCompound__Group__0__Impl rule__ChemCompound__Group__1 )
-            // InternalJoveNotes.g:4059:2: rule__ChemCompound__Group__0__Impl rule__ChemCompound__Group__1
+            // InternalJoveNotes.g:4092:1: ( rule__ChemCompound__Group__0__Impl rule__ChemCompound__Group__1 )
+            // InternalJoveNotes.g:4093:2: rule__ChemCompound__Group__0__Impl rule__ChemCompound__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__ChemCompound__Group__0__Impl();
@@ -11298,17 +11400,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemCompound__Group__0__Impl"
-    // InternalJoveNotes.g:4066:1: rule__ChemCompound__Group__0__Impl : ( '@chem_compound' ) ;
+    // InternalJoveNotes.g:4100:1: rule__ChemCompound__Group__0__Impl : ( '@chem_compound' ) ;
     public final void rule__ChemCompound__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4070:1: ( ( '@chem_compound' ) )
-            // InternalJoveNotes.g:4071:1: ( '@chem_compound' )
+            // InternalJoveNotes.g:4104:1: ( ( '@chem_compound' ) )
+            // InternalJoveNotes.g:4105:1: ( '@chem_compound' )
             {
-            // InternalJoveNotes.g:4071:1: ( '@chem_compound' )
-            // InternalJoveNotes.g:4072:1: '@chem_compound'
+            // InternalJoveNotes.g:4105:1: ( '@chem_compound' )
+            // InternalJoveNotes.g:4106:1: '@chem_compound'
             {
              before(grammarAccess.getChemCompoundAccess().getChem_compoundKeyword_0()); 
             match(input,35,FOLLOW_2); 
@@ -11335,14 +11437,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemCompound__Group__1"
-    // InternalJoveNotes.g:4085:1: rule__ChemCompound__Group__1 : rule__ChemCompound__Group__1__Impl rule__ChemCompound__Group__2 ;
+    // InternalJoveNotes.g:4119:1: rule__ChemCompound__Group__1 : rule__ChemCompound__Group__1__Impl rule__ChemCompound__Group__2 ;
     public final void rule__ChemCompound__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4089:1: ( rule__ChemCompound__Group__1__Impl rule__ChemCompound__Group__2 )
-            // InternalJoveNotes.g:4090:2: rule__ChemCompound__Group__1__Impl rule__ChemCompound__Group__2
+            // InternalJoveNotes.g:4123:1: ( rule__ChemCompound__Group__1__Impl rule__ChemCompound__Group__2 )
+            // InternalJoveNotes.g:4124:2: rule__ChemCompound__Group__1__Impl rule__ChemCompound__Group__2
             {
             pushFollow(FOLLOW_14);
             rule__ChemCompound__Group__1__Impl();
@@ -11373,29 +11475,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemCompound__Group__1__Impl"
-    // InternalJoveNotes.g:4097:1: rule__ChemCompound__Group__1__Impl : ( ( rule__ChemCompound__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:4131:1: rule__ChemCompound__Group__1__Impl : ( ( rule__ChemCompound__HideFromViewAssignment_1 )? ) ;
     public final void rule__ChemCompound__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4101:1: ( ( ( rule__ChemCompound__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:4102:1: ( ( rule__ChemCompound__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:4135:1: ( ( ( rule__ChemCompound__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:4136:1: ( ( rule__ChemCompound__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:4102:1: ( ( rule__ChemCompound__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:4103:1: ( rule__ChemCompound__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:4136:1: ( ( rule__ChemCompound__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:4137:1: ( rule__ChemCompound__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getChemCompoundAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:4104:1: ( rule__ChemCompound__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:4138:1: ( rule__ChemCompound__HideFromViewAssignment_1 )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
-            if ( (LA36_0==59) ) {
+            if ( (LA36_0==60) ) {
                 alt36=1;
             }
             switch (alt36) {
                 case 1 :
-                    // InternalJoveNotes.g:4104:2: rule__ChemCompound__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:4138:2: rule__ChemCompound__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__ChemCompound__HideFromViewAssignment_1();
@@ -11431,14 +11533,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemCompound__Group__2"
-    // InternalJoveNotes.g:4114:1: rule__ChemCompound__Group__2 : rule__ChemCompound__Group__2__Impl rule__ChemCompound__Group__3 ;
+    // InternalJoveNotes.g:4148:1: rule__ChemCompound__Group__2 : rule__ChemCompound__Group__2__Impl rule__ChemCompound__Group__3 ;
     public final void rule__ChemCompound__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4118:1: ( rule__ChemCompound__Group__2__Impl rule__ChemCompound__Group__3 )
-            // InternalJoveNotes.g:4119:2: rule__ChemCompound__Group__2__Impl rule__ChemCompound__Group__3
+            // InternalJoveNotes.g:4152:1: ( rule__ChemCompound__Group__2__Impl rule__ChemCompound__Group__3 )
+            // InternalJoveNotes.g:4153:2: rule__ChemCompound__Group__2__Impl rule__ChemCompound__Group__3
             {
             pushFollow(FOLLOW_7);
             rule__ChemCompound__Group__2__Impl();
@@ -11469,21 +11571,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemCompound__Group__2__Impl"
-    // InternalJoveNotes.g:4126:1: rule__ChemCompound__Group__2__Impl : ( ( rule__ChemCompound__SymbolAssignment_2 ) ) ;
+    // InternalJoveNotes.g:4160:1: rule__ChemCompound__Group__2__Impl : ( ( rule__ChemCompound__SymbolAssignment_2 ) ) ;
     public final void rule__ChemCompound__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4130:1: ( ( ( rule__ChemCompound__SymbolAssignment_2 ) ) )
-            // InternalJoveNotes.g:4131:1: ( ( rule__ChemCompound__SymbolAssignment_2 ) )
+            // InternalJoveNotes.g:4164:1: ( ( ( rule__ChemCompound__SymbolAssignment_2 ) ) )
+            // InternalJoveNotes.g:4165:1: ( ( rule__ChemCompound__SymbolAssignment_2 ) )
             {
-            // InternalJoveNotes.g:4131:1: ( ( rule__ChemCompound__SymbolAssignment_2 ) )
-            // InternalJoveNotes.g:4132:1: ( rule__ChemCompound__SymbolAssignment_2 )
+            // InternalJoveNotes.g:4165:1: ( ( rule__ChemCompound__SymbolAssignment_2 ) )
+            // InternalJoveNotes.g:4166:1: ( rule__ChemCompound__SymbolAssignment_2 )
             {
              before(grammarAccess.getChemCompoundAccess().getSymbolAssignment_2()); 
-            // InternalJoveNotes.g:4133:1: ( rule__ChemCompound__SymbolAssignment_2 )
-            // InternalJoveNotes.g:4133:2: rule__ChemCompound__SymbolAssignment_2
+            // InternalJoveNotes.g:4167:1: ( rule__ChemCompound__SymbolAssignment_2 )
+            // InternalJoveNotes.g:4167:2: rule__ChemCompound__SymbolAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__ChemCompound__SymbolAssignment_2();
@@ -11516,14 +11618,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemCompound__Group__3"
-    // InternalJoveNotes.g:4143:1: rule__ChemCompound__Group__3 : rule__ChemCompound__Group__3__Impl rule__ChemCompound__Group__4 ;
+    // InternalJoveNotes.g:4177:1: rule__ChemCompound__Group__3 : rule__ChemCompound__Group__3__Impl rule__ChemCompound__Group__4 ;
     public final void rule__ChemCompound__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4147:1: ( rule__ChemCompound__Group__3__Impl rule__ChemCompound__Group__4 )
-            // InternalJoveNotes.g:4148:2: rule__ChemCompound__Group__3__Impl rule__ChemCompound__Group__4
+            // InternalJoveNotes.g:4181:1: ( rule__ChemCompound__Group__3__Impl rule__ChemCompound__Group__4 )
+            // InternalJoveNotes.g:4182:2: rule__ChemCompound__Group__3__Impl rule__ChemCompound__Group__4
             {
             pushFollow(FOLLOW_7);
             rule__ChemCompound__Group__3__Impl();
@@ -11554,21 +11656,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemCompound__Group__3__Impl"
-    // InternalJoveNotes.g:4155:1: rule__ChemCompound__Group__3__Impl : ( ( rule__ChemCompound__ChemicalNameAssignment_3 ) ) ;
+    // InternalJoveNotes.g:4189:1: rule__ChemCompound__Group__3__Impl : ( ( rule__ChemCompound__ChemicalNameAssignment_3 ) ) ;
     public final void rule__ChemCompound__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4159:1: ( ( ( rule__ChemCompound__ChemicalNameAssignment_3 ) ) )
-            // InternalJoveNotes.g:4160:1: ( ( rule__ChemCompound__ChemicalNameAssignment_3 ) )
+            // InternalJoveNotes.g:4193:1: ( ( ( rule__ChemCompound__ChemicalNameAssignment_3 ) ) )
+            // InternalJoveNotes.g:4194:1: ( ( rule__ChemCompound__ChemicalNameAssignment_3 ) )
             {
-            // InternalJoveNotes.g:4160:1: ( ( rule__ChemCompound__ChemicalNameAssignment_3 ) )
-            // InternalJoveNotes.g:4161:1: ( rule__ChemCompound__ChemicalNameAssignment_3 )
+            // InternalJoveNotes.g:4194:1: ( ( rule__ChemCompound__ChemicalNameAssignment_3 ) )
+            // InternalJoveNotes.g:4195:1: ( rule__ChemCompound__ChemicalNameAssignment_3 )
             {
              before(grammarAccess.getChemCompoundAccess().getChemicalNameAssignment_3()); 
-            // InternalJoveNotes.g:4162:1: ( rule__ChemCompound__ChemicalNameAssignment_3 )
-            // InternalJoveNotes.g:4162:2: rule__ChemCompound__ChemicalNameAssignment_3
+            // InternalJoveNotes.g:4196:1: ( rule__ChemCompound__ChemicalNameAssignment_3 )
+            // InternalJoveNotes.g:4196:2: rule__ChemCompound__ChemicalNameAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__ChemCompound__ChemicalNameAssignment_3();
@@ -11601,14 +11703,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemCompound__Group__4"
-    // InternalJoveNotes.g:4172:1: rule__ChemCompound__Group__4 : rule__ChemCompound__Group__4__Impl ;
+    // InternalJoveNotes.g:4206:1: rule__ChemCompound__Group__4 : rule__ChemCompound__Group__4__Impl ;
     public final void rule__ChemCompound__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4176:1: ( rule__ChemCompound__Group__4__Impl )
-            // InternalJoveNotes.g:4177:2: rule__ChemCompound__Group__4__Impl
+            // InternalJoveNotes.g:4210:1: ( rule__ChemCompound__Group__4__Impl )
+            // InternalJoveNotes.g:4211:2: rule__ChemCompound__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ChemCompound__Group__4__Impl();
@@ -11634,20 +11736,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemCompound__Group__4__Impl"
-    // InternalJoveNotes.g:4183:1: rule__ChemCompound__Group__4__Impl : ( ( rule__ChemCompound__CommonNameAssignment_4 )? ) ;
+    // InternalJoveNotes.g:4217:1: rule__ChemCompound__Group__4__Impl : ( ( rule__ChemCompound__CommonNameAssignment_4 )? ) ;
     public final void rule__ChemCompound__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4187:1: ( ( ( rule__ChemCompound__CommonNameAssignment_4 )? ) )
-            // InternalJoveNotes.g:4188:1: ( ( rule__ChemCompound__CommonNameAssignment_4 )? )
+            // InternalJoveNotes.g:4221:1: ( ( ( rule__ChemCompound__CommonNameAssignment_4 )? ) )
+            // InternalJoveNotes.g:4222:1: ( ( rule__ChemCompound__CommonNameAssignment_4 )? )
             {
-            // InternalJoveNotes.g:4188:1: ( ( rule__ChemCompound__CommonNameAssignment_4 )? )
-            // InternalJoveNotes.g:4189:1: ( rule__ChemCompound__CommonNameAssignment_4 )?
+            // InternalJoveNotes.g:4222:1: ( ( rule__ChemCompound__CommonNameAssignment_4 )? )
+            // InternalJoveNotes.g:4223:1: ( rule__ChemCompound__CommonNameAssignment_4 )?
             {
              before(grammarAccess.getChemCompoundAccess().getCommonNameAssignment_4()); 
-            // InternalJoveNotes.g:4190:1: ( rule__ChemCompound__CommonNameAssignment_4 )?
+            // InternalJoveNotes.g:4224:1: ( rule__ChemCompound__CommonNameAssignment_4 )?
             int alt37=2;
             int LA37_0 = input.LA(1);
 
@@ -11656,7 +11758,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt37) {
                 case 1 :
-                    // InternalJoveNotes.g:4190:2: rule__ChemCompound__CommonNameAssignment_4
+                    // InternalJoveNotes.g:4224:2: rule__ChemCompound__CommonNameAssignment_4
                     {
                     pushFollow(FOLLOW_2);
                     rule__ChemCompound__CommonNameAssignment_4();
@@ -11692,14 +11794,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Spellbee__Group__0"
-    // InternalJoveNotes.g:4210:1: rule__Spellbee__Group__0 : rule__Spellbee__Group__0__Impl rule__Spellbee__Group__1 ;
+    // InternalJoveNotes.g:4244:1: rule__Spellbee__Group__0 : rule__Spellbee__Group__0__Impl rule__Spellbee__Group__1 ;
     public final void rule__Spellbee__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4214:1: ( rule__Spellbee__Group__0__Impl rule__Spellbee__Group__1 )
-            // InternalJoveNotes.g:4215:2: rule__Spellbee__Group__0__Impl rule__Spellbee__Group__1
+            // InternalJoveNotes.g:4248:1: ( rule__Spellbee__Group__0__Impl rule__Spellbee__Group__1 )
+            // InternalJoveNotes.g:4249:2: rule__Spellbee__Group__0__Impl rule__Spellbee__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__Spellbee__Group__0__Impl();
@@ -11730,17 +11832,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Spellbee__Group__0__Impl"
-    // InternalJoveNotes.g:4222:1: rule__Spellbee__Group__0__Impl : ( '@spellbee' ) ;
+    // InternalJoveNotes.g:4256:1: rule__Spellbee__Group__0__Impl : ( '@spellbee' ) ;
     public final void rule__Spellbee__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4226:1: ( ( '@spellbee' ) )
-            // InternalJoveNotes.g:4227:1: ( '@spellbee' )
+            // InternalJoveNotes.g:4260:1: ( ( '@spellbee' ) )
+            // InternalJoveNotes.g:4261:1: ( '@spellbee' )
             {
-            // InternalJoveNotes.g:4227:1: ( '@spellbee' )
-            // InternalJoveNotes.g:4228:1: '@spellbee'
+            // InternalJoveNotes.g:4261:1: ( '@spellbee' )
+            // InternalJoveNotes.g:4262:1: '@spellbee'
             {
              before(grammarAccess.getSpellbeeAccess().getSpellbeeKeyword_0()); 
             match(input,36,FOLLOW_2); 
@@ -11767,14 +11869,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Spellbee__Group__1"
-    // InternalJoveNotes.g:4241:1: rule__Spellbee__Group__1 : rule__Spellbee__Group__1__Impl rule__Spellbee__Group__2 ;
+    // InternalJoveNotes.g:4275:1: rule__Spellbee__Group__1 : rule__Spellbee__Group__1__Impl rule__Spellbee__Group__2 ;
     public final void rule__Spellbee__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4245:1: ( rule__Spellbee__Group__1__Impl rule__Spellbee__Group__2 )
-            // InternalJoveNotes.g:4246:2: rule__Spellbee__Group__1__Impl rule__Spellbee__Group__2
+            // InternalJoveNotes.g:4279:1: ( rule__Spellbee__Group__1__Impl rule__Spellbee__Group__2 )
+            // InternalJoveNotes.g:4280:2: rule__Spellbee__Group__1__Impl rule__Spellbee__Group__2
             {
             pushFollow(FOLLOW_14);
             rule__Spellbee__Group__1__Impl();
@@ -11805,29 +11907,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Spellbee__Group__1__Impl"
-    // InternalJoveNotes.g:4253:1: rule__Spellbee__Group__1__Impl : ( ( rule__Spellbee__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:4287:1: rule__Spellbee__Group__1__Impl : ( ( rule__Spellbee__HideFromViewAssignment_1 )? ) ;
     public final void rule__Spellbee__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4257:1: ( ( ( rule__Spellbee__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:4258:1: ( ( rule__Spellbee__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:4291:1: ( ( ( rule__Spellbee__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:4292:1: ( ( rule__Spellbee__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:4258:1: ( ( rule__Spellbee__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:4259:1: ( rule__Spellbee__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:4292:1: ( ( rule__Spellbee__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:4293:1: ( rule__Spellbee__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getSpellbeeAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:4260:1: ( rule__Spellbee__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:4294:1: ( rule__Spellbee__HideFromViewAssignment_1 )?
             int alt38=2;
             int LA38_0 = input.LA(1);
 
-            if ( (LA38_0==59) ) {
+            if ( (LA38_0==60) ) {
                 alt38=1;
             }
             switch (alt38) {
                 case 1 :
-                    // InternalJoveNotes.g:4260:2: rule__Spellbee__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:4294:2: rule__Spellbee__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Spellbee__HideFromViewAssignment_1();
@@ -11863,14 +11965,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Spellbee__Group__2"
-    // InternalJoveNotes.g:4270:1: rule__Spellbee__Group__2 : rule__Spellbee__Group__2__Impl ;
+    // InternalJoveNotes.g:4304:1: rule__Spellbee__Group__2 : rule__Spellbee__Group__2__Impl ;
     public final void rule__Spellbee__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4274:1: ( rule__Spellbee__Group__2__Impl )
-            // InternalJoveNotes.g:4275:2: rule__Spellbee__Group__2__Impl
+            // InternalJoveNotes.g:4308:1: ( rule__Spellbee__Group__2__Impl )
+            // InternalJoveNotes.g:4309:2: rule__Spellbee__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Spellbee__Group__2__Impl();
@@ -11896,21 +11998,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Spellbee__Group__2__Impl"
-    // InternalJoveNotes.g:4281:1: rule__Spellbee__Group__2__Impl : ( ( rule__Spellbee__WordAssignment_2 ) ) ;
+    // InternalJoveNotes.g:4315:1: rule__Spellbee__Group__2__Impl : ( ( rule__Spellbee__WordAssignment_2 ) ) ;
     public final void rule__Spellbee__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4285:1: ( ( ( rule__Spellbee__WordAssignment_2 ) ) )
-            // InternalJoveNotes.g:4286:1: ( ( rule__Spellbee__WordAssignment_2 ) )
+            // InternalJoveNotes.g:4319:1: ( ( ( rule__Spellbee__WordAssignment_2 ) ) )
+            // InternalJoveNotes.g:4320:1: ( ( rule__Spellbee__WordAssignment_2 ) )
             {
-            // InternalJoveNotes.g:4286:1: ( ( rule__Spellbee__WordAssignment_2 ) )
-            // InternalJoveNotes.g:4287:1: ( rule__Spellbee__WordAssignment_2 )
+            // InternalJoveNotes.g:4320:1: ( ( rule__Spellbee__WordAssignment_2 ) )
+            // InternalJoveNotes.g:4321:1: ( rule__Spellbee__WordAssignment_2 )
             {
              before(grammarAccess.getSpellbeeAccess().getWordAssignment_2()); 
-            // InternalJoveNotes.g:4288:1: ( rule__Spellbee__WordAssignment_2 )
-            // InternalJoveNotes.g:4288:2: rule__Spellbee__WordAssignment_2
+            // InternalJoveNotes.g:4322:1: ( rule__Spellbee__WordAssignment_2 )
+            // InternalJoveNotes.g:4322:2: rule__Spellbee__WordAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Spellbee__WordAssignment_2();
@@ -11943,14 +12045,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__0"
-    // InternalJoveNotes.g:4304:1: rule__ImageLabel__Group__0 : rule__ImageLabel__Group__0__Impl rule__ImageLabel__Group__1 ;
+    // InternalJoveNotes.g:4338:1: rule__ImageLabel__Group__0 : rule__ImageLabel__Group__0__Impl rule__ImageLabel__Group__1 ;
     public final void rule__ImageLabel__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4308:1: ( rule__ImageLabel__Group__0__Impl rule__ImageLabel__Group__1 )
-            // InternalJoveNotes.g:4309:2: rule__ImageLabel__Group__0__Impl rule__ImageLabel__Group__1
+            // InternalJoveNotes.g:4342:1: ( rule__ImageLabel__Group__0__Impl rule__ImageLabel__Group__1 )
+            // InternalJoveNotes.g:4343:2: rule__ImageLabel__Group__0__Impl rule__ImageLabel__Group__1
             {
             pushFollow(FOLLOW_24);
             rule__ImageLabel__Group__0__Impl();
@@ -11981,17 +12083,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__0__Impl"
-    // InternalJoveNotes.g:4316:1: rule__ImageLabel__Group__0__Impl : ( '@image_label' ) ;
+    // InternalJoveNotes.g:4350:1: rule__ImageLabel__Group__0__Impl : ( '@image_label' ) ;
     public final void rule__ImageLabel__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4320:1: ( ( '@image_label' ) )
-            // InternalJoveNotes.g:4321:1: ( '@image_label' )
+            // InternalJoveNotes.g:4354:1: ( ( '@image_label' ) )
+            // InternalJoveNotes.g:4355:1: ( '@image_label' )
             {
-            // InternalJoveNotes.g:4321:1: ( '@image_label' )
-            // InternalJoveNotes.g:4322:1: '@image_label'
+            // InternalJoveNotes.g:4355:1: ( '@image_label' )
+            // InternalJoveNotes.g:4356:1: '@image_label'
             {
              before(grammarAccess.getImageLabelAccess().getImage_labelKeyword_0()); 
             match(input,37,FOLLOW_2); 
@@ -12018,14 +12120,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__1"
-    // InternalJoveNotes.g:4335:1: rule__ImageLabel__Group__1 : rule__ImageLabel__Group__1__Impl rule__ImageLabel__Group__2 ;
+    // InternalJoveNotes.g:4369:1: rule__ImageLabel__Group__1 : rule__ImageLabel__Group__1__Impl rule__ImageLabel__Group__2 ;
     public final void rule__ImageLabel__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4339:1: ( rule__ImageLabel__Group__1__Impl rule__ImageLabel__Group__2 )
-            // InternalJoveNotes.g:4340:2: rule__ImageLabel__Group__1__Impl rule__ImageLabel__Group__2
+            // InternalJoveNotes.g:4373:1: ( rule__ImageLabel__Group__1__Impl rule__ImageLabel__Group__2 )
+            // InternalJoveNotes.g:4374:2: rule__ImageLabel__Group__1__Impl rule__ImageLabel__Group__2
             {
             pushFollow(FOLLOW_24);
             rule__ImageLabel__Group__1__Impl();
@@ -12056,29 +12158,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__1__Impl"
-    // InternalJoveNotes.g:4347:1: rule__ImageLabel__Group__1__Impl : ( ( rule__ImageLabel__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:4381:1: rule__ImageLabel__Group__1__Impl : ( ( rule__ImageLabel__HideFromViewAssignment_1 )? ) ;
     public final void rule__ImageLabel__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4351:1: ( ( ( rule__ImageLabel__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:4352:1: ( ( rule__ImageLabel__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:4385:1: ( ( ( rule__ImageLabel__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:4386:1: ( ( rule__ImageLabel__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:4352:1: ( ( rule__ImageLabel__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:4353:1: ( rule__ImageLabel__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:4386:1: ( ( rule__ImageLabel__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:4387:1: ( rule__ImageLabel__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getImageLabelAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:4354:1: ( rule__ImageLabel__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:4388:1: ( rule__ImageLabel__HideFromViewAssignment_1 )?
             int alt39=2;
             int LA39_0 = input.LA(1);
 
-            if ( (LA39_0==59) ) {
+            if ( (LA39_0==60) ) {
                 alt39=1;
             }
             switch (alt39) {
                 case 1 :
-                    // InternalJoveNotes.g:4354:2: rule__ImageLabel__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:4388:2: rule__ImageLabel__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__ImageLabel__HideFromViewAssignment_1();
@@ -12114,14 +12216,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__2"
-    // InternalJoveNotes.g:4364:1: rule__ImageLabel__Group__2 : rule__ImageLabel__Group__2__Impl rule__ImageLabel__Group__3 ;
+    // InternalJoveNotes.g:4398:1: rule__ImageLabel__Group__2 : rule__ImageLabel__Group__2__Impl rule__ImageLabel__Group__3 ;
     public final void rule__ImageLabel__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4368:1: ( rule__ImageLabel__Group__2__Impl rule__ImageLabel__Group__3 )
-            // InternalJoveNotes.g:4369:2: rule__ImageLabel__Group__2__Impl rule__ImageLabel__Group__3
+            // InternalJoveNotes.g:4402:1: ( rule__ImageLabel__Group__2__Impl rule__ImageLabel__Group__3 )
+            // InternalJoveNotes.g:4403:2: rule__ImageLabel__Group__2__Impl rule__ImageLabel__Group__3
             {
             pushFollow(FOLLOW_24);
             rule__ImageLabel__Group__2__Impl();
@@ -12152,20 +12254,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__2__Impl"
-    // InternalJoveNotes.g:4376:1: rule__ImageLabel__Group__2__Impl : ( ( rule__ImageLabel__CaptionAssignment_2 )? ) ;
+    // InternalJoveNotes.g:4410:1: rule__ImageLabel__Group__2__Impl : ( ( rule__ImageLabel__CaptionAssignment_2 )? ) ;
     public final void rule__ImageLabel__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4380:1: ( ( ( rule__ImageLabel__CaptionAssignment_2 )? ) )
-            // InternalJoveNotes.g:4381:1: ( ( rule__ImageLabel__CaptionAssignment_2 )? )
+            // InternalJoveNotes.g:4414:1: ( ( ( rule__ImageLabel__CaptionAssignment_2 )? ) )
+            // InternalJoveNotes.g:4415:1: ( ( rule__ImageLabel__CaptionAssignment_2 )? )
             {
-            // InternalJoveNotes.g:4381:1: ( ( rule__ImageLabel__CaptionAssignment_2 )? )
-            // InternalJoveNotes.g:4382:1: ( rule__ImageLabel__CaptionAssignment_2 )?
+            // InternalJoveNotes.g:4415:1: ( ( rule__ImageLabel__CaptionAssignment_2 )? )
+            // InternalJoveNotes.g:4416:1: ( rule__ImageLabel__CaptionAssignment_2 )?
             {
              before(grammarAccess.getImageLabelAccess().getCaptionAssignment_2()); 
-            // InternalJoveNotes.g:4383:1: ( rule__ImageLabel__CaptionAssignment_2 )?
+            // InternalJoveNotes.g:4417:1: ( rule__ImageLabel__CaptionAssignment_2 )?
             int alt40=2;
             int LA40_0 = input.LA(1);
 
@@ -12174,7 +12276,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt40) {
                 case 1 :
-                    // InternalJoveNotes.g:4383:2: rule__ImageLabel__CaptionAssignment_2
+                    // InternalJoveNotes.g:4417:2: rule__ImageLabel__CaptionAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__ImageLabel__CaptionAssignment_2();
@@ -12210,14 +12312,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__3"
-    // InternalJoveNotes.g:4393:1: rule__ImageLabel__Group__3 : rule__ImageLabel__Group__3__Impl rule__ImageLabel__Group__4 ;
+    // InternalJoveNotes.g:4427:1: rule__ImageLabel__Group__3 : rule__ImageLabel__Group__3__Impl rule__ImageLabel__Group__4 ;
     public final void rule__ImageLabel__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4397:1: ( rule__ImageLabel__Group__3__Impl rule__ImageLabel__Group__4 )
-            // InternalJoveNotes.g:4398:2: rule__ImageLabel__Group__3__Impl rule__ImageLabel__Group__4
+            // InternalJoveNotes.g:4431:1: ( rule__ImageLabel__Group__3__Impl rule__ImageLabel__Group__4 )
+            // InternalJoveNotes.g:4432:2: rule__ImageLabel__Group__3__Impl rule__ImageLabel__Group__4
             {
             pushFollow(FOLLOW_28);
             rule__ImageLabel__Group__3__Impl();
@@ -12248,17 +12350,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__3__Impl"
-    // InternalJoveNotes.g:4405:1: rule__ImageLabel__Group__3__Impl : ( '{' ) ;
+    // InternalJoveNotes.g:4439:1: rule__ImageLabel__Group__3__Impl : ( '{' ) ;
     public final void rule__ImageLabel__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4409:1: ( ( '{' ) )
-            // InternalJoveNotes.g:4410:1: ( '{' )
+            // InternalJoveNotes.g:4443:1: ( ( '{' ) )
+            // InternalJoveNotes.g:4444:1: ( '{' )
             {
-            // InternalJoveNotes.g:4410:1: ( '{' )
-            // InternalJoveNotes.g:4411:1: '{'
+            // InternalJoveNotes.g:4444:1: ( '{' )
+            // InternalJoveNotes.g:4445:1: '{'
             {
              before(grammarAccess.getImageLabelAccess().getLeftCurlyBracketKeyword_3()); 
             match(input,23,FOLLOW_2); 
@@ -12285,14 +12387,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__4"
-    // InternalJoveNotes.g:4424:1: rule__ImageLabel__Group__4 : rule__ImageLabel__Group__4__Impl rule__ImageLabel__Group__5 ;
+    // InternalJoveNotes.g:4458:1: rule__ImageLabel__Group__4 : rule__ImageLabel__Group__4__Impl rule__ImageLabel__Group__5 ;
     public final void rule__ImageLabel__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4428:1: ( rule__ImageLabel__Group__4__Impl rule__ImageLabel__Group__5 )
-            // InternalJoveNotes.g:4429:2: rule__ImageLabel__Group__4__Impl rule__ImageLabel__Group__5
+            // InternalJoveNotes.g:4462:1: ( rule__ImageLabel__Group__4__Impl rule__ImageLabel__Group__5 )
+            // InternalJoveNotes.g:4463:2: rule__ImageLabel__Group__4__Impl rule__ImageLabel__Group__5
             {
             pushFollow(FOLLOW_7);
             rule__ImageLabel__Group__4__Impl();
@@ -12323,17 +12425,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__4__Impl"
-    // InternalJoveNotes.g:4436:1: rule__ImageLabel__Group__4__Impl : ( 'imageName' ) ;
+    // InternalJoveNotes.g:4470:1: rule__ImageLabel__Group__4__Impl : ( 'imageName' ) ;
     public final void rule__ImageLabel__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4440:1: ( ( 'imageName' ) )
-            // InternalJoveNotes.g:4441:1: ( 'imageName' )
+            // InternalJoveNotes.g:4474:1: ( ( 'imageName' ) )
+            // InternalJoveNotes.g:4475:1: ( 'imageName' )
             {
-            // InternalJoveNotes.g:4441:1: ( 'imageName' )
-            // InternalJoveNotes.g:4442:1: 'imageName'
+            // InternalJoveNotes.g:4475:1: ( 'imageName' )
+            // InternalJoveNotes.g:4476:1: 'imageName'
             {
              before(grammarAccess.getImageLabelAccess().getImageNameKeyword_4()); 
             match(input,38,FOLLOW_2); 
@@ -12360,14 +12462,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__5"
-    // InternalJoveNotes.g:4455:1: rule__ImageLabel__Group__5 : rule__ImageLabel__Group__5__Impl rule__ImageLabel__Group__6 ;
+    // InternalJoveNotes.g:4489:1: rule__ImageLabel__Group__5 : rule__ImageLabel__Group__5__Impl rule__ImageLabel__Group__6 ;
     public final void rule__ImageLabel__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4459:1: ( rule__ImageLabel__Group__5__Impl rule__ImageLabel__Group__6 )
-            // InternalJoveNotes.g:4460:2: rule__ImageLabel__Group__5__Impl rule__ImageLabel__Group__6
+            // InternalJoveNotes.g:4493:1: ( rule__ImageLabel__Group__5__Impl rule__ImageLabel__Group__6 )
+            // InternalJoveNotes.g:4494:2: rule__ImageLabel__Group__5__Impl rule__ImageLabel__Group__6
             {
             pushFollow(FOLLOW_9);
             rule__ImageLabel__Group__5__Impl();
@@ -12398,21 +12500,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__5__Impl"
-    // InternalJoveNotes.g:4467:1: rule__ImageLabel__Group__5__Impl : ( ( rule__ImageLabel__ImageNameAssignment_5 ) ) ;
+    // InternalJoveNotes.g:4501:1: rule__ImageLabel__Group__5__Impl : ( ( rule__ImageLabel__ImageNameAssignment_5 ) ) ;
     public final void rule__ImageLabel__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4471:1: ( ( ( rule__ImageLabel__ImageNameAssignment_5 ) ) )
-            // InternalJoveNotes.g:4472:1: ( ( rule__ImageLabel__ImageNameAssignment_5 ) )
+            // InternalJoveNotes.g:4505:1: ( ( ( rule__ImageLabel__ImageNameAssignment_5 ) ) )
+            // InternalJoveNotes.g:4506:1: ( ( rule__ImageLabel__ImageNameAssignment_5 ) )
             {
-            // InternalJoveNotes.g:4472:1: ( ( rule__ImageLabel__ImageNameAssignment_5 ) )
-            // InternalJoveNotes.g:4473:1: ( rule__ImageLabel__ImageNameAssignment_5 )
+            // InternalJoveNotes.g:4506:1: ( ( rule__ImageLabel__ImageNameAssignment_5 ) )
+            // InternalJoveNotes.g:4507:1: ( rule__ImageLabel__ImageNameAssignment_5 )
             {
              before(grammarAccess.getImageLabelAccess().getImageNameAssignment_5()); 
-            // InternalJoveNotes.g:4474:1: ( rule__ImageLabel__ImageNameAssignment_5 )
-            // InternalJoveNotes.g:4474:2: rule__ImageLabel__ImageNameAssignment_5
+            // InternalJoveNotes.g:4508:1: ( rule__ImageLabel__ImageNameAssignment_5 )
+            // InternalJoveNotes.g:4508:2: rule__ImageLabel__ImageNameAssignment_5
             {
             pushFollow(FOLLOW_2);
             rule__ImageLabel__ImageNameAssignment_5();
@@ -12445,14 +12547,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__6"
-    // InternalJoveNotes.g:4484:1: rule__ImageLabel__Group__6 : rule__ImageLabel__Group__6__Impl rule__ImageLabel__Group__7 ;
+    // InternalJoveNotes.g:4518:1: rule__ImageLabel__Group__6 : rule__ImageLabel__Group__6__Impl rule__ImageLabel__Group__7 ;
     public final void rule__ImageLabel__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4488:1: ( rule__ImageLabel__Group__6__Impl rule__ImageLabel__Group__7 )
-            // InternalJoveNotes.g:4489:2: rule__ImageLabel__Group__6__Impl rule__ImageLabel__Group__7
+            // InternalJoveNotes.g:4522:1: ( rule__ImageLabel__Group__6__Impl rule__ImageLabel__Group__7 )
+            // InternalJoveNotes.g:4523:2: rule__ImageLabel__Group__6__Impl rule__ImageLabel__Group__7
             {
             pushFollow(FOLLOW_29);
             rule__ImageLabel__Group__6__Impl();
@@ -12483,21 +12585,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__6__Impl"
-    // InternalJoveNotes.g:4496:1: rule__ImageLabel__Group__6__Impl : ( ( rule__ImageLabel__HotspotsAssignment_6 ) ) ;
+    // InternalJoveNotes.g:4530:1: rule__ImageLabel__Group__6__Impl : ( ( rule__ImageLabel__HotspotsAssignment_6 ) ) ;
     public final void rule__ImageLabel__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4500:1: ( ( ( rule__ImageLabel__HotspotsAssignment_6 ) ) )
-            // InternalJoveNotes.g:4501:1: ( ( rule__ImageLabel__HotspotsAssignment_6 ) )
+            // InternalJoveNotes.g:4534:1: ( ( ( rule__ImageLabel__HotspotsAssignment_6 ) ) )
+            // InternalJoveNotes.g:4535:1: ( ( rule__ImageLabel__HotspotsAssignment_6 ) )
             {
-            // InternalJoveNotes.g:4501:1: ( ( rule__ImageLabel__HotspotsAssignment_6 ) )
-            // InternalJoveNotes.g:4502:1: ( rule__ImageLabel__HotspotsAssignment_6 )
+            // InternalJoveNotes.g:4535:1: ( ( rule__ImageLabel__HotspotsAssignment_6 ) )
+            // InternalJoveNotes.g:4536:1: ( rule__ImageLabel__HotspotsAssignment_6 )
             {
              before(grammarAccess.getImageLabelAccess().getHotspotsAssignment_6()); 
-            // InternalJoveNotes.g:4503:1: ( rule__ImageLabel__HotspotsAssignment_6 )
-            // InternalJoveNotes.g:4503:2: rule__ImageLabel__HotspotsAssignment_6
+            // InternalJoveNotes.g:4537:1: ( rule__ImageLabel__HotspotsAssignment_6 )
+            // InternalJoveNotes.g:4537:2: rule__ImageLabel__HotspotsAssignment_6
             {
             pushFollow(FOLLOW_2);
             rule__ImageLabel__HotspotsAssignment_6();
@@ -12530,14 +12632,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__7"
-    // InternalJoveNotes.g:4513:1: rule__ImageLabel__Group__7 : rule__ImageLabel__Group__7__Impl rule__ImageLabel__Group__8 ;
+    // InternalJoveNotes.g:4547:1: rule__ImageLabel__Group__7 : rule__ImageLabel__Group__7__Impl rule__ImageLabel__Group__8 ;
     public final void rule__ImageLabel__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4517:1: ( rule__ImageLabel__Group__7__Impl rule__ImageLabel__Group__8 )
-            // InternalJoveNotes.g:4518:2: rule__ImageLabel__Group__7__Impl rule__ImageLabel__Group__8
+            // InternalJoveNotes.g:4551:1: ( rule__ImageLabel__Group__7__Impl rule__ImageLabel__Group__8 )
+            // InternalJoveNotes.g:4552:2: rule__ImageLabel__Group__7__Impl rule__ImageLabel__Group__8
             {
             pushFollow(FOLLOW_29);
             rule__ImageLabel__Group__7__Impl();
@@ -12568,20 +12670,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__7__Impl"
-    // InternalJoveNotes.g:4525:1: rule__ImageLabel__Group__7__Impl : ( ( rule__ImageLabel__Group_7__0 )* ) ;
+    // InternalJoveNotes.g:4559:1: rule__ImageLabel__Group__7__Impl : ( ( rule__ImageLabel__Group_7__0 )* ) ;
     public final void rule__ImageLabel__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4529:1: ( ( ( rule__ImageLabel__Group_7__0 )* ) )
-            // InternalJoveNotes.g:4530:1: ( ( rule__ImageLabel__Group_7__0 )* )
+            // InternalJoveNotes.g:4563:1: ( ( ( rule__ImageLabel__Group_7__0 )* ) )
+            // InternalJoveNotes.g:4564:1: ( ( rule__ImageLabel__Group_7__0 )* )
             {
-            // InternalJoveNotes.g:4530:1: ( ( rule__ImageLabel__Group_7__0 )* )
-            // InternalJoveNotes.g:4531:1: ( rule__ImageLabel__Group_7__0 )*
+            // InternalJoveNotes.g:4564:1: ( ( rule__ImageLabel__Group_7__0 )* )
+            // InternalJoveNotes.g:4565:1: ( rule__ImageLabel__Group_7__0 )*
             {
              before(grammarAccess.getImageLabelAccess().getGroup_7()); 
-            // InternalJoveNotes.g:4532:1: ( rule__ImageLabel__Group_7__0 )*
+            // InternalJoveNotes.g:4566:1: ( rule__ImageLabel__Group_7__0 )*
             loop41:
             do {
                 int alt41=2;
@@ -12594,7 +12696,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
                 switch (alt41) {
             	case 1 :
-            	    // InternalJoveNotes.g:4532:2: rule__ImageLabel__Group_7__0
+            	    // InternalJoveNotes.g:4566:2: rule__ImageLabel__Group_7__0
             	    {
             	    pushFollow(FOLLOW_30);
             	    rule__ImageLabel__Group_7__0();
@@ -12633,14 +12735,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__8"
-    // InternalJoveNotes.g:4542:1: rule__ImageLabel__Group__8 : rule__ImageLabel__Group__8__Impl ;
+    // InternalJoveNotes.g:4576:1: rule__ImageLabel__Group__8 : rule__ImageLabel__Group__8__Impl ;
     public final void rule__ImageLabel__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4546:1: ( rule__ImageLabel__Group__8__Impl )
-            // InternalJoveNotes.g:4547:2: rule__ImageLabel__Group__8__Impl
+            // InternalJoveNotes.g:4580:1: ( rule__ImageLabel__Group__8__Impl )
+            // InternalJoveNotes.g:4581:2: rule__ImageLabel__Group__8__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ImageLabel__Group__8__Impl();
@@ -12666,17 +12768,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group__8__Impl"
-    // InternalJoveNotes.g:4553:1: rule__ImageLabel__Group__8__Impl : ( '}' ) ;
+    // InternalJoveNotes.g:4587:1: rule__ImageLabel__Group__8__Impl : ( '}' ) ;
     public final void rule__ImageLabel__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4557:1: ( ( '}' ) )
-            // InternalJoveNotes.g:4558:1: ( '}' )
+            // InternalJoveNotes.g:4591:1: ( ( '}' ) )
+            // InternalJoveNotes.g:4592:1: ( '}' )
             {
-            // InternalJoveNotes.g:4558:1: ( '}' )
-            // InternalJoveNotes.g:4559:1: '}'
+            // InternalJoveNotes.g:4592:1: ( '}' )
+            // InternalJoveNotes.g:4593:1: '}'
             {
              before(grammarAccess.getImageLabelAccess().getRightCurlyBracketKeyword_8()); 
             match(input,24,FOLLOW_2); 
@@ -12703,14 +12805,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group_7__0"
-    // InternalJoveNotes.g:4590:1: rule__ImageLabel__Group_7__0 : rule__ImageLabel__Group_7__0__Impl rule__ImageLabel__Group_7__1 ;
+    // InternalJoveNotes.g:4624:1: rule__ImageLabel__Group_7__0 : rule__ImageLabel__Group_7__0__Impl rule__ImageLabel__Group_7__1 ;
     public final void rule__ImageLabel__Group_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4594:1: ( rule__ImageLabel__Group_7__0__Impl rule__ImageLabel__Group_7__1 )
-            // InternalJoveNotes.g:4595:2: rule__ImageLabel__Group_7__0__Impl rule__ImageLabel__Group_7__1
+            // InternalJoveNotes.g:4628:1: ( rule__ImageLabel__Group_7__0__Impl rule__ImageLabel__Group_7__1 )
+            // InternalJoveNotes.g:4629:2: rule__ImageLabel__Group_7__0__Impl rule__ImageLabel__Group_7__1
             {
             pushFollow(FOLLOW_9);
             rule__ImageLabel__Group_7__0__Impl();
@@ -12741,17 +12843,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group_7__0__Impl"
-    // InternalJoveNotes.g:4602:1: rule__ImageLabel__Group_7__0__Impl : ( ',' ) ;
+    // InternalJoveNotes.g:4636:1: rule__ImageLabel__Group_7__0__Impl : ( ',' ) ;
     public final void rule__ImageLabel__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4606:1: ( ( ',' ) )
-            // InternalJoveNotes.g:4607:1: ( ',' )
+            // InternalJoveNotes.g:4640:1: ( ( ',' ) )
+            // InternalJoveNotes.g:4641:1: ( ',' )
             {
-            // InternalJoveNotes.g:4607:1: ( ',' )
-            // InternalJoveNotes.g:4608:1: ','
+            // InternalJoveNotes.g:4641:1: ( ',' )
+            // InternalJoveNotes.g:4642:1: ','
             {
              before(grammarAccess.getImageLabelAccess().getCommaKeyword_7_0()); 
             match(input,39,FOLLOW_2); 
@@ -12778,14 +12880,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group_7__1"
-    // InternalJoveNotes.g:4621:1: rule__ImageLabel__Group_7__1 : rule__ImageLabel__Group_7__1__Impl ;
+    // InternalJoveNotes.g:4655:1: rule__ImageLabel__Group_7__1 : rule__ImageLabel__Group_7__1__Impl ;
     public final void rule__ImageLabel__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4625:1: ( rule__ImageLabel__Group_7__1__Impl )
-            // InternalJoveNotes.g:4626:2: rule__ImageLabel__Group_7__1__Impl
+            // InternalJoveNotes.g:4659:1: ( rule__ImageLabel__Group_7__1__Impl )
+            // InternalJoveNotes.g:4660:2: rule__ImageLabel__Group_7__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ImageLabel__Group_7__1__Impl();
@@ -12811,21 +12913,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__Group_7__1__Impl"
-    // InternalJoveNotes.g:4632:1: rule__ImageLabel__Group_7__1__Impl : ( ( rule__ImageLabel__HotspotsAssignment_7_1 ) ) ;
+    // InternalJoveNotes.g:4666:1: rule__ImageLabel__Group_7__1__Impl : ( ( rule__ImageLabel__HotspotsAssignment_7_1 ) ) ;
     public final void rule__ImageLabel__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4636:1: ( ( ( rule__ImageLabel__HotspotsAssignment_7_1 ) ) )
-            // InternalJoveNotes.g:4637:1: ( ( rule__ImageLabel__HotspotsAssignment_7_1 ) )
+            // InternalJoveNotes.g:4670:1: ( ( ( rule__ImageLabel__HotspotsAssignment_7_1 ) ) )
+            // InternalJoveNotes.g:4671:1: ( ( rule__ImageLabel__HotspotsAssignment_7_1 ) )
             {
-            // InternalJoveNotes.g:4637:1: ( ( rule__ImageLabel__HotspotsAssignment_7_1 ) )
-            // InternalJoveNotes.g:4638:1: ( rule__ImageLabel__HotspotsAssignment_7_1 )
+            // InternalJoveNotes.g:4671:1: ( ( rule__ImageLabel__HotspotsAssignment_7_1 ) )
+            // InternalJoveNotes.g:4672:1: ( rule__ImageLabel__HotspotsAssignment_7_1 )
             {
              before(grammarAccess.getImageLabelAccess().getHotspotsAssignment_7_1()); 
-            // InternalJoveNotes.g:4639:1: ( rule__ImageLabel__HotspotsAssignment_7_1 )
-            // InternalJoveNotes.g:4639:2: rule__ImageLabel__HotspotsAssignment_7_1
+            // InternalJoveNotes.g:4673:1: ( rule__ImageLabel__HotspotsAssignment_7_1 )
+            // InternalJoveNotes.g:4673:2: rule__ImageLabel__HotspotsAssignment_7_1
             {
             pushFollow(FOLLOW_2);
             rule__ImageLabel__HotspotsAssignment_7_1();
@@ -12858,14 +12960,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__HotSpot__Group__0"
-    // InternalJoveNotes.g:4653:1: rule__HotSpot__Group__0 : rule__HotSpot__Group__0__Impl rule__HotSpot__Group__1 ;
+    // InternalJoveNotes.g:4687:1: rule__HotSpot__Group__0 : rule__HotSpot__Group__0__Impl rule__HotSpot__Group__1 ;
     public final void rule__HotSpot__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4657:1: ( rule__HotSpot__Group__0__Impl rule__HotSpot__Group__1 )
-            // InternalJoveNotes.g:4658:2: rule__HotSpot__Group__0__Impl rule__HotSpot__Group__1
+            // InternalJoveNotes.g:4691:1: ( rule__HotSpot__Group__0__Impl rule__HotSpot__Group__1 )
+            // InternalJoveNotes.g:4692:2: rule__HotSpot__Group__0__Impl rule__HotSpot__Group__1
             {
             pushFollow(FOLLOW_31);
             rule__HotSpot__Group__0__Impl();
@@ -12896,21 +12998,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__HotSpot__Group__0__Impl"
-    // InternalJoveNotes.g:4665:1: rule__HotSpot__Group__0__Impl : ( ( rule__HotSpot__XAssignment_0 ) ) ;
+    // InternalJoveNotes.g:4699:1: rule__HotSpot__Group__0__Impl : ( ( rule__HotSpot__XAssignment_0 ) ) ;
     public final void rule__HotSpot__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4669:1: ( ( ( rule__HotSpot__XAssignment_0 ) ) )
-            // InternalJoveNotes.g:4670:1: ( ( rule__HotSpot__XAssignment_0 ) )
+            // InternalJoveNotes.g:4703:1: ( ( ( rule__HotSpot__XAssignment_0 ) ) )
+            // InternalJoveNotes.g:4704:1: ( ( rule__HotSpot__XAssignment_0 ) )
             {
-            // InternalJoveNotes.g:4670:1: ( ( rule__HotSpot__XAssignment_0 ) )
-            // InternalJoveNotes.g:4671:1: ( rule__HotSpot__XAssignment_0 )
+            // InternalJoveNotes.g:4704:1: ( ( rule__HotSpot__XAssignment_0 ) )
+            // InternalJoveNotes.g:4705:1: ( rule__HotSpot__XAssignment_0 )
             {
              before(grammarAccess.getHotSpotAccess().getXAssignment_0()); 
-            // InternalJoveNotes.g:4672:1: ( rule__HotSpot__XAssignment_0 )
-            // InternalJoveNotes.g:4672:2: rule__HotSpot__XAssignment_0
+            // InternalJoveNotes.g:4706:1: ( rule__HotSpot__XAssignment_0 )
+            // InternalJoveNotes.g:4706:2: rule__HotSpot__XAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__HotSpot__XAssignment_0();
@@ -12943,14 +13045,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__HotSpot__Group__1"
-    // InternalJoveNotes.g:4682:1: rule__HotSpot__Group__1 : rule__HotSpot__Group__1__Impl rule__HotSpot__Group__2 ;
+    // InternalJoveNotes.g:4716:1: rule__HotSpot__Group__1 : rule__HotSpot__Group__1__Impl rule__HotSpot__Group__2 ;
     public final void rule__HotSpot__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4686:1: ( rule__HotSpot__Group__1__Impl rule__HotSpot__Group__2 )
-            // InternalJoveNotes.g:4687:2: rule__HotSpot__Group__1__Impl rule__HotSpot__Group__2
+            // InternalJoveNotes.g:4720:1: ( rule__HotSpot__Group__1__Impl rule__HotSpot__Group__2 )
+            // InternalJoveNotes.g:4721:2: rule__HotSpot__Group__1__Impl rule__HotSpot__Group__2
             {
             pushFollow(FOLLOW_9);
             rule__HotSpot__Group__1__Impl();
@@ -12981,17 +13083,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__HotSpot__Group__1__Impl"
-    // InternalJoveNotes.g:4694:1: rule__HotSpot__Group__1__Impl : ( ',' ) ;
+    // InternalJoveNotes.g:4728:1: rule__HotSpot__Group__1__Impl : ( ',' ) ;
     public final void rule__HotSpot__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4698:1: ( ( ',' ) )
-            // InternalJoveNotes.g:4699:1: ( ',' )
+            // InternalJoveNotes.g:4732:1: ( ( ',' ) )
+            // InternalJoveNotes.g:4733:1: ( ',' )
             {
-            // InternalJoveNotes.g:4699:1: ( ',' )
-            // InternalJoveNotes.g:4700:1: ','
+            // InternalJoveNotes.g:4733:1: ( ',' )
+            // InternalJoveNotes.g:4734:1: ','
             {
              before(grammarAccess.getHotSpotAccess().getCommaKeyword_1()); 
             match(input,39,FOLLOW_2); 
@@ -13018,14 +13120,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__HotSpot__Group__2"
-    // InternalJoveNotes.g:4713:1: rule__HotSpot__Group__2 : rule__HotSpot__Group__2__Impl rule__HotSpot__Group__3 ;
+    // InternalJoveNotes.g:4747:1: rule__HotSpot__Group__2 : rule__HotSpot__Group__2__Impl rule__HotSpot__Group__3 ;
     public final void rule__HotSpot__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4717:1: ( rule__HotSpot__Group__2__Impl rule__HotSpot__Group__3 )
-            // InternalJoveNotes.g:4718:2: rule__HotSpot__Group__2__Impl rule__HotSpot__Group__3
+            // InternalJoveNotes.g:4751:1: ( rule__HotSpot__Group__2__Impl rule__HotSpot__Group__3 )
+            // InternalJoveNotes.g:4752:2: rule__HotSpot__Group__2__Impl rule__HotSpot__Group__3
             {
             pushFollow(FOLLOW_19);
             rule__HotSpot__Group__2__Impl();
@@ -13056,21 +13158,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__HotSpot__Group__2__Impl"
-    // InternalJoveNotes.g:4725:1: rule__HotSpot__Group__2__Impl : ( ( rule__HotSpot__YAssignment_2 ) ) ;
+    // InternalJoveNotes.g:4759:1: rule__HotSpot__Group__2__Impl : ( ( rule__HotSpot__YAssignment_2 ) ) ;
     public final void rule__HotSpot__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4729:1: ( ( ( rule__HotSpot__YAssignment_2 ) ) )
-            // InternalJoveNotes.g:4730:1: ( ( rule__HotSpot__YAssignment_2 ) )
+            // InternalJoveNotes.g:4763:1: ( ( ( rule__HotSpot__YAssignment_2 ) ) )
+            // InternalJoveNotes.g:4764:1: ( ( rule__HotSpot__YAssignment_2 ) )
             {
-            // InternalJoveNotes.g:4730:1: ( ( rule__HotSpot__YAssignment_2 ) )
-            // InternalJoveNotes.g:4731:1: ( rule__HotSpot__YAssignment_2 )
+            // InternalJoveNotes.g:4764:1: ( ( rule__HotSpot__YAssignment_2 ) )
+            // InternalJoveNotes.g:4765:1: ( rule__HotSpot__YAssignment_2 )
             {
              before(grammarAccess.getHotSpotAccess().getYAssignment_2()); 
-            // InternalJoveNotes.g:4732:1: ( rule__HotSpot__YAssignment_2 )
-            // InternalJoveNotes.g:4732:2: rule__HotSpot__YAssignment_2
+            // InternalJoveNotes.g:4766:1: ( rule__HotSpot__YAssignment_2 )
+            // InternalJoveNotes.g:4766:2: rule__HotSpot__YAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__HotSpot__YAssignment_2();
@@ -13103,14 +13205,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__HotSpot__Group__3"
-    // InternalJoveNotes.g:4742:1: rule__HotSpot__Group__3 : rule__HotSpot__Group__3__Impl rule__HotSpot__Group__4 ;
+    // InternalJoveNotes.g:4776:1: rule__HotSpot__Group__3 : rule__HotSpot__Group__3__Impl rule__HotSpot__Group__4 ;
     public final void rule__HotSpot__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4746:1: ( rule__HotSpot__Group__3__Impl rule__HotSpot__Group__4 )
-            // InternalJoveNotes.g:4747:2: rule__HotSpot__Group__3__Impl rule__HotSpot__Group__4
+            // InternalJoveNotes.g:4780:1: ( rule__HotSpot__Group__3__Impl rule__HotSpot__Group__4 )
+            // InternalJoveNotes.g:4781:2: rule__HotSpot__Group__3__Impl rule__HotSpot__Group__4
             {
             pushFollow(FOLLOW_7);
             rule__HotSpot__Group__3__Impl();
@@ -13141,17 +13243,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__HotSpot__Group__3__Impl"
-    // InternalJoveNotes.g:4754:1: rule__HotSpot__Group__3__Impl : ( '=' ) ;
+    // InternalJoveNotes.g:4788:1: rule__HotSpot__Group__3__Impl : ( '=' ) ;
     public final void rule__HotSpot__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4758:1: ( ( '=' ) )
-            // InternalJoveNotes.g:4759:1: ( '=' )
+            // InternalJoveNotes.g:4792:1: ( ( '=' ) )
+            // InternalJoveNotes.g:4793:1: ( '=' )
             {
-            // InternalJoveNotes.g:4759:1: ( '=' )
-            // InternalJoveNotes.g:4760:1: '='
+            // InternalJoveNotes.g:4793:1: ( '=' )
+            // InternalJoveNotes.g:4794:1: '='
             {
              before(grammarAccess.getHotSpotAccess().getEqualsSignKeyword_3()); 
             match(input,25,FOLLOW_2); 
@@ -13178,14 +13280,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__HotSpot__Group__4"
-    // InternalJoveNotes.g:4773:1: rule__HotSpot__Group__4 : rule__HotSpot__Group__4__Impl ;
+    // InternalJoveNotes.g:4807:1: rule__HotSpot__Group__4 : rule__HotSpot__Group__4__Impl ;
     public final void rule__HotSpot__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4777:1: ( rule__HotSpot__Group__4__Impl )
-            // InternalJoveNotes.g:4778:2: rule__HotSpot__Group__4__Impl
+            // InternalJoveNotes.g:4811:1: ( rule__HotSpot__Group__4__Impl )
+            // InternalJoveNotes.g:4812:2: rule__HotSpot__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__HotSpot__Group__4__Impl();
@@ -13211,21 +13313,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__HotSpot__Group__4__Impl"
-    // InternalJoveNotes.g:4784:1: rule__HotSpot__Group__4__Impl : ( ( rule__HotSpot__LabelAssignment_4 ) ) ;
+    // InternalJoveNotes.g:4818:1: rule__HotSpot__Group__4__Impl : ( ( rule__HotSpot__LabelAssignment_4 ) ) ;
     public final void rule__HotSpot__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4788:1: ( ( ( rule__HotSpot__LabelAssignment_4 ) ) )
-            // InternalJoveNotes.g:4789:1: ( ( rule__HotSpot__LabelAssignment_4 ) )
+            // InternalJoveNotes.g:4822:1: ( ( ( rule__HotSpot__LabelAssignment_4 ) ) )
+            // InternalJoveNotes.g:4823:1: ( ( rule__HotSpot__LabelAssignment_4 ) )
             {
-            // InternalJoveNotes.g:4789:1: ( ( rule__HotSpot__LabelAssignment_4 ) )
-            // InternalJoveNotes.g:4790:1: ( rule__HotSpot__LabelAssignment_4 )
+            // InternalJoveNotes.g:4823:1: ( ( rule__HotSpot__LabelAssignment_4 ) )
+            // InternalJoveNotes.g:4824:1: ( rule__HotSpot__LabelAssignment_4 )
             {
              before(grammarAccess.getHotSpotAccess().getLabelAssignment_4()); 
-            // InternalJoveNotes.g:4791:1: ( rule__HotSpot__LabelAssignment_4 )
-            // InternalJoveNotes.g:4791:2: rule__HotSpot__LabelAssignment_4
+            // InternalJoveNotes.g:4825:1: ( rule__HotSpot__LabelAssignment_4 )
+            // InternalJoveNotes.g:4825:2: rule__HotSpot__LabelAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__HotSpot__LabelAssignment_4();
@@ -13258,14 +13360,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__0"
-    // InternalJoveNotes.g:4811:1: rule__Equation__Group__0 : rule__Equation__Group__0__Impl rule__Equation__Group__1 ;
+    // InternalJoveNotes.g:4845:1: rule__Equation__Group__0 : rule__Equation__Group__0__Impl rule__Equation__Group__1 ;
     public final void rule__Equation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4815:1: ( rule__Equation__Group__0__Impl rule__Equation__Group__1 )
-            // InternalJoveNotes.g:4816:2: rule__Equation__Group__0__Impl rule__Equation__Group__1
+            // InternalJoveNotes.g:4849:1: ( rule__Equation__Group__0__Impl rule__Equation__Group__1 )
+            // InternalJoveNotes.g:4850:2: rule__Equation__Group__0__Impl rule__Equation__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__Equation__Group__0__Impl();
@@ -13296,17 +13398,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__0__Impl"
-    // InternalJoveNotes.g:4823:1: rule__Equation__Group__0__Impl : ( '@equation' ) ;
+    // InternalJoveNotes.g:4857:1: rule__Equation__Group__0__Impl : ( '@equation' ) ;
     public final void rule__Equation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4827:1: ( ( '@equation' ) )
-            // InternalJoveNotes.g:4828:1: ( '@equation' )
+            // InternalJoveNotes.g:4861:1: ( ( '@equation' ) )
+            // InternalJoveNotes.g:4862:1: ( '@equation' )
             {
-            // InternalJoveNotes.g:4828:1: ( '@equation' )
-            // InternalJoveNotes.g:4829:1: '@equation'
+            // InternalJoveNotes.g:4862:1: ( '@equation' )
+            // InternalJoveNotes.g:4863:1: '@equation'
             {
              before(grammarAccess.getEquationAccess().getEquationKeyword_0()); 
             match(input,40,FOLLOW_2); 
@@ -13333,14 +13435,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__1"
-    // InternalJoveNotes.g:4842:1: rule__Equation__Group__1 : rule__Equation__Group__1__Impl rule__Equation__Group__2 ;
+    // InternalJoveNotes.g:4876:1: rule__Equation__Group__1 : rule__Equation__Group__1__Impl rule__Equation__Group__2 ;
     public final void rule__Equation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4846:1: ( rule__Equation__Group__1__Impl rule__Equation__Group__2 )
-            // InternalJoveNotes.g:4847:2: rule__Equation__Group__1__Impl rule__Equation__Group__2
+            // InternalJoveNotes.g:4880:1: ( rule__Equation__Group__1__Impl rule__Equation__Group__2 )
+            // InternalJoveNotes.g:4881:2: rule__Equation__Group__1__Impl rule__Equation__Group__2
             {
             pushFollow(FOLLOW_14);
             rule__Equation__Group__1__Impl();
@@ -13371,29 +13473,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__1__Impl"
-    // InternalJoveNotes.g:4854:1: rule__Equation__Group__1__Impl : ( ( rule__Equation__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:4888:1: rule__Equation__Group__1__Impl : ( ( rule__Equation__HideFromViewAssignment_1 )? ) ;
     public final void rule__Equation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4858:1: ( ( ( rule__Equation__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:4859:1: ( ( rule__Equation__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:4892:1: ( ( ( rule__Equation__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:4893:1: ( ( rule__Equation__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:4859:1: ( ( rule__Equation__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:4860:1: ( rule__Equation__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:4893:1: ( ( rule__Equation__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:4894:1: ( rule__Equation__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getEquationAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:4861:1: ( rule__Equation__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:4895:1: ( rule__Equation__HideFromViewAssignment_1 )?
             int alt42=2;
             int LA42_0 = input.LA(1);
 
-            if ( (LA42_0==59) ) {
+            if ( (LA42_0==60) ) {
                 alt42=1;
             }
             switch (alt42) {
                 case 1 :
-                    // InternalJoveNotes.g:4861:2: rule__Equation__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:4895:2: rule__Equation__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Equation__HideFromViewAssignment_1();
@@ -13429,14 +13531,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__2"
-    // InternalJoveNotes.g:4871:1: rule__Equation__Group__2 : rule__Equation__Group__2__Impl rule__Equation__Group__3 ;
+    // InternalJoveNotes.g:4905:1: rule__Equation__Group__2 : rule__Equation__Group__2__Impl rule__Equation__Group__3 ;
     public final void rule__Equation__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4875:1: ( rule__Equation__Group__2__Impl rule__Equation__Group__3 )
-            // InternalJoveNotes.g:4876:2: rule__Equation__Group__2__Impl rule__Equation__Group__3
+            // InternalJoveNotes.g:4909:1: ( rule__Equation__Group__2__Impl rule__Equation__Group__3 )
+            // InternalJoveNotes.g:4910:2: rule__Equation__Group__2__Impl rule__Equation__Group__3
             {
             pushFollow(FOLLOW_20);
             rule__Equation__Group__2__Impl();
@@ -13467,21 +13569,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__2__Impl"
-    // InternalJoveNotes.g:4883:1: rule__Equation__Group__2__Impl : ( ( rule__Equation__EquationAssignment_2 ) ) ;
+    // InternalJoveNotes.g:4917:1: rule__Equation__Group__2__Impl : ( ( rule__Equation__EquationAssignment_2 ) ) ;
     public final void rule__Equation__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4887:1: ( ( ( rule__Equation__EquationAssignment_2 ) ) )
-            // InternalJoveNotes.g:4888:1: ( ( rule__Equation__EquationAssignment_2 ) )
+            // InternalJoveNotes.g:4921:1: ( ( ( rule__Equation__EquationAssignment_2 ) ) )
+            // InternalJoveNotes.g:4922:1: ( ( rule__Equation__EquationAssignment_2 ) )
             {
-            // InternalJoveNotes.g:4888:1: ( ( rule__Equation__EquationAssignment_2 ) )
-            // InternalJoveNotes.g:4889:1: ( rule__Equation__EquationAssignment_2 )
+            // InternalJoveNotes.g:4922:1: ( ( rule__Equation__EquationAssignment_2 ) )
+            // InternalJoveNotes.g:4923:1: ( rule__Equation__EquationAssignment_2 )
             {
              before(grammarAccess.getEquationAccess().getEquationAssignment_2()); 
-            // InternalJoveNotes.g:4890:1: ( rule__Equation__EquationAssignment_2 )
-            // InternalJoveNotes.g:4890:2: rule__Equation__EquationAssignment_2
+            // InternalJoveNotes.g:4924:1: ( rule__Equation__EquationAssignment_2 )
+            // InternalJoveNotes.g:4924:2: rule__Equation__EquationAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Equation__EquationAssignment_2();
@@ -13514,14 +13616,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__3"
-    // InternalJoveNotes.g:4900:1: rule__Equation__Group__3 : rule__Equation__Group__3__Impl rule__Equation__Group__4 ;
+    // InternalJoveNotes.g:4934:1: rule__Equation__Group__3 : rule__Equation__Group__3__Impl rule__Equation__Group__4 ;
     public final void rule__Equation__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4904:1: ( rule__Equation__Group__3__Impl rule__Equation__Group__4 )
-            // InternalJoveNotes.g:4905:2: rule__Equation__Group__3__Impl rule__Equation__Group__4
+            // InternalJoveNotes.g:4938:1: ( rule__Equation__Group__3__Impl rule__Equation__Group__4 )
+            // InternalJoveNotes.g:4939:2: rule__Equation__Group__3__Impl rule__Equation__Group__4
             {
             pushFollow(FOLLOW_32);
             rule__Equation__Group__3__Impl();
@@ -13552,17 +13654,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__3__Impl"
-    // InternalJoveNotes.g:4912:1: rule__Equation__Group__3__Impl : ( '{' ) ;
+    // InternalJoveNotes.g:4946:1: rule__Equation__Group__3__Impl : ( '{' ) ;
     public final void rule__Equation__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4916:1: ( ( '{' ) )
-            // InternalJoveNotes.g:4917:1: ( '{' )
+            // InternalJoveNotes.g:4950:1: ( ( '{' ) )
+            // InternalJoveNotes.g:4951:1: ( '{' )
             {
-            // InternalJoveNotes.g:4917:1: ( '{' )
-            // InternalJoveNotes.g:4918:1: '{'
+            // InternalJoveNotes.g:4951:1: ( '{' )
+            // InternalJoveNotes.g:4952:1: '{'
             {
              before(grammarAccess.getEquationAccess().getLeftCurlyBracketKeyword_3()); 
             match(input,23,FOLLOW_2); 
@@ -13589,14 +13691,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__4"
-    // InternalJoveNotes.g:4931:1: rule__Equation__Group__4 : rule__Equation__Group__4__Impl rule__Equation__Group__5 ;
+    // InternalJoveNotes.g:4965:1: rule__Equation__Group__4 : rule__Equation__Group__4__Impl rule__Equation__Group__5 ;
     public final void rule__Equation__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4935:1: ( rule__Equation__Group__4__Impl rule__Equation__Group__5 )
-            // InternalJoveNotes.g:4936:2: rule__Equation__Group__4__Impl rule__Equation__Group__5
+            // InternalJoveNotes.g:4969:1: ( rule__Equation__Group__4__Impl rule__Equation__Group__5 )
+            // InternalJoveNotes.g:4970:2: rule__Equation__Group__4__Impl rule__Equation__Group__5
             {
             pushFollow(FOLLOW_32);
             rule__Equation__Group__4__Impl();
@@ -13627,20 +13729,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__4__Impl"
-    // InternalJoveNotes.g:4943:1: rule__Equation__Group__4__Impl : ( ( rule__Equation__DescriptionAssignment_4 )? ) ;
+    // InternalJoveNotes.g:4977:1: rule__Equation__Group__4__Impl : ( ( rule__Equation__DescriptionAssignment_4 )? ) ;
     public final void rule__Equation__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4947:1: ( ( ( rule__Equation__DescriptionAssignment_4 )? ) )
-            // InternalJoveNotes.g:4948:1: ( ( rule__Equation__DescriptionAssignment_4 )? )
+            // InternalJoveNotes.g:4981:1: ( ( ( rule__Equation__DescriptionAssignment_4 )? ) )
+            // InternalJoveNotes.g:4982:1: ( ( rule__Equation__DescriptionAssignment_4 )? )
             {
-            // InternalJoveNotes.g:4948:1: ( ( rule__Equation__DescriptionAssignment_4 )? )
-            // InternalJoveNotes.g:4949:1: ( rule__Equation__DescriptionAssignment_4 )?
+            // InternalJoveNotes.g:4982:1: ( ( rule__Equation__DescriptionAssignment_4 )? )
+            // InternalJoveNotes.g:4983:1: ( rule__Equation__DescriptionAssignment_4 )?
             {
              before(grammarAccess.getEquationAccess().getDescriptionAssignment_4()); 
-            // InternalJoveNotes.g:4950:1: ( rule__Equation__DescriptionAssignment_4 )?
+            // InternalJoveNotes.g:4984:1: ( rule__Equation__DescriptionAssignment_4 )?
             int alt43=2;
             int LA43_0 = input.LA(1);
 
@@ -13649,7 +13751,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt43) {
                 case 1 :
-                    // InternalJoveNotes.g:4950:2: rule__Equation__DescriptionAssignment_4
+                    // InternalJoveNotes.g:4984:2: rule__Equation__DescriptionAssignment_4
                     {
                     pushFollow(FOLLOW_2);
                     rule__Equation__DescriptionAssignment_4();
@@ -13685,14 +13787,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__5"
-    // InternalJoveNotes.g:4960:1: rule__Equation__Group__5 : rule__Equation__Group__5__Impl rule__Equation__Group__6 ;
+    // InternalJoveNotes.g:4994:1: rule__Equation__Group__5 : rule__Equation__Group__5__Impl rule__Equation__Group__6 ;
     public final void rule__Equation__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4964:1: ( rule__Equation__Group__5__Impl rule__Equation__Group__6 )
-            // InternalJoveNotes.g:4965:2: rule__Equation__Group__5__Impl rule__Equation__Group__6
+            // InternalJoveNotes.g:4998:1: ( rule__Equation__Group__5__Impl rule__Equation__Group__6 )
+            // InternalJoveNotes.g:4999:2: rule__Equation__Group__5__Impl rule__Equation__Group__6
             {
             pushFollow(FOLLOW_7);
             rule__Equation__Group__5__Impl();
@@ -13723,17 +13825,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__5__Impl"
-    // InternalJoveNotes.g:4972:1: rule__Equation__Group__5__Impl : ( 'where' ) ;
+    // InternalJoveNotes.g:5006:1: rule__Equation__Group__5__Impl : ( 'where' ) ;
     public final void rule__Equation__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4976:1: ( ( 'where' ) )
-            // InternalJoveNotes.g:4977:1: ( 'where' )
+            // InternalJoveNotes.g:5010:1: ( ( 'where' ) )
+            // InternalJoveNotes.g:5011:1: ( 'where' )
             {
-            // InternalJoveNotes.g:4977:1: ( 'where' )
-            // InternalJoveNotes.g:4978:1: 'where'
+            // InternalJoveNotes.g:5011:1: ( 'where' )
+            // InternalJoveNotes.g:5012:1: 'where'
             {
              before(grammarAccess.getEquationAccess().getWhereKeyword_5()); 
             match(input,41,FOLLOW_2); 
@@ -13760,14 +13862,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__6"
-    // InternalJoveNotes.g:4991:1: rule__Equation__Group__6 : rule__Equation__Group__6__Impl rule__Equation__Group__7 ;
+    // InternalJoveNotes.g:5025:1: rule__Equation__Group__6 : rule__Equation__Group__6__Impl rule__Equation__Group__7 ;
     public final void rule__Equation__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:4995:1: ( rule__Equation__Group__6__Impl rule__Equation__Group__7 )
-            // InternalJoveNotes.g:4996:2: rule__Equation__Group__6__Impl rule__Equation__Group__7
+            // InternalJoveNotes.g:5029:1: ( rule__Equation__Group__6__Impl rule__Equation__Group__7 )
+            // InternalJoveNotes.g:5030:2: rule__Equation__Group__6__Impl rule__Equation__Group__7
             {
             pushFollow(FOLLOW_29);
             rule__Equation__Group__6__Impl();
@@ -13798,21 +13900,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__6__Impl"
-    // InternalJoveNotes.g:5003:1: rule__Equation__Group__6__Impl : ( ( rule__Equation__SymbolsAssignment_6 ) ) ;
+    // InternalJoveNotes.g:5037:1: rule__Equation__Group__6__Impl : ( ( rule__Equation__SymbolsAssignment_6 ) ) ;
     public final void rule__Equation__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5007:1: ( ( ( rule__Equation__SymbolsAssignment_6 ) ) )
-            // InternalJoveNotes.g:5008:1: ( ( rule__Equation__SymbolsAssignment_6 ) )
+            // InternalJoveNotes.g:5041:1: ( ( ( rule__Equation__SymbolsAssignment_6 ) ) )
+            // InternalJoveNotes.g:5042:1: ( ( rule__Equation__SymbolsAssignment_6 ) )
             {
-            // InternalJoveNotes.g:5008:1: ( ( rule__Equation__SymbolsAssignment_6 ) )
-            // InternalJoveNotes.g:5009:1: ( rule__Equation__SymbolsAssignment_6 )
+            // InternalJoveNotes.g:5042:1: ( ( rule__Equation__SymbolsAssignment_6 ) )
+            // InternalJoveNotes.g:5043:1: ( rule__Equation__SymbolsAssignment_6 )
             {
              before(grammarAccess.getEquationAccess().getSymbolsAssignment_6()); 
-            // InternalJoveNotes.g:5010:1: ( rule__Equation__SymbolsAssignment_6 )
-            // InternalJoveNotes.g:5010:2: rule__Equation__SymbolsAssignment_6
+            // InternalJoveNotes.g:5044:1: ( rule__Equation__SymbolsAssignment_6 )
+            // InternalJoveNotes.g:5044:2: rule__Equation__SymbolsAssignment_6
             {
             pushFollow(FOLLOW_2);
             rule__Equation__SymbolsAssignment_6();
@@ -13845,14 +13947,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__7"
-    // InternalJoveNotes.g:5020:1: rule__Equation__Group__7 : rule__Equation__Group__7__Impl rule__Equation__Group__8 ;
+    // InternalJoveNotes.g:5054:1: rule__Equation__Group__7 : rule__Equation__Group__7__Impl rule__Equation__Group__8 ;
     public final void rule__Equation__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5024:1: ( rule__Equation__Group__7__Impl rule__Equation__Group__8 )
-            // InternalJoveNotes.g:5025:2: rule__Equation__Group__7__Impl rule__Equation__Group__8
+            // InternalJoveNotes.g:5058:1: ( rule__Equation__Group__7__Impl rule__Equation__Group__8 )
+            // InternalJoveNotes.g:5059:2: rule__Equation__Group__7__Impl rule__Equation__Group__8
             {
             pushFollow(FOLLOW_29);
             rule__Equation__Group__7__Impl();
@@ -13883,20 +13985,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__7__Impl"
-    // InternalJoveNotes.g:5032:1: rule__Equation__Group__7__Impl : ( ( rule__Equation__Group_7__0 )* ) ;
+    // InternalJoveNotes.g:5066:1: rule__Equation__Group__7__Impl : ( ( rule__Equation__Group_7__0 )* ) ;
     public final void rule__Equation__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5036:1: ( ( ( rule__Equation__Group_7__0 )* ) )
-            // InternalJoveNotes.g:5037:1: ( ( rule__Equation__Group_7__0 )* )
+            // InternalJoveNotes.g:5070:1: ( ( ( rule__Equation__Group_7__0 )* ) )
+            // InternalJoveNotes.g:5071:1: ( ( rule__Equation__Group_7__0 )* )
             {
-            // InternalJoveNotes.g:5037:1: ( ( rule__Equation__Group_7__0 )* )
-            // InternalJoveNotes.g:5038:1: ( rule__Equation__Group_7__0 )*
+            // InternalJoveNotes.g:5071:1: ( ( rule__Equation__Group_7__0 )* )
+            // InternalJoveNotes.g:5072:1: ( rule__Equation__Group_7__0 )*
             {
              before(grammarAccess.getEquationAccess().getGroup_7()); 
-            // InternalJoveNotes.g:5039:1: ( rule__Equation__Group_7__0 )*
+            // InternalJoveNotes.g:5073:1: ( rule__Equation__Group_7__0 )*
             loop44:
             do {
                 int alt44=2;
@@ -13909,7 +14011,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
                 switch (alt44) {
             	case 1 :
-            	    // InternalJoveNotes.g:5039:2: rule__Equation__Group_7__0
+            	    // InternalJoveNotes.g:5073:2: rule__Equation__Group_7__0
             	    {
             	    pushFollow(FOLLOW_30);
             	    rule__Equation__Group_7__0();
@@ -13948,14 +14050,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__8"
-    // InternalJoveNotes.g:5049:1: rule__Equation__Group__8 : rule__Equation__Group__8__Impl ;
+    // InternalJoveNotes.g:5083:1: rule__Equation__Group__8 : rule__Equation__Group__8__Impl ;
     public final void rule__Equation__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5053:1: ( rule__Equation__Group__8__Impl )
-            // InternalJoveNotes.g:5054:2: rule__Equation__Group__8__Impl
+            // InternalJoveNotes.g:5087:1: ( rule__Equation__Group__8__Impl )
+            // InternalJoveNotes.g:5088:2: rule__Equation__Group__8__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Equation__Group__8__Impl();
@@ -13981,17 +14083,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group__8__Impl"
-    // InternalJoveNotes.g:5060:1: rule__Equation__Group__8__Impl : ( '}' ) ;
+    // InternalJoveNotes.g:5094:1: rule__Equation__Group__8__Impl : ( '}' ) ;
     public final void rule__Equation__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5064:1: ( ( '}' ) )
-            // InternalJoveNotes.g:5065:1: ( '}' )
+            // InternalJoveNotes.g:5098:1: ( ( '}' ) )
+            // InternalJoveNotes.g:5099:1: ( '}' )
             {
-            // InternalJoveNotes.g:5065:1: ( '}' )
-            // InternalJoveNotes.g:5066:1: '}'
+            // InternalJoveNotes.g:5099:1: ( '}' )
+            // InternalJoveNotes.g:5100:1: '}'
             {
              before(grammarAccess.getEquationAccess().getRightCurlyBracketKeyword_8()); 
             match(input,24,FOLLOW_2); 
@@ -14018,14 +14120,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group_7__0"
-    // InternalJoveNotes.g:5097:1: rule__Equation__Group_7__0 : rule__Equation__Group_7__0__Impl rule__Equation__Group_7__1 ;
+    // InternalJoveNotes.g:5131:1: rule__Equation__Group_7__0 : rule__Equation__Group_7__0__Impl rule__Equation__Group_7__1 ;
     public final void rule__Equation__Group_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5101:1: ( rule__Equation__Group_7__0__Impl rule__Equation__Group_7__1 )
-            // InternalJoveNotes.g:5102:2: rule__Equation__Group_7__0__Impl rule__Equation__Group_7__1
+            // InternalJoveNotes.g:5135:1: ( rule__Equation__Group_7__0__Impl rule__Equation__Group_7__1 )
+            // InternalJoveNotes.g:5136:2: rule__Equation__Group_7__0__Impl rule__Equation__Group_7__1
             {
             pushFollow(FOLLOW_7);
             rule__Equation__Group_7__0__Impl();
@@ -14056,17 +14158,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group_7__0__Impl"
-    // InternalJoveNotes.g:5109:1: rule__Equation__Group_7__0__Impl : ( ',' ) ;
+    // InternalJoveNotes.g:5143:1: rule__Equation__Group_7__0__Impl : ( ',' ) ;
     public final void rule__Equation__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5113:1: ( ( ',' ) )
-            // InternalJoveNotes.g:5114:1: ( ',' )
+            // InternalJoveNotes.g:5147:1: ( ( ',' ) )
+            // InternalJoveNotes.g:5148:1: ( ',' )
             {
-            // InternalJoveNotes.g:5114:1: ( ',' )
-            // InternalJoveNotes.g:5115:1: ','
+            // InternalJoveNotes.g:5148:1: ( ',' )
+            // InternalJoveNotes.g:5149:1: ','
             {
              before(grammarAccess.getEquationAccess().getCommaKeyword_7_0()); 
             match(input,39,FOLLOW_2); 
@@ -14093,14 +14195,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group_7__1"
-    // InternalJoveNotes.g:5128:1: rule__Equation__Group_7__1 : rule__Equation__Group_7__1__Impl ;
+    // InternalJoveNotes.g:5162:1: rule__Equation__Group_7__1 : rule__Equation__Group_7__1__Impl ;
     public final void rule__Equation__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5132:1: ( rule__Equation__Group_7__1__Impl )
-            // InternalJoveNotes.g:5133:2: rule__Equation__Group_7__1__Impl
+            // InternalJoveNotes.g:5166:1: ( rule__Equation__Group_7__1__Impl )
+            // InternalJoveNotes.g:5167:2: rule__Equation__Group_7__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Equation__Group_7__1__Impl();
@@ -14126,21 +14228,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__Group_7__1__Impl"
-    // InternalJoveNotes.g:5139:1: rule__Equation__Group_7__1__Impl : ( ( rule__Equation__SymbolsAssignment_7_1 ) ) ;
+    // InternalJoveNotes.g:5173:1: rule__Equation__Group_7__1__Impl : ( ( rule__Equation__SymbolsAssignment_7_1 ) ) ;
     public final void rule__Equation__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5143:1: ( ( ( rule__Equation__SymbolsAssignment_7_1 ) ) )
-            // InternalJoveNotes.g:5144:1: ( ( rule__Equation__SymbolsAssignment_7_1 ) )
+            // InternalJoveNotes.g:5177:1: ( ( ( rule__Equation__SymbolsAssignment_7_1 ) ) )
+            // InternalJoveNotes.g:5178:1: ( ( rule__Equation__SymbolsAssignment_7_1 ) )
             {
-            // InternalJoveNotes.g:5144:1: ( ( rule__Equation__SymbolsAssignment_7_1 ) )
-            // InternalJoveNotes.g:5145:1: ( rule__Equation__SymbolsAssignment_7_1 )
+            // InternalJoveNotes.g:5178:1: ( ( rule__Equation__SymbolsAssignment_7_1 ) )
+            // InternalJoveNotes.g:5179:1: ( rule__Equation__SymbolsAssignment_7_1 )
             {
              before(grammarAccess.getEquationAccess().getSymbolsAssignment_7_1()); 
-            // InternalJoveNotes.g:5146:1: ( rule__Equation__SymbolsAssignment_7_1 )
-            // InternalJoveNotes.g:5146:2: rule__Equation__SymbolsAssignment_7_1
+            // InternalJoveNotes.g:5180:1: ( rule__Equation__SymbolsAssignment_7_1 )
+            // InternalJoveNotes.g:5180:2: rule__Equation__SymbolsAssignment_7_1
             {
             pushFollow(FOLLOW_2);
             rule__Equation__SymbolsAssignment_7_1();
@@ -14173,14 +14275,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EqSymbol__Group__0"
-    // InternalJoveNotes.g:5160:1: rule__EqSymbol__Group__0 : rule__EqSymbol__Group__0__Impl rule__EqSymbol__Group__1 ;
+    // InternalJoveNotes.g:5194:1: rule__EqSymbol__Group__0 : rule__EqSymbol__Group__0__Impl rule__EqSymbol__Group__1 ;
     public final void rule__EqSymbol__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5164:1: ( rule__EqSymbol__Group__0__Impl rule__EqSymbol__Group__1 )
-            // InternalJoveNotes.g:5165:2: rule__EqSymbol__Group__0__Impl rule__EqSymbol__Group__1
+            // InternalJoveNotes.g:5198:1: ( rule__EqSymbol__Group__0__Impl rule__EqSymbol__Group__1 )
+            // InternalJoveNotes.g:5199:2: rule__EqSymbol__Group__0__Impl rule__EqSymbol__Group__1
             {
             pushFollow(FOLLOW_19);
             rule__EqSymbol__Group__0__Impl();
@@ -14211,21 +14313,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EqSymbol__Group__0__Impl"
-    // InternalJoveNotes.g:5172:1: rule__EqSymbol__Group__0__Impl : ( ( rule__EqSymbol__SymbolAssignment_0 ) ) ;
+    // InternalJoveNotes.g:5206:1: rule__EqSymbol__Group__0__Impl : ( ( rule__EqSymbol__SymbolAssignment_0 ) ) ;
     public final void rule__EqSymbol__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5176:1: ( ( ( rule__EqSymbol__SymbolAssignment_0 ) ) )
-            // InternalJoveNotes.g:5177:1: ( ( rule__EqSymbol__SymbolAssignment_0 ) )
+            // InternalJoveNotes.g:5210:1: ( ( ( rule__EqSymbol__SymbolAssignment_0 ) ) )
+            // InternalJoveNotes.g:5211:1: ( ( rule__EqSymbol__SymbolAssignment_0 ) )
             {
-            // InternalJoveNotes.g:5177:1: ( ( rule__EqSymbol__SymbolAssignment_0 ) )
-            // InternalJoveNotes.g:5178:1: ( rule__EqSymbol__SymbolAssignment_0 )
+            // InternalJoveNotes.g:5211:1: ( ( rule__EqSymbol__SymbolAssignment_0 ) )
+            // InternalJoveNotes.g:5212:1: ( rule__EqSymbol__SymbolAssignment_0 )
             {
              before(grammarAccess.getEqSymbolAccess().getSymbolAssignment_0()); 
-            // InternalJoveNotes.g:5179:1: ( rule__EqSymbol__SymbolAssignment_0 )
-            // InternalJoveNotes.g:5179:2: rule__EqSymbol__SymbolAssignment_0
+            // InternalJoveNotes.g:5213:1: ( rule__EqSymbol__SymbolAssignment_0 )
+            // InternalJoveNotes.g:5213:2: rule__EqSymbol__SymbolAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__EqSymbol__SymbolAssignment_0();
@@ -14258,14 +14360,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EqSymbol__Group__1"
-    // InternalJoveNotes.g:5189:1: rule__EqSymbol__Group__1 : rule__EqSymbol__Group__1__Impl rule__EqSymbol__Group__2 ;
+    // InternalJoveNotes.g:5223:1: rule__EqSymbol__Group__1 : rule__EqSymbol__Group__1__Impl rule__EqSymbol__Group__2 ;
     public final void rule__EqSymbol__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5193:1: ( rule__EqSymbol__Group__1__Impl rule__EqSymbol__Group__2 )
-            // InternalJoveNotes.g:5194:2: rule__EqSymbol__Group__1__Impl rule__EqSymbol__Group__2
+            // InternalJoveNotes.g:5227:1: ( rule__EqSymbol__Group__1__Impl rule__EqSymbol__Group__2 )
+            // InternalJoveNotes.g:5228:2: rule__EqSymbol__Group__1__Impl rule__EqSymbol__Group__2
             {
             pushFollow(FOLLOW_7);
             rule__EqSymbol__Group__1__Impl();
@@ -14296,17 +14398,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EqSymbol__Group__1__Impl"
-    // InternalJoveNotes.g:5201:1: rule__EqSymbol__Group__1__Impl : ( '=' ) ;
+    // InternalJoveNotes.g:5235:1: rule__EqSymbol__Group__1__Impl : ( '=' ) ;
     public final void rule__EqSymbol__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5205:1: ( ( '=' ) )
-            // InternalJoveNotes.g:5206:1: ( '=' )
+            // InternalJoveNotes.g:5239:1: ( ( '=' ) )
+            // InternalJoveNotes.g:5240:1: ( '=' )
             {
-            // InternalJoveNotes.g:5206:1: ( '=' )
-            // InternalJoveNotes.g:5207:1: '='
+            // InternalJoveNotes.g:5240:1: ( '=' )
+            // InternalJoveNotes.g:5241:1: '='
             {
              before(grammarAccess.getEqSymbolAccess().getEqualsSignKeyword_1()); 
             match(input,25,FOLLOW_2); 
@@ -14333,14 +14435,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EqSymbol__Group__2"
-    // InternalJoveNotes.g:5220:1: rule__EqSymbol__Group__2 : rule__EqSymbol__Group__2__Impl ;
+    // InternalJoveNotes.g:5254:1: rule__EqSymbol__Group__2 : rule__EqSymbol__Group__2__Impl ;
     public final void rule__EqSymbol__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5224:1: ( rule__EqSymbol__Group__2__Impl )
-            // InternalJoveNotes.g:5225:2: rule__EqSymbol__Group__2__Impl
+            // InternalJoveNotes.g:5258:1: ( rule__EqSymbol__Group__2__Impl )
+            // InternalJoveNotes.g:5259:2: rule__EqSymbol__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EqSymbol__Group__2__Impl();
@@ -14366,21 +14468,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EqSymbol__Group__2__Impl"
-    // InternalJoveNotes.g:5231:1: rule__EqSymbol__Group__2__Impl : ( ( rule__EqSymbol__DescriptionAssignment_2 ) ) ;
+    // InternalJoveNotes.g:5265:1: rule__EqSymbol__Group__2__Impl : ( ( rule__EqSymbol__DescriptionAssignment_2 ) ) ;
     public final void rule__EqSymbol__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5235:1: ( ( ( rule__EqSymbol__DescriptionAssignment_2 ) ) )
-            // InternalJoveNotes.g:5236:1: ( ( rule__EqSymbol__DescriptionAssignment_2 ) )
+            // InternalJoveNotes.g:5269:1: ( ( ( rule__EqSymbol__DescriptionAssignment_2 ) ) )
+            // InternalJoveNotes.g:5270:1: ( ( rule__EqSymbol__DescriptionAssignment_2 ) )
             {
-            // InternalJoveNotes.g:5236:1: ( ( rule__EqSymbol__DescriptionAssignment_2 ) )
-            // InternalJoveNotes.g:5237:1: ( rule__EqSymbol__DescriptionAssignment_2 )
+            // InternalJoveNotes.g:5270:1: ( ( rule__EqSymbol__DescriptionAssignment_2 ) )
+            // InternalJoveNotes.g:5271:1: ( rule__EqSymbol__DescriptionAssignment_2 )
             {
              before(grammarAccess.getEqSymbolAccess().getDescriptionAssignment_2()); 
-            // InternalJoveNotes.g:5238:1: ( rule__EqSymbol__DescriptionAssignment_2 )
-            // InternalJoveNotes.g:5238:2: rule__EqSymbol__DescriptionAssignment_2
+            // InternalJoveNotes.g:5272:1: ( rule__EqSymbol__DescriptionAssignment_2 )
+            // InternalJoveNotes.g:5272:2: rule__EqSymbol__DescriptionAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__EqSymbol__DescriptionAssignment_2();
@@ -14413,14 +14515,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__Group__0"
-    // InternalJoveNotes.g:5254:1: rule__RefToContext__Group__0 : rule__RefToContext__Group__0__Impl rule__RefToContext__Group__1 ;
+    // InternalJoveNotes.g:5288:1: rule__RefToContext__Group__0 : rule__RefToContext__Group__0__Impl rule__RefToContext__Group__1 ;
     public final void rule__RefToContext__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5258:1: ( rule__RefToContext__Group__0__Impl rule__RefToContext__Group__1 )
-            // InternalJoveNotes.g:5259:2: rule__RefToContext__Group__0__Impl rule__RefToContext__Group__1
+            // InternalJoveNotes.g:5292:1: ( rule__RefToContext__Group__0__Impl rule__RefToContext__Group__1 )
+            // InternalJoveNotes.g:5293:2: rule__RefToContext__Group__0__Impl rule__RefToContext__Group__1
             {
             pushFollow(FOLLOW_33);
             rule__RefToContext__Group__0__Impl();
@@ -14451,17 +14553,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__Group__0__Impl"
-    // InternalJoveNotes.g:5266:1: rule__RefToContext__Group__0__Impl : ( '@rtc' ) ;
+    // InternalJoveNotes.g:5300:1: rule__RefToContext__Group__0__Impl : ( '@rtc' ) ;
     public final void rule__RefToContext__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5270:1: ( ( '@rtc' ) )
-            // InternalJoveNotes.g:5271:1: ( '@rtc' )
+            // InternalJoveNotes.g:5304:1: ( ( '@rtc' ) )
+            // InternalJoveNotes.g:5305:1: ( '@rtc' )
             {
-            // InternalJoveNotes.g:5271:1: ( '@rtc' )
-            // InternalJoveNotes.g:5272:1: '@rtc'
+            // InternalJoveNotes.g:5305:1: ( '@rtc' )
+            // InternalJoveNotes.g:5306:1: '@rtc'
             {
              before(grammarAccess.getRefToContextAccess().getRtcKeyword_0()); 
             match(input,42,FOLLOW_2); 
@@ -14488,14 +14590,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__Group__1"
-    // InternalJoveNotes.g:5285:1: rule__RefToContext__Group__1 : rule__RefToContext__Group__1__Impl rule__RefToContext__Group__2 ;
+    // InternalJoveNotes.g:5319:1: rule__RefToContext__Group__1 : rule__RefToContext__Group__1__Impl rule__RefToContext__Group__2 ;
     public final void rule__RefToContext__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5289:1: ( rule__RefToContext__Group__1__Impl rule__RefToContext__Group__2 )
-            // InternalJoveNotes.g:5290:2: rule__RefToContext__Group__1__Impl rule__RefToContext__Group__2
+            // InternalJoveNotes.g:5323:1: ( rule__RefToContext__Group__1__Impl rule__RefToContext__Group__2 )
+            // InternalJoveNotes.g:5324:2: rule__RefToContext__Group__1__Impl rule__RefToContext__Group__2
             {
             pushFollow(FOLLOW_33);
             rule__RefToContext__Group__1__Impl();
@@ -14526,29 +14628,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__Group__1__Impl"
-    // InternalJoveNotes.g:5297:1: rule__RefToContext__Group__1__Impl : ( ( rule__RefToContext__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:5331:1: rule__RefToContext__Group__1__Impl : ( ( rule__RefToContext__HideFromViewAssignment_1 )? ) ;
     public final void rule__RefToContext__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5301:1: ( ( ( rule__RefToContext__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:5302:1: ( ( rule__RefToContext__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:5335:1: ( ( ( rule__RefToContext__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:5336:1: ( ( rule__RefToContext__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:5302:1: ( ( rule__RefToContext__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:5303:1: ( rule__RefToContext__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:5336:1: ( ( rule__RefToContext__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:5337:1: ( rule__RefToContext__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getRefToContextAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:5304:1: ( rule__RefToContext__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:5338:1: ( rule__RefToContext__HideFromViewAssignment_1 )?
             int alt45=2;
             int LA45_0 = input.LA(1);
 
-            if ( (LA45_0==59) ) {
+            if ( (LA45_0==60) ) {
                 alt45=1;
             }
             switch (alt45) {
                 case 1 :
-                    // InternalJoveNotes.g:5304:2: rule__RefToContext__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:5338:2: rule__RefToContext__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__RefToContext__HideFromViewAssignment_1();
@@ -14584,14 +14686,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__Group__2"
-    // InternalJoveNotes.g:5314:1: rule__RefToContext__Group__2 : rule__RefToContext__Group__2__Impl rule__RefToContext__Group__3 ;
+    // InternalJoveNotes.g:5348:1: rule__RefToContext__Group__2 : rule__RefToContext__Group__2__Impl rule__RefToContext__Group__3 ;
     public final void rule__RefToContext__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5318:1: ( rule__RefToContext__Group__2__Impl rule__RefToContext__Group__3 )
-            // InternalJoveNotes.g:5319:2: rule__RefToContext__Group__2__Impl rule__RefToContext__Group__3
+            // InternalJoveNotes.g:5352:1: ( rule__RefToContext__Group__2__Impl rule__RefToContext__Group__3 )
+            // InternalJoveNotes.g:5353:2: rule__RefToContext__Group__2__Impl rule__RefToContext__Group__3
             {
             pushFollow(FOLLOW_34);
             rule__RefToContext__Group__2__Impl();
@@ -14622,17 +14724,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__Group__2__Impl"
-    // InternalJoveNotes.g:5326:1: rule__RefToContext__Group__2__Impl : ( '{' ) ;
+    // InternalJoveNotes.g:5360:1: rule__RefToContext__Group__2__Impl : ( '{' ) ;
     public final void rule__RefToContext__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5330:1: ( ( '{' ) )
-            // InternalJoveNotes.g:5331:1: ( '{' )
+            // InternalJoveNotes.g:5364:1: ( ( '{' ) )
+            // InternalJoveNotes.g:5365:1: ( '{' )
             {
-            // InternalJoveNotes.g:5331:1: ( '{' )
-            // InternalJoveNotes.g:5332:1: '{'
+            // InternalJoveNotes.g:5365:1: ( '{' )
+            // InternalJoveNotes.g:5366:1: '{'
             {
              before(grammarAccess.getRefToContextAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,23,FOLLOW_2); 
@@ -14659,14 +14761,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__Group__3"
-    // InternalJoveNotes.g:5345:1: rule__RefToContext__Group__3 : rule__RefToContext__Group__3__Impl rule__RefToContext__Group__4 ;
+    // InternalJoveNotes.g:5379:1: rule__RefToContext__Group__3 : rule__RefToContext__Group__3__Impl rule__RefToContext__Group__4 ;
     public final void rule__RefToContext__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5349:1: ( rule__RefToContext__Group__3__Impl rule__RefToContext__Group__4 )
-            // InternalJoveNotes.g:5350:2: rule__RefToContext__Group__3__Impl rule__RefToContext__Group__4
+            // InternalJoveNotes.g:5383:1: ( rule__RefToContext__Group__3__Impl rule__RefToContext__Group__4 )
+            // InternalJoveNotes.g:5384:2: rule__RefToContext__Group__3__Impl rule__RefToContext__Group__4
             {
             pushFollow(FOLLOW_7);
             rule__RefToContext__Group__3__Impl();
@@ -14697,17 +14799,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__Group__3__Impl"
-    // InternalJoveNotes.g:5357:1: rule__RefToContext__Group__3__Impl : ( 'context' ) ;
+    // InternalJoveNotes.g:5391:1: rule__RefToContext__Group__3__Impl : ( 'context' ) ;
     public final void rule__RefToContext__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5361:1: ( ( 'context' ) )
-            // InternalJoveNotes.g:5362:1: ( 'context' )
+            // InternalJoveNotes.g:5395:1: ( ( 'context' ) )
+            // InternalJoveNotes.g:5396:1: ( 'context' )
             {
-            // InternalJoveNotes.g:5362:1: ( 'context' )
-            // InternalJoveNotes.g:5363:1: 'context'
+            // InternalJoveNotes.g:5396:1: ( 'context' )
+            // InternalJoveNotes.g:5397:1: 'context'
             {
              before(grammarAccess.getRefToContextAccess().getContextKeyword_3()); 
             match(input,43,FOLLOW_2); 
@@ -14734,14 +14836,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__Group__4"
-    // InternalJoveNotes.g:5376:1: rule__RefToContext__Group__4 : rule__RefToContext__Group__4__Impl rule__RefToContext__Group__5 ;
+    // InternalJoveNotes.g:5410:1: rule__RefToContext__Group__4 : rule__RefToContext__Group__4__Impl rule__RefToContext__Group__5 ;
     public final void rule__RefToContext__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5380:1: ( rule__RefToContext__Group__4__Impl rule__RefToContext__Group__5 )
-            // InternalJoveNotes.g:5381:2: rule__RefToContext__Group__4__Impl rule__RefToContext__Group__5
+            // InternalJoveNotes.g:5414:1: ( rule__RefToContext__Group__4__Impl rule__RefToContext__Group__5 )
+            // InternalJoveNotes.g:5415:2: rule__RefToContext__Group__4__Impl rule__RefToContext__Group__5
             {
             pushFollow(FOLLOW_35);
             rule__RefToContext__Group__4__Impl();
@@ -14772,21 +14874,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__Group__4__Impl"
-    // InternalJoveNotes.g:5388:1: rule__RefToContext__Group__4__Impl : ( ( rule__RefToContext__ContextAssignment_4 ) ) ;
+    // InternalJoveNotes.g:5422:1: rule__RefToContext__Group__4__Impl : ( ( rule__RefToContext__ContextAssignment_4 ) ) ;
     public final void rule__RefToContext__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5392:1: ( ( ( rule__RefToContext__ContextAssignment_4 ) ) )
-            // InternalJoveNotes.g:5393:1: ( ( rule__RefToContext__ContextAssignment_4 ) )
+            // InternalJoveNotes.g:5426:1: ( ( ( rule__RefToContext__ContextAssignment_4 ) ) )
+            // InternalJoveNotes.g:5427:1: ( ( rule__RefToContext__ContextAssignment_4 ) )
             {
-            // InternalJoveNotes.g:5393:1: ( ( rule__RefToContext__ContextAssignment_4 ) )
-            // InternalJoveNotes.g:5394:1: ( rule__RefToContext__ContextAssignment_4 )
+            // InternalJoveNotes.g:5427:1: ( ( rule__RefToContext__ContextAssignment_4 ) )
+            // InternalJoveNotes.g:5428:1: ( rule__RefToContext__ContextAssignment_4 )
             {
              before(grammarAccess.getRefToContextAccess().getContextAssignment_4()); 
-            // InternalJoveNotes.g:5395:1: ( rule__RefToContext__ContextAssignment_4 )
-            // InternalJoveNotes.g:5395:2: rule__RefToContext__ContextAssignment_4
+            // InternalJoveNotes.g:5429:1: ( rule__RefToContext__ContextAssignment_4 )
+            // InternalJoveNotes.g:5429:2: rule__RefToContext__ContextAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__RefToContext__ContextAssignment_4();
@@ -14819,14 +14921,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__Group__5"
-    // InternalJoveNotes.g:5405:1: rule__RefToContext__Group__5 : rule__RefToContext__Group__5__Impl rule__RefToContext__Group__6 ;
+    // InternalJoveNotes.g:5439:1: rule__RefToContext__Group__5 : rule__RefToContext__Group__5__Impl rule__RefToContext__Group__6 ;
     public final void rule__RefToContext__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5409:1: ( rule__RefToContext__Group__5__Impl rule__RefToContext__Group__6 )
-            // InternalJoveNotes.g:5410:2: rule__RefToContext__Group__5__Impl rule__RefToContext__Group__6
+            // InternalJoveNotes.g:5443:1: ( rule__RefToContext__Group__5__Impl rule__RefToContext__Group__6 )
+            // InternalJoveNotes.g:5444:2: rule__RefToContext__Group__5__Impl rule__RefToContext__Group__6
             {
             pushFollow(FOLLOW_27);
             rule__RefToContext__Group__5__Impl();
@@ -14857,24 +14959,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__Group__5__Impl"
-    // InternalJoveNotes.g:5417:1: rule__RefToContext__Group__5__Impl : ( ( ( rule__RefToContext__RtcElementAssignment_5 ) ) ( ( rule__RefToContext__RtcElementAssignment_5 )* ) ) ;
+    // InternalJoveNotes.g:5451:1: rule__RefToContext__Group__5__Impl : ( ( ( rule__RefToContext__RtcElementAssignment_5 ) ) ( ( rule__RefToContext__RtcElementAssignment_5 )* ) ) ;
     public final void rule__RefToContext__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5421:1: ( ( ( ( rule__RefToContext__RtcElementAssignment_5 ) ) ( ( rule__RefToContext__RtcElementAssignment_5 )* ) ) )
-            // InternalJoveNotes.g:5422:1: ( ( ( rule__RefToContext__RtcElementAssignment_5 ) ) ( ( rule__RefToContext__RtcElementAssignment_5 )* ) )
+            // InternalJoveNotes.g:5455:1: ( ( ( ( rule__RefToContext__RtcElementAssignment_5 ) ) ( ( rule__RefToContext__RtcElementAssignment_5 )* ) ) )
+            // InternalJoveNotes.g:5456:1: ( ( ( rule__RefToContext__RtcElementAssignment_5 ) ) ( ( rule__RefToContext__RtcElementAssignment_5 )* ) )
             {
-            // InternalJoveNotes.g:5422:1: ( ( ( rule__RefToContext__RtcElementAssignment_5 ) ) ( ( rule__RefToContext__RtcElementAssignment_5 )* ) )
-            // InternalJoveNotes.g:5423:1: ( ( rule__RefToContext__RtcElementAssignment_5 ) ) ( ( rule__RefToContext__RtcElementAssignment_5 )* )
+            // InternalJoveNotes.g:5456:1: ( ( ( rule__RefToContext__RtcElementAssignment_5 ) ) ( ( rule__RefToContext__RtcElementAssignment_5 )* ) )
+            // InternalJoveNotes.g:5457:1: ( ( rule__RefToContext__RtcElementAssignment_5 ) ) ( ( rule__RefToContext__RtcElementAssignment_5 )* )
             {
-            // InternalJoveNotes.g:5423:1: ( ( rule__RefToContext__RtcElementAssignment_5 ) )
-            // InternalJoveNotes.g:5424:1: ( rule__RefToContext__RtcElementAssignment_5 )
+            // InternalJoveNotes.g:5457:1: ( ( rule__RefToContext__RtcElementAssignment_5 ) )
+            // InternalJoveNotes.g:5458:1: ( rule__RefToContext__RtcElementAssignment_5 )
             {
              before(grammarAccess.getRefToContextAccess().getRtcElementAssignment_5()); 
-            // InternalJoveNotes.g:5425:1: ( rule__RefToContext__RtcElementAssignment_5 )
-            // InternalJoveNotes.g:5425:2: rule__RefToContext__RtcElementAssignment_5
+            // InternalJoveNotes.g:5459:1: ( rule__RefToContext__RtcElementAssignment_5 )
+            // InternalJoveNotes.g:5459:2: rule__RefToContext__RtcElementAssignment_5
             {
             pushFollow(FOLLOW_36);
             rule__RefToContext__RtcElementAssignment_5();
@@ -14888,11 +14990,11 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
             }
 
-            // InternalJoveNotes.g:5428:1: ( ( rule__RefToContext__RtcElementAssignment_5 )* )
-            // InternalJoveNotes.g:5429:1: ( rule__RefToContext__RtcElementAssignment_5 )*
+            // InternalJoveNotes.g:5462:1: ( ( rule__RefToContext__RtcElementAssignment_5 )* )
+            // InternalJoveNotes.g:5463:1: ( rule__RefToContext__RtcElementAssignment_5 )*
             {
              before(grammarAccess.getRefToContextAccess().getRtcElementAssignment_5()); 
-            // InternalJoveNotes.g:5430:1: ( rule__RefToContext__RtcElementAssignment_5 )*
+            // InternalJoveNotes.g:5464:1: ( rule__RefToContext__RtcElementAssignment_5 )*
             loop46:
             do {
                 int alt46=2;
@@ -14905,7 +15007,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
                 switch (alt46) {
             	case 1 :
-            	    // InternalJoveNotes.g:5430:2: rule__RefToContext__RtcElementAssignment_5
+            	    // InternalJoveNotes.g:5464:2: rule__RefToContext__RtcElementAssignment_5
             	    {
             	    pushFollow(FOLLOW_36);
             	    rule__RefToContext__RtcElementAssignment_5();
@@ -14947,14 +15049,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__Group__6"
-    // InternalJoveNotes.g:5441:1: rule__RefToContext__Group__6 : rule__RefToContext__Group__6__Impl ;
+    // InternalJoveNotes.g:5475:1: rule__RefToContext__Group__6 : rule__RefToContext__Group__6__Impl ;
     public final void rule__RefToContext__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5445:1: ( rule__RefToContext__Group__6__Impl )
-            // InternalJoveNotes.g:5446:2: rule__RefToContext__Group__6__Impl
+            // InternalJoveNotes.g:5479:1: ( rule__RefToContext__Group__6__Impl )
+            // InternalJoveNotes.g:5480:2: rule__RefToContext__Group__6__Impl
             {
             pushFollow(FOLLOW_2);
             rule__RefToContext__Group__6__Impl();
@@ -14980,17 +15082,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__Group__6__Impl"
-    // InternalJoveNotes.g:5452:1: rule__RefToContext__Group__6__Impl : ( '}' ) ;
+    // InternalJoveNotes.g:5486:1: rule__RefToContext__Group__6__Impl : ( '}' ) ;
     public final void rule__RefToContext__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5456:1: ( ( '}' ) )
-            // InternalJoveNotes.g:5457:1: ( '}' )
+            // InternalJoveNotes.g:5490:1: ( ( '}' ) )
+            // InternalJoveNotes.g:5491:1: ( '}' )
             {
-            // InternalJoveNotes.g:5457:1: ( '}' )
-            // InternalJoveNotes.g:5458:1: '}'
+            // InternalJoveNotes.g:5491:1: ( '}' )
+            // InternalJoveNotes.g:5492:1: '}'
             {
              before(grammarAccess.getRefToContextAccess().getRightCurlyBracketKeyword_6()); 
             match(input,24,FOLLOW_2); 
@@ -15017,14 +15119,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__0"
-    // InternalJoveNotes.g:5485:1: rule__MultiChoice__Group__0 : rule__MultiChoice__Group__0__Impl rule__MultiChoice__Group__1 ;
+    // InternalJoveNotes.g:5519:1: rule__MultiChoice__Group__0 : rule__MultiChoice__Group__0__Impl rule__MultiChoice__Group__1 ;
     public final void rule__MultiChoice__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5489:1: ( rule__MultiChoice__Group__0__Impl rule__MultiChoice__Group__1 )
-            // InternalJoveNotes.g:5490:2: rule__MultiChoice__Group__0__Impl rule__MultiChoice__Group__1
+            // InternalJoveNotes.g:5523:1: ( rule__MultiChoice__Group__0__Impl rule__MultiChoice__Group__1 )
+            // InternalJoveNotes.g:5524:2: rule__MultiChoice__Group__0__Impl rule__MultiChoice__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__MultiChoice__Group__0__Impl();
@@ -15055,17 +15157,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__0__Impl"
-    // InternalJoveNotes.g:5497:1: rule__MultiChoice__Group__0__Impl : ( '@multi_choice' ) ;
+    // InternalJoveNotes.g:5531:1: rule__MultiChoice__Group__0__Impl : ( '@multi_choice' ) ;
     public final void rule__MultiChoice__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5501:1: ( ( '@multi_choice' ) )
-            // InternalJoveNotes.g:5502:1: ( '@multi_choice' )
+            // InternalJoveNotes.g:5535:1: ( ( '@multi_choice' ) )
+            // InternalJoveNotes.g:5536:1: ( '@multi_choice' )
             {
-            // InternalJoveNotes.g:5502:1: ( '@multi_choice' )
-            // InternalJoveNotes.g:5503:1: '@multi_choice'
+            // InternalJoveNotes.g:5536:1: ( '@multi_choice' )
+            // InternalJoveNotes.g:5537:1: '@multi_choice'
             {
              before(grammarAccess.getMultiChoiceAccess().getMulti_choiceKeyword_0()); 
             match(input,44,FOLLOW_2); 
@@ -15092,14 +15194,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__1"
-    // InternalJoveNotes.g:5516:1: rule__MultiChoice__Group__1 : rule__MultiChoice__Group__1__Impl rule__MultiChoice__Group__2 ;
+    // InternalJoveNotes.g:5550:1: rule__MultiChoice__Group__1 : rule__MultiChoice__Group__1__Impl rule__MultiChoice__Group__2 ;
     public final void rule__MultiChoice__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5520:1: ( rule__MultiChoice__Group__1__Impl rule__MultiChoice__Group__2 )
-            // InternalJoveNotes.g:5521:2: rule__MultiChoice__Group__1__Impl rule__MultiChoice__Group__2
+            // InternalJoveNotes.g:5554:1: ( rule__MultiChoice__Group__1__Impl rule__MultiChoice__Group__2 )
+            // InternalJoveNotes.g:5555:2: rule__MultiChoice__Group__1__Impl rule__MultiChoice__Group__2
             {
             pushFollow(FOLLOW_14);
             rule__MultiChoice__Group__1__Impl();
@@ -15130,29 +15232,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__1__Impl"
-    // InternalJoveNotes.g:5528:1: rule__MultiChoice__Group__1__Impl : ( ( rule__MultiChoice__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:5562:1: rule__MultiChoice__Group__1__Impl : ( ( rule__MultiChoice__HideFromViewAssignment_1 )? ) ;
     public final void rule__MultiChoice__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5532:1: ( ( ( rule__MultiChoice__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:5533:1: ( ( rule__MultiChoice__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:5566:1: ( ( ( rule__MultiChoice__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:5567:1: ( ( rule__MultiChoice__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:5533:1: ( ( rule__MultiChoice__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:5534:1: ( rule__MultiChoice__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:5567:1: ( ( rule__MultiChoice__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:5568:1: ( rule__MultiChoice__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getMultiChoiceAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:5535:1: ( rule__MultiChoice__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:5569:1: ( rule__MultiChoice__HideFromViewAssignment_1 )?
             int alt47=2;
             int LA47_0 = input.LA(1);
 
-            if ( (LA47_0==59) ) {
+            if ( (LA47_0==60) ) {
                 alt47=1;
             }
             switch (alt47) {
                 case 1 :
-                    // InternalJoveNotes.g:5535:2: rule__MultiChoice__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:5569:2: rule__MultiChoice__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__MultiChoice__HideFromViewAssignment_1();
@@ -15188,14 +15290,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__2"
-    // InternalJoveNotes.g:5545:1: rule__MultiChoice__Group__2 : rule__MultiChoice__Group__2__Impl rule__MultiChoice__Group__3 ;
+    // InternalJoveNotes.g:5579:1: rule__MultiChoice__Group__2 : rule__MultiChoice__Group__2__Impl rule__MultiChoice__Group__3 ;
     public final void rule__MultiChoice__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5549:1: ( rule__MultiChoice__Group__2__Impl rule__MultiChoice__Group__3 )
-            // InternalJoveNotes.g:5550:2: rule__MultiChoice__Group__2__Impl rule__MultiChoice__Group__3
+            // InternalJoveNotes.g:5583:1: ( rule__MultiChoice__Group__2__Impl rule__MultiChoice__Group__3 )
+            // InternalJoveNotes.g:5584:2: rule__MultiChoice__Group__2__Impl rule__MultiChoice__Group__3
             {
             pushFollow(FOLLOW_20);
             rule__MultiChoice__Group__2__Impl();
@@ -15226,21 +15328,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__2__Impl"
-    // InternalJoveNotes.g:5557:1: rule__MultiChoice__Group__2__Impl : ( ( rule__MultiChoice__QuestionAssignment_2 ) ) ;
+    // InternalJoveNotes.g:5591:1: rule__MultiChoice__Group__2__Impl : ( ( rule__MultiChoice__QuestionAssignment_2 ) ) ;
     public final void rule__MultiChoice__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5561:1: ( ( ( rule__MultiChoice__QuestionAssignment_2 ) ) )
-            // InternalJoveNotes.g:5562:1: ( ( rule__MultiChoice__QuestionAssignment_2 ) )
+            // InternalJoveNotes.g:5595:1: ( ( ( rule__MultiChoice__QuestionAssignment_2 ) ) )
+            // InternalJoveNotes.g:5596:1: ( ( rule__MultiChoice__QuestionAssignment_2 ) )
             {
-            // InternalJoveNotes.g:5562:1: ( ( rule__MultiChoice__QuestionAssignment_2 ) )
-            // InternalJoveNotes.g:5563:1: ( rule__MultiChoice__QuestionAssignment_2 )
+            // InternalJoveNotes.g:5596:1: ( ( rule__MultiChoice__QuestionAssignment_2 ) )
+            // InternalJoveNotes.g:5597:1: ( rule__MultiChoice__QuestionAssignment_2 )
             {
              before(grammarAccess.getMultiChoiceAccess().getQuestionAssignment_2()); 
-            // InternalJoveNotes.g:5564:1: ( rule__MultiChoice__QuestionAssignment_2 )
-            // InternalJoveNotes.g:5564:2: rule__MultiChoice__QuestionAssignment_2
+            // InternalJoveNotes.g:5598:1: ( rule__MultiChoice__QuestionAssignment_2 )
+            // InternalJoveNotes.g:5598:2: rule__MultiChoice__QuestionAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__MultiChoice__QuestionAssignment_2();
@@ -15273,14 +15375,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__3"
-    // InternalJoveNotes.g:5574:1: rule__MultiChoice__Group__3 : rule__MultiChoice__Group__3__Impl rule__MultiChoice__Group__4 ;
+    // InternalJoveNotes.g:5608:1: rule__MultiChoice__Group__3 : rule__MultiChoice__Group__3__Impl rule__MultiChoice__Group__4 ;
     public final void rule__MultiChoice__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5578:1: ( rule__MultiChoice__Group__3__Impl rule__MultiChoice__Group__4 )
-            // InternalJoveNotes.g:5579:2: rule__MultiChoice__Group__3__Impl rule__MultiChoice__Group__4
+            // InternalJoveNotes.g:5612:1: ( rule__MultiChoice__Group__3__Impl rule__MultiChoice__Group__4 )
+            // InternalJoveNotes.g:5613:2: rule__MultiChoice__Group__3__Impl rule__MultiChoice__Group__4
             {
             pushFollow(FOLLOW_37);
             rule__MultiChoice__Group__3__Impl();
@@ -15311,17 +15413,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__3__Impl"
-    // InternalJoveNotes.g:5586:1: rule__MultiChoice__Group__3__Impl : ( '{' ) ;
+    // InternalJoveNotes.g:5620:1: rule__MultiChoice__Group__3__Impl : ( '{' ) ;
     public final void rule__MultiChoice__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5590:1: ( ( '{' ) )
-            // InternalJoveNotes.g:5591:1: ( '{' )
+            // InternalJoveNotes.g:5624:1: ( ( '{' ) )
+            // InternalJoveNotes.g:5625:1: ( '{' )
             {
-            // InternalJoveNotes.g:5591:1: ( '{' )
-            // InternalJoveNotes.g:5592:1: '{'
+            // InternalJoveNotes.g:5625:1: ( '{' )
+            // InternalJoveNotes.g:5626:1: '{'
             {
              before(grammarAccess.getMultiChoiceAccess().getLeftCurlyBracketKeyword_3()); 
             match(input,23,FOLLOW_2); 
@@ -15348,14 +15450,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__4"
-    // InternalJoveNotes.g:5605:1: rule__MultiChoice__Group__4 : rule__MultiChoice__Group__4__Impl rule__MultiChoice__Group__5 ;
+    // InternalJoveNotes.g:5639:1: rule__MultiChoice__Group__4 : rule__MultiChoice__Group__4__Impl rule__MultiChoice__Group__5 ;
     public final void rule__MultiChoice__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5609:1: ( rule__MultiChoice__Group__4__Impl rule__MultiChoice__Group__5 )
-            // InternalJoveNotes.g:5610:2: rule__MultiChoice__Group__4__Impl rule__MultiChoice__Group__5
+            // InternalJoveNotes.g:5643:1: ( rule__MultiChoice__Group__4__Impl rule__MultiChoice__Group__5 )
+            // InternalJoveNotes.g:5644:2: rule__MultiChoice__Group__4__Impl rule__MultiChoice__Group__5
             {
             pushFollow(FOLLOW_20);
             rule__MultiChoice__Group__4__Impl();
@@ -15386,17 +15488,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__4__Impl"
-    // InternalJoveNotes.g:5617:1: rule__MultiChoice__Group__4__Impl : ( '@options' ) ;
+    // InternalJoveNotes.g:5651:1: rule__MultiChoice__Group__4__Impl : ( '@options' ) ;
     public final void rule__MultiChoice__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5621:1: ( ( '@options' ) )
-            // InternalJoveNotes.g:5622:1: ( '@options' )
+            // InternalJoveNotes.g:5655:1: ( ( '@options' ) )
+            // InternalJoveNotes.g:5656:1: ( '@options' )
             {
-            // InternalJoveNotes.g:5622:1: ( '@options' )
-            // InternalJoveNotes.g:5623:1: '@options'
+            // InternalJoveNotes.g:5656:1: ( '@options' )
+            // InternalJoveNotes.g:5657:1: '@options'
             {
              before(grammarAccess.getMultiChoiceAccess().getOptionsKeyword_4()); 
             match(input,45,FOLLOW_2); 
@@ -15423,14 +15525,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__5"
-    // InternalJoveNotes.g:5636:1: rule__MultiChoice__Group__5 : rule__MultiChoice__Group__5__Impl rule__MultiChoice__Group__6 ;
+    // InternalJoveNotes.g:5670:1: rule__MultiChoice__Group__5 : rule__MultiChoice__Group__5__Impl rule__MultiChoice__Group__6 ;
     public final void rule__MultiChoice__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5640:1: ( rule__MultiChoice__Group__5__Impl rule__MultiChoice__Group__6 )
-            // InternalJoveNotes.g:5641:2: rule__MultiChoice__Group__5__Impl rule__MultiChoice__Group__6
+            // InternalJoveNotes.g:5674:1: ( rule__MultiChoice__Group__5__Impl rule__MultiChoice__Group__6 )
+            // InternalJoveNotes.g:5675:2: rule__MultiChoice__Group__5__Impl rule__MultiChoice__Group__6
             {
             pushFollow(FOLLOW_7);
             rule__MultiChoice__Group__5__Impl();
@@ -15461,17 +15563,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__5__Impl"
-    // InternalJoveNotes.g:5648:1: rule__MultiChoice__Group__5__Impl : ( '{' ) ;
+    // InternalJoveNotes.g:5682:1: rule__MultiChoice__Group__5__Impl : ( '{' ) ;
     public final void rule__MultiChoice__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5652:1: ( ( '{' ) )
-            // InternalJoveNotes.g:5653:1: ( '{' )
+            // InternalJoveNotes.g:5686:1: ( ( '{' ) )
+            // InternalJoveNotes.g:5687:1: ( '{' )
             {
-            // InternalJoveNotes.g:5653:1: ( '{' )
-            // InternalJoveNotes.g:5654:1: '{'
+            // InternalJoveNotes.g:5687:1: ( '{' )
+            // InternalJoveNotes.g:5688:1: '{'
             {
              before(grammarAccess.getMultiChoiceAccess().getLeftCurlyBracketKeyword_5()); 
             match(input,23,FOLLOW_2); 
@@ -15498,14 +15600,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__6"
-    // InternalJoveNotes.g:5667:1: rule__MultiChoice__Group__6 : rule__MultiChoice__Group__6__Impl rule__MultiChoice__Group__7 ;
+    // InternalJoveNotes.g:5701:1: rule__MultiChoice__Group__6 : rule__MultiChoice__Group__6__Impl rule__MultiChoice__Group__7 ;
     public final void rule__MultiChoice__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5671:1: ( rule__MultiChoice__Group__6__Impl rule__MultiChoice__Group__7 )
-            // InternalJoveNotes.g:5672:2: rule__MultiChoice__Group__6__Impl rule__MultiChoice__Group__7
+            // InternalJoveNotes.g:5705:1: ( rule__MultiChoice__Group__6__Impl rule__MultiChoice__Group__7 )
+            // InternalJoveNotes.g:5706:2: rule__MultiChoice__Group__6__Impl rule__MultiChoice__Group__7
             {
             pushFollow(FOLLOW_29);
             rule__MultiChoice__Group__6__Impl();
@@ -15536,21 +15638,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__6__Impl"
-    // InternalJoveNotes.g:5679:1: rule__MultiChoice__Group__6__Impl : ( ( rule__MultiChoice__OptionsAssignment_6 ) ) ;
+    // InternalJoveNotes.g:5713:1: rule__MultiChoice__Group__6__Impl : ( ( rule__MultiChoice__OptionsAssignment_6 ) ) ;
     public final void rule__MultiChoice__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5683:1: ( ( ( rule__MultiChoice__OptionsAssignment_6 ) ) )
-            // InternalJoveNotes.g:5684:1: ( ( rule__MultiChoice__OptionsAssignment_6 ) )
+            // InternalJoveNotes.g:5717:1: ( ( ( rule__MultiChoice__OptionsAssignment_6 ) ) )
+            // InternalJoveNotes.g:5718:1: ( ( rule__MultiChoice__OptionsAssignment_6 ) )
             {
-            // InternalJoveNotes.g:5684:1: ( ( rule__MultiChoice__OptionsAssignment_6 ) )
-            // InternalJoveNotes.g:5685:1: ( rule__MultiChoice__OptionsAssignment_6 )
+            // InternalJoveNotes.g:5718:1: ( ( rule__MultiChoice__OptionsAssignment_6 ) )
+            // InternalJoveNotes.g:5719:1: ( rule__MultiChoice__OptionsAssignment_6 )
             {
              before(grammarAccess.getMultiChoiceAccess().getOptionsAssignment_6()); 
-            // InternalJoveNotes.g:5686:1: ( rule__MultiChoice__OptionsAssignment_6 )
-            // InternalJoveNotes.g:5686:2: rule__MultiChoice__OptionsAssignment_6
+            // InternalJoveNotes.g:5720:1: ( rule__MultiChoice__OptionsAssignment_6 )
+            // InternalJoveNotes.g:5720:2: rule__MultiChoice__OptionsAssignment_6
             {
             pushFollow(FOLLOW_2);
             rule__MultiChoice__OptionsAssignment_6();
@@ -15583,14 +15685,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__7"
-    // InternalJoveNotes.g:5696:1: rule__MultiChoice__Group__7 : rule__MultiChoice__Group__7__Impl rule__MultiChoice__Group__8 ;
+    // InternalJoveNotes.g:5730:1: rule__MultiChoice__Group__7 : rule__MultiChoice__Group__7__Impl rule__MultiChoice__Group__8 ;
     public final void rule__MultiChoice__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5700:1: ( rule__MultiChoice__Group__7__Impl rule__MultiChoice__Group__8 )
-            // InternalJoveNotes.g:5701:2: rule__MultiChoice__Group__7__Impl rule__MultiChoice__Group__8
+            // InternalJoveNotes.g:5734:1: ( rule__MultiChoice__Group__7__Impl rule__MultiChoice__Group__8 )
+            // InternalJoveNotes.g:5735:2: rule__MultiChoice__Group__7__Impl rule__MultiChoice__Group__8
             {
             pushFollow(FOLLOW_29);
             rule__MultiChoice__Group__7__Impl();
@@ -15621,20 +15723,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__7__Impl"
-    // InternalJoveNotes.g:5708:1: rule__MultiChoice__Group__7__Impl : ( ( rule__MultiChoice__Group_7__0 )* ) ;
+    // InternalJoveNotes.g:5742:1: rule__MultiChoice__Group__7__Impl : ( ( rule__MultiChoice__Group_7__0 )* ) ;
     public final void rule__MultiChoice__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5712:1: ( ( ( rule__MultiChoice__Group_7__0 )* ) )
-            // InternalJoveNotes.g:5713:1: ( ( rule__MultiChoice__Group_7__0 )* )
+            // InternalJoveNotes.g:5746:1: ( ( ( rule__MultiChoice__Group_7__0 )* ) )
+            // InternalJoveNotes.g:5747:1: ( ( rule__MultiChoice__Group_7__0 )* )
             {
-            // InternalJoveNotes.g:5713:1: ( ( rule__MultiChoice__Group_7__0 )* )
-            // InternalJoveNotes.g:5714:1: ( rule__MultiChoice__Group_7__0 )*
+            // InternalJoveNotes.g:5747:1: ( ( rule__MultiChoice__Group_7__0 )* )
+            // InternalJoveNotes.g:5748:1: ( rule__MultiChoice__Group_7__0 )*
             {
              before(grammarAccess.getMultiChoiceAccess().getGroup_7()); 
-            // InternalJoveNotes.g:5715:1: ( rule__MultiChoice__Group_7__0 )*
+            // InternalJoveNotes.g:5749:1: ( rule__MultiChoice__Group_7__0 )*
             loop48:
             do {
                 int alt48=2;
@@ -15647,7 +15749,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
                 switch (alt48) {
             	case 1 :
-            	    // InternalJoveNotes.g:5715:2: rule__MultiChoice__Group_7__0
+            	    // InternalJoveNotes.g:5749:2: rule__MultiChoice__Group_7__0
             	    {
             	    pushFollow(FOLLOW_30);
             	    rule__MultiChoice__Group_7__0();
@@ -15686,14 +15788,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__8"
-    // InternalJoveNotes.g:5725:1: rule__MultiChoice__Group__8 : rule__MultiChoice__Group__8__Impl rule__MultiChoice__Group__9 ;
+    // InternalJoveNotes.g:5759:1: rule__MultiChoice__Group__8 : rule__MultiChoice__Group__8__Impl rule__MultiChoice__Group__9 ;
     public final void rule__MultiChoice__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5729:1: ( rule__MultiChoice__Group__8__Impl rule__MultiChoice__Group__9 )
-            // InternalJoveNotes.g:5730:2: rule__MultiChoice__Group__8__Impl rule__MultiChoice__Group__9
+            // InternalJoveNotes.g:5763:1: ( rule__MultiChoice__Group__8__Impl rule__MultiChoice__Group__9 )
+            // InternalJoveNotes.g:5764:2: rule__MultiChoice__Group__8__Impl rule__MultiChoice__Group__9
             {
             pushFollow(FOLLOW_38);
             rule__MultiChoice__Group__8__Impl();
@@ -15724,17 +15826,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__8__Impl"
-    // InternalJoveNotes.g:5737:1: rule__MultiChoice__Group__8__Impl : ( '}' ) ;
+    // InternalJoveNotes.g:5771:1: rule__MultiChoice__Group__8__Impl : ( '}' ) ;
     public final void rule__MultiChoice__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5741:1: ( ( '}' ) )
-            // InternalJoveNotes.g:5742:1: ( '}' )
+            // InternalJoveNotes.g:5775:1: ( ( '}' ) )
+            // InternalJoveNotes.g:5776:1: ( '}' )
             {
-            // InternalJoveNotes.g:5742:1: ( '}' )
-            // InternalJoveNotes.g:5743:1: '}'
+            // InternalJoveNotes.g:5776:1: ( '}' )
+            // InternalJoveNotes.g:5777:1: '}'
             {
              before(grammarAccess.getMultiChoiceAccess().getRightCurlyBracketKeyword_8()); 
             match(input,24,FOLLOW_2); 
@@ -15761,14 +15863,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__9"
-    // InternalJoveNotes.g:5756:1: rule__MultiChoice__Group__9 : rule__MultiChoice__Group__9__Impl rule__MultiChoice__Group__10 ;
+    // InternalJoveNotes.g:5790:1: rule__MultiChoice__Group__9 : rule__MultiChoice__Group__9__Impl rule__MultiChoice__Group__10 ;
     public final void rule__MultiChoice__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5760:1: ( rule__MultiChoice__Group__9__Impl rule__MultiChoice__Group__10 )
-            // InternalJoveNotes.g:5761:2: rule__MultiChoice__Group__9__Impl rule__MultiChoice__Group__10
+            // InternalJoveNotes.g:5794:1: ( rule__MultiChoice__Group__9__Impl rule__MultiChoice__Group__10 )
+            // InternalJoveNotes.g:5795:2: rule__MultiChoice__Group__9__Impl rule__MultiChoice__Group__10
             {
             pushFollow(FOLLOW_38);
             rule__MultiChoice__Group__9__Impl();
@@ -15799,20 +15901,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__9__Impl"
-    // InternalJoveNotes.g:5768:1: rule__MultiChoice__Group__9__Impl : ( ( rule__MultiChoice__Group_9__0 )? ) ;
+    // InternalJoveNotes.g:5802:1: rule__MultiChoice__Group__9__Impl : ( ( rule__MultiChoice__Group_9__0 )? ) ;
     public final void rule__MultiChoice__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5772:1: ( ( ( rule__MultiChoice__Group_9__0 )? ) )
-            // InternalJoveNotes.g:5773:1: ( ( rule__MultiChoice__Group_9__0 )? )
+            // InternalJoveNotes.g:5806:1: ( ( ( rule__MultiChoice__Group_9__0 )? ) )
+            // InternalJoveNotes.g:5807:1: ( ( rule__MultiChoice__Group_9__0 )? )
             {
-            // InternalJoveNotes.g:5773:1: ( ( rule__MultiChoice__Group_9__0 )? )
-            // InternalJoveNotes.g:5774:1: ( rule__MultiChoice__Group_9__0 )?
+            // InternalJoveNotes.g:5807:1: ( ( rule__MultiChoice__Group_9__0 )? )
+            // InternalJoveNotes.g:5808:1: ( rule__MultiChoice__Group_9__0 )?
             {
              before(grammarAccess.getMultiChoiceAccess().getGroup_9()); 
-            // InternalJoveNotes.g:5775:1: ( rule__MultiChoice__Group_9__0 )?
+            // InternalJoveNotes.g:5809:1: ( rule__MultiChoice__Group_9__0 )?
             int alt49=2;
             int LA49_0 = input.LA(1);
 
@@ -15821,7 +15923,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt49) {
                 case 1 :
-                    // InternalJoveNotes.g:5775:2: rule__MultiChoice__Group_9__0
+                    // InternalJoveNotes.g:5809:2: rule__MultiChoice__Group_9__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__MultiChoice__Group_9__0();
@@ -15857,14 +15959,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__10"
-    // InternalJoveNotes.g:5785:1: rule__MultiChoice__Group__10 : rule__MultiChoice__Group__10__Impl rule__MultiChoice__Group__11 ;
+    // InternalJoveNotes.g:5819:1: rule__MultiChoice__Group__10 : rule__MultiChoice__Group__10__Impl rule__MultiChoice__Group__11 ;
     public final void rule__MultiChoice__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5789:1: ( rule__MultiChoice__Group__10__Impl rule__MultiChoice__Group__11 )
-            // InternalJoveNotes.g:5790:2: rule__MultiChoice__Group__10__Impl rule__MultiChoice__Group__11
+            // InternalJoveNotes.g:5823:1: ( rule__MultiChoice__Group__10__Impl rule__MultiChoice__Group__11 )
+            // InternalJoveNotes.g:5824:2: rule__MultiChoice__Group__10__Impl rule__MultiChoice__Group__11
             {
             pushFollow(FOLLOW_38);
             rule__MultiChoice__Group__10__Impl();
@@ -15895,20 +15997,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__10__Impl"
-    // InternalJoveNotes.g:5797:1: rule__MultiChoice__Group__10__Impl : ( ( rule__MultiChoice__Group_10__0 )? ) ;
+    // InternalJoveNotes.g:5831:1: rule__MultiChoice__Group__10__Impl : ( ( rule__MultiChoice__Group_10__0 )? ) ;
     public final void rule__MultiChoice__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5801:1: ( ( ( rule__MultiChoice__Group_10__0 )? ) )
-            // InternalJoveNotes.g:5802:1: ( ( rule__MultiChoice__Group_10__0 )? )
+            // InternalJoveNotes.g:5835:1: ( ( ( rule__MultiChoice__Group_10__0 )? ) )
+            // InternalJoveNotes.g:5836:1: ( ( rule__MultiChoice__Group_10__0 )? )
             {
-            // InternalJoveNotes.g:5802:1: ( ( rule__MultiChoice__Group_10__0 )? )
-            // InternalJoveNotes.g:5803:1: ( rule__MultiChoice__Group_10__0 )?
+            // InternalJoveNotes.g:5836:1: ( ( rule__MultiChoice__Group_10__0 )? )
+            // InternalJoveNotes.g:5837:1: ( rule__MultiChoice__Group_10__0 )?
             {
              before(grammarAccess.getMultiChoiceAccess().getGroup_10()); 
-            // InternalJoveNotes.g:5804:1: ( rule__MultiChoice__Group_10__0 )?
+            // InternalJoveNotes.g:5838:1: ( rule__MultiChoice__Group_10__0 )?
             int alt50=2;
             int LA50_0 = input.LA(1);
 
@@ -15917,7 +16019,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt50) {
                 case 1 :
-                    // InternalJoveNotes.g:5804:2: rule__MultiChoice__Group_10__0
+                    // InternalJoveNotes.g:5838:2: rule__MultiChoice__Group_10__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__MultiChoice__Group_10__0();
@@ -15953,14 +16055,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__11"
-    // InternalJoveNotes.g:5814:1: rule__MultiChoice__Group__11 : rule__MultiChoice__Group__11__Impl rule__MultiChoice__Group__12 ;
+    // InternalJoveNotes.g:5848:1: rule__MultiChoice__Group__11 : rule__MultiChoice__Group__11__Impl rule__MultiChoice__Group__12 ;
     public final void rule__MultiChoice__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5818:1: ( rule__MultiChoice__Group__11__Impl rule__MultiChoice__Group__12 )
-            // InternalJoveNotes.g:5819:2: rule__MultiChoice__Group__11__Impl rule__MultiChoice__Group__12
+            // InternalJoveNotes.g:5852:1: ( rule__MultiChoice__Group__11__Impl rule__MultiChoice__Group__12 )
+            // InternalJoveNotes.g:5853:2: rule__MultiChoice__Group__11__Impl rule__MultiChoice__Group__12
             {
             pushFollow(FOLLOW_38);
             rule__MultiChoice__Group__11__Impl();
@@ -15991,20 +16093,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__11__Impl"
-    // InternalJoveNotes.g:5826:1: rule__MultiChoice__Group__11__Impl : ( ( rule__MultiChoice__Group_11__0 )? ) ;
+    // InternalJoveNotes.g:5860:1: rule__MultiChoice__Group__11__Impl : ( ( rule__MultiChoice__Group_11__0 )? ) ;
     public final void rule__MultiChoice__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5830:1: ( ( ( rule__MultiChoice__Group_11__0 )? ) )
-            // InternalJoveNotes.g:5831:1: ( ( rule__MultiChoice__Group_11__0 )? )
+            // InternalJoveNotes.g:5864:1: ( ( ( rule__MultiChoice__Group_11__0 )? ) )
+            // InternalJoveNotes.g:5865:1: ( ( rule__MultiChoice__Group_11__0 )? )
             {
-            // InternalJoveNotes.g:5831:1: ( ( rule__MultiChoice__Group_11__0 )? )
-            // InternalJoveNotes.g:5832:1: ( rule__MultiChoice__Group_11__0 )?
+            // InternalJoveNotes.g:5865:1: ( ( rule__MultiChoice__Group_11__0 )? )
+            // InternalJoveNotes.g:5866:1: ( rule__MultiChoice__Group_11__0 )?
             {
              before(grammarAccess.getMultiChoiceAccess().getGroup_11()); 
-            // InternalJoveNotes.g:5833:1: ( rule__MultiChoice__Group_11__0 )?
+            // InternalJoveNotes.g:5867:1: ( rule__MultiChoice__Group_11__0 )?
             int alt51=2;
             int LA51_0 = input.LA(1);
 
@@ -16013,7 +16115,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt51) {
                 case 1 :
-                    // InternalJoveNotes.g:5833:2: rule__MultiChoice__Group_11__0
+                    // InternalJoveNotes.g:5867:2: rule__MultiChoice__Group_11__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__MultiChoice__Group_11__0();
@@ -16049,14 +16151,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__12"
-    // InternalJoveNotes.g:5843:1: rule__MultiChoice__Group__12 : rule__MultiChoice__Group__12__Impl ;
+    // InternalJoveNotes.g:5877:1: rule__MultiChoice__Group__12 : rule__MultiChoice__Group__12__Impl ;
     public final void rule__MultiChoice__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5847:1: ( rule__MultiChoice__Group__12__Impl )
-            // InternalJoveNotes.g:5848:2: rule__MultiChoice__Group__12__Impl
+            // InternalJoveNotes.g:5881:1: ( rule__MultiChoice__Group__12__Impl )
+            // InternalJoveNotes.g:5882:2: rule__MultiChoice__Group__12__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MultiChoice__Group__12__Impl();
@@ -16082,17 +16184,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group__12__Impl"
-    // InternalJoveNotes.g:5854:1: rule__MultiChoice__Group__12__Impl : ( '}' ) ;
+    // InternalJoveNotes.g:5888:1: rule__MultiChoice__Group__12__Impl : ( '}' ) ;
     public final void rule__MultiChoice__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5858:1: ( ( '}' ) )
-            // InternalJoveNotes.g:5859:1: ( '}' )
+            // InternalJoveNotes.g:5892:1: ( ( '}' ) )
+            // InternalJoveNotes.g:5893:1: ( '}' )
             {
-            // InternalJoveNotes.g:5859:1: ( '}' )
-            // InternalJoveNotes.g:5860:1: '}'
+            // InternalJoveNotes.g:5893:1: ( '}' )
+            // InternalJoveNotes.g:5894:1: '}'
             {
              before(grammarAccess.getMultiChoiceAccess().getRightCurlyBracketKeyword_12()); 
             match(input,24,FOLLOW_2); 
@@ -16119,14 +16221,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_7__0"
-    // InternalJoveNotes.g:5899:1: rule__MultiChoice__Group_7__0 : rule__MultiChoice__Group_7__0__Impl rule__MultiChoice__Group_7__1 ;
+    // InternalJoveNotes.g:5933:1: rule__MultiChoice__Group_7__0 : rule__MultiChoice__Group_7__0__Impl rule__MultiChoice__Group_7__1 ;
     public final void rule__MultiChoice__Group_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5903:1: ( rule__MultiChoice__Group_7__0__Impl rule__MultiChoice__Group_7__1 )
-            // InternalJoveNotes.g:5904:2: rule__MultiChoice__Group_7__0__Impl rule__MultiChoice__Group_7__1
+            // InternalJoveNotes.g:5937:1: ( rule__MultiChoice__Group_7__0__Impl rule__MultiChoice__Group_7__1 )
+            // InternalJoveNotes.g:5938:2: rule__MultiChoice__Group_7__0__Impl rule__MultiChoice__Group_7__1
             {
             pushFollow(FOLLOW_7);
             rule__MultiChoice__Group_7__0__Impl();
@@ -16157,17 +16259,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_7__0__Impl"
-    // InternalJoveNotes.g:5911:1: rule__MultiChoice__Group_7__0__Impl : ( ',' ) ;
+    // InternalJoveNotes.g:5945:1: rule__MultiChoice__Group_7__0__Impl : ( ',' ) ;
     public final void rule__MultiChoice__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5915:1: ( ( ',' ) )
-            // InternalJoveNotes.g:5916:1: ( ',' )
+            // InternalJoveNotes.g:5949:1: ( ( ',' ) )
+            // InternalJoveNotes.g:5950:1: ( ',' )
             {
-            // InternalJoveNotes.g:5916:1: ( ',' )
-            // InternalJoveNotes.g:5917:1: ','
+            // InternalJoveNotes.g:5950:1: ( ',' )
+            // InternalJoveNotes.g:5951:1: ','
             {
              before(grammarAccess.getMultiChoiceAccess().getCommaKeyword_7_0()); 
             match(input,39,FOLLOW_2); 
@@ -16194,14 +16296,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_7__1"
-    // InternalJoveNotes.g:5930:1: rule__MultiChoice__Group_7__1 : rule__MultiChoice__Group_7__1__Impl ;
+    // InternalJoveNotes.g:5964:1: rule__MultiChoice__Group_7__1 : rule__MultiChoice__Group_7__1__Impl ;
     public final void rule__MultiChoice__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5934:1: ( rule__MultiChoice__Group_7__1__Impl )
-            // InternalJoveNotes.g:5935:2: rule__MultiChoice__Group_7__1__Impl
+            // InternalJoveNotes.g:5968:1: ( rule__MultiChoice__Group_7__1__Impl )
+            // InternalJoveNotes.g:5969:2: rule__MultiChoice__Group_7__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MultiChoice__Group_7__1__Impl();
@@ -16227,21 +16329,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_7__1__Impl"
-    // InternalJoveNotes.g:5941:1: rule__MultiChoice__Group_7__1__Impl : ( ( rule__MultiChoice__OptionsAssignment_7_1 ) ) ;
+    // InternalJoveNotes.g:5975:1: rule__MultiChoice__Group_7__1__Impl : ( ( rule__MultiChoice__OptionsAssignment_7_1 ) ) ;
     public final void rule__MultiChoice__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5945:1: ( ( ( rule__MultiChoice__OptionsAssignment_7_1 ) ) )
-            // InternalJoveNotes.g:5946:1: ( ( rule__MultiChoice__OptionsAssignment_7_1 ) )
+            // InternalJoveNotes.g:5979:1: ( ( ( rule__MultiChoice__OptionsAssignment_7_1 ) ) )
+            // InternalJoveNotes.g:5980:1: ( ( rule__MultiChoice__OptionsAssignment_7_1 ) )
             {
-            // InternalJoveNotes.g:5946:1: ( ( rule__MultiChoice__OptionsAssignment_7_1 ) )
-            // InternalJoveNotes.g:5947:1: ( rule__MultiChoice__OptionsAssignment_7_1 )
+            // InternalJoveNotes.g:5980:1: ( ( rule__MultiChoice__OptionsAssignment_7_1 ) )
+            // InternalJoveNotes.g:5981:1: ( rule__MultiChoice__OptionsAssignment_7_1 )
             {
              before(grammarAccess.getMultiChoiceAccess().getOptionsAssignment_7_1()); 
-            // InternalJoveNotes.g:5948:1: ( rule__MultiChoice__OptionsAssignment_7_1 )
-            // InternalJoveNotes.g:5948:2: rule__MultiChoice__OptionsAssignment_7_1
+            // InternalJoveNotes.g:5982:1: ( rule__MultiChoice__OptionsAssignment_7_1 )
+            // InternalJoveNotes.g:5982:2: rule__MultiChoice__OptionsAssignment_7_1
             {
             pushFollow(FOLLOW_2);
             rule__MultiChoice__OptionsAssignment_7_1();
@@ -16274,14 +16376,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_9__0"
-    // InternalJoveNotes.g:5962:1: rule__MultiChoice__Group_9__0 : rule__MultiChoice__Group_9__0__Impl rule__MultiChoice__Group_9__1 ;
+    // InternalJoveNotes.g:5996:1: rule__MultiChoice__Group_9__0 : rule__MultiChoice__Group_9__0__Impl rule__MultiChoice__Group_9__1 ;
     public final void rule__MultiChoice__Group_9__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5966:1: ( rule__MultiChoice__Group_9__0__Impl rule__MultiChoice__Group_9__1 )
-            // InternalJoveNotes.g:5967:2: rule__MultiChoice__Group_9__0__Impl rule__MultiChoice__Group_9__1
+            // InternalJoveNotes.g:6000:1: ( rule__MultiChoice__Group_9__0__Impl rule__MultiChoice__Group_9__1 )
+            // InternalJoveNotes.g:6001:2: rule__MultiChoice__Group_9__0__Impl rule__MultiChoice__Group_9__1
             {
             pushFollow(FOLLOW_9);
             rule__MultiChoice__Group_9__0__Impl();
@@ -16312,17 +16414,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_9__0__Impl"
-    // InternalJoveNotes.g:5974:1: rule__MultiChoice__Group_9__0__Impl : ( '@numOptionsToShow' ) ;
+    // InternalJoveNotes.g:6008:1: rule__MultiChoice__Group_9__0__Impl : ( '@numOptionsToShow' ) ;
     public final void rule__MultiChoice__Group_9__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5978:1: ( ( '@numOptionsToShow' ) )
-            // InternalJoveNotes.g:5979:1: ( '@numOptionsToShow' )
+            // InternalJoveNotes.g:6012:1: ( ( '@numOptionsToShow' ) )
+            // InternalJoveNotes.g:6013:1: ( '@numOptionsToShow' )
             {
-            // InternalJoveNotes.g:5979:1: ( '@numOptionsToShow' )
-            // InternalJoveNotes.g:5980:1: '@numOptionsToShow'
+            // InternalJoveNotes.g:6013:1: ( '@numOptionsToShow' )
+            // InternalJoveNotes.g:6014:1: '@numOptionsToShow'
             {
              before(grammarAccess.getMultiChoiceAccess().getNumOptionsToShowKeyword_9_0()); 
             match(input,29,FOLLOW_2); 
@@ -16349,14 +16451,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_9__1"
-    // InternalJoveNotes.g:5993:1: rule__MultiChoice__Group_9__1 : rule__MultiChoice__Group_9__1__Impl ;
+    // InternalJoveNotes.g:6027:1: rule__MultiChoice__Group_9__1 : rule__MultiChoice__Group_9__1__Impl ;
     public final void rule__MultiChoice__Group_9__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:5997:1: ( rule__MultiChoice__Group_9__1__Impl )
-            // InternalJoveNotes.g:5998:2: rule__MultiChoice__Group_9__1__Impl
+            // InternalJoveNotes.g:6031:1: ( rule__MultiChoice__Group_9__1__Impl )
+            // InternalJoveNotes.g:6032:2: rule__MultiChoice__Group_9__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MultiChoice__Group_9__1__Impl();
@@ -16382,21 +16484,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_9__1__Impl"
-    // InternalJoveNotes.g:6004:1: rule__MultiChoice__Group_9__1__Impl : ( ( rule__MultiChoice__NumOptionsToShowAssignment_9_1 ) ) ;
+    // InternalJoveNotes.g:6038:1: rule__MultiChoice__Group_9__1__Impl : ( ( rule__MultiChoice__NumOptionsToShowAssignment_9_1 ) ) ;
     public final void rule__MultiChoice__Group_9__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6008:1: ( ( ( rule__MultiChoice__NumOptionsToShowAssignment_9_1 ) ) )
-            // InternalJoveNotes.g:6009:1: ( ( rule__MultiChoice__NumOptionsToShowAssignment_9_1 ) )
+            // InternalJoveNotes.g:6042:1: ( ( ( rule__MultiChoice__NumOptionsToShowAssignment_9_1 ) ) )
+            // InternalJoveNotes.g:6043:1: ( ( rule__MultiChoice__NumOptionsToShowAssignment_9_1 ) )
             {
-            // InternalJoveNotes.g:6009:1: ( ( rule__MultiChoice__NumOptionsToShowAssignment_9_1 ) )
-            // InternalJoveNotes.g:6010:1: ( rule__MultiChoice__NumOptionsToShowAssignment_9_1 )
+            // InternalJoveNotes.g:6043:1: ( ( rule__MultiChoice__NumOptionsToShowAssignment_9_1 ) )
+            // InternalJoveNotes.g:6044:1: ( rule__MultiChoice__NumOptionsToShowAssignment_9_1 )
             {
              before(grammarAccess.getMultiChoiceAccess().getNumOptionsToShowAssignment_9_1()); 
-            // InternalJoveNotes.g:6011:1: ( rule__MultiChoice__NumOptionsToShowAssignment_9_1 )
-            // InternalJoveNotes.g:6011:2: rule__MultiChoice__NumOptionsToShowAssignment_9_1
+            // InternalJoveNotes.g:6045:1: ( rule__MultiChoice__NumOptionsToShowAssignment_9_1 )
+            // InternalJoveNotes.g:6045:2: rule__MultiChoice__NumOptionsToShowAssignment_9_1
             {
             pushFollow(FOLLOW_2);
             rule__MultiChoice__NumOptionsToShowAssignment_9_1();
@@ -16429,14 +16531,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_10__0"
-    // InternalJoveNotes.g:6025:1: rule__MultiChoice__Group_10__0 : rule__MultiChoice__Group_10__0__Impl rule__MultiChoice__Group_10__1 ;
+    // InternalJoveNotes.g:6059:1: rule__MultiChoice__Group_10__0 : rule__MultiChoice__Group_10__0__Impl rule__MultiChoice__Group_10__1 ;
     public final void rule__MultiChoice__Group_10__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6029:1: ( rule__MultiChoice__Group_10__0__Impl rule__MultiChoice__Group_10__1 )
-            // InternalJoveNotes.g:6030:2: rule__MultiChoice__Group_10__0__Impl rule__MultiChoice__Group_10__1
+            // InternalJoveNotes.g:6063:1: ( rule__MultiChoice__Group_10__0__Impl rule__MultiChoice__Group_10__1 )
+            // InternalJoveNotes.g:6064:2: rule__MultiChoice__Group_10__0__Impl rule__MultiChoice__Group_10__1
             {
             pushFollow(FOLLOW_9);
             rule__MultiChoice__Group_10__0__Impl();
@@ -16467,17 +16569,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_10__0__Impl"
-    // InternalJoveNotes.g:6037:1: rule__MultiChoice__Group_10__0__Impl : ( '@numOptionsPerRow' ) ;
+    // InternalJoveNotes.g:6071:1: rule__MultiChoice__Group_10__0__Impl : ( '@numOptionsPerRow' ) ;
     public final void rule__MultiChoice__Group_10__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6041:1: ( ( '@numOptionsPerRow' ) )
-            // InternalJoveNotes.g:6042:1: ( '@numOptionsPerRow' )
+            // InternalJoveNotes.g:6075:1: ( ( '@numOptionsPerRow' ) )
+            // InternalJoveNotes.g:6076:1: ( '@numOptionsPerRow' )
             {
-            // InternalJoveNotes.g:6042:1: ( '@numOptionsPerRow' )
-            // InternalJoveNotes.g:6043:1: '@numOptionsPerRow'
+            // InternalJoveNotes.g:6076:1: ( '@numOptionsPerRow' )
+            // InternalJoveNotes.g:6077:1: '@numOptionsPerRow'
             {
              before(grammarAccess.getMultiChoiceAccess().getNumOptionsPerRowKeyword_10_0()); 
             match(input,30,FOLLOW_2); 
@@ -16504,14 +16606,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_10__1"
-    // InternalJoveNotes.g:6056:1: rule__MultiChoice__Group_10__1 : rule__MultiChoice__Group_10__1__Impl ;
+    // InternalJoveNotes.g:6090:1: rule__MultiChoice__Group_10__1 : rule__MultiChoice__Group_10__1__Impl ;
     public final void rule__MultiChoice__Group_10__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6060:1: ( rule__MultiChoice__Group_10__1__Impl )
-            // InternalJoveNotes.g:6061:2: rule__MultiChoice__Group_10__1__Impl
+            // InternalJoveNotes.g:6094:1: ( rule__MultiChoice__Group_10__1__Impl )
+            // InternalJoveNotes.g:6095:2: rule__MultiChoice__Group_10__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MultiChoice__Group_10__1__Impl();
@@ -16537,21 +16639,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_10__1__Impl"
-    // InternalJoveNotes.g:6067:1: rule__MultiChoice__Group_10__1__Impl : ( ( rule__MultiChoice__NumOptionsPerRowAssignment_10_1 ) ) ;
+    // InternalJoveNotes.g:6101:1: rule__MultiChoice__Group_10__1__Impl : ( ( rule__MultiChoice__NumOptionsPerRowAssignment_10_1 ) ) ;
     public final void rule__MultiChoice__Group_10__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6071:1: ( ( ( rule__MultiChoice__NumOptionsPerRowAssignment_10_1 ) ) )
-            // InternalJoveNotes.g:6072:1: ( ( rule__MultiChoice__NumOptionsPerRowAssignment_10_1 ) )
+            // InternalJoveNotes.g:6105:1: ( ( ( rule__MultiChoice__NumOptionsPerRowAssignment_10_1 ) ) )
+            // InternalJoveNotes.g:6106:1: ( ( rule__MultiChoice__NumOptionsPerRowAssignment_10_1 ) )
             {
-            // InternalJoveNotes.g:6072:1: ( ( rule__MultiChoice__NumOptionsPerRowAssignment_10_1 ) )
-            // InternalJoveNotes.g:6073:1: ( rule__MultiChoice__NumOptionsPerRowAssignment_10_1 )
+            // InternalJoveNotes.g:6106:1: ( ( rule__MultiChoice__NumOptionsPerRowAssignment_10_1 ) )
+            // InternalJoveNotes.g:6107:1: ( rule__MultiChoice__NumOptionsPerRowAssignment_10_1 )
             {
              before(grammarAccess.getMultiChoiceAccess().getNumOptionsPerRowAssignment_10_1()); 
-            // InternalJoveNotes.g:6074:1: ( rule__MultiChoice__NumOptionsPerRowAssignment_10_1 )
-            // InternalJoveNotes.g:6074:2: rule__MultiChoice__NumOptionsPerRowAssignment_10_1
+            // InternalJoveNotes.g:6108:1: ( rule__MultiChoice__NumOptionsPerRowAssignment_10_1 )
+            // InternalJoveNotes.g:6108:2: rule__MultiChoice__NumOptionsPerRowAssignment_10_1
             {
             pushFollow(FOLLOW_2);
             rule__MultiChoice__NumOptionsPerRowAssignment_10_1();
@@ -16584,14 +16686,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_11__0"
-    // InternalJoveNotes.g:6088:1: rule__MultiChoice__Group_11__0 : rule__MultiChoice__Group_11__0__Impl rule__MultiChoice__Group_11__1 ;
+    // InternalJoveNotes.g:6122:1: rule__MultiChoice__Group_11__0 : rule__MultiChoice__Group_11__0__Impl rule__MultiChoice__Group_11__1 ;
     public final void rule__MultiChoice__Group_11__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6092:1: ( rule__MultiChoice__Group_11__0__Impl rule__MultiChoice__Group_11__1 )
-            // InternalJoveNotes.g:6093:2: rule__MultiChoice__Group_11__0__Impl rule__MultiChoice__Group_11__1
+            // InternalJoveNotes.g:6126:1: ( rule__MultiChoice__Group_11__0__Impl rule__MultiChoice__Group_11__1 )
+            // InternalJoveNotes.g:6127:2: rule__MultiChoice__Group_11__0__Impl rule__MultiChoice__Group_11__1
             {
             pushFollow(FOLLOW_7);
             rule__MultiChoice__Group_11__0__Impl();
@@ -16622,17 +16724,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_11__0__Impl"
-    // InternalJoveNotes.g:6100:1: rule__MultiChoice__Group_11__0__Impl : ( '@explanation' ) ;
+    // InternalJoveNotes.g:6134:1: rule__MultiChoice__Group_11__0__Impl : ( '@explanation' ) ;
     public final void rule__MultiChoice__Group_11__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6104:1: ( ( '@explanation' ) )
-            // InternalJoveNotes.g:6105:1: ( '@explanation' )
+            // InternalJoveNotes.g:6138:1: ( ( '@explanation' ) )
+            // InternalJoveNotes.g:6139:1: ( '@explanation' )
             {
-            // InternalJoveNotes.g:6105:1: ( '@explanation' )
-            // InternalJoveNotes.g:6106:1: '@explanation'
+            // InternalJoveNotes.g:6139:1: ( '@explanation' )
+            // InternalJoveNotes.g:6140:1: '@explanation'
             {
              before(grammarAccess.getMultiChoiceAccess().getExplanationKeyword_11_0()); 
             match(input,46,FOLLOW_2); 
@@ -16659,14 +16761,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_11__1"
-    // InternalJoveNotes.g:6119:1: rule__MultiChoice__Group_11__1 : rule__MultiChoice__Group_11__1__Impl ;
+    // InternalJoveNotes.g:6153:1: rule__MultiChoice__Group_11__1 : rule__MultiChoice__Group_11__1__Impl ;
     public final void rule__MultiChoice__Group_11__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6123:1: ( rule__MultiChoice__Group_11__1__Impl )
-            // InternalJoveNotes.g:6124:2: rule__MultiChoice__Group_11__1__Impl
+            // InternalJoveNotes.g:6157:1: ( rule__MultiChoice__Group_11__1__Impl )
+            // InternalJoveNotes.g:6158:2: rule__MultiChoice__Group_11__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MultiChoice__Group_11__1__Impl();
@@ -16692,21 +16794,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__Group_11__1__Impl"
-    // InternalJoveNotes.g:6130:1: rule__MultiChoice__Group_11__1__Impl : ( ( rule__MultiChoice__ExplanationAssignment_11_1 ) ) ;
+    // InternalJoveNotes.g:6164:1: rule__MultiChoice__Group_11__1__Impl : ( ( rule__MultiChoice__ExplanationAssignment_11_1 ) ) ;
     public final void rule__MultiChoice__Group_11__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6134:1: ( ( ( rule__MultiChoice__ExplanationAssignment_11_1 ) ) )
-            // InternalJoveNotes.g:6135:1: ( ( rule__MultiChoice__ExplanationAssignment_11_1 ) )
+            // InternalJoveNotes.g:6168:1: ( ( ( rule__MultiChoice__ExplanationAssignment_11_1 ) ) )
+            // InternalJoveNotes.g:6169:1: ( ( rule__MultiChoice__ExplanationAssignment_11_1 ) )
             {
-            // InternalJoveNotes.g:6135:1: ( ( rule__MultiChoice__ExplanationAssignment_11_1 ) )
-            // InternalJoveNotes.g:6136:1: ( rule__MultiChoice__ExplanationAssignment_11_1 )
+            // InternalJoveNotes.g:6169:1: ( ( rule__MultiChoice__ExplanationAssignment_11_1 ) )
+            // InternalJoveNotes.g:6170:1: ( rule__MultiChoice__ExplanationAssignment_11_1 )
             {
              before(grammarAccess.getMultiChoiceAccess().getExplanationAssignment_11_1()); 
-            // InternalJoveNotes.g:6137:1: ( rule__MultiChoice__ExplanationAssignment_11_1 )
-            // InternalJoveNotes.g:6137:2: rule__MultiChoice__ExplanationAssignment_11_1
+            // InternalJoveNotes.g:6171:1: ( rule__MultiChoice__ExplanationAssignment_11_1 )
+            // InternalJoveNotes.g:6171:2: rule__MultiChoice__ExplanationAssignment_11_1
             {
             pushFollow(FOLLOW_2);
             rule__MultiChoice__ExplanationAssignment_11_1();
@@ -16739,14 +16841,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group__0"
-    // InternalJoveNotes.g:6151:1: rule__Exercise__Group__0 : rule__Exercise__Group__0__Impl rule__Exercise__Group__1 ;
+    // InternalJoveNotes.g:6185:1: rule__Exercise__Group__0 : rule__Exercise__Group__0__Impl rule__Exercise__Group__1 ;
     public final void rule__Exercise__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6155:1: ( rule__Exercise__Group__0__Impl rule__Exercise__Group__1 )
-            // InternalJoveNotes.g:6156:2: rule__Exercise__Group__0__Impl rule__Exercise__Group__1
+            // InternalJoveNotes.g:6189:1: ( rule__Exercise__Group__0__Impl rule__Exercise__Group__1 )
+            // InternalJoveNotes.g:6190:2: rule__Exercise__Group__0__Impl rule__Exercise__Group__1
             {
             pushFollow(FOLLOW_39);
             rule__Exercise__Group__0__Impl();
@@ -16777,17 +16879,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group__0__Impl"
-    // InternalJoveNotes.g:6163:1: rule__Exercise__Group__0__Impl : ( '@exercise' ) ;
+    // InternalJoveNotes.g:6197:1: rule__Exercise__Group__0__Impl : ( '@exercise' ) ;
     public final void rule__Exercise__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6167:1: ( ( '@exercise' ) )
-            // InternalJoveNotes.g:6168:1: ( '@exercise' )
+            // InternalJoveNotes.g:6201:1: ( ( '@exercise' ) )
+            // InternalJoveNotes.g:6202:1: ( '@exercise' )
             {
-            // InternalJoveNotes.g:6168:1: ( '@exercise' )
-            // InternalJoveNotes.g:6169:1: '@exercise'
+            // InternalJoveNotes.g:6202:1: ( '@exercise' )
+            // InternalJoveNotes.g:6203:1: '@exercise'
             {
              before(grammarAccess.getExerciseAccess().getExerciseKeyword_0()); 
             match(input,47,FOLLOW_2); 
@@ -16814,14 +16916,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group__1"
-    // InternalJoveNotes.g:6182:1: rule__Exercise__Group__1 : rule__Exercise__Group__1__Impl rule__Exercise__Group__2 ;
+    // InternalJoveNotes.g:6216:1: rule__Exercise__Group__1 : rule__Exercise__Group__1__Impl rule__Exercise__Group__2 ;
     public final void rule__Exercise__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6186:1: ( rule__Exercise__Group__1__Impl rule__Exercise__Group__2 )
-            // InternalJoveNotes.g:6187:2: rule__Exercise__Group__1__Impl rule__Exercise__Group__2
+            // InternalJoveNotes.g:6220:1: ( rule__Exercise__Group__1__Impl rule__Exercise__Group__2 )
+            // InternalJoveNotes.g:6221:2: rule__Exercise__Group__1__Impl rule__Exercise__Group__2
             {
             pushFollow(FOLLOW_39);
             rule__Exercise__Group__1__Impl();
@@ -16852,29 +16954,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group__1__Impl"
-    // InternalJoveNotes.g:6194:1: rule__Exercise__Group__1__Impl : ( ( rule__Exercise__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:6228:1: rule__Exercise__Group__1__Impl : ( ( rule__Exercise__HideFromViewAssignment_1 )? ) ;
     public final void rule__Exercise__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6198:1: ( ( ( rule__Exercise__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:6199:1: ( ( rule__Exercise__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:6232:1: ( ( ( rule__Exercise__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:6233:1: ( ( rule__Exercise__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:6199:1: ( ( rule__Exercise__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:6200:1: ( rule__Exercise__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:6233:1: ( ( rule__Exercise__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:6234:1: ( rule__Exercise__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getExerciseAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:6201:1: ( rule__Exercise__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:6235:1: ( rule__Exercise__HideFromViewAssignment_1 )?
             int alt52=2;
             int LA52_0 = input.LA(1);
 
-            if ( (LA52_0==59) ) {
+            if ( (LA52_0==60) ) {
                 alt52=1;
             }
             switch (alt52) {
                 case 1 :
-                    // InternalJoveNotes.g:6201:2: rule__Exercise__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:6235:2: rule__Exercise__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Exercise__HideFromViewAssignment_1();
@@ -16910,14 +17012,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group__2"
-    // InternalJoveNotes.g:6211:1: rule__Exercise__Group__2 : rule__Exercise__Group__2__Impl rule__Exercise__Group__3 ;
+    // InternalJoveNotes.g:6245:1: rule__Exercise__Group__2 : rule__Exercise__Group__2__Impl rule__Exercise__Group__3 ;
     public final void rule__Exercise__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6215:1: ( rule__Exercise__Group__2__Impl rule__Exercise__Group__3 )
-            // InternalJoveNotes.g:6216:2: rule__Exercise__Group__2__Impl rule__Exercise__Group__3
+            // InternalJoveNotes.g:6249:1: ( rule__Exercise__Group__2__Impl rule__Exercise__Group__3 )
+            // InternalJoveNotes.g:6250:2: rule__Exercise__Group__2__Impl rule__Exercise__Group__3
             {
             pushFollow(FOLLOW_7);
             rule__Exercise__Group__2__Impl();
@@ -16948,21 +17050,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group__2__Impl"
-    // InternalJoveNotes.g:6223:1: rule__Exercise__Group__2__Impl : ( ( rule__Exercise__Group_2__0 ) ) ;
+    // InternalJoveNotes.g:6257:1: rule__Exercise__Group__2__Impl : ( ( rule__Exercise__Group_2__0 ) ) ;
     public final void rule__Exercise__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6227:1: ( ( ( rule__Exercise__Group_2__0 ) ) )
-            // InternalJoveNotes.g:6228:1: ( ( rule__Exercise__Group_2__0 ) )
+            // InternalJoveNotes.g:6261:1: ( ( ( rule__Exercise__Group_2__0 ) ) )
+            // InternalJoveNotes.g:6262:1: ( ( rule__Exercise__Group_2__0 ) )
             {
-            // InternalJoveNotes.g:6228:1: ( ( rule__Exercise__Group_2__0 ) )
-            // InternalJoveNotes.g:6229:1: ( rule__Exercise__Group_2__0 )
+            // InternalJoveNotes.g:6262:1: ( ( rule__Exercise__Group_2__0 ) )
+            // InternalJoveNotes.g:6263:1: ( rule__Exercise__Group_2__0 )
             {
              before(grammarAccess.getExerciseAccess().getGroup_2()); 
-            // InternalJoveNotes.g:6230:1: ( rule__Exercise__Group_2__0 )
-            // InternalJoveNotes.g:6230:2: rule__Exercise__Group_2__0
+            // InternalJoveNotes.g:6264:1: ( rule__Exercise__Group_2__0 )
+            // InternalJoveNotes.g:6264:2: rule__Exercise__Group_2__0
             {
             pushFollow(FOLLOW_2);
             rule__Exercise__Group_2__0();
@@ -16995,14 +17097,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group__3"
-    // InternalJoveNotes.g:6240:1: rule__Exercise__Group__3 : rule__Exercise__Group__3__Impl rule__Exercise__Group__4 ;
+    // InternalJoveNotes.g:6274:1: rule__Exercise__Group__3 : rule__Exercise__Group__3__Impl rule__Exercise__Group__4 ;
     public final void rule__Exercise__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6244:1: ( rule__Exercise__Group__3__Impl rule__Exercise__Group__4 )
-            // InternalJoveNotes.g:6245:2: rule__Exercise__Group__3__Impl rule__Exercise__Group__4
+            // InternalJoveNotes.g:6278:1: ( rule__Exercise__Group__3__Impl rule__Exercise__Group__4 )
+            // InternalJoveNotes.g:6279:2: rule__Exercise__Group__3__Impl rule__Exercise__Group__4
             {
             pushFollow(FOLLOW_40);
             rule__Exercise__Group__3__Impl();
@@ -17033,21 +17135,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group__3__Impl"
-    // InternalJoveNotes.g:6252:1: rule__Exercise__Group__3__Impl : ( ( rule__Exercise__QuestionAssignment_3 ) ) ;
+    // InternalJoveNotes.g:6286:1: rule__Exercise__Group__3__Impl : ( ( rule__Exercise__QuestionAssignment_3 ) ) ;
     public final void rule__Exercise__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6256:1: ( ( ( rule__Exercise__QuestionAssignment_3 ) ) )
-            // InternalJoveNotes.g:6257:1: ( ( rule__Exercise__QuestionAssignment_3 ) )
+            // InternalJoveNotes.g:6290:1: ( ( ( rule__Exercise__QuestionAssignment_3 ) ) )
+            // InternalJoveNotes.g:6291:1: ( ( rule__Exercise__QuestionAssignment_3 ) )
             {
-            // InternalJoveNotes.g:6257:1: ( ( rule__Exercise__QuestionAssignment_3 ) )
-            // InternalJoveNotes.g:6258:1: ( rule__Exercise__QuestionAssignment_3 )
+            // InternalJoveNotes.g:6291:1: ( ( rule__Exercise__QuestionAssignment_3 ) )
+            // InternalJoveNotes.g:6292:1: ( rule__Exercise__QuestionAssignment_3 )
             {
              before(grammarAccess.getExerciseAccess().getQuestionAssignment_3()); 
-            // InternalJoveNotes.g:6259:1: ( rule__Exercise__QuestionAssignment_3 )
-            // InternalJoveNotes.g:6259:2: rule__Exercise__QuestionAssignment_3
+            // InternalJoveNotes.g:6293:1: ( rule__Exercise__QuestionAssignment_3 )
+            // InternalJoveNotes.g:6293:2: rule__Exercise__QuestionAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__Exercise__QuestionAssignment_3();
@@ -17080,14 +17182,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group__4"
-    // InternalJoveNotes.g:6269:1: rule__Exercise__Group__4 : rule__Exercise__Group__4__Impl rule__Exercise__Group__5 ;
+    // InternalJoveNotes.g:6303:1: rule__Exercise__Group__4 : rule__Exercise__Group__4__Impl rule__Exercise__Group__5 ;
     public final void rule__Exercise__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6273:1: ( rule__Exercise__Group__4__Impl rule__Exercise__Group__5 )
-            // InternalJoveNotes.g:6274:2: rule__Exercise__Group__4__Impl rule__Exercise__Group__5
+            // InternalJoveNotes.g:6307:1: ( rule__Exercise__Group__4__Impl rule__Exercise__Group__5 )
+            // InternalJoveNotes.g:6308:2: rule__Exercise__Group__4__Impl rule__Exercise__Group__5
             {
             pushFollow(FOLLOW_40);
             rule__Exercise__Group__4__Impl();
@@ -17118,20 +17220,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group__4__Impl"
-    // InternalJoveNotes.g:6281:1: rule__Exercise__Group__4__Impl : ( ( rule__Exercise__Group_4__0 )? ) ;
+    // InternalJoveNotes.g:6315:1: rule__Exercise__Group__4__Impl : ( ( rule__Exercise__Group_4__0 )? ) ;
     public final void rule__Exercise__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6285:1: ( ( ( rule__Exercise__Group_4__0 )? ) )
-            // InternalJoveNotes.g:6286:1: ( ( rule__Exercise__Group_4__0 )? )
+            // InternalJoveNotes.g:6319:1: ( ( ( rule__Exercise__Group_4__0 )? ) )
+            // InternalJoveNotes.g:6320:1: ( ( rule__Exercise__Group_4__0 )? )
             {
-            // InternalJoveNotes.g:6286:1: ( ( rule__Exercise__Group_4__0 )? )
-            // InternalJoveNotes.g:6287:1: ( rule__Exercise__Group_4__0 )?
+            // InternalJoveNotes.g:6320:1: ( ( rule__Exercise__Group_4__0 )? )
+            // InternalJoveNotes.g:6321:1: ( rule__Exercise__Group_4__0 )?
             {
              before(grammarAccess.getExerciseAccess().getGroup_4()); 
-            // InternalJoveNotes.g:6288:1: ( rule__Exercise__Group_4__0 )?
+            // InternalJoveNotes.g:6322:1: ( rule__Exercise__Group_4__0 )?
             int alt53=2;
             int LA53_0 = input.LA(1);
 
@@ -17140,7 +17242,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
             }
             switch (alt53) {
                 case 1 :
-                    // InternalJoveNotes.g:6288:2: rule__Exercise__Group_4__0
+                    // InternalJoveNotes.g:6322:2: rule__Exercise__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Exercise__Group_4__0();
@@ -17176,14 +17278,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group__5"
-    // InternalJoveNotes.g:6298:1: rule__Exercise__Group__5 : rule__Exercise__Group__5__Impl ;
+    // InternalJoveNotes.g:6332:1: rule__Exercise__Group__5 : rule__Exercise__Group__5__Impl ;
     public final void rule__Exercise__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6302:1: ( rule__Exercise__Group__5__Impl )
-            // InternalJoveNotes.g:6303:2: rule__Exercise__Group__5__Impl
+            // InternalJoveNotes.g:6336:1: ( rule__Exercise__Group__5__Impl )
+            // InternalJoveNotes.g:6337:2: rule__Exercise__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Exercise__Group__5__Impl();
@@ -17209,21 +17311,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group__5__Impl"
-    // InternalJoveNotes.g:6309:1: rule__Exercise__Group__5__Impl : ( ( rule__Exercise__Group_5__0 ) ) ;
+    // InternalJoveNotes.g:6343:1: rule__Exercise__Group__5__Impl : ( ( rule__Exercise__Group_5__0 ) ) ;
     public final void rule__Exercise__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6313:1: ( ( ( rule__Exercise__Group_5__0 ) ) )
-            // InternalJoveNotes.g:6314:1: ( ( rule__Exercise__Group_5__0 ) )
+            // InternalJoveNotes.g:6347:1: ( ( ( rule__Exercise__Group_5__0 ) ) )
+            // InternalJoveNotes.g:6348:1: ( ( rule__Exercise__Group_5__0 ) )
             {
-            // InternalJoveNotes.g:6314:1: ( ( rule__Exercise__Group_5__0 ) )
-            // InternalJoveNotes.g:6315:1: ( rule__Exercise__Group_5__0 )
+            // InternalJoveNotes.g:6348:1: ( ( rule__Exercise__Group_5__0 ) )
+            // InternalJoveNotes.g:6349:1: ( rule__Exercise__Group_5__0 )
             {
              before(grammarAccess.getExerciseAccess().getGroup_5()); 
-            // InternalJoveNotes.g:6316:1: ( rule__Exercise__Group_5__0 )
-            // InternalJoveNotes.g:6316:2: rule__Exercise__Group_5__0
+            // InternalJoveNotes.g:6350:1: ( rule__Exercise__Group_5__0 )
+            // InternalJoveNotes.g:6350:2: rule__Exercise__Group_5__0
             {
             pushFollow(FOLLOW_2);
             rule__Exercise__Group_5__0();
@@ -17256,14 +17358,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_2__0"
-    // InternalJoveNotes.g:6338:1: rule__Exercise__Group_2__0 : rule__Exercise__Group_2__0__Impl rule__Exercise__Group_2__1 ;
+    // InternalJoveNotes.g:6372:1: rule__Exercise__Group_2__0 : rule__Exercise__Group_2__0__Impl rule__Exercise__Group_2__1 ;
     public final void rule__Exercise__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6342:1: ( rule__Exercise__Group_2__0__Impl rule__Exercise__Group_2__1 )
-            // InternalJoveNotes.g:6343:2: rule__Exercise__Group_2__0__Impl rule__Exercise__Group_2__1
+            // InternalJoveNotes.g:6376:1: ( rule__Exercise__Group_2__0__Impl rule__Exercise__Group_2__1 )
+            // InternalJoveNotes.g:6377:2: rule__Exercise__Group_2__0__Impl rule__Exercise__Group_2__1
             {
             pushFollow(FOLLOW_19);
             rule__Exercise__Group_2__0__Impl();
@@ -17294,17 +17396,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_2__0__Impl"
-    // InternalJoveNotes.g:6350:1: rule__Exercise__Group_2__0__Impl : ( 'marks' ) ;
+    // InternalJoveNotes.g:6384:1: rule__Exercise__Group_2__0__Impl : ( 'marks' ) ;
     public final void rule__Exercise__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6354:1: ( ( 'marks' ) )
-            // InternalJoveNotes.g:6355:1: ( 'marks' )
+            // InternalJoveNotes.g:6388:1: ( ( 'marks' ) )
+            // InternalJoveNotes.g:6389:1: ( 'marks' )
             {
-            // InternalJoveNotes.g:6355:1: ( 'marks' )
-            // InternalJoveNotes.g:6356:1: 'marks'
+            // InternalJoveNotes.g:6389:1: ( 'marks' )
+            // InternalJoveNotes.g:6390:1: 'marks'
             {
              before(grammarAccess.getExerciseAccess().getMarksKeyword_2_0()); 
             match(input,48,FOLLOW_2); 
@@ -17331,14 +17433,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_2__1"
-    // InternalJoveNotes.g:6369:1: rule__Exercise__Group_2__1 : rule__Exercise__Group_2__1__Impl rule__Exercise__Group_2__2 ;
+    // InternalJoveNotes.g:6403:1: rule__Exercise__Group_2__1 : rule__Exercise__Group_2__1__Impl rule__Exercise__Group_2__2 ;
     public final void rule__Exercise__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6373:1: ( rule__Exercise__Group_2__1__Impl rule__Exercise__Group_2__2 )
-            // InternalJoveNotes.g:6374:2: rule__Exercise__Group_2__1__Impl rule__Exercise__Group_2__2
+            // InternalJoveNotes.g:6407:1: ( rule__Exercise__Group_2__1__Impl rule__Exercise__Group_2__2 )
+            // InternalJoveNotes.g:6408:2: rule__Exercise__Group_2__1__Impl rule__Exercise__Group_2__2
             {
             pushFollow(FOLLOW_9);
             rule__Exercise__Group_2__1__Impl();
@@ -17369,17 +17471,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_2__1__Impl"
-    // InternalJoveNotes.g:6381:1: rule__Exercise__Group_2__1__Impl : ( '=' ) ;
+    // InternalJoveNotes.g:6415:1: rule__Exercise__Group_2__1__Impl : ( '=' ) ;
     public final void rule__Exercise__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6385:1: ( ( '=' ) )
-            // InternalJoveNotes.g:6386:1: ( '=' )
+            // InternalJoveNotes.g:6419:1: ( ( '=' ) )
+            // InternalJoveNotes.g:6420:1: ( '=' )
             {
-            // InternalJoveNotes.g:6386:1: ( '=' )
-            // InternalJoveNotes.g:6387:1: '='
+            // InternalJoveNotes.g:6420:1: ( '=' )
+            // InternalJoveNotes.g:6421:1: '='
             {
              before(grammarAccess.getExerciseAccess().getEqualsSignKeyword_2_1()); 
             match(input,25,FOLLOW_2); 
@@ -17406,14 +17508,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_2__2"
-    // InternalJoveNotes.g:6400:1: rule__Exercise__Group_2__2 : rule__Exercise__Group_2__2__Impl ;
+    // InternalJoveNotes.g:6434:1: rule__Exercise__Group_2__2 : rule__Exercise__Group_2__2__Impl ;
     public final void rule__Exercise__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6404:1: ( rule__Exercise__Group_2__2__Impl )
-            // InternalJoveNotes.g:6405:2: rule__Exercise__Group_2__2__Impl
+            // InternalJoveNotes.g:6438:1: ( rule__Exercise__Group_2__2__Impl )
+            // InternalJoveNotes.g:6439:2: rule__Exercise__Group_2__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Exercise__Group_2__2__Impl();
@@ -17439,21 +17541,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_2__2__Impl"
-    // InternalJoveNotes.g:6411:1: rule__Exercise__Group_2__2__Impl : ( ( rule__Exercise__MarksAssignment_2_2 ) ) ;
+    // InternalJoveNotes.g:6445:1: rule__Exercise__Group_2__2__Impl : ( ( rule__Exercise__MarksAssignment_2_2 ) ) ;
     public final void rule__Exercise__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6415:1: ( ( ( rule__Exercise__MarksAssignment_2_2 ) ) )
-            // InternalJoveNotes.g:6416:1: ( ( rule__Exercise__MarksAssignment_2_2 ) )
+            // InternalJoveNotes.g:6449:1: ( ( ( rule__Exercise__MarksAssignment_2_2 ) ) )
+            // InternalJoveNotes.g:6450:1: ( ( rule__Exercise__MarksAssignment_2_2 ) )
             {
-            // InternalJoveNotes.g:6416:1: ( ( rule__Exercise__MarksAssignment_2_2 ) )
-            // InternalJoveNotes.g:6417:1: ( rule__Exercise__MarksAssignment_2_2 )
+            // InternalJoveNotes.g:6450:1: ( ( rule__Exercise__MarksAssignment_2_2 ) )
+            // InternalJoveNotes.g:6451:1: ( rule__Exercise__MarksAssignment_2_2 )
             {
              before(grammarAccess.getExerciseAccess().getMarksAssignment_2_2()); 
-            // InternalJoveNotes.g:6418:1: ( rule__Exercise__MarksAssignment_2_2 )
-            // InternalJoveNotes.g:6418:2: rule__Exercise__MarksAssignment_2_2
+            // InternalJoveNotes.g:6452:1: ( rule__Exercise__MarksAssignment_2_2 )
+            // InternalJoveNotes.g:6452:2: rule__Exercise__MarksAssignment_2_2
             {
             pushFollow(FOLLOW_2);
             rule__Exercise__MarksAssignment_2_2();
@@ -17486,14 +17588,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_4__0"
-    // InternalJoveNotes.g:6434:1: rule__Exercise__Group_4__0 : rule__Exercise__Group_4__0__Impl rule__Exercise__Group_4__1 ;
+    // InternalJoveNotes.g:6468:1: rule__Exercise__Group_4__0 : rule__Exercise__Group_4__0__Impl rule__Exercise__Group_4__1 ;
     public final void rule__Exercise__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6438:1: ( rule__Exercise__Group_4__0__Impl rule__Exercise__Group_4__1 )
-            // InternalJoveNotes.g:6439:2: rule__Exercise__Group_4__0__Impl rule__Exercise__Group_4__1
+            // InternalJoveNotes.g:6472:1: ( rule__Exercise__Group_4__0__Impl rule__Exercise__Group_4__1 )
+            // InternalJoveNotes.g:6473:2: rule__Exercise__Group_4__0__Impl rule__Exercise__Group_4__1
             {
             pushFollow(FOLLOW_20);
             rule__Exercise__Group_4__0__Impl();
@@ -17524,17 +17626,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_4__0__Impl"
-    // InternalJoveNotes.g:6446:1: rule__Exercise__Group_4__0__Impl : ( 'hints' ) ;
+    // InternalJoveNotes.g:6480:1: rule__Exercise__Group_4__0__Impl : ( 'hints' ) ;
     public final void rule__Exercise__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6450:1: ( ( 'hints' ) )
-            // InternalJoveNotes.g:6451:1: ( 'hints' )
+            // InternalJoveNotes.g:6484:1: ( ( 'hints' ) )
+            // InternalJoveNotes.g:6485:1: ( 'hints' )
             {
-            // InternalJoveNotes.g:6451:1: ( 'hints' )
-            // InternalJoveNotes.g:6452:1: 'hints'
+            // InternalJoveNotes.g:6485:1: ( 'hints' )
+            // InternalJoveNotes.g:6486:1: 'hints'
             {
              before(grammarAccess.getExerciseAccess().getHintsKeyword_4_0()); 
             match(input,49,FOLLOW_2); 
@@ -17561,14 +17663,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_4__1"
-    // InternalJoveNotes.g:6465:1: rule__Exercise__Group_4__1 : rule__Exercise__Group_4__1__Impl rule__Exercise__Group_4__2 ;
+    // InternalJoveNotes.g:6499:1: rule__Exercise__Group_4__1 : rule__Exercise__Group_4__1__Impl rule__Exercise__Group_4__2 ;
     public final void rule__Exercise__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6469:1: ( rule__Exercise__Group_4__1__Impl rule__Exercise__Group_4__2 )
-            // InternalJoveNotes.g:6470:2: rule__Exercise__Group_4__1__Impl rule__Exercise__Group_4__2
+            // InternalJoveNotes.g:6503:1: ( rule__Exercise__Group_4__1__Impl rule__Exercise__Group_4__2 )
+            // InternalJoveNotes.g:6504:2: rule__Exercise__Group_4__1__Impl rule__Exercise__Group_4__2
             {
             pushFollow(FOLLOW_7);
             rule__Exercise__Group_4__1__Impl();
@@ -17599,17 +17701,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_4__1__Impl"
-    // InternalJoveNotes.g:6477:1: rule__Exercise__Group_4__1__Impl : ( '{' ) ;
+    // InternalJoveNotes.g:6511:1: rule__Exercise__Group_4__1__Impl : ( '{' ) ;
     public final void rule__Exercise__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6481:1: ( ( '{' ) )
-            // InternalJoveNotes.g:6482:1: ( '{' )
+            // InternalJoveNotes.g:6515:1: ( ( '{' ) )
+            // InternalJoveNotes.g:6516:1: ( '{' )
             {
-            // InternalJoveNotes.g:6482:1: ( '{' )
-            // InternalJoveNotes.g:6483:1: '{'
+            // InternalJoveNotes.g:6516:1: ( '{' )
+            // InternalJoveNotes.g:6517:1: '{'
             {
              before(grammarAccess.getExerciseAccess().getLeftCurlyBracketKeyword_4_1()); 
             match(input,23,FOLLOW_2); 
@@ -17636,14 +17738,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_4__2"
-    // InternalJoveNotes.g:6496:1: rule__Exercise__Group_4__2 : rule__Exercise__Group_4__2__Impl rule__Exercise__Group_4__3 ;
+    // InternalJoveNotes.g:6530:1: rule__Exercise__Group_4__2 : rule__Exercise__Group_4__2__Impl rule__Exercise__Group_4__3 ;
     public final void rule__Exercise__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6500:1: ( rule__Exercise__Group_4__2__Impl rule__Exercise__Group_4__3 )
-            // InternalJoveNotes.g:6501:2: rule__Exercise__Group_4__2__Impl rule__Exercise__Group_4__3
+            // InternalJoveNotes.g:6534:1: ( rule__Exercise__Group_4__2__Impl rule__Exercise__Group_4__3 )
+            // InternalJoveNotes.g:6535:2: rule__Exercise__Group_4__2__Impl rule__Exercise__Group_4__3
             {
             pushFollow(FOLLOW_27);
             rule__Exercise__Group_4__2__Impl();
@@ -17674,24 +17776,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_4__2__Impl"
-    // InternalJoveNotes.g:6508:1: rule__Exercise__Group_4__2__Impl : ( ( ( rule__Exercise__HintsAssignment_4_2 ) ) ( ( rule__Exercise__HintsAssignment_4_2 )* ) ) ;
+    // InternalJoveNotes.g:6542:1: rule__Exercise__Group_4__2__Impl : ( ( ( rule__Exercise__HintsAssignment_4_2 ) ) ( ( rule__Exercise__HintsAssignment_4_2 )* ) ) ;
     public final void rule__Exercise__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6512:1: ( ( ( ( rule__Exercise__HintsAssignment_4_2 ) ) ( ( rule__Exercise__HintsAssignment_4_2 )* ) ) )
-            // InternalJoveNotes.g:6513:1: ( ( ( rule__Exercise__HintsAssignment_4_2 ) ) ( ( rule__Exercise__HintsAssignment_4_2 )* ) )
+            // InternalJoveNotes.g:6546:1: ( ( ( ( rule__Exercise__HintsAssignment_4_2 ) ) ( ( rule__Exercise__HintsAssignment_4_2 )* ) ) )
+            // InternalJoveNotes.g:6547:1: ( ( ( rule__Exercise__HintsAssignment_4_2 ) ) ( ( rule__Exercise__HintsAssignment_4_2 )* ) )
             {
-            // InternalJoveNotes.g:6513:1: ( ( ( rule__Exercise__HintsAssignment_4_2 ) ) ( ( rule__Exercise__HintsAssignment_4_2 )* ) )
-            // InternalJoveNotes.g:6514:1: ( ( rule__Exercise__HintsAssignment_4_2 ) ) ( ( rule__Exercise__HintsAssignment_4_2 )* )
+            // InternalJoveNotes.g:6547:1: ( ( ( rule__Exercise__HintsAssignment_4_2 ) ) ( ( rule__Exercise__HintsAssignment_4_2 )* ) )
+            // InternalJoveNotes.g:6548:1: ( ( rule__Exercise__HintsAssignment_4_2 ) ) ( ( rule__Exercise__HintsAssignment_4_2 )* )
             {
-            // InternalJoveNotes.g:6514:1: ( ( rule__Exercise__HintsAssignment_4_2 ) )
-            // InternalJoveNotes.g:6515:1: ( rule__Exercise__HintsAssignment_4_2 )
+            // InternalJoveNotes.g:6548:1: ( ( rule__Exercise__HintsAssignment_4_2 ) )
+            // InternalJoveNotes.g:6549:1: ( rule__Exercise__HintsAssignment_4_2 )
             {
              before(grammarAccess.getExerciseAccess().getHintsAssignment_4_2()); 
-            // InternalJoveNotes.g:6516:1: ( rule__Exercise__HintsAssignment_4_2 )
-            // InternalJoveNotes.g:6516:2: rule__Exercise__HintsAssignment_4_2
+            // InternalJoveNotes.g:6550:1: ( rule__Exercise__HintsAssignment_4_2 )
+            // InternalJoveNotes.g:6550:2: rule__Exercise__HintsAssignment_4_2
             {
             pushFollow(FOLLOW_16);
             rule__Exercise__HintsAssignment_4_2();
@@ -17705,11 +17807,11 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
             }
 
-            // InternalJoveNotes.g:6519:1: ( ( rule__Exercise__HintsAssignment_4_2 )* )
-            // InternalJoveNotes.g:6520:1: ( rule__Exercise__HintsAssignment_4_2 )*
+            // InternalJoveNotes.g:6553:1: ( ( rule__Exercise__HintsAssignment_4_2 )* )
+            // InternalJoveNotes.g:6554:1: ( rule__Exercise__HintsAssignment_4_2 )*
             {
              before(grammarAccess.getExerciseAccess().getHintsAssignment_4_2()); 
-            // InternalJoveNotes.g:6521:1: ( rule__Exercise__HintsAssignment_4_2 )*
+            // InternalJoveNotes.g:6555:1: ( rule__Exercise__HintsAssignment_4_2 )*
             loop54:
             do {
                 int alt54=2;
@@ -17722,7 +17824,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
                 switch (alt54) {
             	case 1 :
-            	    // InternalJoveNotes.g:6521:2: rule__Exercise__HintsAssignment_4_2
+            	    // InternalJoveNotes.g:6555:2: rule__Exercise__HintsAssignment_4_2
             	    {
             	    pushFollow(FOLLOW_16);
             	    rule__Exercise__HintsAssignment_4_2();
@@ -17764,14 +17866,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_4__3"
-    // InternalJoveNotes.g:6532:1: rule__Exercise__Group_4__3 : rule__Exercise__Group_4__3__Impl ;
+    // InternalJoveNotes.g:6566:1: rule__Exercise__Group_4__3 : rule__Exercise__Group_4__3__Impl ;
     public final void rule__Exercise__Group_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6536:1: ( rule__Exercise__Group_4__3__Impl )
-            // InternalJoveNotes.g:6537:2: rule__Exercise__Group_4__3__Impl
+            // InternalJoveNotes.g:6570:1: ( rule__Exercise__Group_4__3__Impl )
+            // InternalJoveNotes.g:6571:2: rule__Exercise__Group_4__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Exercise__Group_4__3__Impl();
@@ -17797,17 +17899,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_4__3__Impl"
-    // InternalJoveNotes.g:6543:1: rule__Exercise__Group_4__3__Impl : ( '}' ) ;
+    // InternalJoveNotes.g:6577:1: rule__Exercise__Group_4__3__Impl : ( '}' ) ;
     public final void rule__Exercise__Group_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6547:1: ( ( '}' ) )
-            // InternalJoveNotes.g:6548:1: ( '}' )
+            // InternalJoveNotes.g:6581:1: ( ( '}' ) )
+            // InternalJoveNotes.g:6582:1: ( '}' )
             {
-            // InternalJoveNotes.g:6548:1: ( '}' )
-            // InternalJoveNotes.g:6549:1: '}'
+            // InternalJoveNotes.g:6582:1: ( '}' )
+            // InternalJoveNotes.g:6583:1: '}'
             {
              before(grammarAccess.getExerciseAccess().getRightCurlyBracketKeyword_4_3()); 
             match(input,24,FOLLOW_2); 
@@ -17834,14 +17936,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_5__0"
-    // InternalJoveNotes.g:6570:1: rule__Exercise__Group_5__0 : rule__Exercise__Group_5__0__Impl rule__Exercise__Group_5__1 ;
+    // InternalJoveNotes.g:6604:1: rule__Exercise__Group_5__0 : rule__Exercise__Group_5__0__Impl rule__Exercise__Group_5__1 ;
     public final void rule__Exercise__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6574:1: ( rule__Exercise__Group_5__0__Impl rule__Exercise__Group_5__1 )
-            // InternalJoveNotes.g:6575:2: rule__Exercise__Group_5__0__Impl rule__Exercise__Group_5__1
+            // InternalJoveNotes.g:6608:1: ( rule__Exercise__Group_5__0__Impl rule__Exercise__Group_5__1 )
+            // InternalJoveNotes.g:6609:2: rule__Exercise__Group_5__0__Impl rule__Exercise__Group_5__1
             {
             pushFollow(FOLLOW_7);
             rule__Exercise__Group_5__0__Impl();
@@ -17872,17 +17974,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_5__0__Impl"
-    // InternalJoveNotes.g:6582:1: rule__Exercise__Group_5__0__Impl : ( 'answer' ) ;
+    // InternalJoveNotes.g:6616:1: rule__Exercise__Group_5__0__Impl : ( 'answer' ) ;
     public final void rule__Exercise__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6586:1: ( ( 'answer' ) )
-            // InternalJoveNotes.g:6587:1: ( 'answer' )
+            // InternalJoveNotes.g:6620:1: ( ( 'answer' ) )
+            // InternalJoveNotes.g:6621:1: ( 'answer' )
             {
-            // InternalJoveNotes.g:6587:1: ( 'answer' )
-            // InternalJoveNotes.g:6588:1: 'answer'
+            // InternalJoveNotes.g:6621:1: ( 'answer' )
+            // InternalJoveNotes.g:6622:1: 'answer'
             {
              before(grammarAccess.getExerciseAccess().getAnswerKeyword_5_0()); 
             match(input,50,FOLLOW_2); 
@@ -17909,14 +18011,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_5__1"
-    // InternalJoveNotes.g:6601:1: rule__Exercise__Group_5__1 : rule__Exercise__Group_5__1__Impl ;
+    // InternalJoveNotes.g:6635:1: rule__Exercise__Group_5__1 : rule__Exercise__Group_5__1__Impl ;
     public final void rule__Exercise__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6605:1: ( rule__Exercise__Group_5__1__Impl )
-            // InternalJoveNotes.g:6606:2: rule__Exercise__Group_5__1__Impl
+            // InternalJoveNotes.g:6639:1: ( rule__Exercise__Group_5__1__Impl )
+            // InternalJoveNotes.g:6640:2: rule__Exercise__Group_5__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Exercise__Group_5__1__Impl();
@@ -17942,21 +18044,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__Group_5__1__Impl"
-    // InternalJoveNotes.g:6612:1: rule__Exercise__Group_5__1__Impl : ( ( rule__Exercise__AnswerAssignment_5_1 ) ) ;
+    // InternalJoveNotes.g:6646:1: rule__Exercise__Group_5__1__Impl : ( ( rule__Exercise__AnswerAssignment_5_1 ) ) ;
     public final void rule__Exercise__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6616:1: ( ( ( rule__Exercise__AnswerAssignment_5_1 ) ) )
-            // InternalJoveNotes.g:6617:1: ( ( rule__Exercise__AnswerAssignment_5_1 ) )
+            // InternalJoveNotes.g:6650:1: ( ( ( rule__Exercise__AnswerAssignment_5_1 ) ) )
+            // InternalJoveNotes.g:6651:1: ( ( rule__Exercise__AnswerAssignment_5_1 ) )
             {
-            // InternalJoveNotes.g:6617:1: ( ( rule__Exercise__AnswerAssignment_5_1 ) )
-            // InternalJoveNotes.g:6618:1: ( rule__Exercise__AnswerAssignment_5_1 )
+            // InternalJoveNotes.g:6651:1: ( ( rule__Exercise__AnswerAssignment_5_1 ) )
+            // InternalJoveNotes.g:6652:1: ( rule__Exercise__AnswerAssignment_5_1 )
             {
              before(grammarAccess.getExerciseAccess().getAnswerAssignment_5_1()); 
-            // InternalJoveNotes.g:6619:1: ( rule__Exercise__AnswerAssignment_5_1 )
-            // InternalJoveNotes.g:6619:2: rule__Exercise__AnswerAssignment_5_1
+            // InternalJoveNotes.g:6653:1: ( rule__Exercise__AnswerAssignment_5_1 )
+            // InternalJoveNotes.g:6653:2: rule__Exercise__AnswerAssignment_5_1
             {
             pushFollow(FOLLOW_2);
             rule__Exercise__AnswerAssignment_5_1();
@@ -17989,14 +18091,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__VoiceToText__Group__0"
-    // InternalJoveNotes.g:6633:1: rule__VoiceToText__Group__0 : rule__VoiceToText__Group__0__Impl rule__VoiceToText__Group__1 ;
+    // InternalJoveNotes.g:6667:1: rule__VoiceToText__Group__0 : rule__VoiceToText__Group__0__Impl rule__VoiceToText__Group__1 ;
     public final void rule__VoiceToText__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6637:1: ( rule__VoiceToText__Group__0__Impl rule__VoiceToText__Group__1 )
-            // InternalJoveNotes.g:6638:2: rule__VoiceToText__Group__0__Impl rule__VoiceToText__Group__1
+            // InternalJoveNotes.g:6671:1: ( rule__VoiceToText__Group__0__Impl rule__VoiceToText__Group__1 )
+            // InternalJoveNotes.g:6672:2: rule__VoiceToText__Group__0__Impl rule__VoiceToText__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__VoiceToText__Group__0__Impl();
@@ -18027,17 +18129,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__VoiceToText__Group__0__Impl"
-    // InternalJoveNotes.g:6645:1: rule__VoiceToText__Group__0__Impl : ( '@voice2text' ) ;
+    // InternalJoveNotes.g:6679:1: rule__VoiceToText__Group__0__Impl : ( '@voice2text' ) ;
     public final void rule__VoiceToText__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6649:1: ( ( '@voice2text' ) )
-            // InternalJoveNotes.g:6650:1: ( '@voice2text' )
+            // InternalJoveNotes.g:6683:1: ( ( '@voice2text' ) )
+            // InternalJoveNotes.g:6684:1: ( '@voice2text' )
             {
-            // InternalJoveNotes.g:6650:1: ( '@voice2text' )
-            // InternalJoveNotes.g:6651:1: '@voice2text'
+            // InternalJoveNotes.g:6684:1: ( '@voice2text' )
+            // InternalJoveNotes.g:6685:1: '@voice2text'
             {
              before(grammarAccess.getVoiceToTextAccess().getVoice2textKeyword_0()); 
             match(input,51,FOLLOW_2); 
@@ -18064,14 +18166,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__VoiceToText__Group__1"
-    // InternalJoveNotes.g:6664:1: rule__VoiceToText__Group__1 : rule__VoiceToText__Group__1__Impl rule__VoiceToText__Group__2 ;
+    // InternalJoveNotes.g:6698:1: rule__VoiceToText__Group__1 : rule__VoiceToText__Group__1__Impl rule__VoiceToText__Group__2 ;
     public final void rule__VoiceToText__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6668:1: ( rule__VoiceToText__Group__1__Impl rule__VoiceToText__Group__2 )
-            // InternalJoveNotes.g:6669:2: rule__VoiceToText__Group__1__Impl rule__VoiceToText__Group__2
+            // InternalJoveNotes.g:6702:1: ( rule__VoiceToText__Group__1__Impl rule__VoiceToText__Group__2 )
+            // InternalJoveNotes.g:6703:2: rule__VoiceToText__Group__1__Impl rule__VoiceToText__Group__2
             {
             pushFollow(FOLLOW_14);
             rule__VoiceToText__Group__1__Impl();
@@ -18102,29 +18204,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__VoiceToText__Group__1__Impl"
-    // InternalJoveNotes.g:6676:1: rule__VoiceToText__Group__1__Impl : ( ( rule__VoiceToText__HideFromViewAssignment_1 )? ) ;
+    // InternalJoveNotes.g:6710:1: rule__VoiceToText__Group__1__Impl : ( ( rule__VoiceToText__HideFromViewAssignment_1 )? ) ;
     public final void rule__VoiceToText__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6680:1: ( ( ( rule__VoiceToText__HideFromViewAssignment_1 )? ) )
-            // InternalJoveNotes.g:6681:1: ( ( rule__VoiceToText__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:6714:1: ( ( ( rule__VoiceToText__HideFromViewAssignment_1 )? ) )
+            // InternalJoveNotes.g:6715:1: ( ( rule__VoiceToText__HideFromViewAssignment_1 )? )
             {
-            // InternalJoveNotes.g:6681:1: ( ( rule__VoiceToText__HideFromViewAssignment_1 )? )
-            // InternalJoveNotes.g:6682:1: ( rule__VoiceToText__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:6715:1: ( ( rule__VoiceToText__HideFromViewAssignment_1 )? )
+            // InternalJoveNotes.g:6716:1: ( rule__VoiceToText__HideFromViewAssignment_1 )?
             {
              before(grammarAccess.getVoiceToTextAccess().getHideFromViewAssignment_1()); 
-            // InternalJoveNotes.g:6683:1: ( rule__VoiceToText__HideFromViewAssignment_1 )?
+            // InternalJoveNotes.g:6717:1: ( rule__VoiceToText__HideFromViewAssignment_1 )?
             int alt55=2;
             int LA55_0 = input.LA(1);
 
-            if ( (LA55_0==59) ) {
+            if ( (LA55_0==60) ) {
                 alt55=1;
             }
             switch (alt55) {
                 case 1 :
-                    // InternalJoveNotes.g:6683:2: rule__VoiceToText__HideFromViewAssignment_1
+                    // InternalJoveNotes.g:6717:2: rule__VoiceToText__HideFromViewAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__VoiceToText__HideFromViewAssignment_1();
@@ -18160,14 +18262,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__VoiceToText__Group__2"
-    // InternalJoveNotes.g:6693:1: rule__VoiceToText__Group__2 : rule__VoiceToText__Group__2__Impl rule__VoiceToText__Group__3 ;
+    // InternalJoveNotes.g:6727:1: rule__VoiceToText__Group__2 : rule__VoiceToText__Group__2__Impl rule__VoiceToText__Group__3 ;
     public final void rule__VoiceToText__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6697:1: ( rule__VoiceToText__Group__2__Impl rule__VoiceToText__Group__3 )
-            // InternalJoveNotes.g:6698:2: rule__VoiceToText__Group__2__Impl rule__VoiceToText__Group__3
+            // InternalJoveNotes.g:6731:1: ( rule__VoiceToText__Group__2__Impl rule__VoiceToText__Group__3 )
+            // InternalJoveNotes.g:6732:2: rule__VoiceToText__Group__2__Impl rule__VoiceToText__Group__3
             {
             pushFollow(FOLLOW_7);
             rule__VoiceToText__Group__2__Impl();
@@ -18198,21 +18300,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__VoiceToText__Group__2__Impl"
-    // InternalJoveNotes.g:6705:1: rule__VoiceToText__Group__2__Impl : ( ( rule__VoiceToText__ClipNameAssignment_2 ) ) ;
+    // InternalJoveNotes.g:6739:1: rule__VoiceToText__Group__2__Impl : ( ( rule__VoiceToText__ClipNameAssignment_2 ) ) ;
     public final void rule__VoiceToText__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6709:1: ( ( ( rule__VoiceToText__ClipNameAssignment_2 ) ) )
-            // InternalJoveNotes.g:6710:1: ( ( rule__VoiceToText__ClipNameAssignment_2 ) )
+            // InternalJoveNotes.g:6743:1: ( ( ( rule__VoiceToText__ClipNameAssignment_2 ) ) )
+            // InternalJoveNotes.g:6744:1: ( ( rule__VoiceToText__ClipNameAssignment_2 ) )
             {
-            // InternalJoveNotes.g:6710:1: ( ( rule__VoiceToText__ClipNameAssignment_2 ) )
-            // InternalJoveNotes.g:6711:1: ( rule__VoiceToText__ClipNameAssignment_2 )
+            // InternalJoveNotes.g:6744:1: ( ( rule__VoiceToText__ClipNameAssignment_2 ) )
+            // InternalJoveNotes.g:6745:1: ( rule__VoiceToText__ClipNameAssignment_2 )
             {
              before(grammarAccess.getVoiceToTextAccess().getClipNameAssignment_2()); 
-            // InternalJoveNotes.g:6712:1: ( rule__VoiceToText__ClipNameAssignment_2 )
-            // InternalJoveNotes.g:6712:2: rule__VoiceToText__ClipNameAssignment_2
+            // InternalJoveNotes.g:6746:1: ( rule__VoiceToText__ClipNameAssignment_2 )
+            // InternalJoveNotes.g:6746:2: rule__VoiceToText__ClipNameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__VoiceToText__ClipNameAssignment_2();
@@ -18245,14 +18347,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__VoiceToText__Group__3"
-    // InternalJoveNotes.g:6722:1: rule__VoiceToText__Group__3 : rule__VoiceToText__Group__3__Impl ;
+    // InternalJoveNotes.g:6756:1: rule__VoiceToText__Group__3 : rule__VoiceToText__Group__3__Impl ;
     public final void rule__VoiceToText__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6726:1: ( rule__VoiceToText__Group__3__Impl )
-            // InternalJoveNotes.g:6727:2: rule__VoiceToText__Group__3__Impl
+            // InternalJoveNotes.g:6760:1: ( rule__VoiceToText__Group__3__Impl )
+            // InternalJoveNotes.g:6761:2: rule__VoiceToText__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__VoiceToText__Group__3__Impl();
@@ -18278,21 +18380,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__VoiceToText__Group__3__Impl"
-    // InternalJoveNotes.g:6733:1: rule__VoiceToText__Group__3__Impl : ( ( rule__VoiceToText__TextAssignment_3 ) ) ;
+    // InternalJoveNotes.g:6767:1: rule__VoiceToText__Group__3__Impl : ( ( rule__VoiceToText__TextAssignment_3 ) ) ;
     public final void rule__VoiceToText__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6737:1: ( ( ( rule__VoiceToText__TextAssignment_3 ) ) )
-            // InternalJoveNotes.g:6738:1: ( ( rule__VoiceToText__TextAssignment_3 ) )
+            // InternalJoveNotes.g:6771:1: ( ( ( rule__VoiceToText__TextAssignment_3 ) ) )
+            // InternalJoveNotes.g:6772:1: ( ( rule__VoiceToText__TextAssignment_3 ) )
             {
-            // InternalJoveNotes.g:6738:1: ( ( rule__VoiceToText__TextAssignment_3 ) )
-            // InternalJoveNotes.g:6739:1: ( rule__VoiceToText__TextAssignment_3 )
+            // InternalJoveNotes.g:6772:1: ( ( rule__VoiceToText__TextAssignment_3 ) )
+            // InternalJoveNotes.g:6773:1: ( rule__VoiceToText__TextAssignment_3 )
             {
              before(grammarAccess.getVoiceToTextAccess().getTextAssignment_3()); 
-            // InternalJoveNotes.g:6740:1: ( rule__VoiceToText__TextAssignment_3 )
-            // InternalJoveNotes.g:6740:2: rule__VoiceToText__TextAssignment_3
+            // InternalJoveNotes.g:6774:1: ( rule__VoiceToText__TextAssignment_3 )
+            // InternalJoveNotes.g:6774:2: rule__VoiceToText__TextAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__VoiceToText__TextAssignment_3();
@@ -18325,16 +18427,16 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompilerBreak__Group__0"
-    // InternalJoveNotes.g:6758:1: rule__CompilerBreak__Group__0 : rule__CompilerBreak__Group__0__Impl rule__CompilerBreak__Group__1 ;
+    // InternalJoveNotes.g:6792:1: rule__CompilerBreak__Group__0 : rule__CompilerBreak__Group__0__Impl rule__CompilerBreak__Group__1 ;
     public final void rule__CompilerBreak__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6762:1: ( rule__CompilerBreak__Group__0__Impl rule__CompilerBreak__Group__1 )
-            // InternalJoveNotes.g:6763:2: rule__CompilerBreak__Group__0__Impl rule__CompilerBreak__Group__1
+            // InternalJoveNotes.g:6796:1: ( rule__CompilerBreak__Group__0__Impl rule__CompilerBreak__Group__1 )
+            // InternalJoveNotes.g:6797:2: rule__CompilerBreak__Group__0__Impl rule__CompilerBreak__Group__1
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_41);
             rule__CompilerBreak__Group__0__Impl();
 
             state._fsp--;
@@ -18363,21 +18465,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompilerBreak__Group__0__Impl"
-    // InternalJoveNotes.g:6770:1: rule__CompilerBreak__Group__0__Impl : ( () ) ;
+    // InternalJoveNotes.g:6804:1: rule__CompilerBreak__Group__0__Impl : ( () ) ;
     public final void rule__CompilerBreak__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6774:1: ( ( () ) )
-            // InternalJoveNotes.g:6775:1: ( () )
+            // InternalJoveNotes.g:6808:1: ( ( () ) )
+            // InternalJoveNotes.g:6809:1: ( () )
             {
-            // InternalJoveNotes.g:6775:1: ( () )
-            // InternalJoveNotes.g:6776:1: ()
+            // InternalJoveNotes.g:6809:1: ( () )
+            // InternalJoveNotes.g:6810:1: ()
             {
              before(grammarAccess.getCompilerBreakAccess().getCompilerBreakAction_0()); 
-            // InternalJoveNotes.g:6777:1: ()
-            // InternalJoveNotes.g:6779:1: 
+            // InternalJoveNotes.g:6811:1: ()
+            // InternalJoveNotes.g:6813:1: 
             {
             }
 
@@ -18400,14 +18502,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompilerBreak__Group__1"
-    // InternalJoveNotes.g:6789:1: rule__CompilerBreak__Group__1 : rule__CompilerBreak__Group__1__Impl ;
+    // InternalJoveNotes.g:6823:1: rule__CompilerBreak__Group__1 : rule__CompilerBreak__Group__1__Impl ;
     public final void rule__CompilerBreak__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6793:1: ( rule__CompilerBreak__Group__1__Impl )
-            // InternalJoveNotes.g:6794:2: rule__CompilerBreak__Group__1__Impl
+            // InternalJoveNotes.g:6827:1: ( rule__CompilerBreak__Group__1__Impl )
+            // InternalJoveNotes.g:6828:2: rule__CompilerBreak__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CompilerBreak__Group__1__Impl();
@@ -18433,17 +18535,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompilerBreak__Group__1__Impl"
-    // InternalJoveNotes.g:6800:1: rule__CompilerBreak__Group__1__Impl : ( '@compiler_break' ) ;
+    // InternalJoveNotes.g:6834:1: rule__CompilerBreak__Group__1__Impl : ( '@compiler_break' ) ;
     public final void rule__CompilerBreak__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6804:1: ( ( '@compiler_break' ) )
-            // InternalJoveNotes.g:6805:1: ( '@compiler_break' )
+            // InternalJoveNotes.g:6838:1: ( ( '@compiler_break' ) )
+            // InternalJoveNotes.g:6839:1: ( '@compiler_break' )
             {
-            // InternalJoveNotes.g:6805:1: ( '@compiler_break' )
-            // InternalJoveNotes.g:6806:1: '@compiler_break'
+            // InternalJoveNotes.g:6839:1: ( '@compiler_break' )
+            // InternalJoveNotes.g:6840:1: '@compiler_break'
             {
              before(grammarAccess.getCompilerBreakAccess().getCompiler_breakKeyword_1()); 
             match(input,52,FOLLOW_2); 
@@ -18469,17 +18571,172 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__CompilerBreak__Group__1__Impl"
 
 
+    // $ANTLR start "rule__ChapterSection__Group__0"
+    // InternalJoveNotes.g:6857:1: rule__ChapterSection__Group__0 : rule__ChapterSection__Group__0__Impl rule__ChapterSection__Group__1 ;
+    public final void rule__ChapterSection__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalJoveNotes.g:6861:1: ( rule__ChapterSection__Group__0__Impl rule__ChapterSection__Group__1 )
+            // InternalJoveNotes.g:6862:2: rule__ChapterSection__Group__0__Impl rule__ChapterSection__Group__1
+            {
+            pushFollow(FOLLOW_7);
+            rule__ChapterSection__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__ChapterSection__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ChapterSection__Group__0"
+
+
+    // $ANTLR start "rule__ChapterSection__Group__0__Impl"
+    // InternalJoveNotes.g:6869:1: rule__ChapterSection__Group__0__Impl : ( '@section' ) ;
+    public final void rule__ChapterSection__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalJoveNotes.g:6873:1: ( ( '@section' ) )
+            // InternalJoveNotes.g:6874:1: ( '@section' )
+            {
+            // InternalJoveNotes.g:6874:1: ( '@section' )
+            // InternalJoveNotes.g:6875:1: '@section'
+            {
+             before(grammarAccess.getChapterSectionAccess().getSectionKeyword_0()); 
+            match(input,53,FOLLOW_2); 
+             after(grammarAccess.getChapterSectionAccess().getSectionKeyword_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ChapterSection__Group__0__Impl"
+
+
+    // $ANTLR start "rule__ChapterSection__Group__1"
+    // InternalJoveNotes.g:6888:1: rule__ChapterSection__Group__1 : rule__ChapterSection__Group__1__Impl ;
+    public final void rule__ChapterSection__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalJoveNotes.g:6892:1: ( rule__ChapterSection__Group__1__Impl )
+            // InternalJoveNotes.g:6893:2: rule__ChapterSection__Group__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__ChapterSection__Group__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ChapterSection__Group__1"
+
+
+    // $ANTLR start "rule__ChapterSection__Group__1__Impl"
+    // InternalJoveNotes.g:6899:1: rule__ChapterSection__Group__1__Impl : ( ( rule__ChapterSection__SectionNameAssignment_1 ) ) ;
+    public final void rule__ChapterSection__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalJoveNotes.g:6903:1: ( ( ( rule__ChapterSection__SectionNameAssignment_1 ) ) )
+            // InternalJoveNotes.g:6904:1: ( ( rule__ChapterSection__SectionNameAssignment_1 ) )
+            {
+            // InternalJoveNotes.g:6904:1: ( ( rule__ChapterSection__SectionNameAssignment_1 ) )
+            // InternalJoveNotes.g:6905:1: ( rule__ChapterSection__SectionNameAssignment_1 )
+            {
+             before(grammarAccess.getChapterSectionAccess().getSectionNameAssignment_1()); 
+            // InternalJoveNotes.g:6906:1: ( rule__ChapterSection__SectionNameAssignment_1 )
+            // InternalJoveNotes.g:6906:2: rule__ChapterSection__SectionNameAssignment_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__ChapterSection__SectionNameAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getChapterSectionAccess().getSectionNameAssignment_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ChapterSection__Group__1__Impl"
+
+
     // $ANTLR start "rule__Option__Group__0"
-    // InternalJoveNotes.g:6823:1: rule__Option__Group__0 : rule__Option__Group__0__Impl rule__Option__Group__1 ;
+    // InternalJoveNotes.g:6920:1: rule__Option__Group__0 : rule__Option__Group__0__Impl rule__Option__Group__1 ;
     public final void rule__Option__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6827:1: ( rule__Option__Group__0__Impl rule__Option__Group__1 )
-            // InternalJoveNotes.g:6828:2: rule__Option__Group__0__Impl rule__Option__Group__1
+            // InternalJoveNotes.g:6924:1: ( rule__Option__Group__0__Impl rule__Option__Group__1 )
+            // InternalJoveNotes.g:6925:2: rule__Option__Group__0__Impl rule__Option__Group__1
             {
-            pushFollow(FOLLOW_41);
+            pushFollow(FOLLOW_42);
             rule__Option__Group__0__Impl();
 
             state._fsp--;
@@ -18508,21 +18765,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Option__Group__0__Impl"
-    // InternalJoveNotes.g:6835:1: rule__Option__Group__0__Impl : ( ( rule__Option__OptionValueAssignment_0 ) ) ;
+    // InternalJoveNotes.g:6932:1: rule__Option__Group__0__Impl : ( ( rule__Option__OptionValueAssignment_0 ) ) ;
     public final void rule__Option__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6839:1: ( ( ( rule__Option__OptionValueAssignment_0 ) ) )
-            // InternalJoveNotes.g:6840:1: ( ( rule__Option__OptionValueAssignment_0 ) )
+            // InternalJoveNotes.g:6936:1: ( ( ( rule__Option__OptionValueAssignment_0 ) ) )
+            // InternalJoveNotes.g:6937:1: ( ( rule__Option__OptionValueAssignment_0 ) )
             {
-            // InternalJoveNotes.g:6840:1: ( ( rule__Option__OptionValueAssignment_0 ) )
-            // InternalJoveNotes.g:6841:1: ( rule__Option__OptionValueAssignment_0 )
+            // InternalJoveNotes.g:6937:1: ( ( rule__Option__OptionValueAssignment_0 ) )
+            // InternalJoveNotes.g:6938:1: ( rule__Option__OptionValueAssignment_0 )
             {
              before(grammarAccess.getOptionAccess().getOptionValueAssignment_0()); 
-            // InternalJoveNotes.g:6842:1: ( rule__Option__OptionValueAssignment_0 )
-            // InternalJoveNotes.g:6842:2: rule__Option__OptionValueAssignment_0
+            // InternalJoveNotes.g:6939:1: ( rule__Option__OptionValueAssignment_0 )
+            // InternalJoveNotes.g:6939:2: rule__Option__OptionValueAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Option__OptionValueAssignment_0();
@@ -18555,14 +18812,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Option__Group__1"
-    // InternalJoveNotes.g:6852:1: rule__Option__Group__1 : rule__Option__Group__1__Impl ;
+    // InternalJoveNotes.g:6949:1: rule__Option__Group__1 : rule__Option__Group__1__Impl ;
     public final void rule__Option__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6856:1: ( rule__Option__Group__1__Impl )
-            // InternalJoveNotes.g:6857:2: rule__Option__Group__1__Impl
+            // InternalJoveNotes.g:6953:1: ( rule__Option__Group__1__Impl )
+            // InternalJoveNotes.g:6954:2: rule__Option__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Option__Group__1__Impl();
@@ -18588,29 +18845,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Option__Group__1__Impl"
-    // InternalJoveNotes.g:6863:1: rule__Option__Group__1__Impl : ( ( rule__Option__CorrectOptionAssignment_1 )? ) ;
+    // InternalJoveNotes.g:6960:1: rule__Option__Group__1__Impl : ( ( rule__Option__CorrectOptionAssignment_1 )? ) ;
     public final void rule__Option__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6867:1: ( ( ( rule__Option__CorrectOptionAssignment_1 )? ) )
-            // InternalJoveNotes.g:6868:1: ( ( rule__Option__CorrectOptionAssignment_1 )? )
+            // InternalJoveNotes.g:6964:1: ( ( ( rule__Option__CorrectOptionAssignment_1 )? ) )
+            // InternalJoveNotes.g:6965:1: ( ( rule__Option__CorrectOptionAssignment_1 )? )
             {
-            // InternalJoveNotes.g:6868:1: ( ( rule__Option__CorrectOptionAssignment_1 )? )
-            // InternalJoveNotes.g:6869:1: ( rule__Option__CorrectOptionAssignment_1 )?
+            // InternalJoveNotes.g:6965:1: ( ( rule__Option__CorrectOptionAssignment_1 )? )
+            // InternalJoveNotes.g:6966:1: ( rule__Option__CorrectOptionAssignment_1 )?
             {
              before(grammarAccess.getOptionAccess().getCorrectOptionAssignment_1()); 
-            // InternalJoveNotes.g:6870:1: ( rule__Option__CorrectOptionAssignment_1 )?
+            // InternalJoveNotes.g:6967:1: ( rule__Option__CorrectOptionAssignment_1 )?
             int alt56=2;
             int LA56_0 = input.LA(1);
 
-            if ( (LA56_0==61) ) {
+            if ( (LA56_0==62) ) {
                 alt56=1;
             }
             switch (alt56) {
                 case 1 :
-                    // InternalJoveNotes.g:6870:2: rule__Option__CorrectOptionAssignment_1
+                    // InternalJoveNotes.g:6967:2: rule__Option__CorrectOptionAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Option__CorrectOptionAssignment_1();
@@ -18646,14 +18903,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CMap__Group__0"
-    // InternalJoveNotes.g:6884:1: rule__CMap__Group__0 : rule__CMap__Group__0__Impl rule__CMap__Group__1 ;
+    // InternalJoveNotes.g:6981:1: rule__CMap__Group__0 : rule__CMap__Group__0__Impl rule__CMap__Group__1 ;
     public final void rule__CMap__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6888:1: ( rule__CMap__Group__0__Impl rule__CMap__Group__1 )
-            // InternalJoveNotes.g:6889:2: rule__CMap__Group__0__Impl rule__CMap__Group__1
+            // InternalJoveNotes.g:6985:1: ( rule__CMap__Group__0__Impl rule__CMap__Group__1 )
+            // InternalJoveNotes.g:6986:2: rule__CMap__Group__0__Impl rule__CMap__Group__1
             {
             pushFollow(FOLLOW_20);
             rule__CMap__Group__0__Impl();
@@ -18684,20 +18941,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CMap__Group__0__Impl"
-    // InternalJoveNotes.g:6896:1: rule__CMap__Group__0__Impl : ( 'cmap' ) ;
+    // InternalJoveNotes.g:6993:1: rule__CMap__Group__0__Impl : ( 'cmap' ) ;
     public final void rule__CMap__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6900:1: ( ( 'cmap' ) )
-            // InternalJoveNotes.g:6901:1: ( 'cmap' )
+            // InternalJoveNotes.g:6997:1: ( ( 'cmap' ) )
+            // InternalJoveNotes.g:6998:1: ( 'cmap' )
             {
-            // InternalJoveNotes.g:6901:1: ( 'cmap' )
-            // InternalJoveNotes.g:6902:1: 'cmap'
+            // InternalJoveNotes.g:6998:1: ( 'cmap' )
+            // InternalJoveNotes.g:6999:1: 'cmap'
             {
              before(grammarAccess.getCMapAccess().getCmapKeyword_0()); 
-            match(input,53,FOLLOW_2); 
+            match(input,54,FOLLOW_2); 
              after(grammarAccess.getCMapAccess().getCmapKeyword_0()); 
 
             }
@@ -18721,14 +18978,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CMap__Group__1"
-    // InternalJoveNotes.g:6915:1: rule__CMap__Group__1 : rule__CMap__Group__1__Impl rule__CMap__Group__2 ;
+    // InternalJoveNotes.g:7012:1: rule__CMap__Group__1 : rule__CMap__Group__1__Impl rule__CMap__Group__2 ;
     public final void rule__CMap__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6919:1: ( rule__CMap__Group__1__Impl rule__CMap__Group__2 )
-            // InternalJoveNotes.g:6920:2: rule__CMap__Group__1__Impl rule__CMap__Group__2
+            // InternalJoveNotes.g:7016:1: ( rule__CMap__Group__1__Impl rule__CMap__Group__2 )
+            // InternalJoveNotes.g:7017:2: rule__CMap__Group__1__Impl rule__CMap__Group__2
             {
             pushFollow(FOLLOW_7);
             rule__CMap__Group__1__Impl();
@@ -18759,17 +19016,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CMap__Group__1__Impl"
-    // InternalJoveNotes.g:6927:1: rule__CMap__Group__1__Impl : ( '{' ) ;
+    // InternalJoveNotes.g:7024:1: rule__CMap__Group__1__Impl : ( '{' ) ;
     public final void rule__CMap__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6931:1: ( ( '{' ) )
-            // InternalJoveNotes.g:6932:1: ( '{' )
+            // InternalJoveNotes.g:7028:1: ( ( '{' ) )
+            // InternalJoveNotes.g:7029:1: ( '{' )
             {
-            // InternalJoveNotes.g:6932:1: ( '{' )
-            // InternalJoveNotes.g:6933:1: '{'
+            // InternalJoveNotes.g:7029:1: ( '{' )
+            // InternalJoveNotes.g:7030:1: '{'
             {
              before(grammarAccess.getCMapAccess().getLeftCurlyBracketKeyword_1()); 
             match(input,23,FOLLOW_2); 
@@ -18796,14 +19053,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CMap__Group__2"
-    // InternalJoveNotes.g:6946:1: rule__CMap__Group__2 : rule__CMap__Group__2__Impl rule__CMap__Group__3 ;
+    // InternalJoveNotes.g:7043:1: rule__CMap__Group__2 : rule__CMap__Group__2__Impl rule__CMap__Group__3 ;
     public final void rule__CMap__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6950:1: ( rule__CMap__Group__2__Impl rule__CMap__Group__3 )
-            // InternalJoveNotes.g:6951:2: rule__CMap__Group__2__Impl rule__CMap__Group__3
+            // InternalJoveNotes.g:7047:1: ( rule__CMap__Group__2__Impl rule__CMap__Group__3 )
+            // InternalJoveNotes.g:7048:2: rule__CMap__Group__2__Impl rule__CMap__Group__3
             {
             pushFollow(FOLLOW_27);
             rule__CMap__Group__2__Impl();
@@ -18834,21 +19091,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CMap__Group__2__Impl"
-    // InternalJoveNotes.g:6958:1: rule__CMap__Group__2__Impl : ( ( rule__CMap__ContentAssignment_2 ) ) ;
+    // InternalJoveNotes.g:7055:1: rule__CMap__Group__2__Impl : ( ( rule__CMap__ContentAssignment_2 ) ) ;
     public final void rule__CMap__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6962:1: ( ( ( rule__CMap__ContentAssignment_2 ) ) )
-            // InternalJoveNotes.g:6963:1: ( ( rule__CMap__ContentAssignment_2 ) )
+            // InternalJoveNotes.g:7059:1: ( ( ( rule__CMap__ContentAssignment_2 ) ) )
+            // InternalJoveNotes.g:7060:1: ( ( rule__CMap__ContentAssignment_2 ) )
             {
-            // InternalJoveNotes.g:6963:1: ( ( rule__CMap__ContentAssignment_2 ) )
-            // InternalJoveNotes.g:6964:1: ( rule__CMap__ContentAssignment_2 )
+            // InternalJoveNotes.g:7060:1: ( ( rule__CMap__ContentAssignment_2 ) )
+            // InternalJoveNotes.g:7061:1: ( rule__CMap__ContentAssignment_2 )
             {
              before(grammarAccess.getCMapAccess().getContentAssignment_2()); 
-            // InternalJoveNotes.g:6965:1: ( rule__CMap__ContentAssignment_2 )
-            // InternalJoveNotes.g:6965:2: rule__CMap__ContentAssignment_2
+            // InternalJoveNotes.g:7062:1: ( rule__CMap__ContentAssignment_2 )
+            // InternalJoveNotes.g:7062:2: rule__CMap__ContentAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__CMap__ContentAssignment_2();
@@ -18881,14 +19138,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CMap__Group__3"
-    // InternalJoveNotes.g:6975:1: rule__CMap__Group__3 : rule__CMap__Group__3__Impl ;
+    // InternalJoveNotes.g:7072:1: rule__CMap__Group__3 : rule__CMap__Group__3__Impl ;
     public final void rule__CMap__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6979:1: ( rule__CMap__Group__3__Impl )
-            // InternalJoveNotes.g:6980:2: rule__CMap__Group__3__Impl
+            // InternalJoveNotes.g:7076:1: ( rule__CMap__Group__3__Impl )
+            // InternalJoveNotes.g:7077:2: rule__CMap__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CMap__Group__3__Impl();
@@ -18914,17 +19171,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CMap__Group__3__Impl"
-    // InternalJoveNotes.g:6986:1: rule__CMap__Group__3__Impl : ( '}' ) ;
+    // InternalJoveNotes.g:7083:1: rule__CMap__Group__3__Impl : ( '}' ) ;
     public final void rule__CMap__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:6990:1: ( ( '}' ) )
-            // InternalJoveNotes.g:6991:1: ( '}' )
+            // InternalJoveNotes.g:7087:1: ( ( '}' ) )
+            // InternalJoveNotes.g:7088:1: ( '}' )
             {
-            // InternalJoveNotes.g:6991:1: ( '}' )
-            // InternalJoveNotes.g:6992:1: '}'
+            // InternalJoveNotes.g:7088:1: ( '}' )
+            // InternalJoveNotes.g:7089:1: '}'
             {
              before(grammarAccess.getCMapAccess().getRightCurlyBracketKeyword_3()); 
             match(input,24,FOLLOW_2); 
@@ -18951,14 +19208,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group__0"
-    // InternalJoveNotes.g:7013:1: rule__Script__Group__0 : rule__Script__Group__0__Impl rule__Script__Group__1 ;
+    // InternalJoveNotes.g:7110:1: rule__Script__Group__0 : rule__Script__Group__0__Impl rule__Script__Group__1 ;
     public final void rule__Script__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7017:1: ( rule__Script__Group__0__Impl rule__Script__Group__1 )
-            // InternalJoveNotes.g:7018:2: rule__Script__Group__0__Impl rule__Script__Group__1
+            // InternalJoveNotes.g:7114:1: ( rule__Script__Group__0__Impl rule__Script__Group__1 )
+            // InternalJoveNotes.g:7115:2: rule__Script__Group__0__Impl rule__Script__Group__1
             {
             pushFollow(FOLLOW_20);
             rule__Script__Group__0__Impl();
@@ -18989,20 +19246,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group__0__Impl"
-    // InternalJoveNotes.g:7025:1: rule__Script__Group__0__Impl : ( 'script_expressions' ) ;
+    // InternalJoveNotes.g:7122:1: rule__Script__Group__0__Impl : ( 'script_expressions' ) ;
     public final void rule__Script__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7029:1: ( ( 'script_expressions' ) )
-            // InternalJoveNotes.g:7030:1: ( 'script_expressions' )
+            // InternalJoveNotes.g:7126:1: ( ( 'script_expressions' ) )
+            // InternalJoveNotes.g:7127:1: ( 'script_expressions' )
             {
-            // InternalJoveNotes.g:7030:1: ( 'script_expressions' )
-            // InternalJoveNotes.g:7031:1: 'script_expressions'
+            // InternalJoveNotes.g:7127:1: ( 'script_expressions' )
+            // InternalJoveNotes.g:7128:1: 'script_expressions'
             {
              before(grammarAccess.getScriptAccess().getScript_expressionsKeyword_0()); 
-            match(input,54,FOLLOW_2); 
+            match(input,55,FOLLOW_2); 
              after(grammarAccess.getScriptAccess().getScript_expressionsKeyword_0()); 
 
             }
@@ -19026,14 +19283,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group__1"
-    // InternalJoveNotes.g:7044:1: rule__Script__Group__1 : rule__Script__Group__1__Impl rule__Script__Group__2 ;
+    // InternalJoveNotes.g:7141:1: rule__Script__Group__1 : rule__Script__Group__1__Impl rule__Script__Group__2 ;
     public final void rule__Script__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7048:1: ( rule__Script__Group__1__Impl rule__Script__Group__2 )
-            // InternalJoveNotes.g:7049:2: rule__Script__Group__1__Impl rule__Script__Group__2
+            // InternalJoveNotes.g:7145:1: ( rule__Script__Group__1__Impl rule__Script__Group__2 )
+            // InternalJoveNotes.g:7146:2: rule__Script__Group__1__Impl rule__Script__Group__2
             {
             pushFollow(FOLLOW_7);
             rule__Script__Group__1__Impl();
@@ -19064,17 +19321,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group__1__Impl"
-    // InternalJoveNotes.g:7056:1: rule__Script__Group__1__Impl : ( '{' ) ;
+    // InternalJoveNotes.g:7153:1: rule__Script__Group__1__Impl : ( '{' ) ;
     public final void rule__Script__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7060:1: ( ( '{' ) )
-            // InternalJoveNotes.g:7061:1: ( '{' )
+            // InternalJoveNotes.g:7157:1: ( ( '{' ) )
+            // InternalJoveNotes.g:7158:1: ( '{' )
             {
-            // InternalJoveNotes.g:7061:1: ( '{' )
-            // InternalJoveNotes.g:7062:1: '{'
+            // InternalJoveNotes.g:7158:1: ( '{' )
+            // InternalJoveNotes.g:7159:1: '{'
             {
              before(grammarAccess.getScriptAccess().getLeftCurlyBracketKeyword_1()); 
             match(input,23,FOLLOW_2); 
@@ -19101,14 +19358,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group__2"
-    // InternalJoveNotes.g:7075:1: rule__Script__Group__2 : rule__Script__Group__2__Impl rule__Script__Group__3 ;
+    // InternalJoveNotes.g:7172:1: rule__Script__Group__2 : rule__Script__Group__2__Impl rule__Script__Group__3 ;
     public final void rule__Script__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7079:1: ( rule__Script__Group__2__Impl rule__Script__Group__3 )
-            // InternalJoveNotes.g:7080:2: rule__Script__Group__2__Impl rule__Script__Group__3
+            // InternalJoveNotes.g:7176:1: ( rule__Script__Group__2__Impl rule__Script__Group__3 )
+            // InternalJoveNotes.g:7177:2: rule__Script__Group__2__Impl rule__Script__Group__3
             {
             pushFollow(FOLLOW_29);
             rule__Script__Group__2__Impl();
@@ -19139,21 +19396,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group__2__Impl"
-    // InternalJoveNotes.g:7087:1: rule__Script__Group__2__Impl : ( ( rule__Script__EvalVarsAssignment_2 ) ) ;
+    // InternalJoveNotes.g:7184:1: rule__Script__Group__2__Impl : ( ( rule__Script__EvalVarsAssignment_2 ) ) ;
     public final void rule__Script__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7091:1: ( ( ( rule__Script__EvalVarsAssignment_2 ) ) )
-            // InternalJoveNotes.g:7092:1: ( ( rule__Script__EvalVarsAssignment_2 ) )
+            // InternalJoveNotes.g:7188:1: ( ( ( rule__Script__EvalVarsAssignment_2 ) ) )
+            // InternalJoveNotes.g:7189:1: ( ( rule__Script__EvalVarsAssignment_2 ) )
             {
-            // InternalJoveNotes.g:7092:1: ( ( rule__Script__EvalVarsAssignment_2 ) )
-            // InternalJoveNotes.g:7093:1: ( rule__Script__EvalVarsAssignment_2 )
+            // InternalJoveNotes.g:7189:1: ( ( rule__Script__EvalVarsAssignment_2 ) )
+            // InternalJoveNotes.g:7190:1: ( rule__Script__EvalVarsAssignment_2 )
             {
              before(grammarAccess.getScriptAccess().getEvalVarsAssignment_2()); 
-            // InternalJoveNotes.g:7094:1: ( rule__Script__EvalVarsAssignment_2 )
-            // InternalJoveNotes.g:7094:2: rule__Script__EvalVarsAssignment_2
+            // InternalJoveNotes.g:7191:1: ( rule__Script__EvalVarsAssignment_2 )
+            // InternalJoveNotes.g:7191:2: rule__Script__EvalVarsAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Script__EvalVarsAssignment_2();
@@ -19186,14 +19443,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group__3"
-    // InternalJoveNotes.g:7104:1: rule__Script__Group__3 : rule__Script__Group__3__Impl rule__Script__Group__4 ;
+    // InternalJoveNotes.g:7201:1: rule__Script__Group__3 : rule__Script__Group__3__Impl rule__Script__Group__4 ;
     public final void rule__Script__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7108:1: ( rule__Script__Group__3__Impl rule__Script__Group__4 )
-            // InternalJoveNotes.g:7109:2: rule__Script__Group__3__Impl rule__Script__Group__4
+            // InternalJoveNotes.g:7205:1: ( rule__Script__Group__3__Impl rule__Script__Group__4 )
+            // InternalJoveNotes.g:7206:2: rule__Script__Group__3__Impl rule__Script__Group__4
             {
             pushFollow(FOLLOW_29);
             rule__Script__Group__3__Impl();
@@ -19224,20 +19481,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group__3__Impl"
-    // InternalJoveNotes.g:7116:1: rule__Script__Group__3__Impl : ( ( rule__Script__Group_3__0 )* ) ;
+    // InternalJoveNotes.g:7213:1: rule__Script__Group__3__Impl : ( ( rule__Script__Group_3__0 )* ) ;
     public final void rule__Script__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7120:1: ( ( ( rule__Script__Group_3__0 )* ) )
-            // InternalJoveNotes.g:7121:1: ( ( rule__Script__Group_3__0 )* )
+            // InternalJoveNotes.g:7217:1: ( ( ( rule__Script__Group_3__0 )* ) )
+            // InternalJoveNotes.g:7218:1: ( ( rule__Script__Group_3__0 )* )
             {
-            // InternalJoveNotes.g:7121:1: ( ( rule__Script__Group_3__0 )* )
-            // InternalJoveNotes.g:7122:1: ( rule__Script__Group_3__0 )*
+            // InternalJoveNotes.g:7218:1: ( ( rule__Script__Group_3__0 )* )
+            // InternalJoveNotes.g:7219:1: ( rule__Script__Group_3__0 )*
             {
              before(grammarAccess.getScriptAccess().getGroup_3()); 
-            // InternalJoveNotes.g:7123:1: ( rule__Script__Group_3__0 )*
+            // InternalJoveNotes.g:7220:1: ( rule__Script__Group_3__0 )*
             loop57:
             do {
                 int alt57=2;
@@ -19250,7 +19507,7 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
                 switch (alt57) {
             	case 1 :
-            	    // InternalJoveNotes.g:7123:2: rule__Script__Group_3__0
+            	    // InternalJoveNotes.g:7220:2: rule__Script__Group_3__0
             	    {
             	    pushFollow(FOLLOW_30);
             	    rule__Script__Group_3__0();
@@ -19289,14 +19546,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group__4"
-    // InternalJoveNotes.g:7133:1: rule__Script__Group__4 : rule__Script__Group__4__Impl rule__Script__Group__5 ;
+    // InternalJoveNotes.g:7230:1: rule__Script__Group__4 : rule__Script__Group__4__Impl rule__Script__Group__5 ;
     public final void rule__Script__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7137:1: ( rule__Script__Group__4__Impl rule__Script__Group__5 )
-            // InternalJoveNotes.g:7138:2: rule__Script__Group__4__Impl rule__Script__Group__5
+            // InternalJoveNotes.g:7234:1: ( rule__Script__Group__4__Impl rule__Script__Group__5 )
+            // InternalJoveNotes.g:7235:2: rule__Script__Group__4__Impl rule__Script__Group__5
             {
             pushFollow(FOLLOW_12);
             rule__Script__Group__4__Impl();
@@ -19327,17 +19584,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group__4__Impl"
-    // InternalJoveNotes.g:7145:1: rule__Script__Group__4__Impl : ( '}' ) ;
+    // InternalJoveNotes.g:7242:1: rule__Script__Group__4__Impl : ( '}' ) ;
     public final void rule__Script__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7149:1: ( ( '}' ) )
-            // InternalJoveNotes.g:7150:1: ( '}' )
+            // InternalJoveNotes.g:7246:1: ( ( '}' ) )
+            // InternalJoveNotes.g:7247:1: ( '}' )
             {
-            // InternalJoveNotes.g:7150:1: ( '}' )
-            // InternalJoveNotes.g:7151:1: '}'
+            // InternalJoveNotes.g:7247:1: ( '}' )
+            // InternalJoveNotes.g:7248:1: '}'
             {
              before(grammarAccess.getScriptAccess().getRightCurlyBracketKeyword_4()); 
             match(input,24,FOLLOW_2); 
@@ -19364,14 +19621,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group__5"
-    // InternalJoveNotes.g:7164:1: rule__Script__Group__5 : rule__Script__Group__5__Impl ;
+    // InternalJoveNotes.g:7261:1: rule__Script__Group__5 : rule__Script__Group__5__Impl ;
     public final void rule__Script__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7168:1: ( rule__Script__Group__5__Impl )
-            // InternalJoveNotes.g:7169:2: rule__Script__Group__5__Impl
+            // InternalJoveNotes.g:7265:1: ( rule__Script__Group__5__Impl )
+            // InternalJoveNotes.g:7266:2: rule__Script__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Script__Group__5__Impl();
@@ -19397,29 +19654,29 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group__5__Impl"
-    // InternalJoveNotes.g:7175:1: rule__Script__Group__5__Impl : ( ( rule__Script__ScriptBodyAssignment_5 )? ) ;
+    // InternalJoveNotes.g:7272:1: rule__Script__Group__5__Impl : ( ( rule__Script__ScriptBodyAssignment_5 )? ) ;
     public final void rule__Script__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7179:1: ( ( ( rule__Script__ScriptBodyAssignment_5 )? ) )
-            // InternalJoveNotes.g:7180:1: ( ( rule__Script__ScriptBodyAssignment_5 )? )
+            // InternalJoveNotes.g:7276:1: ( ( ( rule__Script__ScriptBodyAssignment_5 )? ) )
+            // InternalJoveNotes.g:7277:1: ( ( rule__Script__ScriptBodyAssignment_5 )? )
             {
-            // InternalJoveNotes.g:7180:1: ( ( rule__Script__ScriptBodyAssignment_5 )? )
-            // InternalJoveNotes.g:7181:1: ( rule__Script__ScriptBodyAssignment_5 )?
+            // InternalJoveNotes.g:7277:1: ( ( rule__Script__ScriptBodyAssignment_5 )? )
+            // InternalJoveNotes.g:7278:1: ( rule__Script__ScriptBodyAssignment_5 )?
             {
              before(grammarAccess.getScriptAccess().getScriptBodyAssignment_5()); 
-            // InternalJoveNotes.g:7182:1: ( rule__Script__ScriptBodyAssignment_5 )?
+            // InternalJoveNotes.g:7279:1: ( rule__Script__ScriptBodyAssignment_5 )?
             int alt58=2;
             int LA58_0 = input.LA(1);
 
-            if ( (LA58_0==55) ) {
+            if ( (LA58_0==56) ) {
                 alt58=1;
             }
             switch (alt58) {
                 case 1 :
-                    // InternalJoveNotes.g:7182:2: rule__Script__ScriptBodyAssignment_5
+                    // InternalJoveNotes.g:7279:2: rule__Script__ScriptBodyAssignment_5
                     {
                     pushFollow(FOLLOW_2);
                     rule__Script__ScriptBodyAssignment_5();
@@ -19455,14 +19712,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group_3__0"
-    // InternalJoveNotes.g:7204:1: rule__Script__Group_3__0 : rule__Script__Group_3__0__Impl rule__Script__Group_3__1 ;
+    // InternalJoveNotes.g:7301:1: rule__Script__Group_3__0 : rule__Script__Group_3__0__Impl rule__Script__Group_3__1 ;
     public final void rule__Script__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7208:1: ( rule__Script__Group_3__0__Impl rule__Script__Group_3__1 )
-            // InternalJoveNotes.g:7209:2: rule__Script__Group_3__0__Impl rule__Script__Group_3__1
+            // InternalJoveNotes.g:7305:1: ( rule__Script__Group_3__0__Impl rule__Script__Group_3__1 )
+            // InternalJoveNotes.g:7306:2: rule__Script__Group_3__0__Impl rule__Script__Group_3__1
             {
             pushFollow(FOLLOW_7);
             rule__Script__Group_3__0__Impl();
@@ -19493,17 +19750,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group_3__0__Impl"
-    // InternalJoveNotes.g:7216:1: rule__Script__Group_3__0__Impl : ( ',' ) ;
+    // InternalJoveNotes.g:7313:1: rule__Script__Group_3__0__Impl : ( ',' ) ;
     public final void rule__Script__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7220:1: ( ( ',' ) )
-            // InternalJoveNotes.g:7221:1: ( ',' )
+            // InternalJoveNotes.g:7317:1: ( ( ',' ) )
+            // InternalJoveNotes.g:7318:1: ( ',' )
             {
-            // InternalJoveNotes.g:7221:1: ( ',' )
-            // InternalJoveNotes.g:7222:1: ','
+            // InternalJoveNotes.g:7318:1: ( ',' )
+            // InternalJoveNotes.g:7319:1: ','
             {
              before(grammarAccess.getScriptAccess().getCommaKeyword_3_0()); 
             match(input,39,FOLLOW_2); 
@@ -19530,14 +19787,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group_3__1"
-    // InternalJoveNotes.g:7235:1: rule__Script__Group_3__1 : rule__Script__Group_3__1__Impl ;
+    // InternalJoveNotes.g:7332:1: rule__Script__Group_3__1 : rule__Script__Group_3__1__Impl ;
     public final void rule__Script__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7239:1: ( rule__Script__Group_3__1__Impl )
-            // InternalJoveNotes.g:7240:2: rule__Script__Group_3__1__Impl
+            // InternalJoveNotes.g:7336:1: ( rule__Script__Group_3__1__Impl )
+            // InternalJoveNotes.g:7337:2: rule__Script__Group_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Script__Group_3__1__Impl();
@@ -19563,21 +19820,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__Group_3__1__Impl"
-    // InternalJoveNotes.g:7246:1: rule__Script__Group_3__1__Impl : ( ( rule__Script__EvalVarsAssignment_3_1 ) ) ;
+    // InternalJoveNotes.g:7343:1: rule__Script__Group_3__1__Impl : ( ( rule__Script__EvalVarsAssignment_3_1 ) ) ;
     public final void rule__Script__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7250:1: ( ( ( rule__Script__EvalVarsAssignment_3_1 ) ) )
-            // InternalJoveNotes.g:7251:1: ( ( rule__Script__EvalVarsAssignment_3_1 ) )
+            // InternalJoveNotes.g:7347:1: ( ( ( rule__Script__EvalVarsAssignment_3_1 ) ) )
+            // InternalJoveNotes.g:7348:1: ( ( rule__Script__EvalVarsAssignment_3_1 ) )
             {
-            // InternalJoveNotes.g:7251:1: ( ( rule__Script__EvalVarsAssignment_3_1 ) )
-            // InternalJoveNotes.g:7252:1: ( rule__Script__EvalVarsAssignment_3_1 )
+            // InternalJoveNotes.g:7348:1: ( ( rule__Script__EvalVarsAssignment_3_1 ) )
+            // InternalJoveNotes.g:7349:1: ( rule__Script__EvalVarsAssignment_3_1 )
             {
              before(grammarAccess.getScriptAccess().getEvalVarsAssignment_3_1()); 
-            // InternalJoveNotes.g:7253:1: ( rule__Script__EvalVarsAssignment_3_1 )
-            // InternalJoveNotes.g:7253:2: rule__Script__EvalVarsAssignment_3_1
+            // InternalJoveNotes.g:7350:1: ( rule__Script__EvalVarsAssignment_3_1 )
+            // InternalJoveNotes.g:7350:2: rule__Script__EvalVarsAssignment_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Script__EvalVarsAssignment_3_1();
@@ -19610,14 +19867,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EvalVar__Group__0"
-    // InternalJoveNotes.g:7267:1: rule__EvalVar__Group__0 : rule__EvalVar__Group__0__Impl rule__EvalVar__Group__1 ;
+    // InternalJoveNotes.g:7364:1: rule__EvalVar__Group__0 : rule__EvalVar__Group__0__Impl rule__EvalVar__Group__1 ;
     public final void rule__EvalVar__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7271:1: ( rule__EvalVar__Group__0__Impl rule__EvalVar__Group__1 )
-            // InternalJoveNotes.g:7272:2: rule__EvalVar__Group__0__Impl rule__EvalVar__Group__1
+            // InternalJoveNotes.g:7368:1: ( rule__EvalVar__Group__0__Impl rule__EvalVar__Group__1 )
+            // InternalJoveNotes.g:7369:2: rule__EvalVar__Group__0__Impl rule__EvalVar__Group__1
             {
             pushFollow(FOLLOW_19);
             rule__EvalVar__Group__0__Impl();
@@ -19648,21 +19905,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EvalVar__Group__0__Impl"
-    // InternalJoveNotes.g:7279:1: rule__EvalVar__Group__0__Impl : ( ( rule__EvalVar__VarNameAssignment_0 ) ) ;
+    // InternalJoveNotes.g:7376:1: rule__EvalVar__Group__0__Impl : ( ( rule__EvalVar__VarNameAssignment_0 ) ) ;
     public final void rule__EvalVar__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7283:1: ( ( ( rule__EvalVar__VarNameAssignment_0 ) ) )
-            // InternalJoveNotes.g:7284:1: ( ( rule__EvalVar__VarNameAssignment_0 ) )
+            // InternalJoveNotes.g:7380:1: ( ( ( rule__EvalVar__VarNameAssignment_0 ) ) )
+            // InternalJoveNotes.g:7381:1: ( ( rule__EvalVar__VarNameAssignment_0 ) )
             {
-            // InternalJoveNotes.g:7284:1: ( ( rule__EvalVar__VarNameAssignment_0 ) )
-            // InternalJoveNotes.g:7285:1: ( rule__EvalVar__VarNameAssignment_0 )
+            // InternalJoveNotes.g:7381:1: ( ( rule__EvalVar__VarNameAssignment_0 ) )
+            // InternalJoveNotes.g:7382:1: ( rule__EvalVar__VarNameAssignment_0 )
             {
              before(grammarAccess.getEvalVarAccess().getVarNameAssignment_0()); 
-            // InternalJoveNotes.g:7286:1: ( rule__EvalVar__VarNameAssignment_0 )
-            // InternalJoveNotes.g:7286:2: rule__EvalVar__VarNameAssignment_0
+            // InternalJoveNotes.g:7383:1: ( rule__EvalVar__VarNameAssignment_0 )
+            // InternalJoveNotes.g:7383:2: rule__EvalVar__VarNameAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__EvalVar__VarNameAssignment_0();
@@ -19695,14 +19952,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EvalVar__Group__1"
-    // InternalJoveNotes.g:7296:1: rule__EvalVar__Group__1 : rule__EvalVar__Group__1__Impl rule__EvalVar__Group__2 ;
+    // InternalJoveNotes.g:7393:1: rule__EvalVar__Group__1 : rule__EvalVar__Group__1__Impl rule__EvalVar__Group__2 ;
     public final void rule__EvalVar__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7300:1: ( rule__EvalVar__Group__1__Impl rule__EvalVar__Group__2 )
-            // InternalJoveNotes.g:7301:2: rule__EvalVar__Group__1__Impl rule__EvalVar__Group__2
+            // InternalJoveNotes.g:7397:1: ( rule__EvalVar__Group__1__Impl rule__EvalVar__Group__2 )
+            // InternalJoveNotes.g:7398:2: rule__EvalVar__Group__1__Impl rule__EvalVar__Group__2
             {
             pushFollow(FOLLOW_7);
             rule__EvalVar__Group__1__Impl();
@@ -19733,17 +19990,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EvalVar__Group__1__Impl"
-    // InternalJoveNotes.g:7308:1: rule__EvalVar__Group__1__Impl : ( '=' ) ;
+    // InternalJoveNotes.g:7405:1: rule__EvalVar__Group__1__Impl : ( '=' ) ;
     public final void rule__EvalVar__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7312:1: ( ( '=' ) )
-            // InternalJoveNotes.g:7313:1: ( '=' )
+            // InternalJoveNotes.g:7409:1: ( ( '=' ) )
+            // InternalJoveNotes.g:7410:1: ( '=' )
             {
-            // InternalJoveNotes.g:7313:1: ( '=' )
-            // InternalJoveNotes.g:7314:1: '='
+            // InternalJoveNotes.g:7410:1: ( '=' )
+            // InternalJoveNotes.g:7411:1: '='
             {
              before(grammarAccess.getEvalVarAccess().getEqualsSignKeyword_1()); 
             match(input,25,FOLLOW_2); 
@@ -19770,14 +20027,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EvalVar__Group__2"
-    // InternalJoveNotes.g:7327:1: rule__EvalVar__Group__2 : rule__EvalVar__Group__2__Impl ;
+    // InternalJoveNotes.g:7424:1: rule__EvalVar__Group__2 : rule__EvalVar__Group__2__Impl ;
     public final void rule__EvalVar__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7331:1: ( rule__EvalVar__Group__2__Impl )
-            // InternalJoveNotes.g:7332:2: rule__EvalVar__Group__2__Impl
+            // InternalJoveNotes.g:7428:1: ( rule__EvalVar__Group__2__Impl )
+            // InternalJoveNotes.g:7429:2: rule__EvalVar__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EvalVar__Group__2__Impl();
@@ -19803,21 +20060,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EvalVar__Group__2__Impl"
-    // InternalJoveNotes.g:7338:1: rule__EvalVar__Group__2__Impl : ( ( rule__EvalVar__VarExpressionAssignment_2 ) ) ;
+    // InternalJoveNotes.g:7435:1: rule__EvalVar__Group__2__Impl : ( ( rule__EvalVar__VarExpressionAssignment_2 ) ) ;
     public final void rule__EvalVar__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7342:1: ( ( ( rule__EvalVar__VarExpressionAssignment_2 ) ) )
-            // InternalJoveNotes.g:7343:1: ( ( rule__EvalVar__VarExpressionAssignment_2 ) )
+            // InternalJoveNotes.g:7439:1: ( ( ( rule__EvalVar__VarExpressionAssignment_2 ) ) )
+            // InternalJoveNotes.g:7440:1: ( ( rule__EvalVar__VarExpressionAssignment_2 ) )
             {
-            // InternalJoveNotes.g:7343:1: ( ( rule__EvalVar__VarExpressionAssignment_2 ) )
-            // InternalJoveNotes.g:7344:1: ( rule__EvalVar__VarExpressionAssignment_2 )
+            // InternalJoveNotes.g:7440:1: ( ( rule__EvalVar__VarExpressionAssignment_2 ) )
+            // InternalJoveNotes.g:7441:1: ( rule__EvalVar__VarExpressionAssignment_2 )
             {
              before(grammarAccess.getEvalVarAccess().getVarExpressionAssignment_2()); 
-            // InternalJoveNotes.g:7345:1: ( rule__EvalVar__VarExpressionAssignment_2 )
-            // InternalJoveNotes.g:7345:2: rule__EvalVar__VarExpressionAssignment_2
+            // InternalJoveNotes.g:7442:1: ( rule__EvalVar__VarExpressionAssignment_2 )
+            // InternalJoveNotes.g:7442:2: rule__EvalVar__VarExpressionAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__EvalVar__VarExpressionAssignment_2();
@@ -19850,14 +20107,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ScriptBody__Group__0"
-    // InternalJoveNotes.g:7361:1: rule__ScriptBody__Group__0 : rule__ScriptBody__Group__0__Impl rule__ScriptBody__Group__1 ;
+    // InternalJoveNotes.g:7458:1: rule__ScriptBody__Group__0 : rule__ScriptBody__Group__0__Impl rule__ScriptBody__Group__1 ;
     public final void rule__ScriptBody__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7365:1: ( rule__ScriptBody__Group__0__Impl rule__ScriptBody__Group__1 )
-            // InternalJoveNotes.g:7366:2: rule__ScriptBody__Group__0__Impl rule__ScriptBody__Group__1
+            // InternalJoveNotes.g:7462:1: ( rule__ScriptBody__Group__0__Impl rule__ScriptBody__Group__1 )
+            // InternalJoveNotes.g:7463:2: rule__ScriptBody__Group__0__Impl rule__ScriptBody__Group__1
             {
             pushFollow(FOLLOW_20);
             rule__ScriptBody__Group__0__Impl();
@@ -19888,20 +20145,20 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ScriptBody__Group__0__Impl"
-    // InternalJoveNotes.g:7373:1: rule__ScriptBody__Group__0__Impl : ( 'script' ) ;
+    // InternalJoveNotes.g:7470:1: rule__ScriptBody__Group__0__Impl : ( 'script' ) ;
     public final void rule__ScriptBody__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7377:1: ( ( 'script' ) )
-            // InternalJoveNotes.g:7378:1: ( 'script' )
+            // InternalJoveNotes.g:7474:1: ( ( 'script' ) )
+            // InternalJoveNotes.g:7475:1: ( 'script' )
             {
-            // InternalJoveNotes.g:7378:1: ( 'script' )
-            // InternalJoveNotes.g:7379:1: 'script'
+            // InternalJoveNotes.g:7475:1: ( 'script' )
+            // InternalJoveNotes.g:7476:1: 'script'
             {
              before(grammarAccess.getScriptBodyAccess().getScriptKeyword_0()); 
-            match(input,55,FOLLOW_2); 
+            match(input,56,FOLLOW_2); 
              after(grammarAccess.getScriptBodyAccess().getScriptKeyword_0()); 
 
             }
@@ -19925,14 +20182,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ScriptBody__Group__1"
-    // InternalJoveNotes.g:7392:1: rule__ScriptBody__Group__1 : rule__ScriptBody__Group__1__Impl rule__ScriptBody__Group__2 ;
+    // InternalJoveNotes.g:7489:1: rule__ScriptBody__Group__1 : rule__ScriptBody__Group__1__Impl rule__ScriptBody__Group__2 ;
     public final void rule__ScriptBody__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7396:1: ( rule__ScriptBody__Group__1__Impl rule__ScriptBody__Group__2 )
-            // InternalJoveNotes.g:7397:2: rule__ScriptBody__Group__1__Impl rule__ScriptBody__Group__2
+            // InternalJoveNotes.g:7493:1: ( rule__ScriptBody__Group__1__Impl rule__ScriptBody__Group__2 )
+            // InternalJoveNotes.g:7494:2: rule__ScriptBody__Group__1__Impl rule__ScriptBody__Group__2
             {
             pushFollow(FOLLOW_7);
             rule__ScriptBody__Group__1__Impl();
@@ -19963,17 +20220,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ScriptBody__Group__1__Impl"
-    // InternalJoveNotes.g:7404:1: rule__ScriptBody__Group__1__Impl : ( '{' ) ;
+    // InternalJoveNotes.g:7501:1: rule__ScriptBody__Group__1__Impl : ( '{' ) ;
     public final void rule__ScriptBody__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7408:1: ( ( '{' ) )
-            // InternalJoveNotes.g:7409:1: ( '{' )
+            // InternalJoveNotes.g:7505:1: ( ( '{' ) )
+            // InternalJoveNotes.g:7506:1: ( '{' )
             {
-            // InternalJoveNotes.g:7409:1: ( '{' )
-            // InternalJoveNotes.g:7410:1: '{'
+            // InternalJoveNotes.g:7506:1: ( '{' )
+            // InternalJoveNotes.g:7507:1: '{'
             {
              before(grammarAccess.getScriptBodyAccess().getLeftCurlyBracketKeyword_1()); 
             match(input,23,FOLLOW_2); 
@@ -20000,14 +20257,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ScriptBody__Group__2"
-    // InternalJoveNotes.g:7423:1: rule__ScriptBody__Group__2 : rule__ScriptBody__Group__2__Impl rule__ScriptBody__Group__3 ;
+    // InternalJoveNotes.g:7520:1: rule__ScriptBody__Group__2 : rule__ScriptBody__Group__2__Impl rule__ScriptBody__Group__3 ;
     public final void rule__ScriptBody__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7427:1: ( rule__ScriptBody__Group__2__Impl rule__ScriptBody__Group__3 )
-            // InternalJoveNotes.g:7428:2: rule__ScriptBody__Group__2__Impl rule__ScriptBody__Group__3
+            // InternalJoveNotes.g:7524:1: ( rule__ScriptBody__Group__2__Impl rule__ScriptBody__Group__3 )
+            // InternalJoveNotes.g:7525:2: rule__ScriptBody__Group__2__Impl rule__ScriptBody__Group__3
             {
             pushFollow(FOLLOW_27);
             rule__ScriptBody__Group__2__Impl();
@@ -20038,21 +20295,21 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ScriptBody__Group__2__Impl"
-    // InternalJoveNotes.g:7435:1: rule__ScriptBody__Group__2__Impl : ( ( rule__ScriptBody__ScriptAssignment_2 ) ) ;
+    // InternalJoveNotes.g:7532:1: rule__ScriptBody__Group__2__Impl : ( ( rule__ScriptBody__ScriptAssignment_2 ) ) ;
     public final void rule__ScriptBody__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7439:1: ( ( ( rule__ScriptBody__ScriptAssignment_2 ) ) )
-            // InternalJoveNotes.g:7440:1: ( ( rule__ScriptBody__ScriptAssignment_2 ) )
+            // InternalJoveNotes.g:7536:1: ( ( ( rule__ScriptBody__ScriptAssignment_2 ) ) )
+            // InternalJoveNotes.g:7537:1: ( ( rule__ScriptBody__ScriptAssignment_2 ) )
             {
-            // InternalJoveNotes.g:7440:1: ( ( rule__ScriptBody__ScriptAssignment_2 ) )
-            // InternalJoveNotes.g:7441:1: ( rule__ScriptBody__ScriptAssignment_2 )
+            // InternalJoveNotes.g:7537:1: ( ( rule__ScriptBody__ScriptAssignment_2 ) )
+            // InternalJoveNotes.g:7538:1: ( rule__ScriptBody__ScriptAssignment_2 )
             {
              before(grammarAccess.getScriptBodyAccess().getScriptAssignment_2()); 
-            // InternalJoveNotes.g:7442:1: ( rule__ScriptBody__ScriptAssignment_2 )
-            // InternalJoveNotes.g:7442:2: rule__ScriptBody__ScriptAssignment_2
+            // InternalJoveNotes.g:7539:1: ( rule__ScriptBody__ScriptAssignment_2 )
+            // InternalJoveNotes.g:7539:2: rule__ScriptBody__ScriptAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__ScriptBody__ScriptAssignment_2();
@@ -20085,14 +20342,14 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ScriptBody__Group__3"
-    // InternalJoveNotes.g:7452:1: rule__ScriptBody__Group__3 : rule__ScriptBody__Group__3__Impl ;
+    // InternalJoveNotes.g:7549:1: rule__ScriptBody__Group__3 : rule__ScriptBody__Group__3__Impl ;
     public final void rule__ScriptBody__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7456:1: ( rule__ScriptBody__Group__3__Impl )
-            // InternalJoveNotes.g:7457:2: rule__ScriptBody__Group__3__Impl
+            // InternalJoveNotes.g:7553:1: ( rule__ScriptBody__Group__3__Impl )
+            // InternalJoveNotes.g:7554:2: rule__ScriptBody__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ScriptBody__Group__3__Impl();
@@ -20118,17 +20375,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ScriptBody__Group__3__Impl"
-    // InternalJoveNotes.g:7463:1: rule__ScriptBody__Group__3__Impl : ( '}' ) ;
+    // InternalJoveNotes.g:7560:1: rule__ScriptBody__Group__3__Impl : ( '}' ) ;
     public final void rule__ScriptBody__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7467:1: ( ( '}' ) )
-            // InternalJoveNotes.g:7468:1: ( '}' )
+            // InternalJoveNotes.g:7564:1: ( ( '}' ) )
+            // InternalJoveNotes.g:7565:1: ( '}' )
             {
-            // InternalJoveNotes.g:7468:1: ( '}' )
-            // InternalJoveNotes.g:7469:1: '}'
+            // InternalJoveNotes.g:7565:1: ( '}' )
+            // InternalJoveNotes.g:7566:1: '}'
             {
              before(grammarAccess.getScriptBodyAccess().getRightCurlyBracketKeyword_3()); 
             match(input,24,FOLLOW_2); 
@@ -20155,17 +20412,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__JoveNotes__ProcessingHintsAssignment_0"
-    // InternalJoveNotes.g:7491:1: rule__JoveNotes__ProcessingHintsAssignment_0 : ( ruleProcessingHints ) ;
+    // InternalJoveNotes.g:7588:1: rule__JoveNotes__ProcessingHintsAssignment_0 : ( ruleProcessingHints ) ;
     public final void rule__JoveNotes__ProcessingHintsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7495:1: ( ( ruleProcessingHints ) )
-            // InternalJoveNotes.g:7496:1: ( ruleProcessingHints )
+            // InternalJoveNotes.g:7592:1: ( ( ruleProcessingHints ) )
+            // InternalJoveNotes.g:7593:1: ( ruleProcessingHints )
             {
-            // InternalJoveNotes.g:7496:1: ( ruleProcessingHints )
-            // InternalJoveNotes.g:7497:1: ruleProcessingHints
+            // InternalJoveNotes.g:7593:1: ( ruleProcessingHints )
+            // InternalJoveNotes.g:7594:1: ruleProcessingHints
             {
              before(grammarAccess.getJoveNotesAccess().getProcessingHintsProcessingHintsParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -20196,17 +20453,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__JoveNotes__ChapterDetailsAssignment_1"
-    // InternalJoveNotes.g:7506:1: rule__JoveNotes__ChapterDetailsAssignment_1 : ( ruleChapterDetails ) ;
+    // InternalJoveNotes.g:7603:1: rule__JoveNotes__ChapterDetailsAssignment_1 : ( ruleChapterDetails ) ;
     public final void rule__JoveNotes__ChapterDetailsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7510:1: ( ( ruleChapterDetails ) )
-            // InternalJoveNotes.g:7511:1: ( ruleChapterDetails )
+            // InternalJoveNotes.g:7607:1: ( ( ruleChapterDetails ) )
+            // InternalJoveNotes.g:7608:1: ( ruleChapterDetails )
             {
-            // InternalJoveNotes.g:7511:1: ( ruleChapterDetails )
-            // InternalJoveNotes.g:7512:1: ruleChapterDetails
+            // InternalJoveNotes.g:7608:1: ( ruleChapterDetails )
+            // InternalJoveNotes.g:7609:1: ruleChapterDetails
             {
              before(grammarAccess.getJoveNotesAccess().getChapterDetailsChapterDetailsParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -20237,17 +20494,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__JoveNotes__NotesElementsAssignment_2"
-    // InternalJoveNotes.g:7521:1: rule__JoveNotes__NotesElementsAssignment_2 : ( ruleNotesElement ) ;
+    // InternalJoveNotes.g:7618:1: rule__JoveNotes__NotesElementsAssignment_2 : ( ruleNotesElement ) ;
     public final void rule__JoveNotes__NotesElementsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7525:1: ( ( ruleNotesElement ) )
-            // InternalJoveNotes.g:7526:1: ( ruleNotesElement )
+            // InternalJoveNotes.g:7622:1: ( ( ruleNotesElement ) )
+            // InternalJoveNotes.g:7623:1: ( ruleNotesElement )
             {
-            // InternalJoveNotes.g:7526:1: ( ruleNotesElement )
-            // InternalJoveNotes.g:7527:1: ruleNotesElement
+            // InternalJoveNotes.g:7623:1: ( ruleNotesElement )
+            // InternalJoveNotes.g:7624:1: ruleNotesElement
             {
              before(grammarAccess.getJoveNotesAccess().getNotesElementsNotesElementParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -20278,24 +20535,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ProcessingHints__SkipGenerationAssignment_1"
-    // InternalJoveNotes.g:7536:1: rule__ProcessingHints__SkipGenerationAssignment_1 : ( ( '@skip_generation' ) ) ;
+    // InternalJoveNotes.g:7633:1: rule__ProcessingHints__SkipGenerationAssignment_1 : ( ( '@skip_generation' ) ) ;
     public final void rule__ProcessingHints__SkipGenerationAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7540:1: ( ( ( '@skip_generation' ) ) )
-            // InternalJoveNotes.g:7541:1: ( ( '@skip_generation' ) )
+            // InternalJoveNotes.g:7637:1: ( ( ( '@skip_generation' ) ) )
+            // InternalJoveNotes.g:7638:1: ( ( '@skip_generation' ) )
             {
-            // InternalJoveNotes.g:7541:1: ( ( '@skip_generation' ) )
-            // InternalJoveNotes.g:7542:1: ( '@skip_generation' )
-            {
-             before(grammarAccess.getProcessingHintsAccess().getSkipGenerationSkip_generationKeyword_1_0()); 
-            // InternalJoveNotes.g:7543:1: ( '@skip_generation' )
-            // InternalJoveNotes.g:7544:1: '@skip_generation'
+            // InternalJoveNotes.g:7638:1: ( ( '@skip_generation' ) )
+            // InternalJoveNotes.g:7639:1: ( '@skip_generation' )
             {
              before(grammarAccess.getProcessingHintsAccess().getSkipGenerationSkip_generationKeyword_1_0()); 
-            match(input,56,FOLLOW_2); 
+            // InternalJoveNotes.g:7640:1: ( '@skip_generation' )
+            // InternalJoveNotes.g:7641:1: '@skip_generation'
+            {
+             before(grammarAccess.getProcessingHintsAccess().getSkipGenerationSkip_generationKeyword_1_0()); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getProcessingHintsAccess().getSkipGenerationSkip_generationKeyword_1_0()); 
 
             }
@@ -20323,24 +20580,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ProcessingHints__SkipGenerationInProductionAssignment_2"
-    // InternalJoveNotes.g:7559:1: rule__ProcessingHints__SkipGenerationInProductionAssignment_2 : ( ( '@skip_generation_in_production' ) ) ;
+    // InternalJoveNotes.g:7656:1: rule__ProcessingHints__SkipGenerationInProductionAssignment_2 : ( ( '@skip_generation_in_production' ) ) ;
     public final void rule__ProcessingHints__SkipGenerationInProductionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7563:1: ( ( ( '@skip_generation_in_production' ) ) )
-            // InternalJoveNotes.g:7564:1: ( ( '@skip_generation_in_production' ) )
+            // InternalJoveNotes.g:7660:1: ( ( ( '@skip_generation_in_production' ) ) )
+            // InternalJoveNotes.g:7661:1: ( ( '@skip_generation_in_production' ) )
             {
-            // InternalJoveNotes.g:7564:1: ( ( '@skip_generation_in_production' ) )
-            // InternalJoveNotes.g:7565:1: ( '@skip_generation_in_production' )
-            {
-             before(grammarAccess.getProcessingHintsAccess().getSkipGenerationInProductionSkip_generation_in_productionKeyword_2_0()); 
-            // InternalJoveNotes.g:7566:1: ( '@skip_generation_in_production' )
-            // InternalJoveNotes.g:7567:1: '@skip_generation_in_production'
+            // InternalJoveNotes.g:7661:1: ( ( '@skip_generation_in_production' ) )
+            // InternalJoveNotes.g:7662:1: ( '@skip_generation_in_production' )
             {
              before(grammarAccess.getProcessingHintsAccess().getSkipGenerationInProductionSkip_generation_in_productionKeyword_2_0()); 
-            match(input,57,FOLLOW_2); 
+            // InternalJoveNotes.g:7663:1: ( '@skip_generation_in_production' )
+            // InternalJoveNotes.g:7664:1: '@skip_generation_in_production'
+            {
+             before(grammarAccess.getProcessingHintsAccess().getSkipGenerationInProductionSkip_generation_in_productionKeyword_2_0()); 
+            match(input,58,FOLLOW_2); 
              after(grammarAccess.getProcessingHintsAccess().getSkipGenerationInProductionSkip_generation_in_productionKeyword_2_0()); 
 
             }
@@ -20368,24 +20625,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__ExerciseBankAssignment_0"
-    // InternalJoveNotes.g:7582:1: rule__ChapterDetails__ExerciseBankAssignment_0 : ( ( '@exercise_bank' ) ) ;
+    // InternalJoveNotes.g:7679:1: rule__ChapterDetails__ExerciseBankAssignment_0 : ( ( '@exercise_bank' ) ) ;
     public final void rule__ChapterDetails__ExerciseBankAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7586:1: ( ( ( '@exercise_bank' ) ) )
-            // InternalJoveNotes.g:7587:1: ( ( '@exercise_bank' ) )
+            // InternalJoveNotes.g:7683:1: ( ( ( '@exercise_bank' ) ) )
+            // InternalJoveNotes.g:7684:1: ( ( '@exercise_bank' ) )
             {
-            // InternalJoveNotes.g:7587:1: ( ( '@exercise_bank' ) )
-            // InternalJoveNotes.g:7588:1: ( '@exercise_bank' )
-            {
-             before(grammarAccess.getChapterDetailsAccess().getExerciseBankExercise_bankKeyword_0_0()); 
-            // InternalJoveNotes.g:7589:1: ( '@exercise_bank' )
-            // InternalJoveNotes.g:7590:1: '@exercise_bank'
+            // InternalJoveNotes.g:7684:1: ( ( '@exercise_bank' ) )
+            // InternalJoveNotes.g:7685:1: ( '@exercise_bank' )
             {
              before(grammarAccess.getChapterDetailsAccess().getExerciseBankExercise_bankKeyword_0_0()); 
-            match(input,58,FOLLOW_2); 
+            // InternalJoveNotes.g:7686:1: ( '@exercise_bank' )
+            // InternalJoveNotes.g:7687:1: '@exercise_bank'
+            {
+             before(grammarAccess.getChapterDetailsAccess().getExerciseBankExercise_bankKeyword_0_0()); 
+            match(input,59,FOLLOW_2); 
              after(grammarAccess.getChapterDetailsAccess().getExerciseBankExercise_bankKeyword_0_0()); 
 
             }
@@ -20413,17 +20670,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__SubjectNameAssignment_2"
-    // InternalJoveNotes.g:7605:1: rule__ChapterDetails__SubjectNameAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:7702:1: rule__ChapterDetails__SubjectNameAssignment_2 : ( RULE_STRING ) ;
     public final void rule__ChapterDetails__SubjectNameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7609:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:7610:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7706:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:7707:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:7610:1: ( RULE_STRING )
-            // InternalJoveNotes.g:7611:1: RULE_STRING
+            // InternalJoveNotes.g:7707:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7708:1: RULE_STRING
             {
              before(grammarAccess.getChapterDetailsAccess().getSubjectNameSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -20450,17 +20707,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__ChapterNumberAssignment_4"
-    // InternalJoveNotes.g:7620:1: rule__ChapterDetails__ChapterNumberAssignment_4 : ( RULE_INT ) ;
+    // InternalJoveNotes.g:7717:1: rule__ChapterDetails__ChapterNumberAssignment_4 : ( RULE_INT ) ;
     public final void rule__ChapterDetails__ChapterNumberAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7624:1: ( ( RULE_INT ) )
-            // InternalJoveNotes.g:7625:1: ( RULE_INT )
+            // InternalJoveNotes.g:7721:1: ( ( RULE_INT ) )
+            // InternalJoveNotes.g:7722:1: ( RULE_INT )
             {
-            // InternalJoveNotes.g:7625:1: ( RULE_INT )
-            // InternalJoveNotes.g:7626:1: RULE_INT
+            // InternalJoveNotes.g:7722:1: ( RULE_INT )
+            // InternalJoveNotes.g:7723:1: RULE_INT
             {
              before(grammarAccess.getChapterDetailsAccess().getChapterNumberINTTerminalRuleCall_4_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -20487,17 +20744,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__SubChapterNumberAssignment_6"
-    // InternalJoveNotes.g:7635:1: rule__ChapterDetails__SubChapterNumberAssignment_6 : ( RULE_INT ) ;
+    // InternalJoveNotes.g:7732:1: rule__ChapterDetails__SubChapterNumberAssignment_6 : ( RULE_INT ) ;
     public final void rule__ChapterDetails__SubChapterNumberAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7639:1: ( ( RULE_INT ) )
-            // InternalJoveNotes.g:7640:1: ( RULE_INT )
+            // InternalJoveNotes.g:7736:1: ( ( RULE_INT ) )
+            // InternalJoveNotes.g:7737:1: ( RULE_INT )
             {
-            // InternalJoveNotes.g:7640:1: ( RULE_INT )
-            // InternalJoveNotes.g:7641:1: RULE_INT
+            // InternalJoveNotes.g:7737:1: ( RULE_INT )
+            // InternalJoveNotes.g:7738:1: RULE_INT
             {
              before(grammarAccess.getChapterDetailsAccess().getSubChapterNumberINTTerminalRuleCall_6_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -20524,17 +20781,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__ChapterNameAssignment_8"
-    // InternalJoveNotes.g:7650:1: rule__ChapterDetails__ChapterNameAssignment_8 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:7747:1: rule__ChapterDetails__ChapterNameAssignment_8 : ( RULE_STRING ) ;
     public final void rule__ChapterDetails__ChapterNameAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7654:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:7655:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7751:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:7752:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:7655:1: ( RULE_STRING )
-            // InternalJoveNotes.g:7656:1: RULE_STRING
+            // InternalJoveNotes.g:7752:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7753:1: RULE_STRING
             {
              before(grammarAccess.getChapterDetailsAccess().getChapterNameSTRINGTerminalRuleCall_8_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -20561,17 +20818,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChapterDetails__ScriptBodyAssignment_9"
-    // InternalJoveNotes.g:7665:1: rule__ChapterDetails__ScriptBodyAssignment_9 : ( ruleScriptBody ) ;
+    // InternalJoveNotes.g:7762:1: rule__ChapterDetails__ScriptBodyAssignment_9 : ( ruleScriptBody ) ;
     public final void rule__ChapterDetails__ScriptBodyAssignment_9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7669:1: ( ( ruleScriptBody ) )
-            // InternalJoveNotes.g:7670:1: ( ruleScriptBody )
+            // InternalJoveNotes.g:7766:1: ( ( ruleScriptBody ) )
+            // InternalJoveNotes.g:7767:1: ( ruleScriptBody )
             {
-            // InternalJoveNotes.g:7670:1: ( ruleScriptBody )
-            // InternalJoveNotes.g:7671:1: ruleScriptBody
+            // InternalJoveNotes.g:7767:1: ( ruleScriptBody )
+            // InternalJoveNotes.g:7768:1: ruleScriptBody
             {
              before(grammarAccess.getChapterDetailsAccess().getScriptBodyScriptBodyParserRuleCall_9_0()); 
             pushFollow(FOLLOW_2);
@@ -20602,17 +20859,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__NotesElement__ScriptAssignment_1"
-    // InternalJoveNotes.g:7680:1: rule__NotesElement__ScriptAssignment_1 : ( ruleScript ) ;
+    // InternalJoveNotes.g:7777:1: rule__NotesElement__ScriptAssignment_1 : ( ruleScript ) ;
     public final void rule__NotesElement__ScriptAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7684:1: ( ( ruleScript ) )
-            // InternalJoveNotes.g:7685:1: ( ruleScript )
+            // InternalJoveNotes.g:7781:1: ( ( ruleScript ) )
+            // InternalJoveNotes.g:7782:1: ( ruleScript )
             {
-            // InternalJoveNotes.g:7685:1: ( ruleScript )
-            // InternalJoveNotes.g:7686:1: ruleScript
+            // InternalJoveNotes.g:7782:1: ( ruleScript )
+            // InternalJoveNotes.g:7783:1: ruleScript
             {
              before(grammarAccess.getNotesElementAccess().getScriptScriptParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -20643,24 +20900,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__WordMeaning__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:7695:1: rule__WordMeaning__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:7792:1: rule__WordMeaning__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__WordMeaning__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7699:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:7700:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:7796:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:7797:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:7700:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:7701:1: ( 'hide' )
-            {
-             before(grammarAccess.getWordMeaningAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:7702:1: ( 'hide' )
-            // InternalJoveNotes.g:7703:1: 'hide'
+            // InternalJoveNotes.g:7797:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:7798:1: ( 'hide' )
             {
              before(grammarAccess.getWordMeaningAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:7799:1: ( 'hide' )
+            // InternalJoveNotes.g:7800:1: 'hide'
+            {
+             before(grammarAccess.getWordMeaningAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getWordMeaningAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -20688,17 +20945,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__WordMeaning__WordAssignment_2"
-    // InternalJoveNotes.g:7718:1: rule__WordMeaning__WordAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:7815:1: rule__WordMeaning__WordAssignment_2 : ( RULE_STRING ) ;
     public final void rule__WordMeaning__WordAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7722:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:7723:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7819:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:7820:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:7723:1: ( RULE_STRING )
-            // InternalJoveNotes.g:7724:1: RULE_STRING
+            // InternalJoveNotes.g:7820:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7821:1: RULE_STRING
             {
              before(grammarAccess.getWordMeaningAccess().getWordSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -20725,17 +20982,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__WordMeaning__MeaningAssignment_3"
-    // InternalJoveNotes.g:7733:1: rule__WordMeaning__MeaningAssignment_3 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:7830:1: rule__WordMeaning__MeaningAssignment_3 : ( RULE_STRING ) ;
     public final void rule__WordMeaning__MeaningAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7737:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:7738:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7834:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:7835:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:7738:1: ( RULE_STRING )
-            // InternalJoveNotes.g:7739:1: RULE_STRING
+            // InternalJoveNotes.g:7835:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7836:1: RULE_STRING
             {
              before(grammarAccess.getWordMeaningAccess().getMeaningSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -20762,24 +21019,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuestionAnswer__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:7748:1: rule__QuestionAnswer__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:7845:1: rule__QuestionAnswer__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__QuestionAnswer__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7752:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:7753:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:7849:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:7850:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:7753:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:7754:1: ( 'hide' )
-            {
-             before(grammarAccess.getQuestionAnswerAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:7755:1: ( 'hide' )
-            // InternalJoveNotes.g:7756:1: 'hide'
+            // InternalJoveNotes.g:7850:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:7851:1: ( 'hide' )
             {
              before(grammarAccess.getQuestionAnswerAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:7852:1: ( 'hide' )
+            // InternalJoveNotes.g:7853:1: 'hide'
+            {
+             before(grammarAccess.getQuestionAnswerAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getQuestionAnswerAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -20807,17 +21064,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuestionAnswer__QuestionAssignment_2"
-    // InternalJoveNotes.g:7771:1: rule__QuestionAnswer__QuestionAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:7868:1: rule__QuestionAnswer__QuestionAssignment_2 : ( RULE_STRING ) ;
     public final void rule__QuestionAnswer__QuestionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7775:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:7776:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7872:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:7873:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:7776:1: ( RULE_STRING )
-            // InternalJoveNotes.g:7777:1: RULE_STRING
+            // InternalJoveNotes.g:7873:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7874:1: RULE_STRING
             {
              before(grammarAccess.getQuestionAnswerAccess().getQuestionSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -20844,17 +21101,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuestionAnswer__AnswerPartsAssignment_3"
-    // InternalJoveNotes.g:7786:1: rule__QuestionAnswer__AnswerPartsAssignment_3 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:7883:1: rule__QuestionAnswer__AnswerPartsAssignment_3 : ( RULE_STRING ) ;
     public final void rule__QuestionAnswer__AnswerPartsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7790:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:7791:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7887:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:7888:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:7791:1: ( RULE_STRING )
-            // InternalJoveNotes.g:7792:1: RULE_STRING
+            // InternalJoveNotes.g:7888:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7889:1: RULE_STRING
             {
              before(grammarAccess.getQuestionAnswerAccess().getAnswerPartsSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -20881,17 +21138,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuestionAnswer__CmapAssignment_4"
-    // InternalJoveNotes.g:7801:1: rule__QuestionAnswer__CmapAssignment_4 : ( ruleCMap ) ;
+    // InternalJoveNotes.g:7898:1: rule__QuestionAnswer__CmapAssignment_4 : ( ruleCMap ) ;
     public final void rule__QuestionAnswer__CmapAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7805:1: ( ( ruleCMap ) )
-            // InternalJoveNotes.g:7806:1: ( ruleCMap )
+            // InternalJoveNotes.g:7902:1: ( ( ruleCMap ) )
+            // InternalJoveNotes.g:7903:1: ( ruleCMap )
             {
-            // InternalJoveNotes.g:7806:1: ( ruleCMap )
-            // InternalJoveNotes.g:7807:1: ruleCMap
+            // InternalJoveNotes.g:7903:1: ( ruleCMap )
+            // InternalJoveNotes.g:7904:1: ruleCMap
             {
              before(grammarAccess.getQuestionAnswerAccess().getCmapCMapParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -20922,24 +21179,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__FIB__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:7816:1: rule__FIB__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:7913:1: rule__FIB__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__FIB__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7820:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:7821:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:7917:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:7918:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:7821:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:7822:1: ( 'hide' )
-            {
-             before(grammarAccess.getFIBAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:7823:1: ( 'hide' )
-            // InternalJoveNotes.g:7824:1: 'hide'
+            // InternalJoveNotes.g:7918:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:7919:1: ( 'hide' )
             {
              before(grammarAccess.getFIBAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:7920:1: ( 'hide' )
+            // InternalJoveNotes.g:7921:1: 'hide'
+            {
+             before(grammarAccess.getFIBAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getFIBAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -20967,17 +21224,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__FIB__QuestionAssignment_2"
-    // InternalJoveNotes.g:7839:1: rule__FIB__QuestionAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:7936:1: rule__FIB__QuestionAssignment_2 : ( RULE_STRING ) ;
     public final void rule__FIB__QuestionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7843:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:7844:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7940:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:7941:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:7844:1: ( RULE_STRING )
-            // InternalJoveNotes.g:7845:1: RULE_STRING
+            // InternalJoveNotes.g:7941:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7942:1: RULE_STRING
             {
              before(grammarAccess.getFIBAccess().getQuestionSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -21004,17 +21261,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__FIB__AnswersAssignment_3"
-    // InternalJoveNotes.g:7854:1: rule__FIB__AnswersAssignment_3 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:7951:1: rule__FIB__AnswersAssignment_3 : ( RULE_STRING ) ;
     public final void rule__FIB__AnswersAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7858:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:7859:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7955:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:7956:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:7859:1: ( RULE_STRING )
-            // InternalJoveNotes.g:7860:1: RULE_STRING
+            // InternalJoveNotes.g:7956:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7957:1: RULE_STRING
             {
              before(grammarAccess.getFIBAccess().getAnswersSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -21041,24 +21298,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Definition__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:7869:1: rule__Definition__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:7966:1: rule__Definition__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__Definition__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7873:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:7874:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:7970:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:7971:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:7874:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:7875:1: ( 'hide' )
-            {
-             before(grammarAccess.getDefinitionAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:7876:1: ( 'hide' )
-            // InternalJoveNotes.g:7877:1: 'hide'
+            // InternalJoveNotes.g:7971:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:7972:1: ( 'hide' )
             {
              before(grammarAccess.getDefinitionAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:7973:1: ( 'hide' )
+            // InternalJoveNotes.g:7974:1: 'hide'
+            {
+             before(grammarAccess.getDefinitionAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getDefinitionAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -21086,17 +21343,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Definition__TermAssignment_2"
-    // InternalJoveNotes.g:7892:1: rule__Definition__TermAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:7989:1: rule__Definition__TermAssignment_2 : ( RULE_STRING ) ;
     public final void rule__Definition__TermAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7896:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:7897:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7993:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:7994:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:7897:1: ( RULE_STRING )
-            // InternalJoveNotes.g:7898:1: RULE_STRING
+            // InternalJoveNotes.g:7994:1: ( RULE_STRING )
+            // InternalJoveNotes.g:7995:1: RULE_STRING
             {
              before(grammarAccess.getDefinitionAccess().getTermSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -21123,17 +21380,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Definition__DefinitionAssignment_3"
-    // InternalJoveNotes.g:7907:1: rule__Definition__DefinitionAssignment_3 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8004:1: rule__Definition__DefinitionAssignment_3 : ( RULE_STRING ) ;
     public final void rule__Definition__DefinitionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7911:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:7912:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8008:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8009:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:7912:1: ( RULE_STRING )
-            // InternalJoveNotes.g:7913:1: RULE_STRING
+            // InternalJoveNotes.g:8009:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8010:1: RULE_STRING
             {
              before(grammarAccess.getDefinitionAccess().getDefinitionSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -21160,17 +21417,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Definition__CmapAssignment_4"
-    // InternalJoveNotes.g:7922:1: rule__Definition__CmapAssignment_4 : ( ruleCMap ) ;
+    // InternalJoveNotes.g:8019:1: rule__Definition__CmapAssignment_4 : ( ruleCMap ) ;
     public final void rule__Definition__CmapAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7926:1: ( ( ruleCMap ) )
-            // InternalJoveNotes.g:7927:1: ( ruleCMap )
+            // InternalJoveNotes.g:8023:1: ( ( ruleCMap ) )
+            // InternalJoveNotes.g:8024:1: ( ruleCMap )
             {
-            // InternalJoveNotes.g:7927:1: ( ruleCMap )
-            // InternalJoveNotes.g:7928:1: ruleCMap
+            // InternalJoveNotes.g:8024:1: ( ruleCMap )
+            // InternalJoveNotes.g:8025:1: ruleCMap
             {
              before(grammarAccess.getDefinitionAccess().getCmapCMapParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -21201,24 +21458,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Character__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:7937:1: rule__Character__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:8034:1: rule__Character__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__Character__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7941:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:7942:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8038:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:8039:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:7942:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:7943:1: ( 'hide' )
-            {
-             before(grammarAccess.getCharacterAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:7944:1: ( 'hide' )
-            // InternalJoveNotes.g:7945:1: 'hide'
+            // InternalJoveNotes.g:8039:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8040:1: ( 'hide' )
             {
              before(grammarAccess.getCharacterAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:8041:1: ( 'hide' )
+            // InternalJoveNotes.g:8042:1: 'hide'
+            {
+             before(grammarAccess.getCharacterAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getCharacterAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -21246,17 +21503,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Character__CharacterAssignment_2"
-    // InternalJoveNotes.g:7960:1: rule__Character__CharacterAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8057:1: rule__Character__CharacterAssignment_2 : ( RULE_STRING ) ;
     public final void rule__Character__CharacterAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7964:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:7965:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8061:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8062:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:7965:1: ( RULE_STRING )
-            // InternalJoveNotes.g:7966:1: RULE_STRING
+            // InternalJoveNotes.g:8062:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8063:1: RULE_STRING
             {
              before(grammarAccess.getCharacterAccess().getCharacterSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -21283,17 +21540,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Character__EstimateAssignment_3"
-    // InternalJoveNotes.g:7975:1: rule__Character__EstimateAssignment_3 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8072:1: rule__Character__EstimateAssignment_3 : ( RULE_STRING ) ;
     public final void rule__Character__EstimateAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7979:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:7980:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8076:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8077:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:7980:1: ( RULE_STRING )
-            // InternalJoveNotes.g:7981:1: RULE_STRING
+            // InternalJoveNotes.g:8077:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8078:1: RULE_STRING
             {
              before(grammarAccess.getCharacterAccess().getEstimateSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -21320,17 +21577,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Character__CmapAssignment_4"
-    // InternalJoveNotes.g:7990:1: rule__Character__CmapAssignment_4 : ( ruleCMap ) ;
+    // InternalJoveNotes.g:8087:1: rule__Character__CmapAssignment_4 : ( ruleCMap ) ;
     public final void rule__Character__CmapAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:7994:1: ( ( ruleCMap ) )
-            // InternalJoveNotes.g:7995:1: ( ruleCMap )
+            // InternalJoveNotes.g:8091:1: ( ( ruleCMap ) )
+            // InternalJoveNotes.g:8092:1: ( ruleCMap )
             {
-            // InternalJoveNotes.g:7995:1: ( ruleCMap )
-            // InternalJoveNotes.g:7996:1: ruleCMap
+            // InternalJoveNotes.g:8092:1: ( ruleCMap )
+            // InternalJoveNotes.g:8093:1: ruleCMap
             {
              before(grammarAccess.getCharacterAccess().getCmapCMapParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -21361,24 +21618,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TeacherNote__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:8005:1: rule__TeacherNote__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:8102:1: rule__TeacherNote__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__TeacherNote__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8009:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:8010:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8106:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:8107:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:8010:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:8011:1: ( 'hide' )
-            {
-             before(grammarAccess.getTeacherNoteAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:8012:1: ( 'hide' )
-            // InternalJoveNotes.g:8013:1: 'hide'
+            // InternalJoveNotes.g:8107:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8108:1: ( 'hide' )
             {
              before(grammarAccess.getTeacherNoteAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:8109:1: ( 'hide' )
+            // InternalJoveNotes.g:8110:1: 'hide'
+            {
+             before(grammarAccess.getTeacherNoteAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getTeacherNoteAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -21406,17 +21663,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TeacherNote__CaptionAssignment_2"
-    // InternalJoveNotes.g:8028:1: rule__TeacherNote__CaptionAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8125:1: rule__TeacherNote__CaptionAssignment_2 : ( RULE_STRING ) ;
     public final void rule__TeacherNote__CaptionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8032:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8033:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8129:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8130:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8033:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8034:1: RULE_STRING
+            // InternalJoveNotes.g:8130:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8131:1: RULE_STRING
             {
              before(grammarAccess.getTeacherNoteAccess().getCaptionSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -21443,17 +21700,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TeacherNote__NoteAssignment_3"
-    // InternalJoveNotes.g:8043:1: rule__TeacherNote__NoteAssignment_3 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8140:1: rule__TeacherNote__NoteAssignment_3 : ( RULE_STRING ) ;
     public final void rule__TeacherNote__NoteAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8047:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8048:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8144:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8145:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8048:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8049:1: RULE_STRING
+            // InternalJoveNotes.g:8145:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8146:1: RULE_STRING
             {
              before(grammarAccess.getTeacherNoteAccess().getNoteSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -21480,17 +21737,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TeacherNote__CmapAssignment_4"
-    // InternalJoveNotes.g:8058:1: rule__TeacherNote__CmapAssignment_4 : ( ruleCMap ) ;
+    // InternalJoveNotes.g:8155:1: rule__TeacherNote__CmapAssignment_4 : ( ruleCMap ) ;
     public final void rule__TeacherNote__CmapAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8062:1: ( ( ruleCMap ) )
-            // InternalJoveNotes.g:8063:1: ( ruleCMap )
+            // InternalJoveNotes.g:8159:1: ( ( ruleCMap ) )
+            // InternalJoveNotes.g:8160:1: ( ruleCMap )
             {
-            // InternalJoveNotes.g:8063:1: ( ruleCMap )
-            // InternalJoveNotes.g:8064:1: ruleCMap
+            // InternalJoveNotes.g:8160:1: ( ruleCMap )
+            // InternalJoveNotes.g:8161:1: ruleCMap
             {
              before(grammarAccess.getTeacherNoteAccess().getCmapCMapParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -21521,24 +21778,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:8073:1: rule__Matching__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:8170:1: rule__Matching__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__Matching__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8077:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:8078:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8174:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:8175:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:8078:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:8079:1: ( 'hide' )
-            {
-             before(grammarAccess.getMatchingAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:8080:1: ( 'hide' )
-            // InternalJoveNotes.g:8081:1: 'hide'
+            // InternalJoveNotes.g:8175:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8176:1: ( 'hide' )
             {
              before(grammarAccess.getMatchingAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:8177:1: ( 'hide' )
+            // InternalJoveNotes.g:8178:1: 'hide'
+            {
+             before(grammarAccess.getMatchingAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getMatchingAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -21566,24 +21823,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__SkipReverseQuestionAssignment_2"
-    // InternalJoveNotes.g:8096:1: rule__Matching__SkipReverseQuestionAssignment_2 : ( ( 'skip_reverse_question' ) ) ;
+    // InternalJoveNotes.g:8193:1: rule__Matching__SkipReverseQuestionAssignment_2 : ( ( 'skip_reverse_question' ) ) ;
     public final void rule__Matching__SkipReverseQuestionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8100:1: ( ( ( 'skip_reverse_question' ) ) )
-            // InternalJoveNotes.g:8101:1: ( ( 'skip_reverse_question' ) )
+            // InternalJoveNotes.g:8197:1: ( ( ( 'skip_reverse_question' ) ) )
+            // InternalJoveNotes.g:8198:1: ( ( 'skip_reverse_question' ) )
             {
-            // InternalJoveNotes.g:8101:1: ( ( 'skip_reverse_question' ) )
-            // InternalJoveNotes.g:8102:1: ( 'skip_reverse_question' )
-            {
-             before(grammarAccess.getMatchingAccess().getSkipReverseQuestionSkip_reverse_questionKeyword_2_0()); 
-            // InternalJoveNotes.g:8103:1: ( 'skip_reverse_question' )
-            // InternalJoveNotes.g:8104:1: 'skip_reverse_question'
+            // InternalJoveNotes.g:8198:1: ( ( 'skip_reverse_question' ) )
+            // InternalJoveNotes.g:8199:1: ( 'skip_reverse_question' )
             {
              before(grammarAccess.getMatchingAccess().getSkipReverseQuestionSkip_reverse_questionKeyword_2_0()); 
-            match(input,60,FOLLOW_2); 
+            // InternalJoveNotes.g:8200:1: ( 'skip_reverse_question' )
+            // InternalJoveNotes.g:8201:1: 'skip_reverse_question'
+            {
+             before(grammarAccess.getMatchingAccess().getSkipReverseQuestionSkip_reverse_questionKeyword_2_0()); 
+            match(input,61,FOLLOW_2); 
              after(grammarAccess.getMatchingAccess().getSkipReverseQuestionSkip_reverse_questionKeyword_2_0()); 
 
             }
@@ -21611,17 +21868,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__QuestionAssignment_3"
-    // InternalJoveNotes.g:8119:1: rule__Matching__QuestionAssignment_3 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8216:1: rule__Matching__QuestionAssignment_3 : ( RULE_STRING ) ;
     public final void rule__Matching__QuestionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8123:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8124:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8220:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8221:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8124:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8125:1: RULE_STRING
+            // InternalJoveNotes.g:8221:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8222:1: RULE_STRING
             {
              before(grammarAccess.getMatchingAccess().getQuestionSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -21648,17 +21905,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__PairsAssignment_5"
-    // InternalJoveNotes.g:8134:1: rule__Matching__PairsAssignment_5 : ( ruleMatchPair ) ;
+    // InternalJoveNotes.g:8231:1: rule__Matching__PairsAssignment_5 : ( ruleMatchPair ) ;
     public final void rule__Matching__PairsAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8138:1: ( ( ruleMatchPair ) )
-            // InternalJoveNotes.g:8139:1: ( ruleMatchPair )
+            // InternalJoveNotes.g:8235:1: ( ( ruleMatchPair ) )
+            // InternalJoveNotes.g:8236:1: ( ruleMatchPair )
             {
-            // InternalJoveNotes.g:8139:1: ( ruleMatchPair )
-            // InternalJoveNotes.g:8140:1: ruleMatchPair
+            // InternalJoveNotes.g:8236:1: ( ruleMatchPair )
+            // InternalJoveNotes.g:8237:1: ruleMatchPair
             {
              before(grammarAccess.getMatchingAccess().getPairsMatchPairParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
@@ -21689,17 +21946,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Matching__McqConfigAssignment_6"
-    // InternalJoveNotes.g:8149:1: rule__Matching__McqConfigAssignment_6 : ( ruleMatchMCQConfig ) ;
+    // InternalJoveNotes.g:8246:1: rule__Matching__McqConfigAssignment_6 : ( ruleMatchMCQConfig ) ;
     public final void rule__Matching__McqConfigAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8153:1: ( ( ruleMatchMCQConfig ) )
-            // InternalJoveNotes.g:8154:1: ( ruleMatchMCQConfig )
+            // InternalJoveNotes.g:8250:1: ( ( ruleMatchMCQConfig ) )
+            // InternalJoveNotes.g:8251:1: ( ruleMatchMCQConfig )
             {
-            // InternalJoveNotes.g:8154:1: ( ruleMatchMCQConfig )
-            // InternalJoveNotes.g:8155:1: ruleMatchMCQConfig
+            // InternalJoveNotes.g:8251:1: ( ruleMatchMCQConfig )
+            // InternalJoveNotes.g:8252:1: ruleMatchMCQConfig
             {
              before(grammarAccess.getMatchingAccess().getMcqConfigMatchMCQConfigParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
@@ -21730,17 +21987,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchPair__MatchQuestionAssignment_0"
-    // InternalJoveNotes.g:8164:1: rule__MatchPair__MatchQuestionAssignment_0 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8261:1: rule__MatchPair__MatchQuestionAssignment_0 : ( RULE_STRING ) ;
     public final void rule__MatchPair__MatchQuestionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8168:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8169:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8265:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8266:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8169:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8170:1: RULE_STRING
+            // InternalJoveNotes.g:8266:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8267:1: RULE_STRING
             {
              before(grammarAccess.getMatchPairAccess().getMatchQuestionSTRINGTerminalRuleCall_0_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -21767,17 +22024,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchPair__MatchAnswerAssignment_2"
-    // InternalJoveNotes.g:8179:1: rule__MatchPair__MatchAnswerAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8276:1: rule__MatchPair__MatchAnswerAssignment_2 : ( RULE_STRING ) ;
     public final void rule__MatchPair__MatchAnswerAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8183:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8184:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8280:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8281:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8184:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8185:1: RULE_STRING
+            // InternalJoveNotes.g:8281:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8282:1: RULE_STRING
             {
              before(grammarAccess.getMatchPairAccess().getMatchAnswerSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -21804,17 +22061,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__ForwardCaptionAssignment_3"
-    // InternalJoveNotes.g:8194:1: rule__MatchMCQConfig__ForwardCaptionAssignment_3 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8291:1: rule__MatchMCQConfig__ForwardCaptionAssignment_3 : ( RULE_STRING ) ;
     public final void rule__MatchMCQConfig__ForwardCaptionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8198:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8199:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8295:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8296:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8199:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8200:1: RULE_STRING
+            // InternalJoveNotes.g:8296:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8297:1: RULE_STRING
             {
              before(grammarAccess.getMatchMCQConfigAccess().getForwardCaptionSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -21841,17 +22098,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__ReverseCaptionAssignment_4_1"
-    // InternalJoveNotes.g:8209:1: rule__MatchMCQConfig__ReverseCaptionAssignment_4_1 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8306:1: rule__MatchMCQConfig__ReverseCaptionAssignment_4_1 : ( RULE_STRING ) ;
     public final void rule__MatchMCQConfig__ReverseCaptionAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8213:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8214:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8310:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8311:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8214:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8215:1: RULE_STRING
+            // InternalJoveNotes.g:8311:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8312:1: RULE_STRING
             {
              before(grammarAccess.getMatchMCQConfigAccess().getReverseCaptionSTRINGTerminalRuleCall_4_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -21878,17 +22135,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1"
-    // InternalJoveNotes.g:8224:1: rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1 : ( RULE_INT ) ;
+    // InternalJoveNotes.g:8321:1: rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1 : ( RULE_INT ) ;
     public final void rule__MatchMCQConfig__NumOptionsToShowAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8228:1: ( ( RULE_INT ) )
-            // InternalJoveNotes.g:8229:1: ( RULE_INT )
+            // InternalJoveNotes.g:8325:1: ( ( RULE_INT ) )
+            // InternalJoveNotes.g:8326:1: ( RULE_INT )
             {
-            // InternalJoveNotes.g:8229:1: ( RULE_INT )
-            // InternalJoveNotes.g:8230:1: RULE_INT
+            // InternalJoveNotes.g:8326:1: ( RULE_INT )
+            // InternalJoveNotes.g:8327:1: RULE_INT
             {
              before(grammarAccess.getMatchMCQConfigAccess().getNumOptionsToShowINTTerminalRuleCall_5_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -21915,17 +22172,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1"
-    // InternalJoveNotes.g:8239:1: rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1 : ( RULE_INT ) ;
+    // InternalJoveNotes.g:8336:1: rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1 : ( RULE_INT ) ;
     public final void rule__MatchMCQConfig__NumOptionsPerRowAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8243:1: ( ( RULE_INT ) )
-            // InternalJoveNotes.g:8244:1: ( RULE_INT )
+            // InternalJoveNotes.g:8340:1: ( ( RULE_INT ) )
+            // InternalJoveNotes.g:8341:1: ( RULE_INT )
             {
-            // InternalJoveNotes.g:8244:1: ( RULE_INT )
-            // InternalJoveNotes.g:8245:1: RULE_INT
+            // InternalJoveNotes.g:8341:1: ( RULE_INT )
+            // InternalJoveNotes.g:8342:1: RULE_INT
             {
              before(grammarAccess.getMatchMCQConfigAccess().getNumOptionsPerRowINTTerminalRuleCall_6_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -21952,24 +22209,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Event__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:8254:1: rule__Event__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:8351:1: rule__Event__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__Event__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8258:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:8259:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8355:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:8356:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:8259:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:8260:1: ( 'hide' )
-            {
-             before(grammarAccess.getEventAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:8261:1: ( 'hide' )
-            // InternalJoveNotes.g:8262:1: 'hide'
+            // InternalJoveNotes.g:8356:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8357:1: ( 'hide' )
             {
              before(grammarAccess.getEventAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:8358:1: ( 'hide' )
+            // InternalJoveNotes.g:8359:1: 'hide'
+            {
+             before(grammarAccess.getEventAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getEventAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -21997,17 +22254,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Event__EventAssignment_2"
-    // InternalJoveNotes.g:8277:1: rule__Event__EventAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8374:1: rule__Event__EventAssignment_2 : ( RULE_STRING ) ;
     public final void rule__Event__EventAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8281:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8282:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8378:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8379:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8282:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8283:1: RULE_STRING
+            // InternalJoveNotes.g:8379:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8380:1: RULE_STRING
             {
              before(grammarAccess.getEventAccess().getEventSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22034,17 +22291,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Event__TimeAssignment_3"
-    // InternalJoveNotes.g:8292:1: rule__Event__TimeAssignment_3 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8389:1: rule__Event__TimeAssignment_3 : ( RULE_STRING ) ;
     public final void rule__Event__TimeAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8296:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8297:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8393:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8394:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8297:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8298:1: RULE_STRING
+            // InternalJoveNotes.g:8394:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8395:1: RULE_STRING
             {
              before(grammarAccess.getEventAccess().getTimeSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22071,24 +22328,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TrueFalse__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:8307:1: rule__TrueFalse__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:8404:1: rule__TrueFalse__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__TrueFalse__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8311:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:8312:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8408:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:8409:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:8312:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:8313:1: ( 'hide' )
-            {
-             before(grammarAccess.getTrueFalseAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:8314:1: ( 'hide' )
-            // InternalJoveNotes.g:8315:1: 'hide'
+            // InternalJoveNotes.g:8409:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8410:1: ( 'hide' )
             {
              before(grammarAccess.getTrueFalseAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:8411:1: ( 'hide' )
+            // InternalJoveNotes.g:8412:1: 'hide'
+            {
+             before(grammarAccess.getTrueFalseAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getTrueFalseAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -22116,17 +22373,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TrueFalse__StatementAssignment_2"
-    // InternalJoveNotes.g:8330:1: rule__TrueFalse__StatementAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8427:1: rule__TrueFalse__StatementAssignment_2 : ( RULE_STRING ) ;
     public final void rule__TrueFalse__StatementAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8334:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8335:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8431:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8432:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8335:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8336:1: RULE_STRING
+            // InternalJoveNotes.g:8432:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8433:1: RULE_STRING
             {
              before(grammarAccess.getTrueFalseAccess().getStatementSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22153,17 +22410,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TrueFalse__TruthValueAssignment_3"
-    // InternalJoveNotes.g:8345:1: rule__TrueFalse__TruthValueAssignment_3 : ( RULE_BOOL ) ;
+    // InternalJoveNotes.g:8442:1: rule__TrueFalse__TruthValueAssignment_3 : ( RULE_BOOL ) ;
     public final void rule__TrueFalse__TruthValueAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8349:1: ( ( RULE_BOOL ) )
-            // InternalJoveNotes.g:8350:1: ( RULE_BOOL )
+            // InternalJoveNotes.g:8446:1: ( ( RULE_BOOL ) )
+            // InternalJoveNotes.g:8447:1: ( RULE_BOOL )
             {
-            // InternalJoveNotes.g:8350:1: ( RULE_BOOL )
-            // InternalJoveNotes.g:8351:1: RULE_BOOL
+            // InternalJoveNotes.g:8447:1: ( RULE_BOOL )
+            // InternalJoveNotes.g:8448:1: RULE_BOOL
             {
              before(grammarAccess.getTrueFalseAccess().getTruthValueBOOLTerminalRuleCall_3_0()); 
             match(input,RULE_BOOL,FOLLOW_2); 
@@ -22190,17 +22447,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__TrueFalse__JustificationAssignment_4"
-    // InternalJoveNotes.g:8360:1: rule__TrueFalse__JustificationAssignment_4 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8457:1: rule__TrueFalse__JustificationAssignment_4 : ( RULE_STRING ) ;
     public final void rule__TrueFalse__JustificationAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8364:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8365:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8461:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8462:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8365:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8366:1: RULE_STRING
+            // InternalJoveNotes.g:8462:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8463:1: RULE_STRING
             {
              before(grammarAccess.getTrueFalseAccess().getJustificationSTRINGTerminalRuleCall_4_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22227,24 +22484,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:8375:1: rule__ChemEquation__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:8472:1: rule__ChemEquation__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__ChemEquation__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8379:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:8380:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8476:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:8477:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:8380:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:8381:1: ( 'hide' )
-            {
-             before(grammarAccess.getChemEquationAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:8382:1: ( 'hide' )
-            // InternalJoveNotes.g:8383:1: 'hide'
+            // InternalJoveNotes.g:8477:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8478:1: ( 'hide' )
             {
              before(grammarAccess.getChemEquationAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:8479:1: ( 'hide' )
+            // InternalJoveNotes.g:8480:1: 'hide'
+            {
+             before(grammarAccess.getChemEquationAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getChemEquationAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -22272,17 +22529,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__DescriptionAssignment_2"
-    // InternalJoveNotes.g:8398:1: rule__ChemEquation__DescriptionAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8495:1: rule__ChemEquation__DescriptionAssignment_2 : ( RULE_STRING ) ;
     public final void rule__ChemEquation__DescriptionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8402:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8403:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8499:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8500:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8403:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8404:1: RULE_STRING
+            // InternalJoveNotes.g:8500:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8501:1: RULE_STRING
             {
              before(grammarAccess.getChemEquationAccess().getDescriptionSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22309,17 +22566,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__ReactantsAssignment_4"
-    // InternalJoveNotes.g:8413:1: rule__ChemEquation__ReactantsAssignment_4 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8510:1: rule__ChemEquation__ReactantsAssignment_4 : ( RULE_STRING ) ;
     public final void rule__ChemEquation__ReactantsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8417:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8418:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8514:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8515:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8418:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8419:1: RULE_STRING
+            // InternalJoveNotes.g:8515:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8516:1: RULE_STRING
             {
              before(grammarAccess.getChemEquationAccess().getReactantsSTRINGTerminalRuleCall_4_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22346,17 +22603,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__ProducesAssignment_6"
-    // InternalJoveNotes.g:8428:1: rule__ChemEquation__ProducesAssignment_6 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8525:1: rule__ChemEquation__ProducesAssignment_6 : ( RULE_STRING ) ;
     public final void rule__ChemEquation__ProducesAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8432:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8433:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8529:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8530:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8433:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8434:1: RULE_STRING
+            // InternalJoveNotes.g:8530:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8531:1: RULE_STRING
             {
              before(grammarAccess.getChemEquationAccess().getProducesSTRINGTerminalRuleCall_6_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22383,17 +22640,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemEquation__ProductsAssignment_8"
-    // InternalJoveNotes.g:8443:1: rule__ChemEquation__ProductsAssignment_8 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8540:1: rule__ChemEquation__ProductsAssignment_8 : ( RULE_STRING ) ;
     public final void rule__ChemEquation__ProductsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8447:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8448:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8544:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8545:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8448:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8449:1: RULE_STRING
+            // InternalJoveNotes.g:8545:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8546:1: RULE_STRING
             {
              before(grammarAccess.getChemEquationAccess().getProductsSTRINGTerminalRuleCall_8_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22420,24 +22677,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemCompound__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:8458:1: rule__ChemCompound__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:8555:1: rule__ChemCompound__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__ChemCompound__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8462:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:8463:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8559:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:8560:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:8463:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:8464:1: ( 'hide' )
-            {
-             before(grammarAccess.getChemCompoundAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:8465:1: ( 'hide' )
-            // InternalJoveNotes.g:8466:1: 'hide'
+            // InternalJoveNotes.g:8560:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8561:1: ( 'hide' )
             {
              before(grammarAccess.getChemCompoundAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:8562:1: ( 'hide' )
+            // InternalJoveNotes.g:8563:1: 'hide'
+            {
+             before(grammarAccess.getChemCompoundAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getChemCompoundAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -22465,17 +22722,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemCompound__SymbolAssignment_2"
-    // InternalJoveNotes.g:8481:1: rule__ChemCompound__SymbolAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8578:1: rule__ChemCompound__SymbolAssignment_2 : ( RULE_STRING ) ;
     public final void rule__ChemCompound__SymbolAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8485:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8486:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8582:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8583:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8486:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8487:1: RULE_STRING
+            // InternalJoveNotes.g:8583:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8584:1: RULE_STRING
             {
              before(grammarAccess.getChemCompoundAccess().getSymbolSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22502,17 +22759,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemCompound__ChemicalNameAssignment_3"
-    // InternalJoveNotes.g:8496:1: rule__ChemCompound__ChemicalNameAssignment_3 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8593:1: rule__ChemCompound__ChemicalNameAssignment_3 : ( RULE_STRING ) ;
     public final void rule__ChemCompound__ChemicalNameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8500:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8501:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8597:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8598:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8501:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8502:1: RULE_STRING
+            // InternalJoveNotes.g:8598:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8599:1: RULE_STRING
             {
              before(grammarAccess.getChemCompoundAccess().getChemicalNameSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22539,17 +22796,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ChemCompound__CommonNameAssignment_4"
-    // InternalJoveNotes.g:8511:1: rule__ChemCompound__CommonNameAssignment_4 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8608:1: rule__ChemCompound__CommonNameAssignment_4 : ( RULE_STRING ) ;
     public final void rule__ChemCompound__CommonNameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8515:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8516:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8612:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8613:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8516:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8517:1: RULE_STRING
+            // InternalJoveNotes.g:8613:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8614:1: RULE_STRING
             {
              before(grammarAccess.getChemCompoundAccess().getCommonNameSTRINGTerminalRuleCall_4_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22576,24 +22833,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Spellbee__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:8526:1: rule__Spellbee__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:8623:1: rule__Spellbee__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__Spellbee__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8530:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:8531:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8627:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:8628:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:8531:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:8532:1: ( 'hide' )
-            {
-             before(grammarAccess.getSpellbeeAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:8533:1: ( 'hide' )
-            // InternalJoveNotes.g:8534:1: 'hide'
+            // InternalJoveNotes.g:8628:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8629:1: ( 'hide' )
             {
              before(grammarAccess.getSpellbeeAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:8630:1: ( 'hide' )
+            // InternalJoveNotes.g:8631:1: 'hide'
+            {
+             before(grammarAccess.getSpellbeeAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getSpellbeeAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -22621,17 +22878,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Spellbee__WordAssignment_2"
-    // InternalJoveNotes.g:8549:1: rule__Spellbee__WordAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8646:1: rule__Spellbee__WordAssignment_2 : ( RULE_STRING ) ;
     public final void rule__Spellbee__WordAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8553:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8554:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8650:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8651:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8554:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8555:1: RULE_STRING
+            // InternalJoveNotes.g:8651:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8652:1: RULE_STRING
             {
              before(grammarAccess.getSpellbeeAccess().getWordSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22658,24 +22915,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:8564:1: rule__ImageLabel__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:8661:1: rule__ImageLabel__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__ImageLabel__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8568:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:8569:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8665:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:8666:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:8569:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:8570:1: ( 'hide' )
-            {
-             before(grammarAccess.getImageLabelAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:8571:1: ( 'hide' )
-            // InternalJoveNotes.g:8572:1: 'hide'
+            // InternalJoveNotes.g:8666:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8667:1: ( 'hide' )
             {
              before(grammarAccess.getImageLabelAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:8668:1: ( 'hide' )
+            // InternalJoveNotes.g:8669:1: 'hide'
+            {
+             before(grammarAccess.getImageLabelAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getImageLabelAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -22703,17 +22960,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__CaptionAssignment_2"
-    // InternalJoveNotes.g:8587:1: rule__ImageLabel__CaptionAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8684:1: rule__ImageLabel__CaptionAssignment_2 : ( RULE_STRING ) ;
     public final void rule__ImageLabel__CaptionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8591:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8592:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8688:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8689:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8592:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8593:1: RULE_STRING
+            // InternalJoveNotes.g:8689:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8690:1: RULE_STRING
             {
              before(grammarAccess.getImageLabelAccess().getCaptionSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22740,17 +22997,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__ImageNameAssignment_5"
-    // InternalJoveNotes.g:8602:1: rule__ImageLabel__ImageNameAssignment_5 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8699:1: rule__ImageLabel__ImageNameAssignment_5 : ( RULE_STRING ) ;
     public final void rule__ImageLabel__ImageNameAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8606:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8607:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8703:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8704:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8607:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8608:1: RULE_STRING
+            // InternalJoveNotes.g:8704:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8705:1: RULE_STRING
             {
              before(grammarAccess.getImageLabelAccess().getImageNameSTRINGTerminalRuleCall_5_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22777,17 +23034,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__HotspotsAssignment_6"
-    // InternalJoveNotes.g:8617:1: rule__ImageLabel__HotspotsAssignment_6 : ( ruleHotSpot ) ;
+    // InternalJoveNotes.g:8714:1: rule__ImageLabel__HotspotsAssignment_6 : ( ruleHotSpot ) ;
     public final void rule__ImageLabel__HotspotsAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8621:1: ( ( ruleHotSpot ) )
-            // InternalJoveNotes.g:8622:1: ( ruleHotSpot )
+            // InternalJoveNotes.g:8718:1: ( ( ruleHotSpot ) )
+            // InternalJoveNotes.g:8719:1: ( ruleHotSpot )
             {
-            // InternalJoveNotes.g:8622:1: ( ruleHotSpot )
-            // InternalJoveNotes.g:8623:1: ruleHotSpot
+            // InternalJoveNotes.g:8719:1: ( ruleHotSpot )
+            // InternalJoveNotes.g:8720:1: ruleHotSpot
             {
              before(grammarAccess.getImageLabelAccess().getHotspotsHotSpotParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
@@ -22818,17 +23075,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ImageLabel__HotspotsAssignment_7_1"
-    // InternalJoveNotes.g:8632:1: rule__ImageLabel__HotspotsAssignment_7_1 : ( ruleHotSpot ) ;
+    // InternalJoveNotes.g:8729:1: rule__ImageLabel__HotspotsAssignment_7_1 : ( ruleHotSpot ) ;
     public final void rule__ImageLabel__HotspotsAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8636:1: ( ( ruleHotSpot ) )
-            // InternalJoveNotes.g:8637:1: ( ruleHotSpot )
+            // InternalJoveNotes.g:8733:1: ( ( ruleHotSpot ) )
+            // InternalJoveNotes.g:8734:1: ( ruleHotSpot )
             {
-            // InternalJoveNotes.g:8637:1: ( ruleHotSpot )
-            // InternalJoveNotes.g:8638:1: ruleHotSpot
+            // InternalJoveNotes.g:8734:1: ( ruleHotSpot )
+            // InternalJoveNotes.g:8735:1: ruleHotSpot
             {
              before(grammarAccess.getImageLabelAccess().getHotspotsHotSpotParserRuleCall_7_1_0()); 
             pushFollow(FOLLOW_2);
@@ -22859,17 +23116,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__HotSpot__XAssignment_0"
-    // InternalJoveNotes.g:8647:1: rule__HotSpot__XAssignment_0 : ( RULE_INT ) ;
+    // InternalJoveNotes.g:8744:1: rule__HotSpot__XAssignment_0 : ( RULE_INT ) ;
     public final void rule__HotSpot__XAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8651:1: ( ( RULE_INT ) )
-            // InternalJoveNotes.g:8652:1: ( RULE_INT )
+            // InternalJoveNotes.g:8748:1: ( ( RULE_INT ) )
+            // InternalJoveNotes.g:8749:1: ( RULE_INT )
             {
-            // InternalJoveNotes.g:8652:1: ( RULE_INT )
-            // InternalJoveNotes.g:8653:1: RULE_INT
+            // InternalJoveNotes.g:8749:1: ( RULE_INT )
+            // InternalJoveNotes.g:8750:1: RULE_INT
             {
              before(grammarAccess.getHotSpotAccess().getXINTTerminalRuleCall_0_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -22896,17 +23153,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__HotSpot__YAssignment_2"
-    // InternalJoveNotes.g:8662:1: rule__HotSpot__YAssignment_2 : ( RULE_INT ) ;
+    // InternalJoveNotes.g:8759:1: rule__HotSpot__YAssignment_2 : ( RULE_INT ) ;
     public final void rule__HotSpot__YAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8666:1: ( ( RULE_INT ) )
-            // InternalJoveNotes.g:8667:1: ( RULE_INT )
+            // InternalJoveNotes.g:8763:1: ( ( RULE_INT ) )
+            // InternalJoveNotes.g:8764:1: ( RULE_INT )
             {
-            // InternalJoveNotes.g:8667:1: ( RULE_INT )
-            // InternalJoveNotes.g:8668:1: RULE_INT
+            // InternalJoveNotes.g:8764:1: ( RULE_INT )
+            // InternalJoveNotes.g:8765:1: RULE_INT
             {
              before(grammarAccess.getHotSpotAccess().getYINTTerminalRuleCall_2_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -22933,17 +23190,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__HotSpot__LabelAssignment_4"
-    // InternalJoveNotes.g:8677:1: rule__HotSpot__LabelAssignment_4 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8774:1: rule__HotSpot__LabelAssignment_4 : ( RULE_STRING ) ;
     public final void rule__HotSpot__LabelAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8681:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8682:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8778:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8779:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8682:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8683:1: RULE_STRING
+            // InternalJoveNotes.g:8779:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8780:1: RULE_STRING
             {
              before(grammarAccess.getHotSpotAccess().getLabelSTRINGTerminalRuleCall_4_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22970,24 +23227,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:8692:1: rule__Equation__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:8789:1: rule__Equation__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__Equation__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8696:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:8697:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8793:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:8794:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:8697:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:8698:1: ( 'hide' )
-            {
-             before(grammarAccess.getEquationAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:8699:1: ( 'hide' )
-            // InternalJoveNotes.g:8700:1: 'hide'
+            // InternalJoveNotes.g:8794:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8795:1: ( 'hide' )
             {
              before(grammarAccess.getEquationAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:8796:1: ( 'hide' )
+            // InternalJoveNotes.g:8797:1: 'hide'
+            {
+             before(grammarAccess.getEquationAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getEquationAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -23015,17 +23272,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__EquationAssignment_2"
-    // InternalJoveNotes.g:8715:1: rule__Equation__EquationAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8812:1: rule__Equation__EquationAssignment_2 : ( RULE_STRING ) ;
     public final void rule__Equation__EquationAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8719:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8720:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8816:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8817:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8720:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8721:1: RULE_STRING
+            // InternalJoveNotes.g:8817:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8818:1: RULE_STRING
             {
              before(grammarAccess.getEquationAccess().getEquationSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -23052,17 +23309,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__DescriptionAssignment_4"
-    // InternalJoveNotes.g:8730:1: rule__Equation__DescriptionAssignment_4 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8827:1: rule__Equation__DescriptionAssignment_4 : ( RULE_STRING ) ;
     public final void rule__Equation__DescriptionAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8734:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8735:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8831:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8832:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8735:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8736:1: RULE_STRING
+            // InternalJoveNotes.g:8832:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8833:1: RULE_STRING
             {
              before(grammarAccess.getEquationAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -23089,17 +23346,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__SymbolsAssignment_6"
-    // InternalJoveNotes.g:8745:1: rule__Equation__SymbolsAssignment_6 : ( ruleEqSymbol ) ;
+    // InternalJoveNotes.g:8842:1: rule__Equation__SymbolsAssignment_6 : ( ruleEqSymbol ) ;
     public final void rule__Equation__SymbolsAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8749:1: ( ( ruleEqSymbol ) )
-            // InternalJoveNotes.g:8750:1: ( ruleEqSymbol )
+            // InternalJoveNotes.g:8846:1: ( ( ruleEqSymbol ) )
+            // InternalJoveNotes.g:8847:1: ( ruleEqSymbol )
             {
-            // InternalJoveNotes.g:8750:1: ( ruleEqSymbol )
-            // InternalJoveNotes.g:8751:1: ruleEqSymbol
+            // InternalJoveNotes.g:8847:1: ( ruleEqSymbol )
+            // InternalJoveNotes.g:8848:1: ruleEqSymbol
             {
              before(grammarAccess.getEquationAccess().getSymbolsEqSymbolParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
@@ -23130,17 +23387,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Equation__SymbolsAssignment_7_1"
-    // InternalJoveNotes.g:8760:1: rule__Equation__SymbolsAssignment_7_1 : ( ruleEqSymbol ) ;
+    // InternalJoveNotes.g:8857:1: rule__Equation__SymbolsAssignment_7_1 : ( ruleEqSymbol ) ;
     public final void rule__Equation__SymbolsAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8764:1: ( ( ruleEqSymbol ) )
-            // InternalJoveNotes.g:8765:1: ( ruleEqSymbol )
+            // InternalJoveNotes.g:8861:1: ( ( ruleEqSymbol ) )
+            // InternalJoveNotes.g:8862:1: ( ruleEqSymbol )
             {
-            // InternalJoveNotes.g:8765:1: ( ruleEqSymbol )
-            // InternalJoveNotes.g:8766:1: ruleEqSymbol
+            // InternalJoveNotes.g:8862:1: ( ruleEqSymbol )
+            // InternalJoveNotes.g:8863:1: ruleEqSymbol
             {
              before(grammarAccess.getEquationAccess().getSymbolsEqSymbolParserRuleCall_7_1_0()); 
             pushFollow(FOLLOW_2);
@@ -23171,17 +23428,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EqSymbol__SymbolAssignment_0"
-    // InternalJoveNotes.g:8775:1: rule__EqSymbol__SymbolAssignment_0 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8872:1: rule__EqSymbol__SymbolAssignment_0 : ( RULE_STRING ) ;
     public final void rule__EqSymbol__SymbolAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8779:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8780:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8876:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8877:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8780:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8781:1: RULE_STRING
+            // InternalJoveNotes.g:8877:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8878:1: RULE_STRING
             {
              before(grammarAccess.getEqSymbolAccess().getSymbolSTRINGTerminalRuleCall_0_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -23208,17 +23465,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EqSymbol__DescriptionAssignment_2"
-    // InternalJoveNotes.g:8790:1: rule__EqSymbol__DescriptionAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8887:1: rule__EqSymbol__DescriptionAssignment_2 : ( RULE_STRING ) ;
     public final void rule__EqSymbol__DescriptionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8794:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8795:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8891:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8892:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8795:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8796:1: RULE_STRING
+            // InternalJoveNotes.g:8892:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8893:1: RULE_STRING
             {
              before(grammarAccess.getEqSymbolAccess().getDescriptionSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -23245,24 +23502,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:8805:1: rule__RefToContext__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:8902:1: rule__RefToContext__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__RefToContext__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8809:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:8810:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8906:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:8907:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:8810:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:8811:1: ( 'hide' )
-            {
-             before(grammarAccess.getRefToContextAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:8812:1: ( 'hide' )
-            // InternalJoveNotes.g:8813:1: 'hide'
+            // InternalJoveNotes.g:8907:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8908:1: ( 'hide' )
             {
              before(grammarAccess.getRefToContextAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:8909:1: ( 'hide' )
+            // InternalJoveNotes.g:8910:1: 'hide'
+            {
+             before(grammarAccess.getRefToContextAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getRefToContextAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -23290,17 +23547,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__ContextAssignment_4"
-    // InternalJoveNotes.g:8828:1: rule__RefToContext__ContextAssignment_4 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8925:1: rule__RefToContext__ContextAssignment_4 : ( RULE_STRING ) ;
     public final void rule__RefToContext__ContextAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8832:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8833:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8929:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8930:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8833:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8834:1: RULE_STRING
+            // InternalJoveNotes.g:8930:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8931:1: RULE_STRING
             {
              before(grammarAccess.getRefToContextAccess().getContextSTRINGTerminalRuleCall_4_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -23327,17 +23584,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RefToContext__RtcElementAssignment_5"
-    // InternalJoveNotes.g:8843:1: rule__RefToContext__RtcElementAssignment_5 : ( ruleRTCElement ) ;
+    // InternalJoveNotes.g:8940:1: rule__RefToContext__RtcElementAssignment_5 : ( ruleRTCElement ) ;
     public final void rule__RefToContext__RtcElementAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8847:1: ( ( ruleRTCElement ) )
-            // InternalJoveNotes.g:8848:1: ( ruleRTCElement )
+            // InternalJoveNotes.g:8944:1: ( ( ruleRTCElement ) )
+            // InternalJoveNotes.g:8945:1: ( ruleRTCElement )
             {
-            // InternalJoveNotes.g:8848:1: ( ruleRTCElement )
-            // InternalJoveNotes.g:8849:1: ruleRTCElement
+            // InternalJoveNotes.g:8945:1: ( ruleRTCElement )
+            // InternalJoveNotes.g:8946:1: ruleRTCElement
             {
              before(grammarAccess.getRefToContextAccess().getRtcElementRTCElementParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
@@ -23368,24 +23625,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:8858:1: rule__MultiChoice__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:8955:1: rule__MultiChoice__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__MultiChoice__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8862:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:8863:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8959:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:8960:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:8863:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:8864:1: ( 'hide' )
-            {
-             before(grammarAccess.getMultiChoiceAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:8865:1: ( 'hide' )
-            // InternalJoveNotes.g:8866:1: 'hide'
+            // InternalJoveNotes.g:8960:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:8961:1: ( 'hide' )
             {
              before(grammarAccess.getMultiChoiceAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:8962:1: ( 'hide' )
+            // InternalJoveNotes.g:8963:1: 'hide'
+            {
+             before(grammarAccess.getMultiChoiceAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getMultiChoiceAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -23413,17 +23670,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__QuestionAssignment_2"
-    // InternalJoveNotes.g:8881:1: rule__MultiChoice__QuestionAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:8978:1: rule__MultiChoice__QuestionAssignment_2 : ( RULE_STRING ) ;
     public final void rule__MultiChoice__QuestionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8885:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8886:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8982:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:8983:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8886:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8887:1: RULE_STRING
+            // InternalJoveNotes.g:8983:1: ( RULE_STRING )
+            // InternalJoveNotes.g:8984:1: RULE_STRING
             {
              before(grammarAccess.getMultiChoiceAccess().getQuestionSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -23450,17 +23707,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__OptionsAssignment_6"
-    // InternalJoveNotes.g:8896:1: rule__MultiChoice__OptionsAssignment_6 : ( ruleOption ) ;
+    // InternalJoveNotes.g:8993:1: rule__MultiChoice__OptionsAssignment_6 : ( ruleOption ) ;
     public final void rule__MultiChoice__OptionsAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8900:1: ( ( ruleOption ) )
-            // InternalJoveNotes.g:8901:1: ( ruleOption )
+            // InternalJoveNotes.g:8997:1: ( ( ruleOption ) )
+            // InternalJoveNotes.g:8998:1: ( ruleOption )
             {
-            // InternalJoveNotes.g:8901:1: ( ruleOption )
-            // InternalJoveNotes.g:8902:1: ruleOption
+            // InternalJoveNotes.g:8998:1: ( ruleOption )
+            // InternalJoveNotes.g:8999:1: ruleOption
             {
              before(grammarAccess.getMultiChoiceAccess().getOptionsOptionParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
@@ -23491,17 +23748,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__OptionsAssignment_7_1"
-    // InternalJoveNotes.g:8911:1: rule__MultiChoice__OptionsAssignment_7_1 : ( ruleOption ) ;
+    // InternalJoveNotes.g:9008:1: rule__MultiChoice__OptionsAssignment_7_1 : ( ruleOption ) ;
     public final void rule__MultiChoice__OptionsAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8915:1: ( ( ruleOption ) )
-            // InternalJoveNotes.g:8916:1: ( ruleOption )
+            // InternalJoveNotes.g:9012:1: ( ( ruleOption ) )
+            // InternalJoveNotes.g:9013:1: ( ruleOption )
             {
-            // InternalJoveNotes.g:8916:1: ( ruleOption )
-            // InternalJoveNotes.g:8917:1: ruleOption
+            // InternalJoveNotes.g:9013:1: ( ruleOption )
+            // InternalJoveNotes.g:9014:1: ruleOption
             {
              before(grammarAccess.getMultiChoiceAccess().getOptionsOptionParserRuleCall_7_1_0()); 
             pushFollow(FOLLOW_2);
@@ -23532,17 +23789,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__NumOptionsToShowAssignment_9_1"
-    // InternalJoveNotes.g:8926:1: rule__MultiChoice__NumOptionsToShowAssignment_9_1 : ( RULE_INT ) ;
+    // InternalJoveNotes.g:9023:1: rule__MultiChoice__NumOptionsToShowAssignment_9_1 : ( RULE_INT ) ;
     public final void rule__MultiChoice__NumOptionsToShowAssignment_9_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8930:1: ( ( RULE_INT ) )
-            // InternalJoveNotes.g:8931:1: ( RULE_INT )
+            // InternalJoveNotes.g:9027:1: ( ( RULE_INT ) )
+            // InternalJoveNotes.g:9028:1: ( RULE_INT )
             {
-            // InternalJoveNotes.g:8931:1: ( RULE_INT )
-            // InternalJoveNotes.g:8932:1: RULE_INT
+            // InternalJoveNotes.g:9028:1: ( RULE_INT )
+            // InternalJoveNotes.g:9029:1: RULE_INT
             {
              before(grammarAccess.getMultiChoiceAccess().getNumOptionsToShowINTTerminalRuleCall_9_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -23569,17 +23826,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__NumOptionsPerRowAssignment_10_1"
-    // InternalJoveNotes.g:8941:1: rule__MultiChoice__NumOptionsPerRowAssignment_10_1 : ( RULE_INT ) ;
+    // InternalJoveNotes.g:9038:1: rule__MultiChoice__NumOptionsPerRowAssignment_10_1 : ( RULE_INT ) ;
     public final void rule__MultiChoice__NumOptionsPerRowAssignment_10_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8945:1: ( ( RULE_INT ) )
-            // InternalJoveNotes.g:8946:1: ( RULE_INT )
+            // InternalJoveNotes.g:9042:1: ( ( RULE_INT ) )
+            // InternalJoveNotes.g:9043:1: ( RULE_INT )
             {
-            // InternalJoveNotes.g:8946:1: ( RULE_INT )
-            // InternalJoveNotes.g:8947:1: RULE_INT
+            // InternalJoveNotes.g:9043:1: ( RULE_INT )
+            // InternalJoveNotes.g:9044:1: RULE_INT
             {
              before(grammarAccess.getMultiChoiceAccess().getNumOptionsPerRowINTTerminalRuleCall_10_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -23606,17 +23863,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__MultiChoice__ExplanationAssignment_11_1"
-    // InternalJoveNotes.g:8956:1: rule__MultiChoice__ExplanationAssignment_11_1 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:9053:1: rule__MultiChoice__ExplanationAssignment_11_1 : ( RULE_STRING ) ;
     public final void rule__MultiChoice__ExplanationAssignment_11_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8960:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:8961:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9057:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:9058:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:8961:1: ( RULE_STRING )
-            // InternalJoveNotes.g:8962:1: RULE_STRING
+            // InternalJoveNotes.g:9058:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9059:1: RULE_STRING
             {
              before(grammarAccess.getMultiChoiceAccess().getExplanationSTRINGTerminalRuleCall_11_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -23643,24 +23900,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:8971:1: rule__Exercise__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:9068:1: rule__Exercise__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__Exercise__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8975:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:8976:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:9072:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:9073:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:8976:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:8977:1: ( 'hide' )
-            {
-             before(grammarAccess.getExerciseAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:8978:1: ( 'hide' )
-            // InternalJoveNotes.g:8979:1: 'hide'
+            // InternalJoveNotes.g:9073:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:9074:1: ( 'hide' )
             {
              before(grammarAccess.getExerciseAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:9075:1: ( 'hide' )
+            // InternalJoveNotes.g:9076:1: 'hide'
+            {
+             before(grammarAccess.getExerciseAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getExerciseAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -23688,17 +23945,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__MarksAssignment_2_2"
-    // InternalJoveNotes.g:8994:1: rule__Exercise__MarksAssignment_2_2 : ( RULE_INT ) ;
+    // InternalJoveNotes.g:9091:1: rule__Exercise__MarksAssignment_2_2 : ( RULE_INT ) ;
     public final void rule__Exercise__MarksAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:8998:1: ( ( RULE_INT ) )
-            // InternalJoveNotes.g:8999:1: ( RULE_INT )
+            // InternalJoveNotes.g:9095:1: ( ( RULE_INT ) )
+            // InternalJoveNotes.g:9096:1: ( RULE_INT )
             {
-            // InternalJoveNotes.g:8999:1: ( RULE_INT )
-            // InternalJoveNotes.g:9000:1: RULE_INT
+            // InternalJoveNotes.g:9096:1: ( RULE_INT )
+            // InternalJoveNotes.g:9097:1: RULE_INT
             {
              before(grammarAccess.getExerciseAccess().getMarksINTTerminalRuleCall_2_2_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -23725,17 +23982,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__QuestionAssignment_3"
-    // InternalJoveNotes.g:9009:1: rule__Exercise__QuestionAssignment_3 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:9106:1: rule__Exercise__QuestionAssignment_3 : ( RULE_STRING ) ;
     public final void rule__Exercise__QuestionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:9013:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:9014:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9110:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:9111:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:9014:1: ( RULE_STRING )
-            // InternalJoveNotes.g:9015:1: RULE_STRING
+            // InternalJoveNotes.g:9111:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9112:1: RULE_STRING
             {
              before(grammarAccess.getExerciseAccess().getQuestionSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -23762,17 +24019,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__HintsAssignment_4_2"
-    // InternalJoveNotes.g:9024:1: rule__Exercise__HintsAssignment_4_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:9121:1: rule__Exercise__HintsAssignment_4_2 : ( RULE_STRING ) ;
     public final void rule__Exercise__HintsAssignment_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:9028:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:9029:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9125:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:9126:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:9029:1: ( RULE_STRING )
-            // InternalJoveNotes.g:9030:1: RULE_STRING
+            // InternalJoveNotes.g:9126:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9127:1: RULE_STRING
             {
              before(grammarAccess.getExerciseAccess().getHintsSTRINGTerminalRuleCall_4_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -23799,17 +24056,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Exercise__AnswerAssignment_5_1"
-    // InternalJoveNotes.g:9039:1: rule__Exercise__AnswerAssignment_5_1 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:9136:1: rule__Exercise__AnswerAssignment_5_1 : ( RULE_STRING ) ;
     public final void rule__Exercise__AnswerAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:9043:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:9044:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9140:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:9141:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:9044:1: ( RULE_STRING )
-            // InternalJoveNotes.g:9045:1: RULE_STRING
+            // InternalJoveNotes.g:9141:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9142:1: RULE_STRING
             {
              before(grammarAccess.getExerciseAccess().getAnswerSTRINGTerminalRuleCall_5_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -23836,24 +24093,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__VoiceToText__HideFromViewAssignment_1"
-    // InternalJoveNotes.g:9054:1: rule__VoiceToText__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
+    // InternalJoveNotes.g:9151:1: rule__VoiceToText__HideFromViewAssignment_1 : ( ( 'hide' ) ) ;
     public final void rule__VoiceToText__HideFromViewAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:9058:1: ( ( ( 'hide' ) ) )
-            // InternalJoveNotes.g:9059:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:9155:1: ( ( ( 'hide' ) ) )
+            // InternalJoveNotes.g:9156:1: ( ( 'hide' ) )
             {
-            // InternalJoveNotes.g:9059:1: ( ( 'hide' ) )
-            // InternalJoveNotes.g:9060:1: ( 'hide' )
-            {
-             before(grammarAccess.getVoiceToTextAccess().getHideFromViewHideKeyword_1_0()); 
-            // InternalJoveNotes.g:9061:1: ( 'hide' )
-            // InternalJoveNotes.g:9062:1: 'hide'
+            // InternalJoveNotes.g:9156:1: ( ( 'hide' ) )
+            // InternalJoveNotes.g:9157:1: ( 'hide' )
             {
              before(grammarAccess.getVoiceToTextAccess().getHideFromViewHideKeyword_1_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalJoveNotes.g:9158:1: ( 'hide' )
+            // InternalJoveNotes.g:9159:1: 'hide'
+            {
+             before(grammarAccess.getVoiceToTextAccess().getHideFromViewHideKeyword_1_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getVoiceToTextAccess().getHideFromViewHideKeyword_1_0()); 
 
             }
@@ -23881,17 +24138,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__VoiceToText__ClipNameAssignment_2"
-    // InternalJoveNotes.g:9077:1: rule__VoiceToText__ClipNameAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:9174:1: rule__VoiceToText__ClipNameAssignment_2 : ( RULE_STRING ) ;
     public final void rule__VoiceToText__ClipNameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:9081:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:9082:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9178:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:9179:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:9082:1: ( RULE_STRING )
-            // InternalJoveNotes.g:9083:1: RULE_STRING
+            // InternalJoveNotes.g:9179:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9180:1: RULE_STRING
             {
              before(grammarAccess.getVoiceToTextAccess().getClipNameSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -23918,17 +24175,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__VoiceToText__TextAssignment_3"
-    // InternalJoveNotes.g:9092:1: rule__VoiceToText__TextAssignment_3 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:9189:1: rule__VoiceToText__TextAssignment_3 : ( RULE_STRING ) ;
     public final void rule__VoiceToText__TextAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:9096:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:9097:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9193:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:9194:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:9097:1: ( RULE_STRING )
-            // InternalJoveNotes.g:9098:1: RULE_STRING
+            // InternalJoveNotes.g:9194:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9195:1: RULE_STRING
             {
              before(grammarAccess.getVoiceToTextAccess().getTextSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -23954,18 +24211,55 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__VoiceToText__TextAssignment_3"
 
 
+    // $ANTLR start "rule__ChapterSection__SectionNameAssignment_1"
+    // InternalJoveNotes.g:9204:1: rule__ChapterSection__SectionNameAssignment_1 : ( RULE_STRING ) ;
+    public final void rule__ChapterSection__SectionNameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // InternalJoveNotes.g:9208:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:9209:1: ( RULE_STRING )
+            {
+            // InternalJoveNotes.g:9209:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9210:1: RULE_STRING
+            {
+             before(grammarAccess.getChapterSectionAccess().getSectionNameSTRINGTerminalRuleCall_1_0()); 
+            match(input,RULE_STRING,FOLLOW_2); 
+             after(grammarAccess.getChapterSectionAccess().getSectionNameSTRINGTerminalRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ChapterSection__SectionNameAssignment_1"
+
+
     // $ANTLR start "rule__Option__OptionValueAssignment_0"
-    // InternalJoveNotes.g:9107:1: rule__Option__OptionValueAssignment_0 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:9219:1: rule__Option__OptionValueAssignment_0 : ( RULE_STRING ) ;
     public final void rule__Option__OptionValueAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:9111:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:9112:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9223:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:9224:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:9112:1: ( RULE_STRING )
-            // InternalJoveNotes.g:9113:1: RULE_STRING
+            // InternalJoveNotes.g:9224:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9225:1: RULE_STRING
             {
              before(grammarAccess.getOptionAccess().getOptionValueSTRINGTerminalRuleCall_0_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -23992,24 +24286,24 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Option__CorrectOptionAssignment_1"
-    // InternalJoveNotes.g:9122:1: rule__Option__CorrectOptionAssignment_1 : ( ( 'correct' ) ) ;
+    // InternalJoveNotes.g:9234:1: rule__Option__CorrectOptionAssignment_1 : ( ( 'correct' ) ) ;
     public final void rule__Option__CorrectOptionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:9126:1: ( ( ( 'correct' ) ) )
-            // InternalJoveNotes.g:9127:1: ( ( 'correct' ) )
+            // InternalJoveNotes.g:9238:1: ( ( ( 'correct' ) ) )
+            // InternalJoveNotes.g:9239:1: ( ( 'correct' ) )
             {
-            // InternalJoveNotes.g:9127:1: ( ( 'correct' ) )
-            // InternalJoveNotes.g:9128:1: ( 'correct' )
-            {
-             before(grammarAccess.getOptionAccess().getCorrectOptionCorrectKeyword_1_0()); 
-            // InternalJoveNotes.g:9129:1: ( 'correct' )
-            // InternalJoveNotes.g:9130:1: 'correct'
+            // InternalJoveNotes.g:9239:1: ( ( 'correct' ) )
+            // InternalJoveNotes.g:9240:1: ( 'correct' )
             {
              before(grammarAccess.getOptionAccess().getCorrectOptionCorrectKeyword_1_0()); 
-            match(input,61,FOLLOW_2); 
+            // InternalJoveNotes.g:9241:1: ( 'correct' )
+            // InternalJoveNotes.g:9242:1: 'correct'
+            {
+             before(grammarAccess.getOptionAccess().getCorrectOptionCorrectKeyword_1_0()); 
+            match(input,62,FOLLOW_2); 
              after(grammarAccess.getOptionAccess().getCorrectOptionCorrectKeyword_1_0()); 
 
             }
@@ -24037,17 +24331,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CMap__ContentAssignment_2"
-    // InternalJoveNotes.g:9145:1: rule__CMap__ContentAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:9257:1: rule__CMap__ContentAssignment_2 : ( RULE_STRING ) ;
     public final void rule__CMap__ContentAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:9149:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:9150:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9261:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:9262:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:9150:1: ( RULE_STRING )
-            // InternalJoveNotes.g:9151:1: RULE_STRING
+            // InternalJoveNotes.g:9262:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9263:1: RULE_STRING
             {
              before(grammarAccess.getCMapAccess().getContentSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -24074,17 +24368,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__EvalVarsAssignment_2"
-    // InternalJoveNotes.g:9160:1: rule__Script__EvalVarsAssignment_2 : ( ruleEvalVar ) ;
+    // InternalJoveNotes.g:9272:1: rule__Script__EvalVarsAssignment_2 : ( ruleEvalVar ) ;
     public final void rule__Script__EvalVarsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:9164:1: ( ( ruleEvalVar ) )
-            // InternalJoveNotes.g:9165:1: ( ruleEvalVar )
+            // InternalJoveNotes.g:9276:1: ( ( ruleEvalVar ) )
+            // InternalJoveNotes.g:9277:1: ( ruleEvalVar )
             {
-            // InternalJoveNotes.g:9165:1: ( ruleEvalVar )
-            // InternalJoveNotes.g:9166:1: ruleEvalVar
+            // InternalJoveNotes.g:9277:1: ( ruleEvalVar )
+            // InternalJoveNotes.g:9278:1: ruleEvalVar
             {
              before(grammarAccess.getScriptAccess().getEvalVarsEvalVarParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -24115,17 +24409,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__EvalVarsAssignment_3_1"
-    // InternalJoveNotes.g:9175:1: rule__Script__EvalVarsAssignment_3_1 : ( ruleEvalVar ) ;
+    // InternalJoveNotes.g:9287:1: rule__Script__EvalVarsAssignment_3_1 : ( ruleEvalVar ) ;
     public final void rule__Script__EvalVarsAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:9179:1: ( ( ruleEvalVar ) )
-            // InternalJoveNotes.g:9180:1: ( ruleEvalVar )
+            // InternalJoveNotes.g:9291:1: ( ( ruleEvalVar ) )
+            // InternalJoveNotes.g:9292:1: ( ruleEvalVar )
             {
-            // InternalJoveNotes.g:9180:1: ( ruleEvalVar )
-            // InternalJoveNotes.g:9181:1: ruleEvalVar
+            // InternalJoveNotes.g:9292:1: ( ruleEvalVar )
+            // InternalJoveNotes.g:9293:1: ruleEvalVar
             {
              before(grammarAccess.getScriptAccess().getEvalVarsEvalVarParserRuleCall_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24156,17 +24450,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Script__ScriptBodyAssignment_5"
-    // InternalJoveNotes.g:9190:1: rule__Script__ScriptBodyAssignment_5 : ( ruleScriptBody ) ;
+    // InternalJoveNotes.g:9302:1: rule__Script__ScriptBodyAssignment_5 : ( ruleScriptBody ) ;
     public final void rule__Script__ScriptBodyAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:9194:1: ( ( ruleScriptBody ) )
-            // InternalJoveNotes.g:9195:1: ( ruleScriptBody )
+            // InternalJoveNotes.g:9306:1: ( ( ruleScriptBody ) )
+            // InternalJoveNotes.g:9307:1: ( ruleScriptBody )
             {
-            // InternalJoveNotes.g:9195:1: ( ruleScriptBody )
-            // InternalJoveNotes.g:9196:1: ruleScriptBody
+            // InternalJoveNotes.g:9307:1: ( ruleScriptBody )
+            // InternalJoveNotes.g:9308:1: ruleScriptBody
             {
              before(grammarAccess.getScriptAccess().getScriptBodyScriptBodyParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
@@ -24197,17 +24491,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EvalVar__VarNameAssignment_0"
-    // InternalJoveNotes.g:9205:1: rule__EvalVar__VarNameAssignment_0 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:9317:1: rule__EvalVar__VarNameAssignment_0 : ( RULE_STRING ) ;
     public final void rule__EvalVar__VarNameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:9209:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:9210:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9321:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:9322:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:9210:1: ( RULE_STRING )
-            // InternalJoveNotes.g:9211:1: RULE_STRING
+            // InternalJoveNotes.g:9322:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9323:1: RULE_STRING
             {
              before(grammarAccess.getEvalVarAccess().getVarNameSTRINGTerminalRuleCall_0_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -24234,17 +24528,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EvalVar__VarExpressionAssignment_2"
-    // InternalJoveNotes.g:9220:1: rule__EvalVar__VarExpressionAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:9332:1: rule__EvalVar__VarExpressionAssignment_2 : ( RULE_STRING ) ;
     public final void rule__EvalVar__VarExpressionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:9224:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:9225:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9336:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:9337:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:9225:1: ( RULE_STRING )
-            // InternalJoveNotes.g:9226:1: RULE_STRING
+            // InternalJoveNotes.g:9337:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9338:1: RULE_STRING
             {
              before(grammarAccess.getEvalVarAccess().getVarExpressionSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -24271,17 +24565,17 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ScriptBody__ScriptAssignment_2"
-    // InternalJoveNotes.g:9235:1: rule__ScriptBody__ScriptAssignment_2 : ( RULE_STRING ) ;
+    // InternalJoveNotes.g:9347:1: rule__ScriptBody__ScriptAssignment_2 : ( RULE_STRING ) ;
     public final void rule__ScriptBody__ScriptAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalJoveNotes.g:9239:1: ( ( RULE_STRING ) )
-            // InternalJoveNotes.g:9240:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9351:1: ( ( RULE_STRING ) )
+            // InternalJoveNotes.g:9352:1: ( RULE_STRING )
             {
-            // InternalJoveNotes.g:9240:1: ( RULE_STRING )
-            // InternalJoveNotes.g:9241:1: RULE_STRING
+            // InternalJoveNotes.g:9352:1: ( RULE_STRING )
+            // InternalJoveNotes.g:9353:1: RULE_STRING
             {
              before(grammarAccess.getScriptBodyAccess().getScriptSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -24313,28 +24607,28 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0400000000001000L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0018953B807F0000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0018953B807F0002L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0300000000000000L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0800000000001000L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0038953B807F0000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0038953B807F0002L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0600000000000000L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0800000000000010L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x1000000000000010L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0040000000000000L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x1800000000800010L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x3000000000800010L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000005000000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000002000000L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000800000L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000071000000L});
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0800000000800010L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x1000000000800010L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000400000000L});
     public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000400000010L});
     public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000001000000L});
@@ -24343,14 +24637,15 @@ public class InternalJoveNotesParser extends AbstractInternalContentAssistParser
     public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000008000000002L});
     public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000008000000000L});
     public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000020000000010L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0800000000800000L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x1000000000800000L});
     public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000080000000000L});
     public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000112B807F0000L});
     public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000112B807F0002L});
     public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000200000000000L});
     public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000400061000000L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0801000000000000L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x1001000000000000L});
     public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0006000000000000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x4000000000000000L});
 
 }
